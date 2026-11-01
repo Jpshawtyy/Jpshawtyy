@@ -1,0 +1,40 @@
+# Todo dia o GitHub refaz a cidade 3D das contribuições e os números do crachá, e salva no repositório.
+# Também roda quando entra arquivo novo no main, e dá para rodar na mão pela aba Actions.
+name: Atualizar o perfil
+
+on:
+  schedule:
+    - cron: "0 10 * * *"   # todo dia, 6h em Cuiabá
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  atualizar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Cidade 3D das contribuições
+        uses: yoshi389111/github-profile-3d-contrib@latest
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          USERNAME: ${{ github.repository_owner }}
+
+      - name: Números do crachá
+        run: node ferramentas/numeros.mjs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          USUARIO: ${{ github.repository_owner }}
+
+      - name: Salvar
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add -A .
+          if git commit -m "atualiza a cidade 3D e os números do crachá"; then
+            git push
+          fi
