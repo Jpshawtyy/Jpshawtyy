@@ -1,0 +1,10 @@
+node_modules/
+# cache das cartas (imagens e dados vêm da Pokémon TCG API e são baixados de novo quando faltam)
+public/cards/
+public/_audio/
+# prévias, quadros de conferência e arquivos temporários
+out/*
+!out/.gitkeep
+!out/aula-01.mp4
+!out/aula-01-capa.png
+.cache/

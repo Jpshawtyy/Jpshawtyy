@@ -1,0 +1,60 @@
+{
+  "serie": "Biblioteca de componentes",
+  "numero": 0,
+  "titulo_capa": "mesa",
+  "subtitulo_capa": "todas as ações",
+  "cartas": {
+    "iron-thorns": {"nome": "Iron Thorns ex", "set": "Twilight Masquerade", "numero": 77},
+    "dreepy": {"nome": "Dreepy", "set": "Twilight Masquerade", "numero": 128},
+    "drakloak": {"nome": "Drakloak", "set": "Twilight Masquerade", "numero": 129},
+    "dragapult": {"nome": "Dragapult ex", "set": "Twilight Masquerade", "numero": 130},
+    "estadio": {"nome": "Jamming Tower"},
+    "ferramenta": {"nome": "Rescue Board"},
+    "energia-fogo": {"nome": "Basic Fire Energy"},
+    "energia-psiquica": {"nome": "Basic Psychic Energy"},
+    "energia-eletrica": {"nome": "Basic Lightning Energy"}
+  },
+  "cenas": [
+    {"tipo": "gancho", "texto": "mesa", "subtitulo": "todas as ações", "duracao": 1.5},
+    {
+      "tipo": "mesa",
+      "estado": {
+        "turno": 5,
+        "quem_comecou": "eu",
+        "eu": {
+          "ativo": {"carta": "dreepy", "energias": ["energia-psiquica"], "entrou_no_turno": 3},
+          "banco": [
+            {"carta": "dragapult", "evoluiu_de": ["dreepy", "drakloak"], "energias": ["energia-fogo", "energia-psiquica"], "entrou_no_turno": 1}
+          ],
+          "mao": ["estadio", "ferramenta", "energia-fogo"],
+          "deck": 30,
+          "descarte": ["dreepy"],
+          "premios": 6
+        },
+        "oponente": {
+          "ativo": {"carta": "iron-thorns", "energias": ["energia-eletrica", "energia-eletrica"], "dano": 70, "entrou_no_turno": 2},
+          "banco": [{"carta": "dreepy", "entrou_no_turno": 2}, {"carta": "drakloak", "evoluiu_de": ["dreepy"], "energias": ["energia-fogo"], "entrou_no_turno": 2}],
+          "mao": 4,
+          "deck": 28,
+          "premios": 5
+        }
+      },
+      "acoes": [
+        {"acao": "comprar", "carta": "drakloak", "legenda": "*Comprar*: do deck para a mão"},
+        {"acao": "jogar_treinador", "carta": "estadio", "legenda": "*Estádio*: fica em jogo, um por turno"},
+        {"acao": "jogar_treinador", "carta": "ferramenta", "alvo": "banco:1", "legenda": "*Ferramenta*: presa a um Pokémon"},
+        {"acao": "recuar", "para": "banco:1", "legenda": "*Recuar*: troca o Ativo, uma vez por turno"},
+        {"acao": "ligar_energia", "carta": "energia-fogo", "alvo": "banco:1", "legenda": "*Energia* no banco também vale"},
+        {"acao": "atacar", "ataque": "Phantom Dive", "legenda": "*Atacar*: nome do ataque e dano"},
+        {"acao": "dano", "alvo": "oponente.banco:1", "valor": 60, "legenda": "*Marcadores* de dano no banco"},
+        {"acao": "nocaute", "alvo": "oponente.ativo", "legenda": "*Nocaute*: treme, apaga e vai pro descarte"},
+        {"acao": "pegar_premio", "cartas": ["dreepy", "energia-psiquica"], "legenda": "*Prêmio*: vira e vai para a mão"},
+        {"acao": "promover", "banco": 2, "legenda": "O oponente *sobe* um do banco"},
+        {"acao": "fim_de_turno", "legenda": "*Fim* do turno"},
+        {"acao": "comprar", "legenda": "Agora é a vez *dele*"},
+        {"acao": "ligar_energia", "carta": "energia-psiquica", "alvo": "ativo"},
+        {"acao": "atacar", "ataque": "Dragon Headbutt", "legenda": "O oponente *também* ataca"}
+      ]
+    }
+  ]
+}

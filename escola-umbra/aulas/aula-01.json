@@ -1,0 +1,90 @@
+{
+  "serie": "Do zero ao campeonato",
+  "numero": 1,
+  "titulo_capa": "o turno",
+  "subtitulo_capa": "como funciona",
+  "capa": {"cartas": ["dreepy", "drakloak", "dragapult"]},
+
+  "cartas": {
+    "dreepy": {"nome": "Dreepy", "set": "Twilight Masquerade", "numero": 128},
+    "drakloak": {"nome": "Drakloak", "set": "Twilight Masquerade", "numero": 129},
+    "dragapult": {"nome": "Dragapult ex", "set": "Twilight Masquerade", "numero": 130},
+    "iron-thorns": {"nome": "Iron Thorns ex", "set": "Twilight Masquerade", "numero": 77},
+    "dawn": {"nome": "Dawn", "set": "Phantasmal Flames", "numero": 87},
+    "energia-fogo": {"nome": "Basic Fire Energy", "set": "Scarlet & Violet Energies", "numero": 2},
+    "energia-psiquica": {"nome": "Basic Psychic Energy", "set": "Scarlet & Violet Energies", "numero": 5},
+    "energia-eletrica": {"nome": "Basic Lightning Energy", "set": "Scarlet & Violet Energies", "numero": 4}
+  },
+
+  "cenas": [
+    {
+      "tipo": "gancho",
+      "texto": "o turno",
+      "subtitulo": "como funciona",
+      "duracao": 2,
+      "legendas": [{"texto": "em *30 segundos*", "em": 0.9}]
+    },
+    {
+      "tipo": "lista",
+      "titulo": "todo turno é assim",
+      "duracao": 6,
+      "itens": ["Compra uma carta", "Faz suas ações", "Ataca e o turno acaba"],
+      "legendas": [
+        {"texto": "Todo turno começa *comprando*", "em": 0.7},
+        {"texto": "Ações: *quantas* der, na ordem que quiser", "em": 2.3},
+        {"texto": "Atacou? *Acabou* o turno", "em": 3.9}
+      ]
+    },
+    {
+      "tipo": "mesa",
+      "duracao": 17.8,
+      "legendas": [{"texto": "Olha um turno *de verdade*", "em": 0.15}],
+      "estado": {
+        "turno": 3,
+        "quem_comecou": "eu",
+        "eu": {
+          "ativo": {"carta": "dreepy", "energias": ["energia-psiquica"], "entrou_no_turno": 1},
+          "banco": [],
+          "mao": ["dreepy", "dawn", "energia-psiquica"],
+          "deck": 45,
+          "premios": 6
+        },
+        "oponente": {
+          "ativo": {"carta": "iron-thorns", "energias": ["energia-eletrica"], "entrou_no_turno": 2},
+          "banco": [],
+          "mao": 6,
+          "deck": 45,
+          "premios": 6
+        }
+      },
+      "acoes": [
+        {"acao": "comprar", "carta": "energia-fogo", "legenda": "Primeiro você *compra* uma carta"},
+        {"acao": "jogar_no_banco", "carta": "dreepy", "legenda": "Pokémon *Básico* vai pro banco"},
+        {"acao": "ligar_energia", "carta": "energia-fogo", "alvo": "ativo", "legenda": "Liga *uma* energia por turno"},
+        {"acao": "jogar_treinador", "carta": "dawn", "legenda": "Joga *um* Apoiador por turno"},
+        {"acao": "buscar", "cartas": ["dreepy", "drakloak", "dragapult"], "legenda": "Este busca *três* Pokémon no deck"},
+        {"acao": "evoluir", "carta": "drakloak", "alvo": "ativo", "legenda": "*Evolui* quem já estava em jogo"},
+        {"acao": "atacar", "ataque": "Dragon Headbutt", "legenda": "Por último, *ataca*"},
+        {"acao": "fim_de_turno", "legenda": "*70* de dano e o turno acaba"}
+      ]
+    },
+    {
+      "tipo": "riscado",
+      "titulo": "erros de iniciante",
+      "duracao": 6,
+      "itens": ["Ligar duas energias", "Jogar dois Apoiadores", "Atacar e depois jogar carta"],
+      "legendas": [
+        {"texto": "Energia da mão: só *uma* por turno", "em": 0.5},
+        {"texto": "Apoiador: só *um* por turno", "em": 2.2},
+        {"texto": "Depois do ataque, *nada* mais", "em": 3.9}
+      ]
+    },
+    {
+      "tipo": "cta",
+      "duracao": 4.5,
+      "principal": "SALVA",
+      "complemento": "pra próxima partida",
+      "seguir": "segue @escolaumbratcg"
+    }
+  ]
+}

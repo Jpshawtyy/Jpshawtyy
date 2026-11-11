@@ -1,0 +1,61 @@
+{
+  "serie": "Biblioteca de componentes",
+  "numero": 0,
+  "titulo_capa": "demo",
+  "subtitulo_capa": "todos os componentes",
+  "capa": {"cartas": ["dreepy", "drakloak", "dragapult"]},
+  "cartas": {
+    "iron-thorns": {"nome": "Iron Thorns ex", "set": "Twilight Masquerade", "numero": 77},
+    "dreepy": {"nome": "Dreepy", "set": "Twilight Masquerade", "numero": 128},
+    "drakloak": {"nome": "Drakloak", "set": "Twilight Masquerade", "numero": 129},
+    "dragapult": {"nome": "Dragapult ex", "set": "Twilight Masquerade", "numero": 130}
+  },
+  "cenas": [
+    {"tipo": "gancho", "texto": "demo", "subtitulo": "um exemplo de cada cena", "duracao": 2},
+    {
+      "tipo": "carta_destaque",
+      "carta": "iron-thorns",
+      "pill": "META",
+      "duracao": 3.5,
+      "legendas": [{"texto": "Carta em *destaque*"}, {"texto": "com pill e *estrelinhas*", "em": 1.8}]
+    },
+    {
+      "tipo": "lista",
+      "titulo": "lista em passos",
+      "itens": ["Compra", {"texto": "Descarta", "detalhe": "detalhe opcional do passo"}, "Ataca"],
+      "duracao": 5,
+      "legendas": [{"texto": "Um item *de cada vez*"}, {"texto": "no tempo da *fala*", "em": 2.6}]
+    },
+    {
+      "tipo": "piramide",
+      "titulo": "níveis de campeonato",
+      "niveis": [
+        {"rotulo": "League Challenge", "detalhe": "na sua loja"},
+        {"rotulo": "League Cup", "detalhe": "na sua região"},
+        {"rotulo": "Regional", "detalhe": "dois dias"},
+        {"rotulo": "Internacional"},
+        {"rotulo": "Mundial", "destaque": true}
+      ],
+      "duracao": 6,
+      "legendas": [{"texto": "As barras *sobem* uma por vez"}, {"texto": "o topo fica em *dourado*", "em": 3.4}]
+    },
+    {
+      "tipo": "comparacao",
+      "titulo": "quem aguenta mais",
+      "pill_bons": "320 de HP",
+      "pill_ruins": "70 de HP",
+      "bons": ["dragapult"],
+      "ruins": ["dreepy"],
+      "duracao": 4,
+      "legendas": [{"texto": "Duas colunas: *bom* e ruim"}, {"texto": "as cartas entram de *cada lado*", "em": 2.1}]
+    },
+    {
+      "tipo": "riscado",
+      "titulo": "esquece isso",
+      "itens": ["Primeiro item riscado", "Segundo item, que ocupa duas linhas", "Terceiro item"],
+      "duracao": 6,
+      "legendas": [{"texto": "Aparece e é *riscado*"}, {"texto": "em *vermelho*", "em": 2.4}, {"texto": "um por vez", "em": 4.2}]
+    },
+    {"tipo": "cta", "duracao": 4.5}
+  ]
+}

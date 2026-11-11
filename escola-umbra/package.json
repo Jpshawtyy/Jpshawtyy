@@ -1,0 +1,33 @@
+{
+  "name": "escola-umbra-reels",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Template de Reels 9:16 da Escola Umbra (@escolaumbratcg): troque o roteiro JSON e gere uma nova aula.",
+  "scripts": {
+    "aula": "tsx scripts/aula.ts",
+    "previa": "tsx scripts/aula.ts --previa",
+    "validar": "tsx scripts/aula.ts --so-validar",
+    "quadros": "tsx scripts/quadros.ts",
+    "studio": "tsx scripts/studio.ts",
+    "logo": "tsx scripts/logo.ts",
+    "tipos": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@remotion/bundler": "^4.0.543",
+    "@remotion/cli": "^4.0.543",
+    "@remotion/google-fonts": "^4.0.543",
+    "@remotion/layout-utils": "^4.0.543",
+    "@remotion/renderer": "^4.0.543",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "remotion": "^4.0.543"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}
