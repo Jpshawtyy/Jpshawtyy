@@ -1,0 +1,424 @@
+{
+ "assinatura": "d7b8fe534acc448596e2bf3eda76b1f43db9623e",
+ "voz": "pt_BR-faber-medium",
+ "frases": [
+  {
+   "fala": "O meta do Pokémon.",
+   "duracao": 0.926349
+  },
+  {
+   "fala": "o que é, e quem manda hoje",
+   "duracao": 1.555057
+  },
+  {
+   "fala": "Meta são os decks mais usados",
+   "duracao": 1.657868
+  },
+  {
+   "fala": "e os que mais vencem torneio",
+   "duracao": 1.581678
+  },
+  {
+   "fala": "Do quinto ao segundo, tudo embolado",
+   "duracao": 1.793424
+  },
+  {
+   "fala": "No topo, sozinho: o Dragapult.",
+   "duracao": 1.892744
+  },
+  {
+   "fala": "Trinta e seis por cento dos pontos de torneio.",
+   "duracao": 2.167937
+  },
+  {
+   "fala": "Duzentos de dano por ataque,",
+   "duracao": 1.431202
+  },
+  {
+   "fala": "e mais sessenta distribuídos no banco.",
+   "duracao": 1.946984
+  },
+  {
+   "fala": "Mas ele não ganha tudo",
+   "duracao": 1.08644
+  },
+  {
+   "fala": "De cinco Regionais, ganhou dois",
+   "duracao": 1.742857
+  },
+  {
+   "fala": "Meta não é pra copiar o deck dos outros",
+   "duracao": 1.942676
+  },
+  {
+   "fala": "É pra saber contra quem você joga",
+   "duracao": 1.673197
+  },
+  {
+   "fala": "Salva pra próxima partida, e segue a Escola Umbra.",
+   "duracao": 2.468254
+  }
+ ],
+ "words": [
+  {
+   "palavra": "o",
+   "inicio": 1.136349,
+   "fim": 1.2548295333333335
+  },
+  {
+   "palavra": "que",
+   "inicio": 1.2548295333333335,
+   "fim": 1.4680944933333333
+  },
+  {
+   "palavra": "é,",
+   "inicio": 1.4680944933333333,
+   "fim": 1.6813594533333334
+  },
+  {
+   "palavra": "e",
+   "inicio": 1.6813594533333334,
+   "fim": 1.7998399866666666
+  },
+  {
+   "palavra": "quem",
+   "inicio": 1.7998399866666666,
+   "fim": 2.06049716
+  },
+  {
+   "palavra": "manda",
+   "inicio": 2.06049716,
+   "fim": 2.368546546666667
+  },
+  {
+   "palavra": "hoje",
+   "inicio": 2.368546546666667,
+   "fim": 2.62920372
+  },
+  {
+   "palavra": "Meta",
+   "inicio": 3.441406,
+   "fim": 3.70666488
+  },
+  {
+   "palavra": "são",
+   "inicio": 3.70666488,
+   "fim": 3.923694872727273
+  },
+  {
+   "palavra": "os",
+   "inicio": 3.923694872727273,
+   "fim": 4.092495978181819
+  },
+  {
+   "palavra": "decks",
+   "inicio": 4.092495978181819,
+   "fim": 4.405983745454545
+  },
+  {
+   "palavra": "mais",
+   "inicio": 4.405983745454545,
+   "fim": 4.671242625454545
+  },
+  {
+   "palavra": "usados",
+   "inicio": 4.671242625454545,
+   "fim": 5.03295928
+  },
+  {
+   "palavra": "e",
+   "inicio": 5.441406000000001,
+   "fim": 5.5600318500000006
+  },
+  {
+   "palavra": "os",
+   "inicio": 5.5600318500000006,
+   "fim": 5.726108040000001
+  },
+  {
+   "palavra": "que",
+   "inicio": 5.726108040000001,
+   "fim": 5.939634570000001
+  },
+  {
+   "palavra": "mais",
+   "inicio": 5.939634570000001,
+   "fim": 6.20061144
+  },
+  {
+   "palavra": "vencem",
+   "inicio": 6.20061144,
+   "fim": 6.55648899
+  },
+  {
+   "palavra": "torneio",
+   "inicio": 6.55648899,
+   "fim": 6.95981688
+  },
+  {
+   "palavra": "Do",
+   "inicio": 7.841406,
+   "fim": 7.992053616
+  },
+  {
+   "palavra": "quinto",
+   "inicio": 7.992053616,
+   "fim": 8.314869936000001
+  },
+  {
+   "palavra": "ao",
+   "inicio": 8.314869936000001,
+   "fim": 8.465517552
+  },
+  {
+   "palavra": "segundo,",
+   "inicio": 8.465517552,
+   "fim": 8.9174604
+  },
+  {
+   "palavra": "tudo",
+   "inicio": 8.9174604,
+   "fim": 9.154192368
+  },
+  {
+   "palavra": "embolado",
+   "inicio": 9.154192368,
+   "fim": 9.56309304
+  },
+  {
+   "palavra": "No",
+   "inicio": 10.341406,
+   "fim": 10.52055022084507
+  },
+  {
+   "palavra": "topo,",
+   "inicio": 10.52055022084507,
+   "fim": 10.904430694084507
+  },
+  {
+   "palavra": "sozinho:",
+   "inicio": 10.904430694084507,
+   "fim": 11.441863356619717
+  },
+  {
+   "palavra": "Dragapult",
+   "inicio": 11.441863356619717,
+   "fim": 11.979296019154928
+  },
+  {
+   "palavra": "ex",
+   "inicio": 11.979296019154928,
+   "fim": 12.15844024
+  },
+  {
+   "palavra": "36%",
+   "inicio": 12.741406000000001,
+   "fim": 13.006288484363637
+  },
+  {
+   "palavra": "dos",
+   "inicio": 13.006288484363637,
+   "fim": 13.346851678545455
+  },
+  {
+   "palavra": "pontos",
+   "inicio": 13.346851678545455,
+   "fim": 13.91445700218182
+  },
+  {
+   "palavra": "de",
+   "inicio": 13.91445700218182,
+   "fim": 14.179339486545455
+  },
+  {
+   "palavra": "torneio",
+   "inicio": 14.179339486545455,
+   "fim": 14.82262552
+  },
+  {
+   "palavra": "200",
+   "inicio": 15.659343,
+   "fim": 15.901805456470589
+  },
+  {
+   "palavra": "de",
+   "inicio": 15.901805456470589,
+   "fim": 16.090387367058824
+  },
+  {
+   "palavra": "dano",
+   "inicio": 16.090387367058824,
+   "fim": 16.386730369411765
+  },
+  {
+   "palavra": "por",
+   "inicio": 16.386730369411765,
+   "fim": 16.629192825882352
+  },
+  {
+   "palavra": "ataque",
+   "inicio": 16.629192825882352,
+   "fim": 17.033296919999998
+  },
+  {
+   "palavra": "e",
+   "inicio": 17.659343,
+   "fim": 17.792850474285714
+  },
+  {
+   "palavra": "mais",
+   "inicio": 17.792850474285714,
+   "fim": 18.086566917714286
+  },
+  {
+   "palavra": "60",
+   "inicio": 18.086566917714286,
+   "fim": 18.273477381714287
+  },
+  {
+   "palavra": "distribuídos",
+   "inicio": 18.273477381714287,
+   "fim": 18.99441774285714
+  },
+  {
+   "palavra": "no",
+   "inicio": 18.99441774285714,
+   "fim": 19.181328206857142
+  },
+  {
+   "palavra": "banco",
+   "inicio": 19.181328206857142,
+   "fim": 19.52844764
+  },
+  {
+   "palavra": "Mas",
+   "inicio": 20.256327,
+   "fim": 20.440382717647058
+  },
+  {
+   "palavra": "ele",
+   "inicio": 20.440382717647058,
+   "fim": 20.624438435294117
+  },
+  {
+   "palavra": "não",
+   "inicio": 20.624438435294117,
+   "fim": 20.808494152941176
+  },
+  {
+   "palavra": "ganha",
+   "inicio": 20.808494152941176,
+   "fim": 21.074352411764703
+  },
+  {
+   "palavra": "tudo",
+   "inicio": 21.074352411764703,
+   "fim": 21.2993094
+  },
+  {
+   "palavra": "De",
+   "inicio": 22.956327,
+   "fim": 23.121284732957747
+  },
+  {
+   "palavra": "cinco",
+   "inicio": 23.121284732957747,
+   "fim": 23.427634808450705
+  },
+  {
+   "palavra": "Regionais,",
+   "inicio": 23.427634808450705,
+   "fim": 24.016769569014087
+  },
+  {
+   "palavra": "ganhou",
+   "inicio": 24.016769569014087,
+   "fim": 24.370250425352115
+  },
+  {
+   "palavra": "dois",
+   "inicio": 24.370250425352115,
+   "fim": 24.629469720000003
+  },
+  {
+   "palavra": "Meta",
+   "inicio": 26.356327,
+   "fim": 26.586828781573033
+  },
+  {
+   "palavra": "não",
+   "inicio": 26.586828781573033,
+   "fim": 26.775421148314607
+  },
+  {
+   "palavra": "é",
+   "inicio": 26.775421148314607,
+   "fim": 26.88019468539326
+  },
+  {
+   "palavra": "pra",
+   "inicio": 26.88019468539326,
+   "fim": 27.06878705213483
+  },
+  {
+   "palavra": "copiar",
+   "inicio": 27.06878705213483,
+   "fim": 27.383107663370787
+  },
+  {
+   "palavra": "o",
+   "inicio": 27.383107663370787,
+   "fim": 27.48788120044944
+  },
+  {
+   "palavra": "deck",
+   "inicio": 27.48788120044944,
+   "fim": 27.718382982022472
+  },
+  {
+   "palavra": "dos",
+   "inicio": 27.718382982022472,
+   "fim": 27.906975348764046
+  },
+  {
+   "palavra": "outros",
+   "inicio": 27.906975348764046,
+   "fim": 28.22129596
+  },
+  {
+   "palavra": "É",
+   "inicio": 28.456327,
+   "fim": 28.563411608000003
+  },
+  {
+   "palavra": "pra",
+   "inicio": 28.563411608000003,
+   "fim": 28.7561639024
+  },
+  {
+   "palavra": "saber",
+   "inicio": 28.7561639024,
+   "fim": 29.0345838832
+  },
+  {
+   "palavra": "contra",
+   "inicio": 29.0345838832,
+   "fim": 29.355837707200003
+  },
+  {
+   "palavra": "quem",
+   "inicio": 29.355837707200003,
+   "fim": 29.5914238448
+  },
+  {
+   "palavra": "você",
+   "inicio": 29.5914238448,
+   "fim": 29.8270099824
+  },
+  {
+   "palavra": "joga",
+   "inicio": 29.8270099824,
+   "fim": 30.062596120000002
+  }
+ ]
+}

@@ -57,7 +57,7 @@ export const ListaPassos: React.FC<{cena: CenaLista; duracao: number}> = ({cena,
               display: 'flex',
               alignItems: 'center',
               gap: 34,
-              opacity: Math.min(1, e * 1.5) * (1 - 0.45 * recua),
+              opacity: Math.min(1, e * 1.5) * (1 - (item.destaque ? 0 : 0.45) * recua),
               transform: `translateX(${(1 - e) * 80}px)`,
             }}
           >
@@ -95,7 +95,7 @@ export const ListaPassos: React.FC<{cena: CenaLista; duracao: number}> = ({cena,
                 {item.texto}
               </div>
               {item.detalhe ? (
-                <div style={{fontFamily: FONTE_TEXTO, fontWeight: 400, fontSize: 36, lineHeight: 1.2, color: CORES.secundario, marginTop: 8}}>
+                <div style={{fontFamily: FONTE_TEXTO, fontWeight: item.destaque ? 500 : 400, fontSize: 36, lineHeight: 1.2, color: item.destaque ? CORES.ouro : CORES.secundario, marginTop: 8}}>
                   {item.detalhe}
                 </div>
               ) : null}

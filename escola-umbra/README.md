@@ -70,14 +70,14 @@ Opções úteis de `aula`: `--guias` (área segura por cima), `--sem-capa`, `--a
 | --- | --- |
 | `gancho` | `texto` (a palavra gigante), `subtitulo` |
 | `carta_destaque` | `carta`, `pill` ("META", "DE VOLTA"), `pill_cor` (`ouro` ou `vermelho`), `titulo` |
-| `lista` | `titulo`, `itens` (texto, ou `{"texto", "detalhe", "em"}`) |
-| `piramide` | `titulo`, `modo` (`piramide` ou `ranking`), `niveis` da base ao topo: `{"rotulo", "detalhe", "destaque"}` |
+| `lista` | `titulo`, `itens` (texto, ou `{"texto", "detalhe", "em", "destaque"}`; com `destaque` o item não apaga quando o próximo entra) |
+| `piramide` | `titulo`, `modo` (`piramide` ou `ranking`), `fonte` (linha pequena citando a origem dos dados), `niveis` da base ao topo: `{"rotulo", "detalhe", "destaque"}`. No `ranking`, cada nível aceita também `carta` (miniatura) e `valor` (preenche a barra na proporção), e o `detalhe` aparece grande à direita |
 | `comparacao` | `titulo`, `pill_bons`, `pill_ruins`, `bons` e `ruins` (cartas ou `{"texto"}`) |
 | `riscado` | `titulo`, `itens` (texto, ou `{"texto", "em", "riscar_em"}`) |
 | `mesa` | `estado` e `acoes` (abaixo) |
 | `cta` | `principal`, `complemento`, `seguir` |
 
-Exemplos de todas: `aulas/demo-componentes.json` e `aulas/demo-mesa.json`.
+Exemplos de todas: `aulas/demo-componentes.json` e `aulas/demo-mesa.json`. A `aulas/aula-02.json` mostra o ranking com dados de torneio.
 
 ### Mesa simulada
 

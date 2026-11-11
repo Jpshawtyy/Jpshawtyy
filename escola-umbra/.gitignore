@@ -5,8 +5,8 @@ public/_audio/
 # prévias, quadros de conferência e arquivos temporários
 out/*
 !out/.gitkeep
-!out/aula-01.mp4
-!out/aula-01-capa.png
+!out/aula-[0-9][0-9].mp4
+!out/aula-[0-9][0-9]-capa.png
 .cache/
 # narrador: ambiente Python, vozes baixadas e frases já geradas (refeitos sozinhos quando faltam)
 .narrador/

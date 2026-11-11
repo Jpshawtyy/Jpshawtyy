@@ -80,15 +80,23 @@ export type CenaCartaDestaque = CenaBase & {
   texto?: string;
 };
 
-export type ItemLista = string | {texto: string; detalhe?: string; em?: number};
+export type ItemLista = string | {texto: string; detalhe?: string; em?: number; destaque?: boolean}; // destaque: não apaga quando o próximo entra
 export type CenaLista = CenaBase & {tipo: 'lista'; titulo?: string; itens: ItemLista[]};
 
-export type NivelPiramide = {rotulo: string; detalhe?: string; destaque?: boolean; em?: number};
+export type NivelPiramide = {
+  rotulo: string;
+  detalhe?: string; // no ranking aparece grande à direita (ex.: "36,5%")
+  destaque?: boolean;
+  em?: number;
+  carta?: RefCarta; // só no ranking: miniatura da carta que representa o item
+  valor?: number; // só no ranking: a barra é preenchida na proporção deste número
+};
 export type CenaPiramide = CenaBase & {
   tipo: 'piramide';
   titulo?: string;
   modo?: 'piramide' | 'ranking';
   niveis: NivelPiramide[]; // do primeiro que sobe (a base) até o topo
+  fonte?: string; // linha pequena embaixo, para citar a origem dos dados
 };
 
 export type ItemComparacao = RefCarta | {carta?: RefCarta; texto?: string};

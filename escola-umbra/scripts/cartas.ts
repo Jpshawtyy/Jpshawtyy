@@ -211,6 +211,7 @@ export const coletarRefs = (roteiro: Roteiro): string[] => {
   (roteiro.capa?.cartas ?? []).forEach(add);
   for (const cena of roteiro.cenas) {
     if (cena.tipo === 'carta_destaque') add(cena.carta);
+    if (cena.tipo === 'piramide') cena.niveis.forEach((n) => add(n.carta));
     if (cena.tipo === 'comparacao') {
       for (const item of [...cena.bons, ...cena.ruins]) {
         if (typeof item === 'string') add(item);

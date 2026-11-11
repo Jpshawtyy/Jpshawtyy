@@ -25,7 +25,7 @@ const desenharCena = (cena: Cena, props: PropsAula, duracao: number, inicio: num
     case 'riscado':
       return <Riscado cena={cena} duracao={duracao} />;
     case 'piramide':
-      return <Piramide cena={cena} duracao={duracao} />;
+      return <Piramide cena={cena} duracao={duracao} cartas={props.cartas} />;
     case 'comparacao':
       return <Comparacao cena={cena} cartas={props.cartas} />;
     case 'carta_destaque':

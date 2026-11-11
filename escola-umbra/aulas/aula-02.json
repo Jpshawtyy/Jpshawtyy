@@ -1,0 +1,101 @@
+{
+  "serie": "Do zero ao campeonato",
+  "numero": 2,
+  "titulo_capa": "o meta",
+  "subtitulo_capa": "quem manda hoje",
+  "capa": {"cartas": ["ogerpon", "dragapult", "slowking"]},
+  "narracao": "auto",
+
+  "cartas": {
+    "dragapult": {"nome": "Dragapult ex", "set": "Twilight Masquerade", "numero": 130},
+    "ogerpon": {"nome": "Teal Mask Ogerpon ex", "set": "Twilight Masquerade", "numero": 25},
+    "slowking": {"nome": "Slowking", "set": "Stellar Crown", "numero": 58},
+    "zoroark": {"nome": "N's Zoroark ex", "set": "Journey Together", "numero": 98},
+    "alakazam": {"nome": "Alakazam", "set": "Mega Evolution", "numero": 56}
+  },
+
+  "cenas": [
+    {
+      "tipo": "gancho",
+      "texto": "o meta",
+      "subtitulo": "quem manda hoje",
+      "duracao": 2,
+      "falas": [{"texto": "O meta do Pokémon.", "em": 0.05}],
+      "legendas": [{"texto": "o que é, e quem *manda* hoje", "em": 0.9}]
+    },
+    {
+      "tipo": "lista",
+      "titulo": "o que é meta",
+      "duracao": 4.6,
+      "itens": ["Os decks mais usados", "E os que mais vencem"],
+      "legendas": [
+        {"texto": "Meta são os decks *mais usados*", "em": 0.5},
+        {"texto": "e os que mais *vencem* torneio", "em": 2.5}
+      ]
+    },
+    {
+      "tipo": "piramide",
+      "modo": "ranking",
+      "titulo": "outubro de 2026",
+      "fonte": "Limitless TCG · pontos de torneio · até 31/10/2026",
+      "duracao": 7.5,
+      "niveis": [
+        {"rotulo": "Alakazam", "detalhe": "6,4%", "valor": 6.39, "carta": "alakazam", "em": 0.35},
+        {"rotulo": "N's Zoroark ex", "detalhe": "7,3%", "valor": 7.29, "carta": "zoroark", "em": 0.75},
+        {"rotulo": "Slowking", "detalhe": "7,6%", "valor": 7.62, "carta": "slowking", "em": 1.15},
+        {"rotulo": "Basic Box", "detalhe": "8,9%", "valor": 8.86, "carta": "ogerpon", "em": 1.55},
+        {"rotulo": "Dragapult ex", "detalhe": "36,5%", "valor": 36.5, "carta": "dragapult", "destaque": true, "em": 2.6}
+      ],
+      "legendas": [
+        {"texto": "Do quinto ao segundo, tudo *embolado*", "em": 0.3},
+        {"texto": "No topo, sozinho: *Dragapult ex*", "em": 2.8, "fala": "No topo, sozinho: o Dragapult."},
+        {"texto": "*36%* dos pontos de torneio", "em": 5.2, "fala": "Trinta e seis por cento dos pontos de torneio."}
+      ]
+    },
+    {
+      "tipo": "carta_destaque",
+      "carta": "dragapult",
+      "pill": "META",
+      "titulo": "o deck a bater",
+      "duracao": 4.6,
+      "legendas": [
+        {"texto": "*200* de dano por ataque", "em": 0.5, "fala": "Duzentos de dano por ataque,"},
+        {"texto": "e mais *60* distribuídos no banco", "em": 2.5, "fala": "e mais sessenta distribuídos no banco."}
+      ]
+    },
+    {
+      "tipo": "lista",
+      "titulo": "Regionais de outubro",
+      "duracao": 6,
+      "itens": [
+        {"texto": "Recife", "detalhe": "Ogerpon Meganium", "em": 0.3},
+        {"texto": "Louisville", "detalhe": "Dragapult ex", "em": 0.9, "destaque": true},
+        {"texto": "Nice", "detalhe": "Basic Box", "em": 1.5},
+        {"texto": "Puebla", "detalhe": "Dragapult ex", "em": 2.1, "destaque": true},
+        {"texto": "Gdansk", "detalhe": "Slowking", "em": 2.7}
+      ],
+      "legendas": [
+        {"texto": "Mas ele *não* ganha tudo", "em": 0.4},
+        {"texto": "De cinco Regionais, ganhou *dois*", "em": 3.1}
+      ]
+    },
+    {
+      "tipo": "riscado",
+      "titulo": "pra que serve",
+      "duracao": 5,
+      "itens": [{"texto": "Copiar o deck do campeão", "em": 0.3, "riscar_em": 1.5}],
+      "legendas": [
+        {"texto": "Meta não é pra *copiar* o deck dos outros", "em": 0.5},
+        {"texto": "É pra saber *contra quem* você joga", "em": 2.6}
+      ]
+    },
+    {
+      "tipo": "cta",
+      "duracao": 4.5,
+      "principal": "SALVA",
+      "complemento": "pra próxima partida",
+      "seguir": "segue @escolaumbratcg",
+      "falas": [{"texto": "Salva pra próxima partida, e segue a Escola Umbra.", "em": 0.25}]
+    }
+  ]
+}
