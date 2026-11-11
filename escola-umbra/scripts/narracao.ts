@@ -199,7 +199,7 @@ export const narrar = async (
   } else {
     await prepararNarrador(config, log);
     log(`  narrador ${config.voz} falando ${falas.length} frases...`);
-    const faladas = falas.map((f) => falar(config, f));
+    const faladas = falar(config, falas);
     duracoes = faladas.map((f) => f.duracao);
     arquivos = faladas.map((f) => f.arquivo);
   }

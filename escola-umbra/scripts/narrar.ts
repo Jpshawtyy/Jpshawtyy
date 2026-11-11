@@ -10,7 +10,7 @@ garantirProxy();
 
 const {preparar, relatar} = await import('./preparar');
 const {RAIZ} = await import('./cartas');
-const {VOZES_PT_BR, falar, ffmpeg, lerConfigNarrador, prepararNarrador} = await import('./narrador');
+const {NARRADORES, falar, ffmpeg, lerConfigNarrador, prepararNarrador} = await import('./narrador');
 
 const args = process.argv.slice(2);
 try {
@@ -21,15 +21,16 @@ try {
     const atual = lerConfigNarrador();
     const pasta = path.join(RAIZ, 'out', 'amostras');
     fs.mkdirSync(pasta, {recursive: true});
-    for (const voz of VOZES_PT_BR) {
-      const config = {...atual, voz};
+    for (const n of NARRADORES) {
+      const config = {...atual, motor: n.motor, voz: n.voz};
       await prepararNarrador(config);
-      const {arquivo} = falar(config, texto);
-      const destino = path.join(pasta, `narrador-${voz.split('-')[1]}.mp3`);
+      const [{arquivo}] = falar(config, [texto]);
+      const destino = path.join(pasta, `narrador-${n.motor}-${n.voz.replace(/^pt_BR-|-medium$/g, '')}.mp3`);
       ffmpeg(['-i', arquivo, '-af', 'loudnorm=I=-16:TP=-1.5:LRA=11', '-b:a', '192k', destino]);
-      console.log(`  ${path.relative(process.cwd(), destino)}${voz === atual.voz ? '  (narrador atual)' : ''}`);
+      const marca = n.motor === atual.motor && n.voz === atual.voz ? '  <- narrador atual' : '';
+      console.log(`  ${path.relative(process.cwd(), destino)}  (${n.descricao}; "motor": "${n.motor}", "voz": "${n.voz}")${marca}`);
     }
-    console.log('\nPara trocar o narrador de todas as aulas, mude "voz" em narrador.json.');
+    console.log('\nPara trocar o narrador de todas as aulas, copie o "motor" e a "voz" escolhidos para narrador.json.');
     process.exit(0);
   }
 

@@ -127,7 +127,7 @@ Para o oponente agir, ponha `"lado": "oponente"` na ação ou use `fim_de_turno`
 O narrador é um só para todas as aulas e fica em `narrador.json`:
 
 ```json
-{"motor": "piper", "voz": "pt_BR-cadu-medium", "velocidade": 1.08}
+{"motor": "piper", "voz": "pt_BR-faber-medium", "velocidade": 1.08}
 ```
 
 Com `"narracao": "auto"` no roteiro, o comando `aula` faz tudo sozinho:
@@ -142,9 +142,18 @@ Ajustes no roteiro:
 - `"falas": [{"texto": "Salva pra próxima partida.", "em": 0.25}]` numa cena faz o narrador falar sem legenda na tela (bom para o gancho e o CTA).
 - Em `lista` e `riscado`, com uma legenda por item, cada item entra junto com a frase dele.
 
-O motor é o [Piper](https://github.com/OHF-Voice/piper1-gpl): voz neural que roda no seu computador, de graça e sem internet depois de instalado. Precisa de Python 3. Na primeira vez o comando instala o Piper e baixa a voz (uns 60 MB) na pasta `.narrador/`. Se o roteiro e o `narrador.json` não mudaram, a narração é reaproveitada e nada disso é necessário.
+Os dois motores são vozes neurais que rodam no seu computador, de graça e sem internet depois de instalados. Precisam de Python 3. Na primeira vez o comando instala o motor e baixa a voz na pasta `.narrador/`. Se o roteiro e o `narrador.json` não mudaram, a narração é reaproveitada e nada disso é necessário.
 
-Vozes em português do Brasil: `pt_BR-cadu-medium` (a atual, a mais clara nos testes), `pt_BR-faber-medium` e `pt_BR-jeff-medium`. Para ouvir as três: `npm run narrar -- --amostras`. Trocar a voz muda o narrador de todas as aulas dali em diante; as já renderizadas ficam como estão.
+| `motor` | `voz` | Como é | Download |
+| --- | --- | --- | --- |
+| `piper` | `pt_BR-faber-medium` | masculina (a atual) | 60 MB |
+| `piper` | `pt_BR-cadu-medium` | masculina | 60 MB |
+| `piper` | `pt_BR-jeff-medium` | masculina | 60 MB |
+| `kokoro` | `pf_dora` | feminina | 325 MB |
+| `kokoro` | `pm_alex` | masculina | 325 MB |
+| `kokoro` | `pm_santa` | masculina, mais grave | 325 MB |
+
+Para ouvir todas: `npm run narrar -- --amostras` (grava em `out/amostras/`). Trocar `motor` e `voz` muda o narrador de todas as aulas dali em diante; as já renderizadas ficam como estão. `velocidade` acima de 1 fala mais rápido.
 
 ### Narração gravada por você e música
 
