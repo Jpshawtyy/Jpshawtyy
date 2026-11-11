@@ -4,6 +4,7 @@
   "titulo_capa": "o turno",
   "subtitulo_capa": "como funciona",
   "capa": {"cartas": ["dreepy", "drakloak", "dragapult"]},
+  "narracao": "auto",
 
   "cartas": {
     "dreepy": {"nome": "Dreepy", "set": "Twilight Masquerade", "numero": 128},
@@ -22,7 +23,8 @@
       "texto": "o turno",
       "subtitulo": "como funciona",
       "duracao": 2,
-      "legendas": [{"texto": "em *30 segundos*", "em": 0.9}]
+      "falas": [{"texto": "O turno.", "em": 0.05}],
+      "legendas": [{"texto": "em *30 segundos*", "em": 0.9, "fala": "Em trinta segundos."}]
     },
     {
       "tipo": "lista",
@@ -30,8 +32,8 @@
       "duracao": 6,
       "itens": ["Compra uma carta", "Faz suas ações", "Ataca e o turno acaba"],
       "legendas": [
-        {"texto": "Todo turno começa *comprando*", "em": 0.7},
-        {"texto": "Ações: *quantas* der, na ordem que quiser", "em": 2.3},
+        {"texto": "Todo turno começa *comprando*", "em": 0.5},
+        {"texto": "Depois vêm as *ações*, na ordem que quiser", "em": 2.2},
         {"texto": "Atacou? *Acabou* o turno", "em": 3.9}
       ]
     },
@@ -65,7 +67,7 @@
         {"acao": "buscar", "cartas": ["dreepy", "drakloak", "dragapult"], "legenda": "Este busca *três* Pokémon no deck"},
         {"acao": "evoluir", "carta": "drakloak", "alvo": "ativo", "legenda": "*Evolui* quem já estava em jogo"},
         {"acao": "atacar", "ataque": "Dragon Headbutt", "legenda": "Por último, *ataca*"},
-        {"acao": "fim_de_turno", "legenda": "*70* de dano e o turno acaba"}
+        {"acao": "fim_de_turno", "legenda": "*70* de dano e o turno acaba", "fala": "Setenta de dano, e o turno acaba."}
       ]
     },
     {
@@ -73,10 +75,11 @@
       "titulo": "erros de iniciante",
       "duracao": 6,
       "itens": ["Ligar duas energias", "Jogar dois Apoiadores", "Atacar e depois jogar carta"],
+      "falas": [{"texto": "Erros de iniciante.", "em": 0.1}],
       "legendas": [
-        {"texto": "Energia da mão: só *uma* por turno", "em": 0.5},
-        {"texto": "Apoiador: só *um* por turno", "em": 2.2},
-        {"texto": "Depois do ataque, *nada* mais", "em": 3.9}
+        {"texto": "Energia da mão: só *uma* por turno", "em": 0.6},
+        {"texto": "Apoiador: só *um* por turno", "em": 2.3},
+        {"texto": "Depois do ataque, *nada* mais", "em": 4.0}
       ]
     },
     {
@@ -84,7 +87,8 @@
       "duracao": 4.5,
       "principal": "SALVA",
       "complemento": "pra próxima partida",
-      "seguir": "segue @escolaumbratcg"
+      "seguir": "segue @escolaumbratcg",
+      "falas": [{"texto": "Salva pra próxima partida, e segue a Escola Umbra.", "em": 0.25}]
     }
   ]
 }

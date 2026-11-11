@@ -1,0 +1,499 @@
+{
+ "assinatura": "1d9a871eef1b93176ea73a170fa8baa40f696da8",
+ "voz": "pt_BR-cadu-medium",
+ "frases": [
+  {
+   "fala": "O turno.",
+   "duracao": 0.70254
+  },
+  {
+   "fala": "Em trinta segundos.",
+   "duracao": 1.197188
+  },
+  {
+   "fala": "Todo turno começa comprando",
+   "duracao": 1.559048
+  },
+  {
+   "fala": "Depois vêm as ações, na ordem que quiser",
+   "duracao": 2.415601
+  },
+  {
+   "fala": "Atacou? Acabou o turno",
+   "duracao": 2.220136
+  },
+  {
+   "fala": "Olha um turno de verdade",
+   "duracao": 1.259002
+  },
+  {
+   "fala": "Primeiro você compra uma carta",
+   "duracao": 1.586939
+  },
+  {
+   "fala": "Pokémon Básico vai pro banco",
+   "duracao": 1.604807
+  },
+  {
+   "fala": "Liga uma energia por turno",
+   "duracao": 1.474376
+  },
+  {
+   "fala": "Joga um Apoiador por turno",
+   "duracao": 1.565125
+  },
+  {
+   "fala": "Este busca três Pokémon no deck",
+   "duracao": 1.719683
+  },
+  {
+   "fala": "Evolui quem já estava em jogo",
+   "duracao": 1.752336
+  },
+  {
+   "fala": "Por último, ataca",
+   "duracao": 1.22127
+  },
+  {
+   "fala": "Setenta de dano, e o turno acaba.",
+   "duracao": 2.276327
+  },
+  {
+   "fala": "Erros de iniciante.",
+   "duracao": 1.053243
+  },
+  {
+   "fala": "Energia da mão: só uma por turno",
+   "duracao": 2.090975
+  },
+  {
+   "fala": "Apoiador: só um por turno",
+   "duracao": 1.774467
+  },
+  {
+   "fala": "Depois do ataque, nada mais",
+   "duracao": 1.673651
+  },
+  {
+   "fala": "Salva pra próxima partida, e segue a Escola Umbra.",
+   "duracao": 3.109478
+  }
+ ],
+ "words": [
+  {
+   "palavra": "em",
+   "inicio": 0.9125400000000001,
+   "fim": 1.156331010909091
+  },
+  {
+   "palavra": "30",
+   "inicio": 1.156331010909091,
+   "fim": 1.4001220218181818
+  },
+  {
+   "palavra": "segundos",
+   "inicio": 1.4001220218181818,
+   "fim": 2.06184048
+  },
+  {
+   "palavra": "Todo",
+   "inicio": 2.859728,
+   "fim": 3.134120448
+  },
+  {
+   "palavra": "turno",
+   "inicio": 3.134120448,
+   "fim": 3.4584024319999997
+  },
+  {
+   "palavra": "começa",
+   "inicio": 3.4584024319999997,
+   "fim": 3.8325739519999997
+  },
+  {
+   "palavra": "comprando",
+   "inicio": 3.8325739519999997,
+   "fim": 4.35641408
+  },
+  {
+   "palavra": "Depois",
+   "inicio": 4.5787759999999995,
+   "fim": 4.956870069565217
+  },
+  {
+   "palavra": "vêm",
+   "inicio": 4.956870069565217,
+   "fim": 5.183726511304347
+  },
+  {
+   "palavra": "as",
+   "inicio": 5.183726511304347,
+   "fim": 5.360170410434782
+  },
+  {
+   "palavra": "ações,",
+   "inicio": 5.360170410434782,
+   "fim": 5.788677022608695
+  },
+  {
+   "palavra": "na",
+   "inicio": 5.788677022608695,
+   "fim": 5.96512092173913
+  },
+  {
+   "palavra": "ordem",
+   "inicio": 5.96512092173913,
+   "fim": 6.292802448695651
+  },
+  {
+   "palavra": "que",
+   "inicio": 6.292802448695651,
+   "fim": 6.519658890434782
+  },
+  {
+   "palavra": "quiser",
+   "inicio": 6.519658890434782,
+   "fim": 6.89775296
+  },
+  {
+   "palavra": "Atacou?",
+   "inicio": 7.154377,
+   "fim": 7.983227773333334
+  },
+  {
+   "palavra": "Acabou",
+   "inicio": 7.983227773333334,
+   "fim": 8.57526404
+  },
+  {
+   "palavra": "o",
+   "inicio": 8.57526404,
+   "fim": 8.772609462222222
+  },
+  {
+   "palavra": "turno",
+   "inicio": 8.772609462222222,
+   "fim": 9.28570756
+  },
+  {
+   "palavra": "Olha",
+   "inicio": 9.774513,
+   "fim": 10.016241384
+  },
+  {
+   "palavra": "um",
+   "inicio": 10.016241384,
+   "fim": 10.170068537454545
+  },
+  {
+   "palavra": "turno",
+   "inicio": 10.170068537454545,
+   "fim": 10.455747536727273
+  },
+  {
+   "palavra": "de",
+   "inicio": 10.455747536727273,
+   "fim": 10.60957469018182
+  },
+  {
+   "palavra": "verdade",
+   "inicio": 10.60957469018182,
+   "fim": 10.98315492
+  },
+  {
+   "palavra": "Primeiro",
+   "inicio": 11.193515,
+   "fim": 11.625541378507462
+  },
+  {
+   "palavra": "você",
+   "inicio": 11.625541378507462,
+   "fim": 11.875661913432836
+  },
+  {
+   "palavra": "compra",
+   "inicio": 11.875661913432836,
+   "fim": 12.216735370149253
+  },
+  {
+   "palavra": "uma",
+   "inicio": 12.216735370149253,
+   "fim": 12.421379444179104
+  },
+  {
+   "palavra": "carta",
+   "inicio": 12.421379444179104,
+   "fim": 12.71697644
+  },
+  {
+   "palavra": "Pokémon",
+   "inicio": 12.940454,
+   "fim": 13.356175432380953
+  },
+  {
+   "palavra": "Básico",
+   "inicio": 13.356175432380953,
+   "fim": 13.722988460952381
+  },
+  {
+   "palavra": "vai",
+   "inicio": 13.722988460952381,
+   "fim": 13.943076278095239
+  },
+  {
+   "palavra": "pro",
+   "inicio": 13.943076278095239,
+   "fim": 14.163164095238097
+  },
+  {
+   "palavra": "banco",
+   "inicio": 14.163164095238097,
+   "fim": 14.481068720000001
+  },
+  {
+   "palavra": "Liga",
+   "inicio": 14.705261,
+   "fim": 14.96914931457627
+  },
+  {
+   "palavra": "uma",
+   "inicio": 14.96914931457627,
+   "fim": 15.185057935593221
+  },
+  {
+   "palavra": "energia",
+   "inicio": 15.185057935593221,
+   "fim": 15.592885330847457
+  },
+  {
+   "palavra": "por",
+   "inicio": 15.592885330847457,
+   "fim": 15.808793951864407
+  },
+  {
+   "palavra": "turno",
+   "inicio": 15.808793951864407,
+   "fim": 16.12066196
+  },
+  {
+   "palavra": "Joga",
+   "inicio": 16.339637,
+   "fim": 16.619767847457627
+  },
+  {
+   "palavra": "um",
+   "inicio": 16.619767847457627,
+   "fim": 16.79803293220339
+  },
+  {
+   "palavra": "Apoiador",
+   "inicio": 16.79803293220339,
+   "fim": 17.281895305084745
+  },
+  {
+   "palavra": "por",
+   "inicio": 17.281895305084745,
+   "fim": 17.51109327118644
+  },
+  {
+   "palavra": "turno",
+   "inicio": 17.51109327118644,
+   "fim": 17.842157
+  },
+  {
+   "palavra": "Este",
+   "inicio": 18.639637,
+   "fim": 18.899063464
+  },
+  {
+   "palavra": "busca",
+   "inicio": 18.899063464,
+   "fim": 19.205658376000002
+  },
+  {
+   "palavra": "três",
+   "inicio": 19.205658376000002,
+   "fim": 19.46508484
+  },
+  {
+   "palavra": "Pokémon",
+   "inicio": 19.46508484,
+   "fim": 19.866016648
+  },
+  {
+   "palavra": "no",
+   "inicio": 19.866016648,
+   "fim": 20.031106216
+  },
+  {
+   "palavra": "deck",
+   "inicio": 20.031106216,
+   "fim": 20.290532680000002
+  },
+  {
+   "palavra": "Evolui",
+   "inicio": 21.339637,
+   "fim": 21.721964854545455
+  },
+  {
+   "palavra": "quem",
+   "inicio": 21.721964854545455,
+   "fim": 22.002338614545454
+  },
+  {
+   "palavra": "já",
+   "inicio": 22.002338614545454,
+   "fim": 22.18075828
+  },
+  {
+   "palavra": "estava",
+   "inicio": 22.18075828,
+   "fim": 22.563086134545454
+  },
+  {
+   "palavra": "em",
+   "inicio": 22.563086134545454,
+   "fim": 22.7415058
+  },
+  {
+   "palavra": "jogo",
+   "inicio": 22.7415058,
+   "fim": 23.02187956
+  },
+  {
+   "palavra": "Por",
+   "inicio": 23.251973,
+   "fim": 23.50933331219512
+  },
+  {
+   "palavra": "último,",
+   "inicio": 23.50933331219512,
+   "fim": 24.052649526829267
+  },
+  {
+   "palavra": "ataca",
+   "inicio": 24.052649526829267,
+   "fim": 24.4243922
+  },
+  {
+   "palavra": "70",
+   "inicio": 26.151973,
+   "fim": 26.402742138360658
+  },
+  {
+   "palavra": "de",
+   "inicio": 26.402742138360658,
+   "fim": 26.653511276721314
+  },
+  {
+   "palavra": "dano",
+   "inicio": 26.653511276721314,
+   "fim": 27.047577065573773
+  },
+  {
+   "palavra": "e",
+   "inicio": 27.047577065573773,
+   "fim": 27.226697878688526
+  },
+  {
+   "palavra": "o",
+   "inicio": 27.226697878688526,
+   "fim": 27.40581869180328
+  },
+  {
+   "palavra": "turno",
+   "inicio": 27.40581869180328,
+   "fim": 27.87153280590164
+  },
+  {
+   "palavra": "acaba",
+   "inicio": 27.87153280590164,
+   "fim": 28.337246920000002
+  },
+  {
+   "palavra": "Energia",
+   "inicio": 29.991543000000004,
+   "fim": 30.446539160000004
+  },
+  {
+   "palavra": "da",
+   "inicio": 30.446539160000004,
+   "fim": 30.633890520000005
+  },
+  {
+   "palavra": "mão:",
+   "inicio": 30.633890520000005,
+   "fim": 30.981828760000003
+  },
+  {
+   "palavra": "só",
+   "inicio": 30.981828760000003,
+   "fim": 31.169180120000004
+  },
+  {
+   "palavra": "uma",
+   "inicio": 31.169180120000004,
+   "fim": 31.410060440000002
+  },
+  {
+   "palavra": "por",
+   "inicio": 31.410060440000002,
+   "fim": 31.650940760000005
+  },
+  {
+   "palavra": "turno",
+   "inicio": 31.650940760000005,
+   "fim": 31.998879000000002
+  },
+  {
+   "palavra": "Apoiador:",
+   "inicio": 32.242518000000004,
+   "fim": 32.906589717966106
+  },
+  {
+   "palavra": "só",
+   "inicio": 32.906589717966106,
+   "fim": 33.10869850169492
+  },
+  {
+   "palavra": "um",
+   "inicio": 33.10869850169492,
+   "fim": 33.310807285423735
+  },
+  {
+   "palavra": "por",
+   "inicio": 33.310807285423735,
+   "fim": 33.57066143593221
+  },
+  {
+   "palavra": "turno",
+   "inicio": 33.57066143593221,
+   "fim": 33.94600632
+  },
+  {
+   "palavra": "Depois",
+   "inicio": 34.176985,
+   "fim": 34.559533800000004
+  },
+  {
+   "palavra": "do",
+   "inicio": 34.559533800000004,
+   "fim": 34.73805657333334
+  },
+  {
+   "palavra": "ataque,",
+   "inicio": 34.73805657333334,
+   "fim": 35.22261838666667
+  },
+  {
+   "palavra": "nada",
+   "inicio": 35.22261838666667,
+   "fim": 35.503154173333336
+  },
+  {
+   "palavra": "mais",
+   "inicio": 35.503154173333336,
+   "fim": 35.783689960000004
+  }
+ ]
+}

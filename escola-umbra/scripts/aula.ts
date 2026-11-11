@@ -24,7 +24,8 @@ if (!caminho) {
   --guias         desenha a área segura do Reels por cima (para conferência)
   --forcar        renderiza mesmo com erro de regra
   --sem-capa      não gera a capa PNG
-  --atualizar-cartas   ignora o cache e busca as cartas de novo na API`);
+  --atualizar-cartas   ignora o cache e busca as cartas de novo na API
+  --refazer-narracao   gera a narração de novo, mesmo sem mudança no roteiro`);
   process.exit(1);
 }
 
@@ -39,7 +40,7 @@ const barra = (rotulo: string) => {
 };
 
 try {
-  const p = await preparar(caminho, {guias: tem('--guias'), atualizarCartas: tem('--atualizar-cartas')});
+  const p = await preparar(caminho, {guias: tem('--guias'), atualizarCartas: tem('--atualizar-cartas'), refazerNarracao: tem('--refazer-narracao')});
   const temErro = relatar(p);
   if (temErro && !tem('--forcar')) {
     console.log('\nNada foi renderizado. Corrija o roteiro (ou use --forcar para renderizar assim mesmo).');

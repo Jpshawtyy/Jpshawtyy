@@ -9,7 +9,7 @@ import {Pill} from '../componentes/Pill';
 import {Estrela} from '../componentes/Estrela';
 import {LegendaDinamica} from '../componentes/Legenda';
 import {IconeEnergia} from './IconeEnergia';
-import type {CenaMesa, LadoId, Legenda, MapaCartas, PalavraFalada} from '../tipos';
+import type {CenaMesa, LadoId, Legenda, LegendaPronta, MapaCartas, PalavraFalada} from '../tipos';
 import {INTRO_MESA, marcadores, simularMesa, topo, type Estado, type Passo, type Simulacao} from './motor';
 import {ZONAS, alturaCarta, arranjar, poseAtivo, poseBanco, poseDeck, poseDescarte, poseFora, posePremio, type Arranjo, type Pose} from './layout';
 
@@ -138,7 +138,7 @@ const coreografia = (passo: Passo, j: number, a: Pose, b: Pose, chegaNaMesa: boo
 
 // ---------- legendas ----------
 
-export const legendasDaMesa = (cena: CenaMesa, sim: Simulacao, duracao: number): Required<Legenda>[] => {
+export const legendasDaMesa = (cena: CenaMesa, sim: Simulacao, duracao: number): LegendaPronta[] => {
   const brutas: Legenda[] = [
     ...(cena.legenda ? [{texto: cena.legenda, em: 0.2}] : []),
     ...(cena.legendas ?? []).map((l) => ({...l, em: l.em ?? 0.2})),

@@ -7,7 +7,7 @@ Feito em [Remotion](https://www.remotion.dev) (React + TypeScript). As cartas s�
 
 ## Começando
 
-Precisa de Node 22 ou mais novo e do `ffmpeg` (só para o comando `quadros`).
+Precisa de Node 22 ou mais novo. Para o narrador, Python 3. O `ffmpeg` só é obrigatório no comando `quadros`.
 
 ```bash
 cd escola-umbra
@@ -31,11 +31,13 @@ Sai em `out/`: `aula-01.mp4` e `aula-01-capa.png`.
 | `npm run aula -- <roteiro>` | MP4 final e capa PNG em `out/` |
 | `npm run previa -- <roteiro>` | MP4 pequeno e rápido (432x768) para conferir o ritmo |
 | `npm run validar -- <roteiro>` | Só confere roteiro, cartas e regras |
+| `npm run narrar -- <roteiro>` | Gera só a narração e mostra o tempo de cada frase |
+| `npm run narrar -- --amostras` | Grava uma amostra de cada voz em `out/amostras/`, para escolher o narrador |
 | `npm run quadros -- <roteiro> --guias` | Fotos dos pontos de transição em `out/quadros/`, com a área segura desenhada |
 | `npm run studio -- <roteiro>` | Abre o Remotion Studio para ver e ajustar ao vivo |
 | `npm run logo -- --forcar` | Refaz a logo provisória em `public/logo.png` |
 
-Opções úteis de `aula`: `--guias` (área segura por cima), `--sem-capa`, `--atualizar-cartas` (ignora o cache), `--forcar` (renderiza mesmo com regra quebrada).
+Opções úteis de `aula`: `--guias` (área segura por cima), `--sem-capa`, `--atualizar-cartas` (ignora o cache), `--refazer-narracao`, `--forcar` (renderiza mesmo com regra quebrada).
 
 ## O roteiro
 
@@ -46,7 +48,7 @@ Opções úteis de `aula`: `--guias` (área segura por cima), `--sem-capa`, `--a
   "titulo_capa": "a mão",
   "subtitulo_capa": "o que fazer com ela",
   "capa": {"cartas": ["dreepy", "drakloak"]},
-  "narracao": "audio/aula-02.mp3",
+  "narracao": "auto",
   "musica": "audio/trilha.mp3",
   "cartas": {
     "iron-thorns": {"nome": "Iron Thorns ex", "set": "Twilight Masquerade", "numero": 77},
@@ -120,13 +122,37 @@ Para o oponente agir, ponha `"lado": "oponente"` na ação ou use `fim_de_turno`
 
 **Regras conferidas** antes de renderizar: 1 energia da mão por turno, 1 Apoiador por turno, 1 Estádio por turno, recuar 1 vez por turno (e pagar o custo), não evoluir no turno em que o Pokémon entrou nem no primeiro turno do jogador, quem começa não ataca nem joga Apoiador no primeiro turno, nada depois do ataque, só Básico vai para o banco (máximo 5), a evolução precisa bater com a carta de baixo, o ataque precisa existir na carta e a energia precisa pagar o custo. Fraqueza e resistência entram na conta do dano. Se o roteiro quebrar regra, o comando lista os erros e não renderiza.
 
-### Narração e música
+### Narrador
 
-- `"narracao": "audio/aula-02.mp3"` toca em volume cheio. `"musica"` toca em loop a 15% (mude com `{"arquivo": "...", "volume": 0.1}`).
-- Para a legenda acompanhar a fala palavra por palavra, informe a transcrição com tempos:
+O narrador é um só para todas as aulas e fica em `narrador.json`:
+
+```json
+{"motor": "piper", "voz": "pt_BR-cadu-medium", "velocidade": 1.08}
+```
+
+Com `"narracao": "auto"` no roteiro, o comando `aula` faz tudo sozinho:
+
+1. O narrador fala cada legenda (o texto, sem os asteriscos), na ordem.
+2. Onde a frase não cabe no tempo da cena, a cena estica o que faltar e empurra o resto para a frente.
+3. A legenda entra palavra por palavra no tempo da fala, e a trilha sai em `audio/<aula>-narracao.mp3`.
+
+Ajustes no roteiro:
+
+- `"fala"` numa legenda ou ação da mesa troca o que é dito sem mudar o que aparece: `{"legenda": "*70* de dano", "fala": "Setenta de dano."}`. Escreva números por extenso na fala. `"fala": ""` deixa a legenda muda.
+- `"falas": [{"texto": "Salva pra próxima partida.", "em": 0.25}]` numa cena faz o narrador falar sem legenda na tela (bom para o gancho e o CTA).
+- Em `lista` e `riscado`, com uma legenda por item, cada item entra junto com a frase dele.
+
+O motor é o [Piper](https://github.com/OHF-Voice/piper1-gpl): voz neural que roda no seu computador, de graça e sem internet depois de instalado. Precisa de Python 3. Na primeira vez o comando instala o Piper e baixa a voz (uns 60 MB) na pasta `.narrador/`. Se o roteiro e o `narrador.json` não mudaram, a narração é reaproveitada e nada disso é necessário.
+
+Vozes em português do Brasil: `pt_BR-cadu-medium` (a atual, a mais clara nos testes), `pt_BR-faber-medium` e `pt_BR-jeff-medium`. Para ouvir as três: `npm run narrar -- --amostras`. Trocar a voz muda o narrador de todas as aulas dali em diante; as já renderizadas ficam como estão.
+
+### Narração gravada por você e música
+
+- `"narracao": "audio/aula-02.mp3"` usa um áudio seu em volume cheio. Nesse caso ponha `inicio` (segundo do vídeo) em cada cena para casar com a fala.
+- Para a legenda acompanhar a sua fala palavra por palavra, informe a transcrição com tempos:
   `"narracao": {"arquivo": "audio/aula-02.mp3", "transcricao": "audio/aula-02.json"}`.
   Aceita a saída do Whisper (`whisper audio.mp3 --language pt --word_timestamps True --output_format json`) ou uma lista `[{"palavra": "olha", "inicio": 0.5, "fim": 0.9}]`.
-- Sem transcrição, as palavras entram em sequência a partir do `em` de cada legenda.
+- `"musica": "audio/trilha.mp3"` toca em loop a 15% por baixo da narração (mude com `{"arquivo": "...", "volume": 0.1}`).
 
 ## Identidade visual
 
@@ -141,7 +167,9 @@ aulas/            roteiros (um JSON por aula)
 src/componentes/  gancho, carta em destaque, lista, pirâmide, comparação, riscado, legenda, CTA
 src/mesa/         motor de regras (motor.ts), posições (layout.ts) e animação (Mesa.tsx)
 src/Aula.tsx      junta as cenas; src/Capa.tsx é a capa
-scripts/          comandos (aula, quadros, studio, logo) e a busca de cartas
+scripts/          comandos (aula, narrar, quadros, studio, logo), a busca de cartas e o narrador
+narrador.json     a voz do narrador, a mesma para todas as aulas
+audio/            narrações geradas e os seus áudios
 public/cards/     cache das cartas (não vai para o git; baixa de novo quando falta)
 out/              vídeos e capas
 ```

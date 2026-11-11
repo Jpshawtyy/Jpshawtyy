@@ -7,6 +7,8 @@ import {RAIZ, resolverCartas, type Escolha} from './cartas';
 import {simularMesa, type Problema} from '../src/mesa/motor';
 import {completarLegendas, comoObjeto, legendasDaCena, planejar, temposDosItens, type Plano} from '../src/tempo';
 import {AREA} from '../src/tema';
+import {narrar, relatarNarracao, type Narracao} from './narracao';
+import {lerConfigNarrador} from './narrador';
 import {textoDaSerie} from '../src/componentes/Moldura';
 
 export type Achado = {nivel: 'erro' | 'aviso'; onde: string; mensagem: string};
@@ -18,6 +20,7 @@ export type Preparo = {
   plano: Plano;
   achados: Achado[];
   escolhas: Escolha[];
+  narracao?: Narracao; // quando o roteiro usa "narracao": "auto"
 };
 
 const TIPOS = ['gancho', 'carta_destaque', 'lista', 'piramide', 'comparacao', 'riscado', 'mesa', 'cta'];
@@ -127,7 +130,7 @@ const prepararAudio = (audio: Audio | undefined, pastaRoteiro: string, achados: 
 
 export const preparar = async (
   caminho: string,
-  opcoes: {guias?: boolean; atualizarCartas?: boolean; log?: (m: string) => void} = {},
+  opcoes: {guias?: boolean; atualizarCartas?: boolean; refazerNarracao?: boolean; log?: (m: string) => void} = {},
 ): Promise<Preparo> => {
   const log = opcoes.log ?? console.log;
   const arquivo = path.resolve(process.cwd(), caminho);
@@ -148,6 +151,14 @@ export const preparar = async (
   log('Cartas (Pokémon TCG API, com cache em public/cards/):');
   const {cartas, escolhas} = await resolverCartas(roteiro, {atualizar: opcoes.atualizarCartas, log});
   for (const e of escolhas) if (e.aviso) achados.push({nivel: 'aviso', onde: `carta "${e.ref}"`, mensagem: e.aviso});
+
+  // narrador automático: fala as legendas e ajusta o tempo das cenas ao áudio
+  let narracao: Narracao | undefined;
+  if (roteiro.narracao === 'auto') {
+    log('Narração:');
+    narracao = await narrar(roteiro, cartas, nome, {log, forcar: opcoes.refazerNarracao});
+    roteiro = narracao.roteiro;
+  }
 
   // regras da mesa
   const temposPorCena = new Map<number, number[]>();
@@ -187,22 +198,22 @@ export const preparar = async (
 
   // áudio
   const pastaRoteiro = path.dirname(arquivo);
-  const narracao = prepararAudio(roteiro.narracao, pastaRoteiro, achados, `${nome}-narracao`);
+  const audioNarracao = prepararAudio(roteiro.narracao, pastaRoteiro, achados, `${nome}-narracao`);
   const musica = prepararAudio(roteiro.musica, pastaRoteiro, achados, `${nome}-musica`);
 
   const props: PropsAula = {
     roteiro,
     cartas,
     audio: {
-      narracao: narracao?.arquivo,
-      narracaoVolume: narracao?.volume ?? 1,
+      narracao: audioNarracao?.arquivo,
+      narracaoVolume: audioNarracao?.volume ?? 1,
       musica: musica?.arquivo,
       musicaVolume: musica?.volume ?? 0.15,
     },
-    palavras: narracao?.palavras,
+    palavras: audioNarracao?.palavras,
     guias: opcoes.guias ?? false,
   };
-  return {nome, roteiro, props, plano, achados, escolhas};
+  return {nome, roteiro, props, plano, achados, escolhas, narracao};
 };
 
 // Imprime o relatório. Devolve true se há erro que impede o render.
@@ -214,6 +225,7 @@ export const relatar = (p: Preparo): boolean => {
       if (e.outras.length > 0) console.log(`      outras versões no Standard: ${e.outras.join('; ')}`);
     }
   }
+  if (p.narracao) relatarNarracao(p.narracao, lerConfigNarrador().voz);
   if (p.plano.cenas.length > 0) {
     console.log('\nCenas:');
     for (const c of p.plano.cenas) {

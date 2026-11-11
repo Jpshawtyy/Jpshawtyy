@@ -8,3 +8,5 @@ out/*
 !out/aula-01.mp4
 !out/aula-01-capa.png
 .cache/
+# narrador: ambiente Python, vozes baixadas e frases já geradas (refeitos sozinhos quando faltam)
+.narrador/

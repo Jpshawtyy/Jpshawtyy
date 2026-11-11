@@ -3,7 +3,7 @@ import {useCurrentFrame, useVideoConfig} from 'remotion';
 import {AREA, CORES, MOLDURA} from '../tema';
 import {FONTE_TEXTO} from '../fontes';
 import {MOLA_PULO, mola, trecho} from '../anim';
-import type {Legenda as LegendaTipo, PalavraFalada} from '../tipos';
+import type {LegendaPronta, PalavraFalada} from '../tipos';
 
 type Palavra = {texto: string; chave: boolean};
 
@@ -51,7 +51,7 @@ const temposDaFala = (palavras: Palavra[], falas: PalavraFalada[], de: number, a
 
 // Legenda dinâmica: grande, no centro-baixo, palavra por palavra, palavra-chave em dourado.
 export const LegendaDinamica: React.FC<{
-  legendas: Required<LegendaTipo>[];
+  legendas: LegendaPronta[];
   falas?: PalavraFalada[]; // transcrição, com tempos absolutos do vídeo
   inicioDaCena?: number; // segundo absoluto em que a cena começa
   tamanho?: number;

@@ -1,4 +1,4 @@
-import type {Cena, Legenda, MapaCartas, Roteiro} from './tipos';
+import type {Cena, Legenda, LegendaPronta, MapaCartas, Roteiro} from './tipos';
 import {VIDEO} from './tema';
 import {simularMesa} from './mesa/motor';
 
@@ -58,12 +58,12 @@ export const planejar = (roteiro: Roteiro, cartas: MapaCartas): Plano => {
 };
 
 // Junta "legenda" (atalho) e "legendas" e preenche os tempos que faltam.
-export const legendasDaCena = (cena: Cena, duracao: number): Required<Legenda>[] => {
+export const legendasDaCena = (cena: Cena, duracao: number): LegendaPronta[] => {
   const brutas: Legenda[] = [...(cena.legenda ? [{texto: cena.legenda}] : []), ...(cena.legendas ?? [])];
   return completarLegendas(brutas, duracao);
 };
 
-export const completarLegendas = (brutas: Legenda[], duracao: number): Required<Legenda>[] => {
+export const completarLegendas = (brutas: Legenda[], duracao: number): LegendaPronta[] => {
   if (brutas.length === 0) return [];
   const fatia = duracao / brutas.length;
   const comInicio = brutas.map((l, i) => ({...l, em: l.em ?? (i === 0 ? 0.25 : i * fatia)}));

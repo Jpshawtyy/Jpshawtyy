@@ -50,13 +50,21 @@ export type Legenda = {
   texto: string;
   em?: number; // segundo (dentro da cena) em que aparece
   ate?: number; // segundo em que some
+  fala?: string; // o que o narrador diz, se for diferente do texto ("" = não fala)
 };
+
+// Legenda com os tempos já preenchidos.
+export type LegendaPronta = {texto: string; em: number; ate: number};
+
+// Fala do narrador sem legenda na tela.
+export type Fala = {texto: string; em?: number};
 
 type CenaBase = {
   duracao?: number; // segundos
   inicio?: number; // segundo absoluto no vídeo (para sincronizar com a narração)
   legenda?: string; // atalho para uma legenda só
   legendas?: Legenda[];
+  falas?: Fala[]; // narração sem legenda (ex.: no CTA)
 };
 
 // ---------- Cenas ----------
@@ -140,6 +148,7 @@ type AcaoBase = {
   em?: number; // segundo (dentro da cena) em que a ação começa
   duracao?: number;
   legenda?: string;
+  fala?: string; // o que o narrador diz nesta ação, se for diferente da legenda ("" = não fala)
   lado?: LadoId; // quem faz a ação (padrão: quem está na vez)
 };
 
@@ -188,7 +197,7 @@ export type Roteiro = {
   titulo_capa: string;
   subtitulo_capa?: string;
   capa?: {cartas?: RefCarta[]};
-  narracao?: Audio;
+  narracao?: Audio; // caminho de um .mp3 seu, ou "auto" para o narrador gerar a fala das legendas
   musica?: Audio;
   cartas?: Record<string, DefCarta>;
   cenas: Cena[];
