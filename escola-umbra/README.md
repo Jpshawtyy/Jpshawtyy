@@ -127,7 +127,7 @@ Para o oponente agir, ponha `"lado": "oponente"` na ação ou use `fim_de_turno`
 O narrador é um só para todas as aulas e fica em `narrador.json`:
 
 ```json
-{"motor": "piper", "voz": "pt_BR-faber-medium", "velocidade": 1.08}
+{"motor": "kokoro", "voz": "pm_santa", "velocidade": 1.1}
 ```
 
 Com `"narracao": "auto"` no roteiro, o comando `aula` faz tudo sozinho:
@@ -146,12 +146,14 @@ Os dois motores são vozes neurais que rodam no seu computador, de graça e sem 
 
 | `motor` | `voz` | Como é | Download |
 | --- | --- | --- | --- |
-| `piper` | `pt_BR-faber-medium` | masculina (a atual) | 60 MB |
+| `piper` | `pt_BR-faber-medium` | masculina | 60 MB |
 | `piper` | `pt_BR-cadu-medium` | masculina | 60 MB |
 | `piper` | `pt_BR-jeff-medium` | masculina | 60 MB |
 | `kokoro` | `pf_dora` | feminina | 325 MB |
 | `kokoro` | `pm_alex` | masculina | 325 MB |
-| `kokoro` | `pm_santa` | masculina, mais grave | 325 MB |
+| `kokoro` | `pm_santa` | masculina, mais grave (a atual, a mais clara nos testes) | 325 MB |
+
+A narração passa por um tratamento de voz (corte de grave, presença, brilho, compressão leve e volume padronizado em -15 LUFS), definido em `tratamentoDaVoz` no `scripts/narrador.ts`.
 
 Para ouvir todas: `npm run narrar -- --amostras` (grava em `out/amostras/`). Trocar `motor` e `voz` muda o narrador de todas as aulas dali em diante; as já renderizadas ficam como estão. `velocidade` acima de 1 fala mais rápido.
 
@@ -165,7 +167,7 @@ Para ouvir todas: `npm run narrar -- --amostras` (grava em `out/amostras/`). Tro
 
 ## Identidade visual
 
-Tudo em `src/tema.ts`: cores, área segura (250 px em cima, 450 px embaixo, 160 px à direita) e o `@`. Fontes em `src/fontes.ts` (Unbounded 700, Inter 400/500, JetBrains Mono 500, via `@remotion/google-fonts`).
+Tudo em `src/tema.ts`: cores, área segura (250 px em cima, 450 px embaixo, 160 px à direita) e o `@`. A margem da esquerda é igual à da direita, para o conteúdo ficar centrado no meio real da tela; a mesa é encaixada nessa área por escala. Fontes em `src/fontes.ts` (Unbounded 700, Inter 400/500, JetBrains Mono 500, via `@remotion/google-fonts`).
 
 `public/logo.png` é uma logo provisória (lua + capelo) gerada pelo projeto. Se você tem a oficial, salve por cima com o mesmo nome (PNG quadrado, fundo transparente).
 

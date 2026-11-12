@@ -17,12 +17,12 @@ export const LuaCrescente: React.FC<{tamanho: number; cor?: string; opacidade?: 
 
 // Onde fica o centro dos anéis em cada cena (ele desliza de um ponto ao outro na troca de cena).
 const ANCORAS: [number, number][] = [
-  [495, 790],
-  [190, 520],
-  [495, 660],
-  [820, 600],
-  [495, 880],
-  [240, 1050],
+  [540, 790],
+  [230, 520],
+  [540, 660],
+  [850, 600],
+  [540, 880],
+  [280, 1050],
 ];
 
 const RAIOS = [150, 262, 384, 520, 668, 830, 1004, 1190];
@@ -83,7 +83,7 @@ export const Fundo: React.FC<{inicios: number[]; suave?: boolean}> = ({inicios, 
       {/* escurece as bordas para o centro respirar */}
       <AbsoluteFill
         style={{
-          background: 'radial-gradient(ellipse 75% 60% at 46% 45%, rgba(10,10,12,0) 40%, rgba(10,10,12,0.78) 100%)',
+          background: 'radial-gradient(ellipse 75% 60% at 50% 45%, rgba(10,10,12,0) 40%, rgba(10,10,12,0.78) 100%)',
         }}
       />
     </AbsoluteFill>

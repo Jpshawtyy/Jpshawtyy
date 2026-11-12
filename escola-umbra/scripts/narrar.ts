@@ -10,7 +10,7 @@ garantirProxy();
 
 const {preparar, relatar} = await import('./preparar');
 const {RAIZ} = await import('./cartas');
-const {NARRADORES, falar, ffmpeg, lerConfigNarrador, prepararNarrador} = await import('./narrador');
+const {NARRADORES, falar, ffmpeg, lerConfigNarrador, prepararNarrador, tratamentoDaVoz} = await import('./narrador');
 
 const args = process.argv.slice(2);
 try {
@@ -26,7 +26,7 @@ try {
       await prepararNarrador(config);
       const [{arquivo}] = falar(config, [texto]);
       const destino = path.join(pasta, `narrador-${n.motor}-${n.voz.replace(/^pt_BR-|-medium$/g, '')}.mp3`);
-      ffmpeg(['-i', arquivo, '-af', 'loudnorm=I=-16:TP=-1.5:LRA=11', '-b:a', '192k', destino]);
+      ffmpeg(['-i', arquivo, '-af', tratamentoDaVoz(atual.volume_lufs), '-b:a', '192k', destino]);
       const marca = n.motor === atual.motor && n.voz === atual.voz ? '  <- narrador atual' : '';
       console.log(`  ${path.relative(process.cwd(), destino)}  (${n.descricao}; "motor": "${n.motor}", "voz": "${n.voz}")${marca}`);
     }

@@ -1,6 +1,19 @@
-// Onde cada carta fica na mesa. Tudo dentro da área segura do Reels (x 70 a 920, y 250 a 1470).
+// Onde cada carta fica na mesa, em coordenadas da base da mesa (ver BASE_MESA).
 
 import {AREA, PROPORCAO_CARTA} from '../tema';
+
+// A mesa é desenhada numa base fixa (x de 70 a 920, centro em 495) e depois encaixada, por escala,
+// na área de conteúdo centrada da tela. Assim as medidas das zonas não dependem das margens.
+export const BASE_MESA = {x0: 70, x1: 920, cx: 495, largura: 850, topo: 316, fundo: 1262} as const;
+export const ENCAIXE_MESA = (() => {
+  const escala = Math.min(1, AREA.largura / BASE_MESA.largura);
+  const altura = (BASE_MESA.fundo - BASE_MESA.topo) * escala;
+  // centra na horizontal e, na vertical, entre a etiqueta da série e a legenda
+  const topoLivre = 312;
+  const fundoLivre = 1262;
+  const dy = topoLivre + (fundoLivre - topoLivre - altura) / 2 - BASE_MESA.topo;
+  return {escala, dx: AREA.cx - BASE_MESA.cx, dy};
+})();
 import {acaso} from '../anim';
 import type {LadoId} from '../tipos';
 import type {Estado, Poke} from './motor';
@@ -32,7 +45,7 @@ const pose = (x: number, y: number, w: number, extra: Partial<Pose> = {}): Pose 
 
 export const alturaCarta = (w: number) => w * PROPORCAO_CARTA;
 
-const CX = AREA.cx; // 495
+const CX = BASE_MESA.cx; // 495
 
 // Medidas de cada zona. "eu" embaixo e grande; "oponente" em cima e menor.
 export const ZONAS = {

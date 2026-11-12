@@ -56,7 +56,7 @@ export const LegendaDinamica: React.FC<{
   inicioDaCena?: number; // segundo absoluto em que a cena começa
   tamanho?: number;
   base?: number;
-}> = ({legendas, falas, inicioDaCena = 0, tamanho = 56, base = MOLDURA.legendaBase}) => {
+}> = ({legendas, falas, inicioDaCena = 0, tamanho = 52, base = MOLDURA.legendaBase}) => {
   const quadro = useCurrentFrame();
   const {fps} = useVideoConfig();
   const t = quadro / fps;

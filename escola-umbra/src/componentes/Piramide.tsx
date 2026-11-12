@@ -19,10 +19,13 @@ export const Piramide: React.FC<{cena: CenaPiramide; duracao: number; cartas: Ma
   const ranking = cena.modo === 'ranking';
 
   const base = cena.fonte ? 1206 : 1230; // linha de baixo da pilha
-  const topoLivre = cena.titulo ? 500 : 400;
+  const topoLivre = cena.titulo ? 470 : 360;
   const vao = 14;
   const altura = Math.min(132, (base - topoLivre - vao * (n - 1)) / n);
-  const larguraMax = AREA.largura - 30;
+  const larguraMax = AREA.largura - 10;
+  // a pilha fica centrada entre o título e a base
+  const sobra = base - topoLivre - (n * altura + (n - 1) * vao);
+  const chao = base - Math.max(0, sobra) / 2;
   const maior = Math.max(...cena.niveis.map((x) => x.valor ?? 0));
 
   return (
@@ -33,7 +36,7 @@ export const Piramide: React.FC<{cena: CenaPiramide; duracao: number; cartas: Ma
         const e = mola(quadro, fps, tempos[i], MOLA_PULO);
         // pirâmide: a base é a mais larga; ranking: todas iguais
         const largura = ranking ? larguraMax : larguraMax * (1 - (i / Math.max(1, n - 1)) * 0.52);
-        const y = base - (i + 1) * altura - i * vao;
+        const y = chao - (i + 1) * altura - i * vao;
         const destaque = nivel.destaque ?? false;
         const posicao = n - i; // no ranking, o topo é o 1º
         const dados = ranking && nivel.carta ? cartas[nivel.carta] : undefined;
@@ -143,7 +146,7 @@ export const Piramide: React.FC<{cena: CenaPiramide; duracao: number; cartas: Ma
             position: 'absolute',
             left: AREA.x0,
             width: AREA.largura,
-            top: base + 16,
+            top: chao + 16,
             textAlign: 'center',
             fontFamily: FONTE_MONO,
             fontWeight: 500,

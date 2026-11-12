@@ -28,11 +28,17 @@ const Coluna: React.FC<{
   // a carta ocupa o que der na coluna, sem passar da largura
   const larguraCarta = Math.min(largura - 40, (alturaLivre - vao * (n - 1)) / n / PROPORCAO_CARTA);
 
-  let y = topo + 110;
+  const alturas = itens.map((item) => {
+    const o = typeof item === 'string' ? {carta: item} : item;
+    return o.carta && cartas[o.carta] ? larguraCarta * PROPORCAO_CARTA : 150;
+  });
+  const conjunto = 110 + alturas.reduce((s, h) => s + h, 0) + vao * (n - 1);
+  const desce = Math.max(0, (1240 - topo - conjunto) / 2);
+  let y = topo + desce + 110;
   return (
     <>
-      <div style={{position: 'absolute', left: x, width: largura, top: topo, display: 'flex', justifyContent: 'center', transform: `scale(${pill})`, opacity: pill}}>
-        <Pill cor={lado === 'bons' ? 'ouro' : 'vermelho'} tamanho={38}>
+      <div style={{position: 'absolute', left: x, width: largura, top: topo + desce, display: 'flex', justifyContent: 'center', transform: `scale(${pill})`, opacity: pill}}>
+        <Pill cor={lado === 'bons' ? 'ouro' : 'vermelho'} tamanho={34}>
           {rotulo}
         </Pill>
       </div>
@@ -92,7 +98,7 @@ const Coluna: React.FC<{
 export const Comparacao: React.FC<{cena: CenaComparacao; cartas: MapaCartas}> = ({cena, cartas}) => {
   const quadro = useCurrentFrame();
   const {fps} = useVideoConfig();
-  const topo = cena.titulo ? 470 : 380;
+  const topo = cena.titulo ? 450 : 340;
   const vao = 30;
   const largura = (AREA.largura - vao) / 2;
   const divisor = mola(quadro, fps, 0.15);

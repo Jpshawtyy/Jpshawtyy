@@ -13,7 +13,8 @@ export const CORES = {
 export const VIDEO = {largura: 1080, altura: 1920, fps: 30} as const;
 
 // Área segura do Reels: nada importante nos 250px de cima, 450px de baixo e 160px da direita.
-export const SEGURA = {topo: 250, base: 450, direita: 160, esquerda: 70} as const;
+// A margem da esquerda é igual à da direita para o conteúdo ficar centrado no meio real da tela (x = 540).
+export const SEGURA = {topo: 250, base: 450, direita: 160, esquerda: 160} as const;
 
 // Retângulo onde o conteúdo pode ficar.
 export const AREA = {
@@ -21,8 +22,8 @@ export const AREA = {
   x1: VIDEO.largura - SEGURA.direita, // 920
   y0: SEGURA.topo, // 250
   y1: VIDEO.altura - SEGURA.base, // 1470
-  cx: (SEGURA.esquerda + VIDEO.largura - SEGURA.direita) / 2, // 495
-  largura: VIDEO.largura - SEGURA.direita - SEGURA.esquerda, // 850
+  cx: (SEGURA.esquerda + VIDEO.largura - SEGURA.direita) / 2, // 540
+  largura: VIDEO.largura - SEGURA.direita - SEGURA.esquerda, // 760
 } as const;
 
 // Linhas fixas da moldura.

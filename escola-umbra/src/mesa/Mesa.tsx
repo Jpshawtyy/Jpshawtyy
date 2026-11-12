@@ -1,6 +1,6 @@
 import React, {useMemo} from 'react';
 import {AbsoluteFill, interpolate, spring, useCurrentFrame, useVideoConfig} from 'remotion';
-import {AREA, CORES} from '../tema';
+import {CORES} from '../tema';
 import {FONTE_MONO, FONTE_TITULO} from '../fontes';
 import {MOLA_PULO, MOLA_SECA, misturar, mola, trecho} from '../anim';
 import {completarLegendas} from '../tempo';
@@ -11,7 +11,7 @@ import {LegendaDinamica} from '../componentes/Legenda';
 import {IconeEnergia} from './IconeEnergia';
 import type {CenaMesa, LadoId, Legenda, LegendaPronta, MapaCartas, PalavraFalada} from '../tipos';
 import {INTRO_MESA, marcadores, simularMesa, topo, type Estado, type Passo, type Simulacao} from './motor';
-import {ZONAS, alturaCarta, arranjar, poseAtivo, poseBanco, poseDeck, poseDescarte, poseFora, posePremio, type Arranjo, type Pose} from './layout';
+import {BASE_MESA, ENCAIXE_MESA, ZONAS, alturaCarta, arranjar, poseAtivo, poseBanco, poseDeck, poseDescarte, poseFora, posePremio, type Arranjo, type Pose} from './layout';
 
 // ---------- movimento ----------
 
@@ -232,8 +232,8 @@ const Tabuleiro: React.FC<{estado: Estado; deckEu: number; deckOponente: number;
   return (
     <>
       {/* divisor entre os dois lados, com a etiqueta de quem está jogando */}
-      <div style={{position: 'absolute', left: AREA.x0 + 6, width: AREA.largura - 12, top: ZONAS.divisorY, height: 1.5, background: 'rgba(232,184,74,0.22)'}} />
-      <div style={{position: 'absolute', right: 1080 - (AREA.x1 - 6), top: ZONAS.divisorY - 15}}>
+      <div style={{position: 'absolute', left: BASE_MESA.x0 + 6, width: BASE_MESA.largura - 12, top: ZONAS.divisorY, height: 1.5, background: 'rgba(232,184,74,0.22)'}} />
+      <div style={{position: 'absolute', right: 1080 - (BASE_MESA.x1 - 6), top: ZONAS.divisorY - 15}}>
         <Pill tamanho={15} contorno={estado.vez !== 'eu'}>
           {estado.vez === 'eu' ? 'seu turno' : 'turno do oponente'}
         </Pill>
@@ -261,14 +261,14 @@ const Tabuleiro: React.FC<{estado: Estado; deckEu: number; deckOponente: number;
       <Rotulo x={ze.descarte.x} y={baseDeck + 12}>
         DESCARTE
       </Rotulo>
-      <Rotulo x={AREA.x0 + 6} y={ze.mao.y - 8} alinhar="left">
+      <Rotulo x={BASE_MESA.x0 + 6} y={ze.mao.y - 8} alinhar="left">
         MÃO
       </Rotulo>
 
       {/* lado do oponente, menor */}
       {temOponente ? (
         <>
-          <Rotulo x={AREA.x0 + 6} y={ZONAS.oponente.banco.y - alturaCarta(ZONAS.oponente.banco.w) / 2 - 30} alinhar="left" tamanho={15}>
+          <Rotulo x={BASE_MESA.x0 + 6} y={ZONAS.oponente.banco.y - alturaCarta(ZONAS.oponente.banco.w) / 2 - 30} alinhar="left" tamanho={15}>
             OPONENTE
           </Rotulo>
           <Espaco pose={poseAtivo('oponente')} forte />
@@ -443,6 +443,12 @@ export const Mesa: React.FC<{
 
   return (
     <AbsoluteFill>
+      <AbsoluteFill
+        style={{
+          transformOrigin: `${BASE_MESA.cx}px ${BASE_MESA.topo}px`,
+          transform: `translate(${ENCAIXE_MESA.dx}px, ${ENCAIXE_MESA.dy}px) scale(${ENCAIXE_MESA.escala})`,
+        }}
+      >
       <AbsoluteFill style={{opacity: surge}}>
         <Tabuleiro estado={depois} deckEu={deckDe('eu')} deckOponente={deckDe('oponente')} temOponente={temOponente} />
       </AbsoluteFill>
@@ -535,13 +541,13 @@ export const Mesa: React.FC<{
       {/* treinador: escurece a mesa enquanto a carta está grande no centro */}
       {passo?.tipo === 'jogar_treinador' ? (
         <>
-          <AbsoluteFill style={{background: CORES.fundo, opacity: trecho(tl, [0.1, 0.35], [0, 0.66]) * trecho(tl, [1.42, 1.72], [1, 0]), zIndex: 350}} />
+          <div style={{position: 'absolute', inset: -600, background: CORES.fundo, opacity: trecho(tl, [0.1, 0.35], [0, 0.66]) * trecho(tl, [1.42, 1.72], [1, 0]), zIndex: 350}} />
           {passo.rotuloTreinador && tl > 0.28 && tl < 1.5 ? (
             <div
               style={{
                 position: 'absolute',
-                left: AREA.x0,
-                width: AREA.largura,
+                left: BASE_MESA.x0,
+                width: BASE_MESA.largura,
                 top: ZONAS.centro.y - alturaCarta(ZONAS.centro.w) / 2 - 78,
                 display: 'flex',
                 justifyContent: 'center',
@@ -664,8 +670,8 @@ export const Mesa: React.FC<{
             <div
               style={{
                 position: 'absolute',
-                left: AREA.x0,
-                width: AREA.largura,
+                left: BASE_MESA.x0,
+                width: BASE_MESA.largura,
                 top: ZONAS.divisorY - 34,
                 display: 'flex',
                 justifyContent: 'center',
@@ -756,8 +762,8 @@ export const Mesa: React.FC<{
         <div
           style={{
             position: 'absolute',
-            left: AREA.x0,
-            width: AREA.largura,
+            left: BASE_MESA.x0,
+            width: BASE_MESA.largura,
             top: ZONAS.eu.ativo.y - 40,
             display: 'flex',
             justifyContent: 'center',
@@ -770,8 +776,10 @@ export const Mesa: React.FC<{
         </div>
       ) : null}
 
+      </AbsoluteFill>
+
       <AbsoluteFill style={{zIndex: 2000}}>
-        <LegendaDinamica legendas={legendas} falas={falas} inicioDaCena={inicioDaCena} tamanho={54} />
+        <LegendaDinamica legendas={legendas} falas={falas} inicioDaCena={inicioDaCena} tamanho={50} />
       </AbsoluteFill>
     </AbsoluteFill>
   );

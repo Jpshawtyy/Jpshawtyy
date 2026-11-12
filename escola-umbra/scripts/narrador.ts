@@ -13,7 +13,7 @@ export type ConfigNarrador = {
   voz: string; // kokoro: "pf_dora", "pm_alex", "pm_santa"; piper: "pt_BR-cadu-medium"...
   velocidade: number; // 1 = normal; 1.1 = 10% mais rápido
   variacao?: number; // só no piper: quanto a entonação varia
-  volume_lufs?: number; // volume final da narração (padrão -16, o usual em redes sociais)
+  volume_lufs?: number; // volume final da narração (padrão -15, o usual em Reels)
 };
 
 const ARQUIVO_CONFIG = path.join(RAIZ, 'narrador.json');
@@ -63,6 +63,17 @@ const rodar = (programa: 'ffmpeg' | 'ffprobe', args: string[]): string => {
 };
 
 export const ffmpeg = (args: string[]) => rodar('ffmpeg', ['-y', '-loglevel', 'error', ...args]);
+
+// Tratamento da voz: tira o grave que embola, dá presença e brilho (a voz sintética vem abafada),
+// segura os picos e padroniza o volume. "lufs" é o volume final (-15 é o usual em Reels).
+export const tratamentoDaVoz = (lufs = -15) =>
+  [
+    'highpass=f=75',
+    'equalizer=f=3000:t=q:w=1.2:g=2.5',
+    'treble=g=3:f=7500',
+    'acompressor=threshold=-20dB:ratio=2.5:attack=8:release=140:makeup=1.5',
+    `loudnorm=I=${lufs}:TP=-1.5:LRA=11`,
+  ].join(',');
 
 export const duracaoDoAudio = (arquivo: string): number =>
   Number(rodar('ffprobe', ['-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', arquivo]).trim());

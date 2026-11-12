@@ -9,7 +9,7 @@ import {comoObjeto, completarLegendas, planejar, temposDosItens} from '../src/te
 import {simularMesa} from '../src/mesa/motor';
 import {quebrarPalavras} from '../src/componentes/Legenda';
 import {RAIZ} from './cartas';
-import {ErroNarrador, falar, ffmpeg, lerConfigNarrador, prepararNarrador, type ConfigNarrador} from './narrador';
+import {ErroNarrador, falar, ffmpeg, lerConfigNarrador, prepararNarrador, tratamentoDaVoz, type ConfigNarrador} from './narrador';
 
 const PAUSA = 0.16; // respiro entre uma frase e a próxima
 const FOLGA_FIM = 0.25; // respiro entre a última frase e a troca de cena
@@ -183,7 +183,7 @@ export const narrar = async (
   if (falas.length === 0) throw new ErroNarrador('O roteiro não tem nenhuma legenda nem "falas" para o narrador dizer.');
 
   // Se o roteiro e o narrador não mudaram, reaproveita o áudio (não precisa nem do Piper instalado).
-  const assinatura = crypto.createHash('sha1').update(JSON.stringify([roteiro, config])).digest('hex');
+  const assinatura = crypto.createHash('sha1').update(JSON.stringify([roteiro, config, tratamentoDaVoz(config.volume_lufs)])).digest('hex');
   let manifesto: Manifesto | null = null;
   try {
     const lido = JSON.parse(fs.readFileSync(arquivoJson, 'utf8')) as Manifesto;
@@ -221,7 +221,7 @@ export const narrar = async (
     const entradas = arquivos.flatMap((a) => ['-i', a]);
     const atrasos = frases.map((f, i) => `[${i}:a]adelay=${Math.round(f.inicio * 1000)}:all=1[a${i}]`).join(';');
     const mistura = `${frases.map((_, i) => `[a${i}]`).join('')}amix=inputs=${frases.length}:normalize=0:dropout_transition=0`;
-    const final = `apad=whole_dur=${plano.totalSegundos.toFixed(3)},loudnorm=I=${config.volume_lufs ?? -16}:TP=-1.5:LRA=11,aresample=44100`;
+    const final = `apad=whole_dur=${plano.totalSegundos.toFixed(3)},${tratamentoDaVoz(config.volume_lufs)},aresample=44100`;
     ffmpeg([...entradas, '-filter_complex', `${atrasos};${mistura},${final}[saida]`, '-map', '[saida]', '-ac', '2', '-b:a', '192k', arquivoMp3]);
     const novo: Manifesto = {assinatura, voz: config.voz, frases: frases.map((f) => ({fala: f.fala, duracao: f.duracao})), words};
     fs.writeFileSync(arquivoJson, JSON.stringify(novo, null, 1));
