@@ -1,0 +1,464 @@
+{
+ "assinatura": "e36f39c58f6ce46e48be80049f5748de7c5207dd",
+ "voz": "pm_santa",
+ "frases": [
+  {
+   "fala": "Da loja ao Mundial.",
+   "duracao": 1.303175
+  },
+  {
+   "fala": "os cinco níveis de campeonato",
+   "duracao": 1.801088
+  },
+  {
+   "fala": "Começa na sua loja: quinze pontos pro campeão.",
+   "duracao": 2.613084
+  },
+  {
+   "fala": "Um torneio maior, ainda na loja: cinquenta.",
+   "duracao": 2.2861
+  },
+  {
+   "fala": "O Regional: duzentos. O de Recife teve mais de mil jogadores.",
+   "duracao": 3.586145
+  },
+  {
+   "fala": "O Internacional: quinhentos.",
+   "duracao": 1.67517
+  },
+  {
+   "fala": "E no topo, o Mundial: em dois mil e vinte e sete, em Singapura.",
+   "duracao": 3.535351
+  },
+  {
+   "fala": "O Internacional é em São Paulo, dia vinte de novembro.",
+   "duracao": 3.066599
+  },
+  {
+   "fala": "E em março tem Regional no Rio",
+   "duracao": 1.84805
+  },
+  {
+   "fala": "Cada torneio dá pontos",
+   "duracao": 1.486349
+  },
+  {
+   "fala": "que somam a temporada toda",
+   "duracao": 1.536168
+  },
+  {
+   "fala": "Quem soma mais é convidado pro Mundial",
+   "duracao": 2.29381
+  },
+  {
+   "fala": "O primeiro nível é aberto pra qualquer jogador",
+   "duracao": 2.582585
+  },
+  {
+   "fala": "Salva pro seu primeiro torneio, e segue a Escola Umbra.",
+   "duracao": 2.981474
+  }
+ ],
+ "words": [
+  {
+   "palavra": "os",
+   "inicio": 1.513175,
+   "fim": 1.699379790153846
+  },
+  {
+   "palavra": "cinco",
+   "inicio": 1.699379790153846,
+   "fim": 2.045188686153846
+  },
+  {
+   "palavra": "níveis",
+   "inicio": 2.045188686153846,
+   "fim": 2.4441989507692305
+  },
+  {
+   "palavra": "de",
+   "inicio": 2.4441989507692305,
+   "fim": 2.630403740923077
+  },
+  {
+   "palavra": "campeonato",
+   "inicio": 2.630403740923077,
+   "fim": 3.24221948
+  },
+  {
+   "palavra": "Começa",
+   "inicio": 3.9642629999999994,
+   "fim": 4.3645652297872335
+  },
+  {
+   "palavra": "na",
+   "inicio": 4.3645652297872335,
+   "fim": 4.551372937021276
+  },
+  {
+   "palavra": "sua",
+   "inicio": 4.551372937021276,
+   "fim": 4.791554274893617
+  },
+  {
+   "palavra": "loja:",
+   "inicio": 4.791554274893617,
+   "fim": 5.1918565046808505
+  },
+  {
+   "palavra": "15",
+   "inicio": 5.1918565046808505,
+   "fim": 5.378664211914893
+  },
+  {
+   "palavra": "pontos",
+   "inicio": 5.378664211914893,
+   "fim": 5.778966441702127
+  },
+  {
+   "palavra": "pro",
+   "inicio": 5.778966441702127,
+   "fim": 6.0191477795744674
+  },
+  {
+   "palavra": "campeão",
+   "inicio": 6.0191477795744674,
+   "fim": 6.47282364
+  },
+  {
+   "palavra": "Um",
+   "inicio": 6.737347,
+   "fim": 6.970113545454545
+  },
+  {
+   "palavra": "torneio",
+   "inicio": 6.970113545454545,
+   "fim": 7.535403727272727
+  },
+  {
+   "palavra": "maior",
+   "inicio": 7.535403727272727,
+   "fim": 7.967684454545454
+  },
+  {
+   "palavra": "na",
+   "inicio": 7.967684454545454,
+   "fim": 8.200451
+  },
+  {
+   "palavra": "loja:",
+   "inicio": 8.200451,
+   "fim": 8.699236454545455
+  },
+  {
+   "palavra": "50",
+   "inicio": 8.699236454545455,
+   "fim": 8.932003
+  },
+  {
+   "palavra": "Regional:",
+   "inicio": 9.183447,
+   "fim": 9.822012174193548
+  },
+  {
+   "palavra": "200.",
+   "inicio": 9.822012174193548,
+   "fim": 10.238467722580644
+  },
+  {
+   "palavra": "O",
+   "inicio": 10.238467722580644,
+   "fim": 10.377286238709676
+  },
+  {
+   "palavra": "de",
+   "inicio": 10.377286238709676,
+   "fim": 10.57163216129032
+  },
+  {
+   "palavra": "Recife",
+   "inicio": 10.57163216129032,
+   "fim": 10.98808770967742
+  },
+  {
+   "palavra": "teve",
+   "inicio": 10.98808770967742,
+   "fim": 11.29348844516129
+  },
+  {
+   "palavra": "mais",
+   "inicio": 11.29348844516129,
+   "fim": 11.59888918064516
+  },
+  {
+   "palavra": "de",
+   "inicio": 11.59888918064516,
+   "fim": 11.793235103225806
+  },
+  {
+   "palavra": "mil",
+   "inicio": 11.793235103225806,
+   "fim": 12.043108432258064
+  },
+  {
+   "palavra": "jogadores",
+   "inicio": 12.043108432258064,
+   "fim": 12.626146199999999
+  },
+  {
+   "palavra": "Internacional:",
+   "inicio": 12.929592,
+   "fim": 14.1931488
+  },
+  {
+   "palavra": "500",
+   "inicio": 14.1931488,
+   "fim": 14.5377552
+  },
+  {
+   "palavra": "No",
+   "inicio": 14.764762000000001,
+   "fim": 15.00718606857143
+  },
+  {
+   "palavra": "topo,",
+   "inicio": 15.00718606857143,
+   "fim": 15.526666215510206
+  },
+  {
+   "palavra": "o",
+   "inicio": 15.526666215510206,
+   "fim": 15.699826264489797
+  },
+  {
+   "palavra": "Mundial:",
+   "inicio": 15.699826264489797,
+   "fim": 16.427098470204083
+  },
+  {
+   "palavra": "em",
+   "inicio": 16.427098470204083,
+   "fim": 16.66952253877551
+  },
+  {
+   "palavra": "2027,",
+   "inicio": 16.66952253877551,
+   "fim": 17.189002685714286
+  },
+  {
+   "palavra": "em",
+   "inicio": 17.189002685714286,
+   "fim": 17.431426754285717
+  },
+  {
+   "palavra": "Singapura",
+   "inicio": 17.431426754285717,
+   "fim": 18.158698960000002
+  },
+  {
+   "palavra": "O",
+   "inicio": 19.050113,
+   "fim": 19.179232957894737
+  },
+  {
+   "palavra": "Internacional",
+   "inicio": 19.179232957894737,
+   "fim": 19.92812871368421
+  },
+  {
+   "palavra": "é",
+   "inicio": 19.92812871368421,
+   "fim": 20.057248671578947
+  },
+  {
+   "palavra": "em",
+   "inicio": 20.057248671578947,
+   "fim": 20.23801661263158
+  },
+  {
+   "palavra": "São",
+   "inicio": 20.23801661263158,
+   "fim": 20.470432536842104
+  },
+  {
+   "palavra": "Paulo,",
+   "inicio": 20.470432536842104,
+   "fim": 20.90944039368421
+  },
+  {
+   "palavra": "dia",
+   "inicio": 20.90944039368421,
+   "fim": 21.141856317894735
+  },
+  {
+   "palavra": "20",
+   "inicio": 21.141856317894735,
+   "fim": 21.322624258947368
+  },
+  {
+   "palavra": "de",
+   "inicio": 21.322624258947368,
+   "fim": 21.5033922
+  },
+  {
+   "palavra": "novembro",
+   "inicio": 21.5033922,
+   "fim": 21.99404804
+  },
+  {
+   "palavra": "E",
+   "inicio": 22.276712,
+   "fim": 22.405272
+  },
+  {
+   "palavra": "em",
+   "inicio": 22.405272,
+   "fim": 22.585256
+  },
+  {
+   "palavra": "março",
+   "inicio": 22.585256,
+   "fim": 22.919512
+  },
+  {
+   "palavra": "tem",
+   "inicio": 22.919512,
+   "fim": 23.15092
+  },
+  {
+   "palavra": "Regional",
+   "inicio": 23.15092,
+   "fim": 23.639448
+  },
+  {
+   "palavra": "no",
+   "inicio": 23.639448,
+   "fim": 23.819432
+  },
+  {
+   "palavra": "Rio",
+   "inicio": 23.819432,
+   "fim": 24.05084
+  },
+  {
+   "palavra": "Cada",
+   "inicio": 25.376711999999998,
+   "fim": 25.690628908799997
+  },
+  {
+   "palavra": "torneio",
+   "inicio": 25.690628908799997,
+   "fim": 26.175773222399997
+  },
+  {
+   "palavra": "dá",
+   "inicio": 26.175773222399997,
+   "fim": 26.375538527999996
+  },
+  {
+   "palavra": "pontos",
+   "inicio": 26.375538527999996,
+   "fim": 26.803607039999996
+  },
+  {
+   "palavra": "que",
+   "inicio": 27.176712,
+   "fim": 27.401669483389828
+  },
+  {
+   "palavra": "somam",
+   "inicio": 27.401669483389828,
+   "fim": 27.726608070508473
+  },
+  {
+   "palavra": "a",
+   "inicio": 27.726608070508473,
+   "fim": 27.85158445016949
+  },
+  {
+   "palavra": "temporada",
+   "inicio": 27.85158445016949,
+   "fim": 28.376485244745762
+  },
+  {
+   "palavra": "toda",
+   "inicio": 28.376485244745762,
+   "fim": 28.65143328
+  },
+  {
+   "palavra": "Quem",
+   "inicio": 29.076711999999997,
+   "fim": 29.361684159999996
+  },
+  {
+   "palavra": "soma",
+   "inicio": 29.361684159999996,
+   "fim": 29.646656319999998
+  },
+  {
+   "palavra": "mais",
+   "inicio": 29.646656319999998,
+   "fim": 29.931628479999997
+  },
+  {
+   "palavra": "é",
+   "inicio": 29.931628479999997,
+   "fim": 30.061161279999997
+  },
+  {
+   "palavra": "convidado",
+   "inicio": 30.061161279999997,
+   "fim": 30.605199039999995
+  },
+  {
+   "palavra": "pro",
+   "inicio": 30.605199039999995,
+   "fim": 30.838358079999995
+  },
+  {
+   "palavra": "Mundial",
+   "inicio": 30.838358079999995,
+   "fim": 31.278769599999997
+  },
+  {
+   "palavra": "O",
+   "inicio": 32.220521999999995,
+   "fim": 32.342055411764704
+  },
+  {
+   "palavra": "primeiro",
+   "inicio": 32.342055411764704,
+   "fim": 32.80388237647058
+  },
+  {
+   "palavra": "nível",
+   "inicio": 32.80388237647058,
+   "fim": 33.119869247058816
+  },
+  {
+   "palavra": "é",
+   "inicio": 33.119869247058816,
+   "fim": 33.241402658823525
+  },
+  {
+   "palavra": "aberto",
+   "inicio": 33.241402658823525,
+   "fim": 33.606002894117644
+  },
+  {
+   "palavra": "pra",
+   "inicio": 33.606002894117644,
+   "fim": 33.82476303529411
+  },
+  {
+   "palavra": "qualquer",
+   "inicio": 33.82476303529411,
+   "fim": 34.28659
+  },
+  {
+   "palavra": "jogador",
+   "inicio": 34.28659,
+   "fim": 34.699803599999996
+  }
+ ]
+}

@@ -67,18 +67,26 @@ const materializar = (roteiro: Roteiro, cartas: MapaCartas): Roteiro => {
     }
     cena.falas = (cena.falas ?? []).map((f) => ({...f, em: f.em ?? 0.1}));
 
-    // Lista ou riscado com uma legenda por item e sem tempos escritos à mão:
+    // Lista, riscado ou pirâmide com uma legenda por item e sem tempos escritos à mão:
     // cada item entra junto com a frase dele (um instante antes da fala).
     const original = roteiro.cenas[i];
+    const legendas = cena.legendas ?? [];
     if ((cena.tipo === 'lista' || cena.tipo === 'riscado') && (original.tipo === 'lista' || original.tipo === 'riscado')) {
       const semTempo = original.itens.every((it) => typeof it === 'string' || it.em === undefined);
-      const legendas = cena.legendas ?? [];
       if (semTempo && legendas.length === cena.itens.length) {
         cena.itens.forEach((it, j) => {
           if (typeof it === 'string') return;
           const em = Math.max(0.1, legendas[j].em! - 0.2);
           it.em = em;
           if ('riscar_em' in it) it.riscar_em = em + 0.9;
+        });
+      }
+    }
+    if (cena.tipo === 'piramide' && original.tipo === 'piramide') {
+      const semTempo = original.niveis.every((n) => n.em === undefined);
+      if (semTempo && legendas.length === cena.niveis.length) {
+        cena.niveis.forEach((n, j) => {
+          n.em = Math.max(0.1, legendas[j].em! - 0.2);
         });
       }
     }

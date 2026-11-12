@@ -1,0 +1,77 @@
+{
+  "serie": "Do zero ao campeonato",
+  "numero": 4,
+  "titulo_capa": "o caminho",
+  "subtitulo_capa": "da loja ao Mundial",
+  "narracao": "auto",
+
+  "cenas": [
+    {
+      "tipo": "gancho",
+      "texto": "o caminho",
+      "subtitulo": "da loja ao Mundial",
+      "duracao": 2.2,
+      "falas": [{"texto": "Da loja ao Mundial.", "em": 0.05}],
+      "legendas": [{"texto": "os *cinco* níveis de campeonato", "em": 1.3}]
+    },
+    {
+      "tipo": "piramide",
+      "titulo": "os cinco níveis",
+      "fonte": "pontos do campeão · temporada 2027",
+      "duracao": 12,
+      "niveis": [
+        {"rotulo": "League Challenge", "detalhe": "na sua loja · 15 pontos"},
+        {"rotulo": "League Cup", "detalhe": "na sua loja · 50 pontos"},
+        {"rotulo": "Regional", "detalhe": "200 pontos"},
+        {"rotulo": "Internacional", "detalhe": "500 pontos"},
+        {"rotulo": "Mundial", "detalhe": "2027 em Singapura", "destaque": true}
+      ],
+      "legendas": [
+        {"texto": "Começa na sua loja: *15* pontos pro campeão", "em": 0.4, "fala": "Começa na sua loja: quinze pontos pro campeão."},
+        {"texto": "Um torneio maior na loja: *50*", "em": 3.0, "fala": "Um torneio maior, ainda na loja: cinquenta."},
+        {"texto": "Regional: *200*. O de Recife teve mais de mil jogadores", "em": 5.2, "fala": "O Regional: duzentos. O de Recife teve mais de mil jogadores."},
+        {"texto": "Internacional: *500*", "em": 8.2, "fala": "O Internacional: quinhentos."},
+        {"texto": "No topo, o *Mundial*: em 2027, em Singapura", "em": 9.8, "fala": "E no topo, o Mundial: em dois mil e vinte e sete, em Singapura."}
+      ]
+    },
+    {
+      "tipo": "lista",
+      "titulo": "no Brasil",
+      "duracao": 6,
+      "itens": [
+        {"texto": "São Paulo", "detalhe": "Internacional (LAIC) · 20 de novembro de 2026", "destaque": true},
+        {"texto": "Rio de Janeiro", "detalhe": "Regional · 6 de março de 2027", "destaque": true}
+      ],
+      "legendas": [
+        {"texto": "O Internacional é em *São Paulo*, dia 20 de novembro", "em": 0.5, "fala": "O Internacional é em São Paulo, dia vinte de novembro."},
+        {"texto": "E em março tem Regional no *Rio*", "em": 3.4}
+      ]
+    },
+    {
+      "tipo": "lista",
+      "titulo": "como chega lá",
+      "duracao": 6.5,
+      "itens": ["Jogue torneios", "Some pontos no ano", "Seja convidado"],
+      "legendas": [
+        {"texto": "Cada torneio dá *pontos*", "em": 0.5},
+        {"texto": "que *somam* a temporada toda", "em": 2.3},
+        {"texto": "Quem soma mais é *convidado* pro Mundial", "em": 4.2}
+      ]
+    },
+    {
+      "tipo": "riscado",
+      "titulo": "esquece isso",
+      "duracao": 4.5,
+      "itens": [{"texto": "Campeonato é só pra profissional", "em": 0.3, "riscar_em": 1.4}],
+      "legendas": [{"texto": "O primeiro nível é *aberto* pra qualquer jogador", "em": 0.6}]
+    },
+    {
+      "tipo": "cta",
+      "duracao": 4.5,
+      "principal": "SALVA",
+      "complemento": "pro seu primeiro torneio",
+      "seguir": "segue @escolaumbratcg",
+      "falas": [{"texto": "Salva pro seu primeiro torneio, e segue a Escola Umbra.", "em": 0.25}]
+    }
+  ]
+}
