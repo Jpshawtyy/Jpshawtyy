@@ -21,7 +21,7 @@ const desenharCena = (cena: Cena, props: PropsAula, duracao: number, inicio: num
     case 'gancho':
       return <Gancho cena={cena} />;
     case 'lista':
-      return <ListaPassos cena={cena} duracao={duracao} />;
+      return <ListaPassos cena={cena} duracao={duracao} cartas={props.cartas} />;
     case 'riscado':
       return <Riscado cena={cena} duracao={duracao} />;
     case 'piramide':

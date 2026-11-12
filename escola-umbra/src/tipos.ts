@@ -80,7 +80,7 @@ export type CenaCartaDestaque = CenaBase & {
   texto?: string;
 };
 
-export type ItemLista = string | {texto: string; detalhe?: string; em?: number; destaque?: boolean}; // destaque: não apaga quando o próximo entra
+export type ItemLista = string | {texto: string; detalhe?: string; em?: number; destaque?: boolean; carta?: RefCarta}; // destaque: não apaga quando o próximo entra; carta: miniatura no lugar do número
 export type CenaLista = CenaBase & {tipo: 'lista'; titulo?: string; itens: ItemLista[]};
 
 export type NivelPiramide = {

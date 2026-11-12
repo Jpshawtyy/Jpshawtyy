@@ -1,0 +1,504 @@
+{
+ "assinatura": "6572b8b49e154e0574e46786db75d38d2e910df6",
+ "voz": "pt_BR-faber-medium",
+ "frases": [
+  {
+   "fala": "Chegou Reinado Delta.",
+   "duracao": 1.050204
+  },
+  {
+   "fala": "os decks que já estão montando",
+   "duracao": 1.426576
+  },
+  {
+   "fala": "Mega Rayquaza: cinquenta de dano por energia de Fogo ou Elétrica,",
+   "duracao": 3.202948
+  },
+  {
+   "fala": "contando todos os seus Pokémon",
+   "duracao": 1.511519
+  },
+  {
+   "fala": "Seis energias? Trezentos de dano.",
+   "duracao": 1.878866
+  },
+  {
+   "fala": "O Talonflame desce direto no banco, sem evoluir.",
+   "duracao": 2.501406
+  },
+  {
+   "fala": "O Pincurchin bate mais, quanto mais energia você tiver.",
+   "duracao": 2.813243
+  },
+  {
+   "fala": "Golisopod: duzentos e vinte, se o rival já tem dano.",
+   "duracao": 2.899637
+  },
+  {
+   "fala": "Malamar: setenta por Pokémon no banco rival.",
+   "duracao": 2.366621
+  },
+  {
+   "fala": "Golurk: trezentos, só com dez cartas na mão.",
+   "duracao": 2.418231
+  },
+  {
+   "fala": "Cuidado: Mega nocauteado vale três prêmios.",
+   "duracao": 2.353197
+  },
+  {
+   "fala": "No Japão, o Rayquaza já foi décimo terceiro, entre cinco mil.",
+   "duracao": 3.368844
+  },
+  {
+   "fala": "Mas o top dezesseis teve nove Dragapult.",
+   "duracao": 2.112698
+  },
+  {
+   "fala": "Salva pra montar o seu, e segue a Escola Umbra.",
+   "duracao": 2.192789
+  }
+ ],
+ "words": [
+  {
+   "palavra": "os",
+   "inicio": 1.2602039999999999,
+   "fim": 1.4011832752941176
+  },
+  {
+   "palavra": "decks",
+   "inicio": 1.4011832752941176,
+   "fim": 1.6630019294117646
+  },
+  {
+   "palavra": "que",
+   "inicio": 1.6630019294117646,
+   "fim": 1.8442609976470588
+  },
+  {
+   "palavra": "já",
+   "inicio": 1.8442609976470588,
+   "fim": 1.9852402729411764
+  },
+  {
+   "palavra": "estão",
+   "inicio": 1.9852402729411764,
+   "fim": 2.2470589270588235
+  },
+  {
+   "palavra": "montando",
+   "inicio": 2.2470589270588235,
+   "fim": 2.6297169599999997
+  },
+  {
+   "palavra": "50",
+   "inicio": 3.3367799999999996,
+   "fim": 3.5633464269473683
+  },
+  {
+   "palavra": "de",
+   "inicio": 3.5633464269473683,
+   "fim": 3.7899128538947364
+  },
+  {
+   "palavra": "dano",
+   "inicio": 3.7899128538947364,
+   "fim": 4.145945810526316
+  },
+  {
+   "palavra": "por",
+   "inicio": 4.145945810526316,
+   "fim": 4.437245502315789
+  },
+  {
+   "palavra": "energia",
+   "inicio": 4.437245502315789,
+   "fim": 4.987478253473684
+  },
+  {
+   "palavra": "de",
+   "inicio": 4.987478253473684,
+   "fim": 5.214044680421052
+  },
+  {
+   "palavra": "Fogo",
+   "inicio": 5.214044680421052,
+   "fim": 5.570077637052631
+  },
+  {
+   "palavra": "ou",
+   "inicio": 5.570077637052631,
+   "fim": 5.796644064
+  },
+  {
+   "palavra": "Elétrica",
+   "inicio": 5.796644064,
+   "fim": 6.411610079999999
+  },
+  {
+   "palavra": "contando",
+   "inicio": 6.699728,
+   "fim": 7.111222127761194
+  },
+  {
+   "palavra": "todos",
+   "inicio": 7.111222127761194,
+   "fim": 7.392770741492537
+  },
+  {
+   "palavra": "os",
+   "inicio": 7.392770741492537,
+   "fim": 7.54437384119403
+  },
+  {
+   "palavra": "seus",
+   "inicio": 7.54437384119403,
+   "fim": 7.78260728358209
+  },
+  {
+   "palavra": "Pokémon",
+   "inicio": 7.78260728358209,
+   "fim": 8.15078624
+  },
+  {
+   "palavra": "Seis",
+   "inicio": 8.371247,
+   "fim": 8.68618072952381
+  },
+  {
+   "palavra": "energias?",
+   "inicio": 8.68618072952381,
+   "fim": 9.401939205714285
+  },
+  {
+   "palavra": "300",
+   "inicio": 9.401939205714285,
+   "fim": 9.659612257142857
+  },
+  {
+   "palavra": "de",
+   "inicio": 9.659612257142857,
+   "fim": 9.860024630476191
+  },
+  {
+   "palavra": "dano",
+   "inicio": 9.860024630476191,
+   "fim": 10.17495836
+  },
+  {
+   "palavra": "Talonflame",
+   "inicio": 11.100112999999999,
+   "fim": 11.611511559999999
+  },
+  {
+   "palavra": "ex",
+   "inicio": 11.611511559999999,
+   "fim": 11.767154599999998
+  },
+  {
+   "palavra": "desce",
+   "inicio": 11.767154599999998,
+   "fim": 12.056205959999998
+  },
+  {
+   "palavra": "direto",
+   "inicio": 12.056205959999998,
+   "fim": 12.389726759999999
+  },
+  {
+   "palavra": "no",
+   "inicio": 12.389726759999999,
+   "fim": 12.545369799999998
+  },
+  {
+   "palavra": "banco,",
+   "inicio": 12.545369799999998,
+   "fim": 12.923360039999999
+  },
+  {
+   "palavra": "sem",
+   "inicio": 12.923360039999999,
+   "fim": 13.123472519999998
+  },
+  {
+   "palavra": "evoluir",
+   "inicio": 13.123472519999998,
+   "fim": 13.501462759999999
+  },
+  {
+   "palavra": "Pincurchin",
+   "inicio": 13.761519,
+   "fim": 14.336670902222222
+  },
+  {
+   "palavra": "bate",
+   "inicio": 14.336670902222222,
+   "fim": 14.611743551111111
+  },
+  {
+   "palavra": "mais",
+   "inicio": 14.611743551111111,
+   "fim": 14.8868162
+  },
+  {
+   "palavra": "quanto",
+   "inicio": 14.8868162,
+   "fim": 15.261915266666666
+  },
+  {
+   "palavra": "mais",
+   "inicio": 15.261915266666666,
+   "fim": 15.536987915555555
+  },
+  {
+   "palavra": "energia",
+   "inicio": 15.536987915555555,
+   "fim": 15.96210019111111
+  },
+  {
+   "palavra": "você",
+   "inicio": 15.96210019111111,
+   "fim": 16.23717284
+  },
+  {
+   "palavra": "tem",
+   "inicio": 16.23717284,
+   "fim": 16.46223228
+  },
+  {
+   "palavra": "Golisopod:",
+   "inicio": 17.324762,
+   "fim": 18.133963023255813
+  },
+  {
+   "palavra": "220",
+   "inicio": 18.133963023255813,
+   "fim": 18.425275391627906
+  },
+  {
+   "palavra": "se",
+   "inicio": 18.425275391627906,
+   "fim": 18.651851678139536
+  },
+  {
+   "palavra": "o",
+   "inicio": 18.651851678139536,
+   "fim": 18.813691882790696
+  },
+  {
+   "palavra": "rival",
+   "inicio": 18.813691882790696,
+   "fim": 19.23447641488372
+  },
+  {
+   "palavra": "já",
+   "inicio": 19.23447641488372,
+   "fim": 19.46105270139535
+  },
+  {
+   "palavra": "tem",
+   "inicio": 19.46105270139535,
+   "fim": 19.752365069767443
+  },
+  {
+   "palavra": "dano",
+   "inicio": 19.752365069767443,
+   "fim": 20.10841352
+  },
+  {
+   "palavra": "Malamar:",
+   "inicio": 20.384399,
+   "fim": 20.93280221103448
+  },
+  {
+   "palavra": "70",
+   "inicio": 20.93280221103448,
+   "fim": 21.115603281379308
+  },
+  {
+   "palavra": "por",
+   "inicio": 21.115603281379308,
+   "fim": 21.350633228965517
+  },
+  {
+   "palavra": "Pokémon",
+   "inicio": 21.350633228965517,
+   "fim": 21.79457868551724
+  },
+  {
+   "palavra": "no",
+   "inicio": 21.79457868551724,
+   "fim": 21.977379755862067
+  },
+  {
+   "palavra": "banco",
+   "inicio": 21.977379755862067,
+   "fim": 22.316867457931032
+  },
+  {
+   "palavra": "rival",
+   "inicio": 22.316867457931032,
+   "fim": 22.656355159999997
+  },
+  {
+   "palavra": "Golurk:",
+   "inicio": 22.91102,
+   "fim": 23.42390992372093
+  },
+  {
+   "palavra": "300,",
+   "inicio": 23.42390992372093,
+   "fim": 23.774834608372093
+  },
+  {
+   "palavra": "só",
+   "inicio": 23.774834608372093,
+   "fim": 23.96379405395349
+  },
+  {
+   "palavra": "com",
+   "inicio": 23.96379405395349,
+   "fim": 24.20674191255814
+  },
+  {
+   "palavra": "10",
+   "inicio": 24.20674191255814,
+   "fim": 24.395701358139537
+  },
+  {
+   "palavra": "cartas",
+   "inicio": 24.395701358139537,
+   "fim": 24.800614455813953
+  },
+  {
+   "palavra": "na",
+   "inicio": 24.800614455813953,
+   "fim": 24.98957390139535
+  },
+  {
+   "palavra": "mão",
+   "inicio": 24.98957390139535,
+   "fim": 25.23252176
+  },
+  {
+   "palavra": "Cuidado:",
+   "inicio": 25.489251,
+   "fim": 26.02834704
+  },
+  {
+   "palavra": "Mega",
+   "inicio": 26.02834704,
+   "fim": 26.31073068
+  },
+  {
+   "palavra": "nocauteado",
+   "inicio": 26.31073068,
+   "fim": 26.9011692
+  },
+  {
+   "palavra": "vale",
+   "inicio": 26.9011692,
+   "fim": 27.18355284
+  },
+  {
+   "palavra": "3",
+   "inicio": 27.18355284,
+   "fim": 27.31190904
+  },
+  {
+   "palavra": "prêmios",
+   "inicio": 27.31190904,
+   "fim": 27.74832012
+  },
+  {
+   "palavra": "No",
+   "inicio": 28.592448,
+   "fim": 28.8188343168
+  },
+  {
+   "palavra": "Japão,",
+   "inicio": 28.8188343168,
+   "fim": 29.3686296576
+  },
+  {
+   "palavra": "o",
+   "inicio": 29.3686296576,
+   "fim": 29.5303341696
+  },
+  {
+   "palavra": "Rayquaza",
+   "inicio": 29.5303341696,
+   "fim": 30.144811315200002
+  },
+  {
+   "palavra": "já",
+   "inicio": 30.144811315200002,
+   "fim": 30.371197632
+  },
+  {
+   "palavra": "foi",
+   "inicio": 30.371197632,
+   "fim": 30.6622657536
+  },
+  {
+   "palavra": "13º",
+   "inicio": 30.6622657536,
+   "fim": 30.953333875200002
+  },
+  {
+   "palavra": "entre",
+   "inicio": 30.953333875200002,
+   "fim": 31.3737656064
+  },
+  {
+   "palavra": "5",
+   "inicio": 31.3737656064,
+   "fim": 31.5354701184
+  },
+  {
+   "palavra": "mil",
+   "inicio": 31.5354701184,
+   "fim": 31.82653824
+  },
+  {
+   "palavra": "mas",
+   "inicio": 32.121292000000004,
+   "fim": 32.349463384
+  },
+  {
+   "palavra": "o",
+   "inicio": 32.349463384,
+   "fim": 32.47622526400001
+  },
+  {
+   "palavra": "top",
+   "inicio": 32.47622526400001,
+   "fim": 32.70439664800001
+  },
+  {
+   "palavra": "16",
+   "inicio": 32.70439664800001,
+   "fim": 32.881863280000005
+  },
+  {
+   "palavra": "ainda",
+   "inicio": 32.881863280000005,
+   "fim": 33.21144416800001
+  },
+  {
+   "palavra": "teve",
+   "inicio": 33.21144416800001,
+   "fim": 33.490320304
+  },
+  {
+   "palavra": "9",
+   "inicio": 33.490320304,
+   "fim": 33.617082184000004
+  },
+  {
+   "palavra": "Dragapult",
+   "inicio": 33.617082184000004,
+   "fim": 34.149482080000006
+  }
+ ]
+}

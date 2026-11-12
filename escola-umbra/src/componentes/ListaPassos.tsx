@@ -1,14 +1,15 @@
 import React from 'react';
 import {AbsoluteFill, useCurrentFrame, useVideoConfig} from 'remotion';
-import {AREA, CORES} from '../tema';
+import {AREA, CORES, PROPORCAO_CARTA} from '../tema';
 import {FONTE_TEXTO, FONTE_TITULO} from '../fontes';
 import {MOLA_PULO, mola, trecho} from '../anim';
 import {comoObjeto, temposDosItens} from '../tempo';
 import {Titulo} from './Titulo';
-import type {CenaLista} from '../tipos';
+import {Carta} from './Carta';
+import type {CenaLista, MapaCartas} from '../tipos';
 
 // Lista em passos: itens numerados que entram um por um, no tempo da fala.
-export const ListaPassos: React.FC<{cena: CenaLista; duracao: number}> = ({cena, duracao}) => {
+export const ListaPassos: React.FC<{cena: CenaLista; duracao: number; cartas?: MapaCartas}> = ({cena, duracao, cartas = {}}) => {
   const quadro = useCurrentFrame();
   const {fps} = useVideoConfig();
   const t = quadro / fps;
@@ -18,13 +19,17 @@ export const ListaPassos: React.FC<{cena: CenaLista; duracao: number}> = ({cena,
   const topo = cena.titulo ? 520 : 440;
   const passo = Math.min(230, (1230 - topo) / itens.length);
   const bola = Math.min(124, passo * 0.62);
+  // com miniaturas de carta, a linha fica da altura da carta e some a linha que liga os números
+  const comCartas = itens.some((it) => it.carta && cartas[it.carta]);
+  const alturaCarta = Math.min(214, passo - 22);
+  const linha = comCartas ? alturaCarta : bola;
   const atual = tempos.filter((x) => t >= x).length - 1;
 
   return (
     <AbsoluteFill>
       {cena.titulo ? <Titulo texto={cena.titulo} /> : null}
       {/* linha que liga os números e cresce a cada passo */}
-      {itens.length > 1 ? (
+      {itens.length > 1 && !comCartas ? (
         <div
           style={{
             position: 'absolute',
@@ -53,7 +58,7 @@ export const ListaPassos: React.FC<{cena: CenaLista; duracao: number}> = ({cena,
               left: AREA.x0 + 20,
               width: AREA.largura - 40,
               top: topo + i * passo,
-              height: bola,
+              height: linha,
               display: 'flex',
               alignItems: 'center',
               gap: 34,
@@ -61,26 +66,32 @@ export const ListaPassos: React.FC<{cena: CenaLista; duracao: number}> = ({cena,
               transform: `translateX(${(1 - e) * 80}px)`,
             }}
           >
-            <div
-              style={{
-                flex: 'none',
-                width: bola,
-                height: bola,
-                borderRadius: '50%',
-                background: recua > 0.5 ? CORES.fundo : CORES.ouro,
-                boxShadow: `inset 0 0 0 4px ${CORES.ouro}`,
-                color: recua > 0.5 ? CORES.ouro : CORES.pillOuroTexto,
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                fontFamily: FONTE_TITULO,
-                fontWeight: 700,
-                fontSize: bola * 0.5,
-                transform: `scale(${(0.5 + 0.5 * e) * pulso})`,
-              }}
-            >
-              {i + 1}
-            </div>
+            {item.carta && cartas[item.carta] ? (
+              <div style={{flex: 'none', transform: `scale(${(0.6 + 0.4 * e) * pulso}) rotate(${(1 - e) * -8}deg)`}}>
+                <Carta imagem={cartas[item.carta].imagem} largura={alturaCarta / PROPORCAO_CARTA} />
+              </div>
+            ) : (
+              <div
+                style={{
+                  flex: 'none',
+                  width: bola,
+                  height: bola,
+                  borderRadius: '50%',
+                  background: recua > 0.5 ? CORES.fundo : CORES.ouro,
+                  boxShadow: `inset 0 0 0 4px ${CORES.ouro}`,
+                  color: recua > 0.5 ? CORES.ouro : CORES.pillOuroTexto,
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  fontFamily: FONTE_TITULO,
+                  fontWeight: 700,
+                  fontSize: bola * 0.5,
+                  transform: `scale(${(0.5 + 0.5 * e) * pulso})`,
+                }}
+              >
+                {i + 1}
+              </div>
+            )}
             <div style={{flex: 1}}>
               <div
                 style={{

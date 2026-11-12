@@ -1,0 +1,90 @@
+{
+  "serie": "Do zero ao campeonato",
+  "numero": 3,
+  "titulo_capa": "Reinado Delta",
+  "subtitulo_capa": "os decks novos",
+  "capa": {"cartas": ["talonflame", "rayquaza", "golisopod"]},
+  "narracao": "auto",
+
+  "cartas": {
+    "rayquaza": {"nome": "Mega Rayquaza ex", "set": "Delta Reign", "numero": 84},
+    "talonflame": {"nome": "Talonflame ex", "set": "Delta Reign", "numero": 88},
+    "pincurchin": {"nome": "Pincurchin", "set": "Delta Reign", "numero": 36},
+    "golisopod": {"nome": "Mega Golisopod ex", "set": "Delta Reign", "numero": 11},
+    "malamar": {"nome": "Mega Malamar ex", "set": "Delta Reign", "numero": 69},
+    "golurk": {"nome": "Mega Golurk ex", "set": "Delta Reign", "numero": 47}
+  },
+
+  "cenas": [
+    {
+      "tipo": "gancho",
+      "texto": "Reinado\nDelta",
+      "subtitulo": "os decks novos",
+      "duracao": 2.2,
+      "falas": [{"texto": "Chegou Reinado Delta.", "em": 0.05}],
+      "legendas": [{"texto": "os decks que *já* estão montando", "em": 1.2}]
+    },
+    {
+      "tipo": "carta_destaque",
+      "carta": "rayquaza",
+      "pill": "NOVO",
+      "titulo": "a estrela da coleção",
+      "duracao": 6.5,
+      "legendas": [
+        {"texto": "*50* de dano por energia de Fogo ou Elétrica", "em": 0.4, "fala": "Mega Rayquaza: cinquenta de dano por energia de Fogo ou Elétrica,"},
+        {"texto": "contando *todos* os seus Pokémon", "em": 3.0},
+        {"texto": "Seis energias? *300* de dano", "em": 4.6, "fala": "Seis energias? Trezentos de dano."}
+      ]
+    },
+    {
+      "tipo": "comparacao",
+      "titulo": "parceiro e ameaça",
+      "pill_bons": "parceiro",
+      "pill_ruins": "ameaça",
+      "bons": ["talonflame"],
+      "ruins": ["pincurchin"],
+      "duracao": 6,
+      "legendas": [
+        {"texto": "*Talonflame ex* desce direto no banco, sem evoluir", "em": 0.6, "fala": "O Talonflame desce direto no banco, sem evoluir."},
+        {"texto": "*Pincurchin* bate mais quanto mais energia você tem", "em": 3.2, "fala": "O Pincurchin bate mais, quanto mais energia você tiver."}
+      ]
+    },
+    {
+      "tipo": "lista",
+      "titulo": "os outros Megas",
+      "duracao": 9,
+      "itens": [
+        {"texto": "Mega Golisopod ex", "detalhe": "220 com 1 energia, se o rival já tem dano", "carta": "golisopod", "destaque": true, "em": 0.3},
+        {"texto": "Mega Malamar ex", "detalhe": "70 por Pokémon no banco rival", "carta": "malamar", "destaque": true, "em": 2.6},
+        {"texto": "Mega Golurk ex", "detalhe": "300 de dano, com 10 cartas na mão", "carta": "golurk", "destaque": true, "em": 4.8}
+      ],
+      "legendas": [
+        {"texto": "Golisopod: *220* se o rival já tem dano", "em": 0.5, "fala": "Golisopod: duzentos e vinte, se o rival já tem dano."},
+        {"texto": "Malamar: *70* por Pokémon no banco rival", "em": 2.8, "fala": "Malamar: setenta por Pokémon no banco rival."},
+        {"texto": "Golurk: *300*, só com 10 cartas na mão", "em": 5.0, "fala": "Golurk: trezentos, só com dez cartas na mão."},
+        {"texto": "Cuidado: Mega nocauteado vale *3* prêmios", "em": 7.2, "fala": "Cuidado: Mega nocauteado vale três prêmios."}
+      ]
+    },
+    {
+      "tipo": "lista",
+      "titulo": "já deu resultado?",
+      "duracao": 6,
+      "itens": [
+        {"texto": "13º e 17º no Japão", "detalhe": "Mega Rayquaza ex, entre 5.000 jogadores", "em": 0.3, "destaque": true},
+        {"texto": "9 Dragapult no top 16", "detalhe": "Champions League Yokohama, 20/09/2026", "em": 3.0}
+      ],
+      "legendas": [
+        {"texto": "No Japão, o Rayquaza já foi *13º* entre 5 mil", "em": 0.5, "fala": "No Japão, o Rayquaza já foi décimo terceiro, entre cinco mil."},
+        {"texto": "mas o top 16 ainda teve *9* Dragapult", "em": 3.2, "fala": "Mas o top dezesseis teve nove Dragapult."}
+      ]
+    },
+    {
+      "tipo": "cta",
+      "duracao": 4.5,
+      "principal": "SALVA",
+      "complemento": "pra montar o seu deck",
+      "seguir": "segue @escolaumbratcg",
+      "falas": [{"texto": "Salva pra montar o seu, e segue a Escola Umbra.", "em": 0.25}]
+    }
+  ]
+}
