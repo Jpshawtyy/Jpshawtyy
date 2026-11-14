@@ -1,0 +1,435 @@
+{
+ "assinatura": "57264a9f5962f7c26fb93b2947bdf8868b1e0441",
+ "voz": "pm_santa",
+ "frases": [
+  {
+   "fala": "Sessenta cartas.",
+   "duracao": 1.16034
+  },
+  {
+   "fala": "nem uma a mais, nem uma a menos",
+   "duracao": 1.786508
+  },
+  {
+   "fala": "No máximo quatro cópias da mesma carta",
+   "duracao": 2.294762
+  },
+  {
+   "fala": "Energia básica é a exceção: sem limite",
+   "duracao": 2.428005
+  },
+  {
+   "fala": "E pelo menos um Pokémon Básico",
+   "duracao": 1.899592
+  },
+  {
+   "fala": "No deck campeão: só nove Energias,",
+   "duracao": 1.99517
+  },
+  {
+   "fala": "dezenove Pokémon,",
+   "duracao": 1.320385
+  },
+  {
+   "fala": "e trinta e dois Treinadores: mais da metade.",
+   "duracao": 2.57127
+  },
+  {
+   "fala": "A linha principal vem cheia: quatro, quatro e três.",
+   "duracao": 2.739637
+  },
+  {
+   "fala": "Mais cópias, mais chance de comprar a carta",
+   "duracao": 2.27068
+  },
+  {
+   "fala": "E carta desse tipo: só uma por deck.",
+   "duracao": 1.953673
+  },
+  {
+   "fala": "O campeão joga com nove energias, não com vinte.",
+   "duracao": 2.619501
+  },
+  {
+   "fala": "Salva pra montar o seu, e segue a Escola Umbra.",
+   "duracao": 2.442336
+  }
+ ],
+ "words": [
+  {
+   "palavra": "nem",
+   "inicio": 1.37034,
+   "fim": 1.5789268799999998
+  },
+  {
+   "palavra": "uma",
+   "inicio": 1.5789268799999998,
+   "fim": 1.78751376
+  },
+  {
+   "palavra": "a",
+   "inicio": 1.78751376,
+   "fim": 1.9033953599999998
+  },
+  {
+   "palavra": "mais,",
+   "inicio": 1.9033953599999998,
+   "fim": 2.2510401599999996
+  },
+  {
+   "palavra": "nem",
+   "inicio": 2.2510401599999996,
+   "fim": 2.45962704
+  },
+  {
+   "palavra": "uma",
+   "inicio": 2.45962704,
+   "fim": 2.66821392
+  },
+  {
+   "palavra": "a",
+   "inicio": 2.66821392,
+   "fim": 2.78409552
+  },
+  {
+   "palavra": "menos",
+   "inicio": 2.78409552,
+   "fim": 3.0853876799999997
+  },
+  {
+   "palavra": "No",
+   "inicio": 3.906848,
+   "fim": 4.0882691840000005
+  },
+  {
+   "palavra": "máximo",
+   "inicio": 4.0882691840000005,
+   "fim": 4.477028864
+  },
+  {
+   "palavra": "quatro",
+   "inicio": 4.477028864,
+   "fim": 4.865788544
+  },
+  {
+   "palavra": "cópias",
+   "inicio": 4.865788544,
+   "fim": 5.254548224
+  },
+  {
+   "palavra": "da",
+   "inicio": 5.254548224,
+   "fim": 5.435969408
+  },
+  {
+   "palavra": "mesma",
+   "inicio": 5.435969408,
+   "fim": 5.772894464
+  },
+  {
+   "palavra": "carta",
+   "inicio": 5.772894464,
+   "fim": 6.10981952
+  },
+  {
+   "palavra": "Energia",
+   "inicio": 6.406848,
+   "fim": 6.862308248275863
+  },
+  {
+   "palavra": "básica",
+   "inicio": 6.862308248275863,
+   "fim": 7.264184937931034
+  },
+  {
+   "palavra": "é",
+   "inicio": 7.264184937931034,
+   "fim": 7.398143834482759
+  },
+  {
+   "palavra": "a",
+   "inicio": 7.398143834482759,
+   "fim": 7.532102731034483
+  },
+  {
+   "palavra": "exceção:",
+   "inicio": 7.532102731034483,
+   "fim": 8.094730096551725
+  },
+  {
+   "palavra": "sem",
+   "inicio": 8.094730096551725,
+   "fim": 8.335856110344828
+  },
+  {
+   "palavra": "limite",
+   "inicio": 8.335856110344828,
+   "fim": 8.7377328
+  },
+  {
+   "palavra": "E",
+   "inicio": 8.994853,
+   "fim": 9.128941847058824
+  },
+  {
+   "palavra": "pelo",
+   "inicio": 9.128941847058824,
+   "fim": 9.423937310588236
+  },
+  {
+   "palavra": "menos",
+   "inicio": 9.423937310588236,
+   "fim": 9.772568312941177
+  },
+  {
+   "palavra": "um",
+   "inicio": 9.772568312941177,
+   "fim": 9.96029269882353
+  },
+  {
+   "palavra": "Pokémon",
+   "inicio": 9.96029269882353,
+   "fim": 10.416194778823531
+  },
+  {
+   "palavra": "Básico",
+   "inicio": 10.416194778823531,
+   "fim": 10.81846132
+  },
+  {
+   "palavra": "No",
+   "inicio": 11.544445000000001,
+   "fim": 11.735981320000002
+  },
+  {
+   "palavra": "deck",
+   "inicio": 11.735981320000002,
+   "fim": 12.036966965714287
+  },
+  {
+   "palavra": "campeão:",
+   "inicio": 12.036966965714287,
+   "fim": 12.611575925714288
+  },
+  {
+   "palavra": "só",
+   "inicio": 12.611575925714288,
+   "fim": 12.803112245714287
+  },
+  {
+   "palavra": "9",
+   "inicio": 12.803112245714287,
+   "fim": 12.939923902857144
+  },
+  {
+   "palavra": "Energias",
+   "inicio": 12.939923902857144,
+   "fim": 13.459808200000001
+  },
+  {
+   "palavra": "19",
+   "inicio": 14.044445000000001,
+   "fim": 14.414152800000002
+  },
+  {
+   "palavra": "Pokémon",
+   "inicio": 14.414152800000002,
+   "fim": 15.312014600000001
+  },
+  {
+   "palavra": "e",
+   "inicio": 15.544445000000001,
+   "fim": 15.711230081081082
+  },
+  {
+   "palavra": "32",
+   "inicio": 15.711230081081082,
+   "fim": 15.944729194594595
+  },
+  {
+   "palavra": "Treinadores:",
+   "inicio": 15.944729194594595,
+   "fim": 16.912082664864865
+  },
+  {
+   "palavra": "mais",
+   "inicio": 16.912082664864865,
+   "fim": 17.279009843243244
+  },
+  {
+   "palavra": "da",
+   "inicio": 17.279009843243244,
+   "fim": 17.512508956756758
+  },
+  {
+   "palavra": "metade",
+   "inicio": 17.512508956756758,
+   "fim": 18.012864200000003
+  },
+  {
+   "palavra": "A",
+   "inicio": 19.044445,
+   "fim": 19.192200703370787
+  },
+  {
+   "palavra": "linha",
+   "inicio": 19.192200703370787,
+   "fim": 19.57636553213483
+  },
+  {
+   "palavra": "principal",
+   "inicio": 19.57636553213483,
+   "fim": 20.196939486292134
+  },
+  {
+   "palavra": "vem",
+   "inicio": 20.196939486292134,
+   "fim": 20.46289975235955
+  },
+  {
+   "palavra": "cheia:",
+   "inicio": 20.46289975235955,
+   "fim": 20.965269143820223
+  },
+  {
+   "palavra": "4,",
+   "inicio": 20.965269143820223,
+   "fim": 21.23122940988764
+  },
+  {
+   "palavra": "4",
+   "inicio": 21.23122940988764,
+   "fim": 21.378985113258427
+  },
+  {
+   "palavra": "e",
+   "inicio": 21.378985113258427,
+   "fim": 21.526740816629214
+  },
+  {
+   "palavra": "3",
+   "inicio": 21.526740816629214,
+   "fim": 21.674496519999998
+  },
+  {
+   "palavra": "Mais",
+   "inicio": 22.044445,
+   "fim": 22.28912235510204
+  },
+  {
+   "palavra": "cópias,",
+   "inicio": 22.28912235510204,
+   "fim": 22.711746877551022
+  },
+  {
+   "palavra": "mais",
+   "inicio": 22.711746877551022,
+   "fim": 22.95642423265306
+  },
+  {
+   "palavra": "chance",
+   "inicio": 22.95642423265306,
+   "fim": 23.290075171428573
+  },
+  {
+   "palavra": "de",
+   "inicio": 23.290075171428573,
+   "fim": 23.445778942857142
+  },
+  {
+   "palavra": "comprar",
+   "inicio": 23.445778942857142,
+   "fim": 23.823916673469387
+  },
+  {
+   "palavra": "a",
+   "inicio": 23.823916673469387,
+   "fim": 23.935133653061225
+  },
+  {
+   "palavra": "carta",
+   "inicio": 23.935133653061225,
+   "fim": 24.2242978
+  },
+  {
+   "palavra": "Carta",
+   "inicio": 25.144445,
+   "fim": 25.478442795068496
+  },
+  {
+   "palavra": "ACE",
+   "inicio": 25.478442795068496,
+   "fim": 25.70967203780822
+  },
+  {
+   "palavra": "SPEC:",
+   "inicio": 25.70967203780822,
+   "fim": 26.095054109041097
+  },
+  {
+   "palavra": "só",
+   "inicio": 26.095054109041097,
+   "fim": 26.27489907561644
+  },
+  {
+   "palavra": "uma",
+   "inicio": 26.27489907561644,
+   "fim": 26.506128318356165
+  },
+  {
+   "palavra": "por",
+   "inicio": 26.506128318356165,
+   "fim": 26.73735756109589
+  },
+  {
+   "palavra": "deck",
+   "inicio": 26.73735756109589,
+   "fim": 27.01997108
+  },
+  {
+   "palavra": "O",
+   "inicio": 29.044445000000003,
+   "fim": 29.176798734736845
+  },
+  {
+   "palavra": "campeão",
+   "inicio": 29.176798734736845,
+   "fim": 29.626801432842107
+  },
+  {
+   "palavra": "joga",
+   "inicio": 29.626801432842107,
+   "fim": 29.91797964926316
+  },
+  {
+   "palavra": "com",
+   "inicio": 29.91797964926316,
+   "fim": 30.156216371789476
+  },
+  {
+   "palavra": "9",
+   "inicio": 30.156216371789476,
+   "fim": 30.28857010652632
+  },
+  {
+   "palavra": "energias,",
+   "inicio": 30.28857010652632,
+   "fim": 30.897397286315794
+  },
+  {
+   "palavra": "não",
+   "inicio": 30.897397286315794,
+   "fim": 31.135634008842107
+  },
+  {
+   "palavra": "com",
+   "inicio": 31.135634008842107,
+   "fim": 31.373870731368424
+  },
+  {
+   "palavra": "20",
+   "inicio": 31.373870731368424,
+   "fim": 31.55916596
+  }
+ ]
+}

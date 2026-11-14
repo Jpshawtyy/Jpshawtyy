@@ -1,0 +1,97 @@
+{
+  "serie": "Do zero ao campeonato",
+  "numero": 5,
+  "titulo_capa": "60 cartas",
+  "subtitulo_capa": "como montar o deck",
+  "capa": {"cartas": ["lillie", "dragapult", "energia-fogo"]},
+  "narracao": "auto",
+
+  "cartas": {
+    "dreepy": {"nome": "Dreepy", "set": "Twilight Masquerade", "numero": 128},
+    "drakloak": {"nome": "Drakloak", "set": "Twilight Masquerade", "numero": 129},
+    "dragapult": {"nome": "Dragapult ex", "set": "Twilight Masquerade", "numero": 130},
+    "lillie": {"nome": "Lillie's Determination", "set": "Mega Evolution", "numero": 119},
+    "selo": {"nome": "Unfair Stamp", "set": "Twilight Masquerade", "numero": 165},
+    "energia-fogo": {"nome": "Basic Fire Energy", "set": "Scarlet & Violet Energies", "numero": 2}
+  },
+
+  "cenas": [
+    {
+      "tipo": "gancho",
+      "texto": "60 cartas",
+      "subtitulo": "como montar o deck",
+      "duracao": 2.2,
+      "falas": [{"texto": "Sessenta cartas.", "em": 0.05}],
+      "legendas": [{"texto": "nem uma a *mais*, nem uma a menos", "em": 1.1}]
+    },
+    {
+      "tipo": "lista",
+      "titulo": "as regras",
+      "duracao": 7.5,
+      "itens": [
+        {"texto": "Até 4 cópias", "detalhe": "de cartas com o mesmo nome"},
+        {"texto": "Energia básica", "detalhe": "sem limite de cópias"},
+        {"texto": "1 Pokémon Básico", "detalhe": "no mínimo"}
+      ],
+      "legendas": [
+        {"texto": "No máximo *quatro* cópias da mesma carta", "em": 0.5},
+        {"texto": "Energia básica é a exceção: *sem limite*", "em": 3.0},
+        {"texto": "E pelo menos *um* Pokémon Básico", "em": 5.4}
+      ]
+    },
+    {
+      "tipo": "piramide",
+      "modo": "ranking",
+      "titulo": "o deck campeão",
+      "fonte": "venceu Louisville e Puebla · out/2026 · Limitless TCG",
+      "duracao": 7.5,
+      "niveis": [
+        {"rotulo": "Energias", "detalhe": "9", "valor": 9, "carta": "energia-fogo"},
+        {"rotulo": "Pokémon", "detalhe": "19", "valor": 19, "carta": "dragapult"},
+        {"rotulo": "Treinadores", "detalhe": "32", "valor": 32, "carta": "lillie", "destaque": true}
+      ],
+      "legendas": [
+        {"texto": "No deck campeão: só *9* Energias", "em": 0.4, "fala": "No deck campeão: só nove Energias,"},
+        {"texto": "*19* Pokémon", "em": 2.9, "fala": "dezenove Pokémon,"},
+        {"texto": "e *32* Treinadores: mais da metade", "em": 4.4, "fala": "e trinta e dois Treinadores: mais da metade."}
+      ]
+    },
+    {
+      "tipo": "lista",
+      "titulo": "a linha principal",
+      "duracao": 6,
+      "itens": [
+        {"texto": "4 Dreepy", "detalhe": "Básico", "carta": "dreepy", "destaque": true, "em": 0.3},
+        {"texto": "4 Drakloak", "detalhe": "Estágio 1", "carta": "drakloak", "destaque": true, "em": 0.9},
+        {"texto": "3 Dragapult ex", "detalhe": "Estágio 2", "carta": "dragapult", "destaque": true, "em": 1.5}
+      ],
+      "legendas": [
+        {"texto": "A linha principal vem cheia: *4*, 4 e 3", "em": 0.4, "fala": "A linha principal vem cheia: quatro, quatro e três."},
+        {"texto": "Mais cópias, mais chance de *comprar* a carta", "em": 3.4}
+      ]
+    },
+    {
+      "tipo": "carta_destaque",
+      "carta": "selo",
+      "pill": "ACE SPEC",
+      "titulo": "só uma por deck",
+      "duracao": 3.8,
+      "legendas": [{"texto": "Carta *ACE SPEC*: só uma por deck", "em": 0.5, "fala": "E carta desse tipo: só uma por deck."}]
+    },
+    {
+      "tipo": "riscado",
+      "titulo": "erro de iniciante",
+      "duracao": 4.5,
+      "itens": [{"texto": "Encher o deck de energia", "em": 0.3, "riscar_em": 1.4}],
+      "legendas": [{"texto": "O campeão joga com *9* energias, não com 20", "em": 0.6, "fala": "O campeão joga com nove energias, não com vinte."}]
+    },
+    {
+      "tipo": "cta",
+      "duracao": 4.5,
+      "principal": "SALVA",
+      "complemento": "pra montar o seu deck",
+      "seguir": "segue @escolaumbratcg",
+      "falas": [{"texto": "Salva pra montar o seu, e segue a Escola Umbra.", "em": 0.25}]
+    }
+  ]
+}
