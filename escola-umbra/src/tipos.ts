@@ -157,6 +157,7 @@ type AcaoBase = {
   duracao?: number;
   legenda?: string;
   fala?: string; // o que o narrador diz nesta ação, se for diferente da legenda ("" = não fala)
+  selo?: string; // texto grande no centro da mesa durante a ação (ex.: "vitória")
   lado?: LadoId; // quem faz a ação (padrão: quem está na vez)
 };
 

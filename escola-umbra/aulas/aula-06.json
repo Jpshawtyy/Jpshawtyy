@@ -1,0 +1,105 @@
+{
+  "serie": "Do zero ao campeonato",
+  "numero": 6,
+  "titulo_capa": "6 prêmios",
+  "subtitulo_capa": "como se ganha",
+  "capa": {"cartas": ["dreepy", "dragapult", "rayquaza"]},
+  "narracao": "auto",
+
+  "cartas": {
+    "dreepy": {"nome": "Dreepy", "set": "Twilight Masquerade", "numero": 128},
+    "drakloak": {"nome": "Drakloak", "set": "Twilight Masquerade", "numero": 129},
+    "dragapult": {"nome": "Dragapult ex", "set": "Twilight Masquerade", "numero": 130},
+    "rayquaza": {"nome": "Mega Rayquaza ex", "set": "Delta Reign", "numero": 84},
+    "raikou": {"nome": "Raikou ex", "set": "Delta Reign", "numero": 33},
+    "pincurchin": {"nome": "Pincurchin", "set": "Delta Reign", "numero": 36},
+    "energia-fogo": {"nome": "Basic Fire Energy", "set": "Scarlet & Violet Energies", "numero": 2},
+    "energia-psiquica": {"nome": "Basic Psychic Energy", "set": "Scarlet & Violet Energies", "numero": 5},
+    "energia-eletrica": {"nome": "Basic Lightning Energy", "set": "Scarlet & Violet Energies", "numero": 4}
+  },
+
+  "cenas": [
+    {
+      "tipo": "gancho",
+      "texto": "6 prêmios",
+      "subtitulo": "como se ganha",
+      "duracao": 2.2,
+      "falas": [{"texto": "Seis prêmios.", "em": 0.05}],
+      "legendas": [{"texto": "o jeito *principal* de ganhar", "em": 1.1}]
+    },
+    {
+      "tipo": "lista",
+      "titulo": "3 jeitos de ganhar",
+      "duracao": 7,
+      "itens": [
+        {"texto": "Pegar os 6 prêmios", "destaque": true},
+        "Rival sem Pokémon em jogo",
+        "Rival sem carta pra comprar"
+      ],
+      "legendas": [
+        {"texto": "Pegar seus *seis* prêmios", "fala": "Pegar seus seis prêmios,"},
+        {"texto": "deixar o rival *sem Pokémon* em jogo", "fala": "deixar o rival sem Pokémon em jogo,"},
+        {"texto": "ou o deck dele *acabar* antes de comprar", "fala": "ou o deck dele acabar na hora de comprar."}
+      ]
+    },
+    {
+      "tipo": "lista",
+      "titulo": "quanto vale o nocaute",
+      "duracao": 7,
+      "itens": [
+        {"texto": "1 prêmio", "detalhe": "Pokémon comum", "carta": "dreepy", "destaque": true},
+        {"texto": "2 prêmios", "detalhe": "Pokémon ex", "carta": "dragapult", "destaque": true},
+        {"texto": "3 prêmios", "detalhe": "Mega Evolução ex", "carta": "rayquaza", "destaque": true}
+      ],
+      "legendas": [
+        {"texto": "Nocauteou um Pokémon comum: *um* prêmio", "fala": "Nocauteou um Pokémon comum: um prêmio."},
+        {"texto": "Um Pokémon ex: *dois*", "fala": "Um Pokémon ex: dois."},
+        {"texto": "Um Mega: *três* de uma vez", "fala": "Um Mega: três de uma vez."}
+      ]
+    },
+    {
+      "tipo": "mesa",
+      "legendas": [{"texto": "Faltam *dois* prêmios. Olha só", "em": 0.15, "fala": "Faltam dois prêmios. Olha só."}],
+      "estado": {
+        "turno": 7,
+        "quem_comecou": "eu",
+        "eu": {
+          "ativo": {"carta": "dragapult", "evoluiu_de": ["dreepy", "drakloak"], "energias": ["energia-fogo", "energia-psiquica"], "entrou_no_turno": 1},
+          "banco": [{"carta": "drakloak", "evoluiu_de": ["dreepy"], "entrou_no_turno": 3}],
+          "mao": ["energia-fogo"],
+          "deck": 22,
+          "premios": 2
+        },
+        "oponente": {
+          "ativo": {"carta": "raikou", "energias": ["energia-eletrica", "energia-eletrica"], "entrou_no_turno": 2},
+          "banco": [{"carta": "pincurchin", "entrou_no_turno": 4}],
+          "mao": 5,
+          "deck": 24,
+          "premios": 3
+        }
+      },
+      "acoes": [
+        {"acao": "atacar", "ataque": "Phantom Dive", "legenda": "*200* de dano no Pokémon ativo", "fala": "Duzentos de dano no Pokémon ativo,"},
+        {"acao": "dano", "alvo": "oponente.banco:1", "valor": 60, "legenda": "e mais *60* espalhados no banco", "fala": "e mais sessenta espalhados no banco."},
+        {"acao": "nocaute", "alvo": "oponente.ativo", "legenda": "Ele tinha *200* de HP: nocaute", "fala": "Ele tinha duzentos de HP: nocaute."},
+        {"acao": "pegar_premio", "cartas": ["dreepy", "energia-psiquica"], "legenda": "Era um *ex*: pega dois prêmios", "fala": "Era um ex: pega dois prêmios."},
+        {"acao": "pausa", "duracao": 1.8, "selo": "vitória", "legenda": "Acabaram os prêmios: *vitória*", "fala": "Acabaram os prêmios: vitória."}
+      ]
+    },
+    {
+      "tipo": "riscado",
+      "titulo": "erro de iniciante",
+      "duracao": 4.2,
+      "itens": [{"texto": "Todo nocaute vale 1 prêmio", "em": 0.3, "riscar_em": 1.4}],
+      "legendas": [{"texto": "Cada ex que você joga é um alvo que vale *dois*", "em": 0.6, "fala": "Cada ex que você joga é um alvo que vale dois."}]
+    },
+    {
+      "tipo": "cta",
+      "duracao": 4.5,
+      "principal": "SALVA",
+      "complemento": "pra próxima partida",
+      "seguir": "segue @escolaumbratcg",
+      "falas": [{"texto": "Salva pra próxima partida, e segue a Escola Umbra.", "em": 0.25}]
+    }
+  ]
+}

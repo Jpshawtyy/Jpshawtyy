@@ -1,0 +1,492 @@
+{
+ "assinatura": "8d72b257436af3367ab2d79466b05f3e5d6cba18",
+ "voz": "pm_santa",
+ "frases": [
+  {
+   "fala": "Seis prêmios.",
+   "duracao": 0.907098
+  },
+  {
+   "fala": "o jeito principal de ganhar",
+   "duracao": 1.758844
+  },
+  {
+   "fala": "Pegar seus seis prêmios,",
+   "duracao": 1.45517
+  },
+  {
+   "fala": "deixar o rival sem Pokémon em jogo,",
+   "duracao": 1.990771
+  },
+  {
+   "fala": "ou o deck dele acabar na hora de comprar.",
+   "duracao": 2.360839
+  },
+  {
+   "fala": "Nocauteou um Pokémon comum: um prêmio.",
+   "duracao": 2.135397
+  },
+  {
+   "fala": "Um Pokémon ex: dois.",
+   "duracao": 1.341088
+  },
+  {
+   "fala": "Um Mega: três de uma vez.",
+   "duracao": 1.5161
+  },
+  {
+   "fala": "Faltam dois prêmios. Olha só.",
+   "duracao": 1.680295
+  },
+  {
+   "fala": "Duzentos de dano no Pokémon ativo,",
+   "duracao": 2.203016
+  },
+  {
+   "fala": "e mais sessenta espalhados no banco.",
+   "duracao": 2.12059
+  },
+  {
+   "fala": "Ele tinha duzentos de HP: nocaute.",
+   "duracao": 2.1461
+  },
+  {
+   "fala": "Era um ex: pega dois prêmios.",
+   "duracao": 1.645714
+  },
+  {
+   "fala": "Acabaram os prêmios: vitória.",
+   "duracao": 1.668889
+  },
+  {
+   "fala": "Cada ex que você joga é um alvo que vale dois.",
+   "duracao": 2.665215
+  },
+  {
+   "fala": "Salva pra próxima partida, e segue a Escola Umbra.",
+   "duracao": 2.837642
+  }
+ ],
+ "words": [
+  {
+   "palavra": "o",
+   "inicio": 1.117098,
+   "fim": 1.2554988393442623
+  },
+  {
+   "palavra": "jeito",
+   "inicio": 1.2554988393442623,
+   "fim": 1.6153410216393442
+  },
+  {
+   "palavra": "principal",
+   "inicio": 1.6153410216393442,
+   "fim": 2.196624546885246
+  },
+  {
+   "palavra": "de",
+   "inicio": 2.196624546885246,
+   "fim": 2.390385721967213
+  },
+  {
+   "palavra": "ganhar",
+   "inicio": 2.390385721967213,
+   "fim": 2.8055882399999996
+  },
+  {
+   "palavra": "Pegar",
+   "inicio": 3.375942,
+   "fim": 3.7251828000000002
+  },
+  {
+   "palavra": "seus",
+   "inicio": 3.7251828000000002,
+   "fim": 4.020694246153846
+  },
+  {
+   "palavra": "seis",
+   "inicio": 4.020694246153846,
+   "fim": 4.316205692307692
+  },
+  {
+   "palavra": "prêmios",
+   "inicio": 4.316205692307692,
+   "fim": 4.7729052
+  },
+  {
+   "palavra": "deixar",
+   "inicio": 5.459275333333334,
+   "fim": 5.831575364502165
+  },
+  {
+   "palavra": "o",
+   "inicio": 5.831575364502165,
+   "fim": 5.955675374891776
+  },
+  {
+   "palavra": "rival",
+   "inicio": 5.955675374891776,
+   "fim": 6.278335401904763
+  },
+  {
+   "palavra": "sem",
+   "inicio": 6.278335401904763,
+   "fim": 6.501715420606061
+  },
+  {
+   "palavra": "Pokémon",
+   "inicio": 6.501715420606061,
+   "fim": 6.923655455930737
+  },
+  {
+   "palavra": "em",
+   "inicio": 6.923655455930737,
+   "fim": 7.097395470476191
+  },
+  {
+   "palavra": "jogo",
+   "inicio": 7.097395470476191,
+   "fim": 7.370415493333335
+  },
+  {
+   "palavra": "ou",
+   "inicio": 7.792608666666667,
+   "fim": 7.977083528062016
+  },
+  {
+   "palavra": "o",
+   "inicio": 7.977083528062016,
+   "fim": 8.108851286201551
+  },
+  {
+   "palavra": "deck",
+   "inicio": 8.108851286201551,
+   "fim": 8.398740354108527
+  },
+  {
+   "palavra": "dele",
+   "inicio": 8.398740354108527,
+   "fim": 8.688629422015504
+  },
+  {
+   "palavra": "acabar",
+   "inicio": 8.688629422015504,
+   "fim": 9.08393269643411
+  },
+  {
+   "palavra": "antes",
+   "inicio": 9.08393269643411,
+   "fim": 9.4265288675969
+  },
+  {
+   "palavra": "de",
+   "inicio": 9.4265288675969,
+   "fim": 9.611003728992248
+  },
+  {
+   "palavra": "comprar",
+   "inicio": 9.611003728992248,
+   "fim": 10.059014106666666
+  },
+  {
+   "palavra": "Nocauteou",
+   "inicio": 10.653447666666667,
+   "fim": 11.165942946666666
+  },
+  {
+   "palavra": "um",
+   "inicio": 11.165942946666666,
+   "fim": 11.336774706666667
+  },
+  {
+   "palavra": "Pokémon",
+   "inicio": 11.336774706666667,
+   "fim": 11.751651838095238
+  },
+  {
+   "palavra": "comum:",
+   "inicio": 11.751651838095238,
+   "fim": 12.16652896952381
+  },
+  {
+   "palavra": "um",
+   "inicio": 12.16652896952381,
+   "fim": 12.337360729523809
+  },
+  {
+   "palavra": "prêmio",
+   "inicio": 12.337360729523809,
+   "fim": 12.703428786666667
+  },
+  {
+   "palavra": "Um",
+   "inicio": 12.948844666666666,
+   "fim": 13.144760131014491
+  },
+  {
+   "palavra": "Pokémon",
+   "inicio": 13.144760131014491,
+   "fim": 13.620554830144927
+  },
+  {
+   "palavra": "ex:",
+   "inicio": 13.620554830144927,
+   "fim": 13.928421988405796
+  },
+  {
+   "palavra": "dois",
+   "inicio": 13.928421988405796,
+   "fim": 14.236289146666666
+  },
+  {
+   "palavra": "Um",
+   "inicio": 15.282178,
+   "fim": 15.457836482758621
+  },
+  {
+   "palavra": "Mega:",
+   "inicio": 15.457836482758621,
+   "fim": 15.83424751724138
+  },
+  {
+   "palavra": "três",
+   "inicio": 15.83424751724138,
+   "fim": 16.11028227586207
+  },
+  {
+   "palavra": "de",
+   "inicio": 16.11028227586207,
+   "fim": 16.28594075862069
+  },
+  {
+   "palavra": "uma",
+   "inicio": 16.28594075862069,
+   "fim": 16.511787379310345
+  },
+  {
+   "palavra": "vez",
+   "inicio": 16.511787379310345,
+   "fim": 16.737634
+  },
+  {
+   "palavra": "Faltam",
+   "inicio": 17.765511333333333,
+   "fim": 18.12664936318408
+  },
+  {
+   "palavra": "dois",
+   "inicio": 18.12664936318408,
+   "fim": 18.39148391840796
+  },
+  {
+   "palavra": "prêmios.",
+   "inicio": 18.39148391840796,
+   "fim": 18.945228897512436
+  },
+  {
+   "palavra": "Olha",
+   "inicio": 18.945228897512436,
+   "fim": 19.210063452736318
+  },
+  {
+   "palavra": "só",
+   "inicio": 19.210063452736318,
+   "fim": 19.37859453333333
+  },
+  {
+   "palavra": "200",
+   "inicio": 19.605806333333334,
+   "fim": 19.903213493333332
+  },
+  {
+   "palavra": "de",
+   "inicio": 19.903213493333332,
+   "fim": 20.134530173333335
+  },
+  {
+   "palavra": "dano",
+   "inicio": 20.134530173333335,
+   "fim": 20.498027813333334
+  },
+  {
+   "palavra": "no",
+   "inicio": 20.498027813333334,
+   "fim": 20.729344493333333
+  },
+  {
+   "palavra": "Pokémon",
+   "inicio": 20.729344493333333,
+   "fim": 21.291113573333334
+  },
+  {
+   "palavra": "ativo",
+   "inicio": 21.291113573333334,
+   "fim": 21.720701693333332
+  },
+  {
+   "palavra": "e",
+   "inicio": 22.505806333333332,
+   "fim": 22.66003106060606
+  },
+  {
+   "palavra": "mais",
+   "inicio": 22.66003106060606,
+   "fim": 22.99932546060606
+  },
+  {
+   "palavra": "60",
+   "inicio": 22.99932546060606,
+   "fim": 23.21524007878788
+  },
+  {
+   "palavra": "espalhados",
+   "inicio": 23.21524007878788,
+   "fim": 23.924673824242422
+  },
+  {
+   "palavra": "no",
+   "inicio": 23.924673824242422,
+   "fim": 24.140588442424242
+  },
+  {
+   "palavra": "banco",
+   "inicio": 24.140588442424242,
+   "fim": 24.541572733333332
+  },
+  {
+   "palavra": "Ele",
+   "inicio": 24.786396333333336,
+   "fim": 25.067340333333338
+  },
+  {
+   "palavra": "tinha",
+   "inicio": 25.067340333333338,
+   "fim": 25.473148333333334
+  },
+  {
+   "palavra": "200",
+   "inicio": 25.473148333333334,
+   "fim": 25.754092333333336
+  },
+  {
+   "palavra": "de",
+   "inicio": 25.754092333333336,
+   "fim": 25.972604333333337
+  },
+  {
+   "palavra": "HP:",
+   "inicio": 25.972604333333337,
+   "fim": 26.315980333333336
+  },
+  {
+   "palavra": "nocaute",
+   "inicio": 26.315980333333336,
+   "fim": 26.846652333333335
+  },
+  {
+   "palavra": "Era",
+   "inicio": 27.092496333333337,
+   "fim": 27.3079352569697
+  },
+  {
+   "palavra": "um",
+   "inicio": 27.3079352569697,
+   "fim": 27.47549886424243
+  },
+  {
+   "palavra": "ex:",
+   "inicio": 27.47549886424243,
+   "fim": 27.73881310424243
+  },
+  {
+   "palavra": "pega",
+   "inicio": 27.73881310424243,
+   "fim": 28.002127344242428
+  },
+  {
+   "palavra": "dois",
+   "inicio": 28.002127344242428,
+   "fim": 28.265441584242428
+  },
+  {
+   "palavra": "prêmios",
+   "inicio": 28.265441584242428,
+   "fim": 28.672381773333335
+  },
+  {
+   "palavra": "Acabaram",
+   "inicio": 28.898210333333335,
+   "fim": 29.373843698333335
+  },
+  {
+   "palavra": "os",
+   "inicio": 29.373843698333335,
+   "fim": 29.549077043333334
+  },
+  {
+   "palavra": "prêmios:",
+   "inicio": 29.549077043333334,
+   "fim": 30.074777078333334
+  },
+  {
+   "palavra": "vitória",
+   "inicio": 30.074777078333334,
+   "fim": 30.500343773333334
+  },
+  {
+   "palavra": "Cada",
+   "inicio": 32.198210333333336,
+   "fim": 32.4714595605178
+  },
+  {
+   "palavra": "ex",
+   "inicio": 32.4714595605178,
+   "fim": 32.64534543236246
+  },
+  {
+   "palavra": "que",
+   "inicio": 32.64534543236246,
+   "fim": 32.868912981877024
+  },
+  {
+   "palavra": "você",
+   "inicio": 32.868912981877024,
+   "fim": 33.14216220906149
+  },
+  {
+   "palavra": "joga",
+   "inicio": 33.14216220906149,
+   "fim": 33.415411436245954
+  },
+  {
+   "palavra": "é",
+   "inicio": 33.415411436245954,
+   "fim": 33.53961563042071
+  },
+  {
+   "palavra": "um",
+   "inicio": 33.53961563042071,
+   "fim": 33.71350150226537
+  },
+  {
+   "palavra": "alvo",
+   "inicio": 33.71350150226537,
+   "fim": 33.98675072944984
+  },
+  {
+   "palavra": "que",
+   "inicio": 33.98675072944984,
+   "fim": 34.2103182789644
+  },
+  {
+   "palavra": "vale",
+   "inicio": 34.2103182789644,
+   "fim": 34.48356750614887
+  },
+  {
+   "palavra": "dois",
+   "inicio": 34.48356750614887,
+   "fim": 34.75681673333334
+  }
+ ]
+}

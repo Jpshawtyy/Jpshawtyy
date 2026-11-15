@@ -118,7 +118,7 @@ Exemplos de todas: `aulas/demo-componentes.json` e `aulas/demo-mesa.json`. A `au
 | `fim_de_turno` | | passa a vez |
 | `pausa` | `duracao` | só espera |
 
-Para o oponente agir, ponha `"lado": "oponente"` na ação ou use `fim_de_turno` antes.
+Para o oponente agir, ponha `"lado": "oponente"` na ação ou use `fim_de_turno` antes. Qualquer ação aceita `"selo": "vitória"` (ou outro texto curto), que aparece grande no centro da mesa enquanto a ação dura.
 
 **Regras conferidas** antes de renderizar: 1 energia da mão por turno, 1 Apoiador por turno, 1 Estádio por turno, recuar 1 vez por turno (e pagar o custo), não evoluir no turno em que o Pokémon entrou nem no primeiro turno do jogador, quem começa não ataca nem joga Apoiador no primeiro turno, nada depois do ataque, só Básico vai para o banco (máximo 5), a evolução precisa bater com a carta de baixo, o ataque precisa existir na carta e a energia precisa pagar o custo. Fraqueza e resistência entram na conta do dano. Se o roteiro quebrar regra, o comando lista os erros e não renderiza.
 

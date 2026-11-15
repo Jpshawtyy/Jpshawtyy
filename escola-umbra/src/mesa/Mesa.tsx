@@ -614,10 +614,10 @@ export const Mesa: React.FC<{
         </>
       ) : null}
 
-      {/* anel de chegada: Pokémon no banco e energia ligada */}
-      {(passo?.tipo === 'jogar_no_banco' || passo?.tipo === 'ligar_energia') && alvoBase
+      {/* anel de chegada: Pokémon no banco, energia ligada e dano (mostra onde o dano caiu) */}
+      {(passo?.tipo === 'jogar_no_banco' || passo?.tipo === 'ligar_energia' || passo?.tipo === 'dano') && alvoBase
         ? (() => {
-            const quando = passo.tipo === 'jogar_no_banco' ? 0.8 : 0.88;
+            const quando = passo.tipo === 'jogar_no_banco' ? 0.8 : passo.tipo === 'dano' ? 0.05 : 0.88;
             const u = trecho(tl, [quando, quando + 0.45], [0, 1]);
             if (u <= 0 || u >= 1) return null;
             const d = alvoBase.w * 2.1;
@@ -755,6 +755,42 @@ export const Mesa: React.FC<{
             nocaute
           </Pill>
         </div>
+      ) : null}
+
+      {/* selo: texto grande no centro durante a ação (ex.: "vitória") */}
+      {passo?.acao.selo && tl > 0.05 ? (
+        <>
+          <div style={{position: 'absolute', inset: -600, background: CORES.fundo, opacity: trecho(tl, [0.05, 0.3], [0, 0.6]), zIndex: 940}} />
+          <div
+            style={{
+              position: 'absolute',
+              left: BASE_MESA.x0,
+              width: BASE_MESA.largura,
+              top: ZONAS.eu.ativo.y - 70,
+              display: 'flex',
+              justifyContent: 'center',
+              zIndex: 960,
+              transform: `scale(${mola(quadro, fps, passo.inicio + 0.05, MOLA_PULO)}) rotate(-4deg)`,
+            }}
+          >
+            <div
+              style={{
+                fontFamily: FONTE_TITULO,
+                fontWeight: 700,
+                fontSize: 120,
+                lineHeight: 1,
+                letterSpacing: '-0.03em',
+                color: CORES.ouro,
+                WebkitTextStroke: `12px ${CORES.fundo}`,
+                paintOrder: 'stroke fill',
+                textShadow: '0 10px 30px rgba(0,0,0,0.7)',
+                whiteSpace: 'nowrap',
+              }}
+            >
+              {passo.acao.selo}
+            </div>
+          </div>
+        </>
       ) : null}
 
       {/* fim de turno */}
