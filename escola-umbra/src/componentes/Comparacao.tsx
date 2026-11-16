@@ -71,7 +71,7 @@ const Coluna: React.FC<{
               <div
                 style={{
                   fontFamily: FONTE_TEXTO,
-                  fontWeight: 500,
+                  fontWeight: 600,
                   fontSize: 44,
                   lineHeight: 1.12,
                   textAlign: 'center',
@@ -81,7 +81,7 @@ const Coluna: React.FC<{
                   width: largura - 30,
                   boxSizing: 'border-box',
                   background: 'rgba(243,238,226,0.05)',
-                  boxShadow: `inset 0 0 0 2px ${lado === 'bons' ? 'rgba(232,184,74,0.55)' : 'rgba(214,51,74,0.55)'}`,
+                  boxShadow: `inset 0 0 0 2px ${lado === 'bons' ? 'rgba(240,193,96,0.6)' : 'rgba(229,50,63,0.65)'}`,
                 }}
               >
                 {o.texto}
@@ -112,7 +112,7 @@ export const Comparacao: React.FC<{cena: CenaComparacao; cartas: MapaCartas}> = 
           top: topo,
           width: 2,
           height: (1240 - topo) * divisor,
-          background: 'rgba(232,184,74,0.3)',
+          background: `linear-gradient(180deg, ${CORES.ouro}, ${CORES.vermelho})`, opacity: 0.6,
         }}
       />
       <Coluna itens={cena.bons} cartas={cartas} lado="bons" rotulo={cena.pill_bons ?? 'bons'} x={AREA.x0} largura={largura} topo={topo} atraso={0.25} />

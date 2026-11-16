@@ -2,7 +2,7 @@ import React from 'react';
 import {CORES} from '../tema';
 import {FONTE_MONO} from '../fontes';
 
-// Etiqueta arredondada: dourada (bom) ou vermelha (alerta).
+// Etiqueta curta em paralelogramo: vermelha (marca, alerta) ou dourada (destaque).
 export const Pill: React.FC<{
   children: React.ReactNode;
   cor?: 'ouro' | 'vermelho';
@@ -16,24 +16,29 @@ export const Pill: React.FC<{
     <div
       style={{
         display: 'inline-flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        fontFamily: FONTE_MONO,
-        fontWeight: 500,
-        fontSize: tamanho,
-        lineHeight: 1,
-        letterSpacing: '0.08em',
-        textTransform: 'uppercase',
-        whiteSpace: 'nowrap',
-        padding: `${tamanho * 0.42}px ${tamanho * 0.8}px`,
-        borderRadius: 999,
-        background: contorno ? 'rgba(10,10,12,0.72)' : fundo,
-        color: contorno ? fundo : texto,
+        transform: 'skewX(-14deg)',
+        background: contorno ? 'rgba(10,10,13,0.78)' : fundo,
         boxShadow: contorno ? `inset 0 0 0 2px ${fundo}` : '0 6px 18px rgba(0,0,0,0.45)',
+        padding: `${tamanho * 0.36}px ${tamanho * 0.8}px`,
         ...style,
       }}
     >
-      {children}
+      <div
+        style={{
+          transform: 'skewX(14deg)',
+          fontFamily: FONTE_MONO,
+          fontWeight: 700,
+          fontSize: tamanho,
+          lineHeight: 1,
+          letterSpacing: '0.14em',
+          marginRight: '-0.14em',
+          textTransform: 'uppercase',
+          whiteSpace: 'nowrap',
+          color: contorno ? fundo : texto,
+        }}
+      >
+        {children}
+      </div>
     </div>
   );
 };

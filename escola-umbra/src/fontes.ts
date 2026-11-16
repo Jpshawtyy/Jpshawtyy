@@ -1,15 +1,19 @@
-import {loadFont as carregarUnbounded} from '@remotion/google-fonts/Unbounded';
-import {loadFont as carregarInter} from '@remotion/google-fonts/Inter';
-import {loadFont as carregarMono} from '@remotion/google-fonts/JetBrainsMono';
+import {loadFont as carregarAnton} from '@remotion/google-fonts/Anton';
+import {loadFont as carregarBarlow} from '@remotion/google-fonts/Barlow';
+import {loadFont as carregarBarlowCondensed} from '@remotion/google-fonts/BarlowCondensed';
 
-// Só os pesos da identidade: Unbounded 700, Inter 400/500, JetBrains Mono 500.
-const unbounded = carregarUnbounded('normal', {weights: ['700'], subsets: ['latin']});
-const inter = carregarInter('normal', {weights: ['400', '500'], subsets: ['latin']});
-const mono = carregarMono('normal', {weights: ['500'], subsets: ['latin']});
+// Identidade "Estilo Arena". O guia usa Impact (títulos) e Bahnschrift (apoio), que são fontes do Windows
+// e não estão no Google Fonts; aqui vão as equivalentes mais próximas:
+// - Anton no lugar da Impact (títulos, sempre em maiúsculas, inclinados e com sombra vermelha)
+// - Barlow no lugar da Bahnschrift (legendas e textos)
+// - Barlow Condensed para as etiquetas em maiúsculas espaçadas
+const anton = carregarAnton('normal', {weights: ['400'], subsets: ['latin']});
+const barlow = carregarBarlow('normal', {weights: ['500', '600', '700'], subsets: ['latin']});
+const barlowCondensed = carregarBarlowCondensed('normal', {weights: ['500', '600', '700'], subsets: ['latin']});
 
-export const FONTE_TITULO = unbounded.fontFamily;
-export const FONTE_TEXTO = inter.fontFamily;
-export const FONTE_MONO = mono.fontFamily;
+export const FONTE_TITULO = anton.fontFamily;
+export const FONTE_TEXTO = barlow.fontFamily;
+export const FONTE_MONO = barlowCondensed.fontFamily; // etiquetas
 
-// Resolve quando as três fontes terminaram de carregar. Quem mede texto precisa esperar por isto.
-export const fontesProntas: Promise<unknown> = Promise.all([unbounded.waitUntilDone(), inter.waitUntilDone(), mono.waitUntilDone()]);
+// Resolve quando as fontes terminaram de carregar. Quem mede texto precisa esperar por isto.
+export const fontesProntas: Promise<unknown> = Promise.all([anton.waitUntilDone(), barlow.waitUntilDone(), barlowCondensed.waitUntilDone()]);

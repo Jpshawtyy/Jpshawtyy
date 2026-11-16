@@ -56,11 +56,11 @@ export const Riscado: React.FC<{cena: CenaRiscado; duracao: number}> = ({cena, d
                 }}
               >
                 {/* X vermelho que aparece junto com o risco */}
-                <svg width={72} height={72} viewBox="0 0 76 76" style={{flex: 'none', transform: `scale(${marca}) rotate(${(1 - marca) * -90}deg)`, opacity: marca}}>
-                  <circle cx={38} cy={38} r={36} fill={CORES.vermelho} />
-                  <path d="M25 25 L51 51 M51 25 L25 51" stroke={CORES.pillVermelhoTexto} strokeWidth={8} strokeLinecap="round" />
+                <svg width={72} height={72} viewBox="0 0 76 76" style={{flex: 'none', transform: `scale(${marca}) rotate(${(1 - marca) * -45}deg)`, opacity: marca, overflow: 'visible'}}>
+                  <polygon points="14,2 76,2 62,74 0,74" fill={CORES.vermelho} />
+                  <path d="M26 24 L50 52 M50 24 L26 52" stroke={CORES.pillVermelhoTexto} strokeWidth={8} strokeLinecap="square" />
                 </svg>
-                <div style={{flex: '0 1 auto', minWidth: 0, fontFamily: FONTE_TEXTO, fontWeight: 500, fontSize: 54, lineHeight: 1.16, letterSpacing: '-0.015em'}}>
+                <div style={{flex: '0 1 auto', minWidth: 0, fontFamily: FONTE_TEXTO, fontWeight: 600, fontSize: 54, lineHeight: 1.16, letterSpacing: '-0.015em'}}>
                   <span
                     style={{
                       color: risco > 0.5 ? CORES.secundario : CORES.texto,

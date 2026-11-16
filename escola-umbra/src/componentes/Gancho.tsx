@@ -1,83 +1,77 @@
 import React from 'react';
 import {AbsoluteFill, useCurrentFrame, useVideoConfig} from 'remotion';
 import {AREA, CORES} from '../tema';
-import {FONTE_TEXTO, FONTE_TITULO} from '../fontes';
+import {FONTE_MONO, FONTE_TITULO} from '../fontes';
 import {MOLA_PULO, mola, trecho} from '../anim';
-import {TextoAjustado} from './TextoAjustado';
-import {Estrela} from './Estrela';
+import {INCLINACAO, ListrasOuro, TituloArena, TracoOuro} from './Arena';
 import type {CenaGancho} from '../tipos';
 
-// Gancho: palavra ou frase gigante em dourado. Já está na tela no primeiro décimo de segundo.
+// Gancho: palavra gigante em maiúsculas, branca com sombra vermelha. Já está na tela no quadro 0.
 export const Gancho: React.FC<{cena: CenaGancho}> = ({cena}) => {
   const quadro = useCurrentFrame();
   const {fps} = useVideoConfig();
   const t = quadro / fps;
 
   const batida = mola(quadro, fps, 0, MOLA_PULO);
-  // Já nasce visível no quadro 0 e cresce com um pulo curto (nunca passa da largura segura).
-  const escala = 0.74 + 0.26 * batida;
-  const linha = mola(quadro, fps, 0.3);
-  const sub = mola(quadro, fps, 0.55, MOLA_PULO);
-  const onda = trecho(t, [0.05, 0.7], [0, 1]);
-  const centroY = 770;
+  const escala = 1.22 - 0.22 * batida;
+  // tremidinha quando a palavra "bate"
+  const tremor = t < 0.3 ? Math.sin(t * 95) * 6 * (1 - t / 0.3) : 0;
+  const traco = mola(quadro, fps, 0.25);
+  const sub = mola(quadro, fps, 0.45, MOLA_PULO);
+  const listras = trecho(t, [0, 0.35], [1, 0]);
+  const centroY = 760;
 
   return (
     <AbsoluteFill>
-      {/* anel que se abre quando a palavra bate */}
+      {/* palavra-fantasma do próprio gancho, enorme e em contorno */}
       <div
         style={{
           position: 'absolute',
-          left: AREA.cx - 420,
-          top: centroY - 420,
-          width: 840,
-          height: 840,
-          borderRadius: '50%',
-          boxShadow: `inset 0 0 0 ${6 * (1 - onda)}px ${CORES.ouro}`,
-          opacity: (1 - onda) * 0.8,
-          transform: `scale(${0.35 + onda * 0.85})`,
+          left: -200,
+          right: -200,
+          top: centroY - 300,
+          textAlign: 'center',
+          fontFamily: FONTE_TITULO,
+          fontSize: 420,
+          lineHeight: 1,
+          whiteSpace: 'nowrap',
+          color: 'transparent',
+          WebkitTextStroke: '2px rgba(229,50,63,0.22)',
+          transform: `skewX(${INCLINACAO}deg) translateX(${(1 - batida) * 120 - t * 10}px)`,
         }}
-      />
+      >
+        {cena.texto.split('\n')[0].toLocaleUpperCase('pt-BR')}
+      </div>
+      {/* listras douradas que cruzam a tela no começo */}
+      <div style={{position: 'absolute', inset: 0, transform: `translateX(${-listras * 900}px)`, opacity: 1 - trecho(t, [0.35, 0.6], [0, 0.65])}}>
+        <ListrasOuro x={AREA.x1 - 120} y={centroY - 380} altura={760} inclinacao={260} brilho={(t * 0.5) % 1} />
+      </div>
       <div
         style={{
           position: 'absolute',
           left: AREA.x0,
           width: AREA.largura,
-          top: centroY - 300,
-          height: 600,
+          top: centroY - 320,
+          height: 640,
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
           justifyContent: 'center',
         }}
       >
-        <div style={{transform: `scale(${escala})`}}>
-          <TextoAjustado
-            texto={cena.texto}
-            largura={AREA.largura - 60}
-            maximo={230}
-            fonte={FONTE_TITULO}
-            peso={700}
-            style={{color: CORES.ouro, textShadow: '0 10px 40px rgba(0,0,0,0.6)'}}
-          />
+        <div style={{transform: `scale(${escala}) translateX(${tremor}px)`}}>
+          <TituloArena texto={cena.texto} largura={AREA.largura - 30} maximo={210} />
         </div>
-        <div
-          style={{
-            width: 360 * linha,
-            height: 8,
-            borderRadius: 8,
-            background: CORES.ouro,
-            marginTop: 30,
-            opacity: linha,
-          }}
-        />
+        <TracoOuro largura={260} progresso={traco} style={{marginTop: 34}} />
         {cena.subtitulo ? (
           <div
             style={{
-              marginTop: 34,
-              fontFamily: FONTE_TEXTO,
-              fontWeight: 500,
-              fontSize: 50,
-              letterSpacing: '-0.01em',
+              marginTop: 30,
+              fontFamily: FONTE_MONO,
+              fontWeight: 700,
+              fontSize: 44,
+              letterSpacing: '0.16em',
+              textTransform: 'uppercase',
               color: CORES.texto,
               textAlign: 'center',
               opacity: Math.min(1, sub * 1.5),
@@ -88,10 +82,6 @@ export const Gancho: React.FC<{cena: CenaGancho}> = ({cena}) => {
           </div>
         ) : null}
       </div>
-      <Estrela x={AREA.x0 + 60} y={centroY - 210} tamanho={54} semente={1} atraso={0.25} />
-      <Estrela x={AREA.x1 - 70} y={centroY - 150} tamanho={38} semente={2} atraso={0.4} />
-      <Estrela x={AREA.x1 - 150} y={centroY + 250} tamanho={46} semente={3} atraso={0.55} />
-      <Estrela x={AREA.x0 + 130} y={centroY + 300} tamanho={30} semente={4} atraso={0.7} />
     </AbsoluteFill>
   );
 };

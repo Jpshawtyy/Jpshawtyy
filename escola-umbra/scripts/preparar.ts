@@ -9,7 +9,7 @@ import {completarLegendas, comoObjeto, legendasDaCena, planejar, temposDosItens,
 import {AREA} from '../src/tema';
 import {narrar, relatarNarracao, type Narracao} from './narracao';
 import {lerConfigNarrador} from './narrador';
-import {textoDaSerie} from '../src/componentes/Moldura';
+import {tamanhoEtiqueta, textoDaSerie} from '../src/componentes/Moldura';
 
 export type Achado = {nivel: 'erro' | 'aviso'; onde: string; mensagem: string};
 
@@ -69,7 +69,7 @@ const conferirEstrutura = (r: Roteiro, achados: Achado[]) => {
     if (EMOJI.test(t.texto)) erro(t.caminho, `Tem emoji no texto ("${t.texto}"). A identidade da Escola Umbra não usa emoji.`);
   }
   const etiqueta = textoDaSerie(r.numero ?? 0, r.serie ?? '');
-  if (etiqueta.length * 0.74 * 15 > AREA.largura - 80) {
+  if (tamanhoEtiqueta(r.numero ?? 0, r.serie ?? '') <= 15) {
     achados.push({nivel: 'aviso', onde: 'roteiro', mensagem: `A etiqueta "${etiqueta}" é comprida e vai ficar com letra pequena. Um nome de série mais curto lê melhor.`});
   }
 };

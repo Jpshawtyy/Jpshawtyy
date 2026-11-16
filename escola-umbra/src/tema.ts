@@ -1,13 +1,16 @@
 // Identidade visual da Escola Umbra. Tudo que é cor, medida e área segura mora aqui.
 
+// Identidade "Estilo Arena" (guia Liga Umbra): preto, vermelho de marca, ouro de destaque, branco quente.
 export const CORES = {
-  fundo: '#0A0A0C',
-  ouro: '#E8B84A',
-  vermelho: '#D6334A',
-  texto: '#F3EEE2',
-  secundario: '#9A9488',
-  pillOuroTexto: '#2A1E05',
-  pillVermelhoTexto: '#FFF1F2',
+  fundo: '#0A0A0D', // Sombra
+  vermelho: '#E5323F', // Vermelho: cor da marca (painéis, etiquetas, sombra dos títulos)
+  vermelhoEscuro: '#7D0F1A', // Vermelho escuro: fundo dos painéis em degradê
+  ouro: '#F0C160', // Ouro: listras, sublinhados, números e palavra-chave
+  texto: '#F5F1E8', // Branco: títulos e textos
+  secundario: '#A19C93', // texto de apoio
+  painel: '#141418', // fundo das barras e caixas escuras
+  pillOuroTexto: '#0A0A0D',
+  pillVermelhoTexto: '#F5F1E8',
 } as const;
 
 export const VIDEO = {largura: 1080, altura: 1920, fps: 30} as const;

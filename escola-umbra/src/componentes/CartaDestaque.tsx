@@ -4,6 +4,7 @@ import {AREA, PROPORCAO_CARTA} from '../tema';
 import {MOLA_PULO, mola} from '../anim';
 import {Titulo} from './Titulo';
 import {Pill} from './Pill';
+import {ListrasOuro, fundoVermelho} from './Arena';
 import {Carta} from './Carta';
 import {Estrela} from './Estrela';
 import type {CenaCartaDestaque, MapaCartas} from '../tipos';
@@ -39,20 +40,31 @@ export const CartaDestaque: React.FC<{cena: CenaCartaDestaque; cartas: MapaCarta
   return (
     <AbsoluteFill>
       {cena.titulo ? <Titulo texto={cena.titulo} /> : null}
-      {/* brilho atrás da carta */}
-      <div
-        style={{
-          position: 'absolute',
-          left: AREA.cx - largura,
-          top: cy - largura,
-          width: largura * 2,
-          height: largura * 2,
-          borderRadius: '50%',
-          background: 'radial-gradient(circle, rgba(232,184,74,0.22) 0%, rgba(232,184,74,0) 62%)',
-          opacity: e,
-          transform: `scale(${0.6 + 0.4 * e + Math.sin(t * 2.2) * 0.03})`,
-        }}
-      />
+      {/* painel vermelho em diagonal atrás da carta, com as listras douradas na borda */}
+      {(() => {
+        const painel = mola(quadro, fps, 0, MOLA_PULO);
+        const pw = largura * 1.5;
+        const ph = altura * 0.74;
+        const px = AREA.cx - pw / 2 + 70;
+        const py = cy - ph / 2;
+        const inclina = ph * 0.3;
+        return (
+          <div style={{position: 'absolute', inset: 0, transform: `translateX(${(1 - painel) * 700}px)`, opacity: Math.min(1, painel * 1.5)}}>
+            <div
+              style={{
+                position: 'absolute',
+                left: px,
+                top: py,
+                width: pw,
+                height: ph,
+                clipPath: `polygon(${inclina}px 0, 100% 0, calc(100% - ${inclina}px) 100%, 0 100%)`,
+                ...fundoVermelho(),
+              }}
+            />
+            <ListrasOuro x={px - 70} y={py} altura={ph} inclinacao={inclina} brilho={(t * 0.4) % 1} />
+          </div>
+        );
+      })()}
       <div
         style={{
           position: 'absolute',

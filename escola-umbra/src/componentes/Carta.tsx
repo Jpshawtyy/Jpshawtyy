@@ -1,20 +1,21 @@
 import React from 'react';
 import {Img, staticFile} from 'remotion';
 import {CORES, PROPORCAO_CARTA} from '../tema';
-import {LuaCrescente} from './Fundo';
 
 // Verso das cartas viradas (deck, prêmios): a "sleeve" da Escola Umbra.
 export const VersoCarta: React.FC<{largura: number}> = ({largura}) => {
   const altura = largura * PROPORCAO_CARTA;
   const raio = largura * 0.045;
+  const borda = Math.max(1.5, largura * 0.02);
   return (
     <div
       style={{
         width: largura,
         height: altura,
         borderRadius: raio,
-        background: 'linear-gradient(160deg, #1B1A1F 0%, #101014 60%, #16151A 100%)',
-        boxShadow: `inset 0 0 0 ${Math.max(1.5, largura * 0.018)}px rgba(232,184,74,0.85)`,
+        // metade preta, metade vermelha, cortadas por uma listra dourada em diagonal (como o emblema)
+        background: `linear-gradient(112deg, #141418 0 49%, ${CORES.ouro} 49% 53%, ${CORES.vermelho} 53% 100%)`,
+        boxShadow: `inset 0 0 0 ${borda}px ${CORES.ouro}`,
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
@@ -22,27 +23,7 @@ export const VersoCarta: React.FC<{largura: number}> = ({largura}) => {
         overflow: 'hidden',
       }}
     >
-      <div
-        style={{
-          position: 'absolute',
-          width: largura * 0.74,
-          height: largura * 0.74,
-          borderRadius: '50%',
-          boxShadow: `inset 0 0 0 ${Math.max(1, largura * 0.012)}px rgba(232,184,74,0.45)`,
-        }}
-      />
-      <div
-        style={{
-          position: 'absolute',
-          width: largura * 1.16,
-          height: largura * 1.16,
-          borderRadius: '50%',
-          boxShadow: `inset 0 0 0 ${Math.max(1, largura * 0.01)}px rgba(232,184,74,0.22)`,
-        }}
-      />
-      <div style={{transform: 'rotate(-18deg)'}}>
-        <LuaCrescente tamanho={largura * 0.34} cor={CORES.ouro} />
-      </div>
+      <Img src={staticFile('logo.png')} style={{width: largura * 0.66, height: largura * 0.66, objectFit: 'contain'}} />
     </div>
   );
 };

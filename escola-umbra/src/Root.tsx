@@ -1,7 +1,6 @@
 import React from 'react';
 import {Composition, Still} from 'remotion';
 import {Capa} from './Capa';
-import {LogoQuadro} from './componentes/Logo';
 import {Aula} from './Aula';
 import type {PropsAula} from './tipos';
 import {planejar} from './tempo';
@@ -31,6 +30,5 @@ export const Root: React.FC = () => (
       calculateMetadata={({props}) => ({durationInFrames: planejar(props.roteiro, props.cartas).totalQuadros})}
     />
     <Still id="Capa" component={Capa} width={VIDEO.largura} height={VIDEO.altura} defaultProps={PROPS_PADRAO} />
-    <Still id="Logo" component={LogoQuadro} width={1024} height={1024} />
   </>
 );

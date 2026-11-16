@@ -85,10 +85,10 @@ export const LegendaDinamica: React.FC<{
       <div
         style={{
           fontFamily: FONTE_TEXTO,
-          fontWeight: 500,
+          fontWeight: 600,
           fontSize: tamanho,
           lineHeight: 1.16,
-          letterSpacing: '-0.01em',
+          letterSpacing: '0',
           textAlign: 'center',
           textWrap: 'balance',
           color: CORES.texto,

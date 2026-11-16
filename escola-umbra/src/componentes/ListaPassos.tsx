@@ -53,7 +53,7 @@ export const ListaPassos: React.FC<{cena: CenaLista; duracao: number; cartas?: M
                 width: 4,
                 height: tempos.slice(1).reduce((soma, quando) => soma + passo * mola(quadro, fps, quando), 0),
                 maxHeight: (itens.length - 1) * passo,
-                background: 'rgba(232,184,74,0.45)',
+                background: 'rgba(240,193,96,0.55)',
                 borderRadius: 4,
               }}
             />
@@ -90,17 +90,16 @@ export const ListaPassos: React.FC<{cena: CenaLista; duracao: number; cartas?: M
                       flex: 'none',
                       width: bola,
                       height: bola,
-                      borderRadius: '50%',
-                      background: recua > 0.5 ? CORES.fundo : CORES.ouro,
-                      boxShadow: `inset 0 0 0 4px ${CORES.ouro}`,
-                      color: recua > 0.5 ? CORES.ouro : CORES.pillOuroTexto,
+                      background: recua > 0.5 ? CORES.painel : CORES.vermelho,
+                      boxShadow: recua > 0.5 ? `inset 0 0 0 3px ${CORES.vermelho}` : '0 8px 20px rgba(0,0,0,0.5)',
+                      color: CORES.texto,
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center',
                       fontFamily: FONTE_TITULO,
-                      fontWeight: 700,
-                      fontSize: bola * 0.5,
-                      transform: `scale(${(0.5 + 0.5 * e) * pulso})`,
+                      fontWeight: 400,
+                      fontSize: bola * 0.58,
+                      transform: `scale(${(0.5 + 0.5 * e) * pulso}) skewX(-10deg)`,
                     }}
                   >
                     {i + 1}
@@ -110,7 +109,7 @@ export const ListaPassos: React.FC<{cena: CenaLista; duracao: number; cartas?: M
                   <div
                     style={{
                       fontFamily: FONTE_TEXTO,
-                      fontWeight: 500,
+                      fontWeight: 600,
                       fontSize: 54,
                       lineHeight: 1.08,
                       letterSpacing: '-0.015em',
@@ -120,7 +119,7 @@ export const ListaPassos: React.FC<{cena: CenaLista; duracao: number; cartas?: M
                     {item.texto}
                   </div>
                   {item.detalhe ? (
-                    <div style={{fontFamily: FONTE_TEXTO, fontWeight: item.destaque ? 500 : 400, fontSize: 33, lineHeight: 1.2, color: item.destaque ? CORES.ouro : CORES.secundario, marginTop: 8}}>
+                    <div style={{fontFamily: FONTE_TEXTO, fontWeight: item.destaque ? 600 : 500, fontSize: 33, lineHeight: 1.2, color: item.destaque ? CORES.ouro : CORES.secundario, marginTop: 8}}>
                       {item.detalhe}
                     </div>
                   ) : null}

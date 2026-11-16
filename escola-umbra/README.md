@@ -35,7 +35,7 @@ Sai em `out/`: `aula-01.mp4` e `aula-01-capa.png`.
 | `npm run narrar -- --amostras` | Grava uma amostra de cada voz em `out/amostras/`, para escolher o narrador |
 | `npm run quadros -- <roteiro> --guias` | Fotos dos pontos de transição em `out/quadros/`, com a área segura desenhada |
 | `npm run studio -- <roteiro>` | Abre o Remotion Studio para ver e ajustar ao vivo |
-| `npm run logo -- --forcar` | Refaz a logo provisória em `public/logo.png` |
+| `npm run capa -- <roteiro>` | Gera só a capa PNG, sem renderizar o vídeo |
 
 Opções úteis de `aula`: `--guias` (área segura por cima), `--sem-capa`, `--atualizar-cartas` (ignora o cache), `--refazer-narracao`, `--forcar` (renderiza mesmo com regra quebrada).
 
@@ -165,11 +165,15 @@ Para ouvir todas: `npm run narrar -- --amostras` (grava em `out/amostras/`). Tro
   Aceita a saída do Whisper (`whisper audio.mp3 --language pt --word_timestamps True --output_format json`) ou uma lista `[{"palavra": "olha", "inicio": 0.5, "fim": 0.9}]`.
 - `"musica": "audio/trilha.mp3"` toca em loop a 15% por baixo da narração (mude com `{"arquivo": "...", "volume": 0.1}`).
 
-## Identidade visual
+## Identidade visual: "Estilo Arena"
 
-Tudo em `src/tema.ts`: cores, área segura (250 px em cima, 450 px embaixo, 160 px à direita) e o `@`. A margem da esquerda é igual à da direita, para o conteúdo ficar centrado no meio real da tela; a mesa é encaixada nessa área por escala. Fontes em `src/fontes.ts` (Unbounded 700, Inter 400/500, JetBrains Mono 500, via `@remotion/google-fonts`).
+Segue o guia de identidade (Estilo Arena), com o nome Escola Umbra e o @escolaumbratcg.
 
-`public/logo.png` é uma logo provisória (lua + capelo) gerada pelo projeto. Se você tem a oficial, salve por cima com o mesmo nome (PNG quadrado, fundo transparente).
+- **Cores** (`src/tema.ts`): Sombra `#0A0A0D` (fundo), Vermelho `#E5323F` (marca: painéis, etiquetas, sombra dos títulos), Vermelho escuro `#7D0F1A` (degradê dos painéis), Ouro `#F0C160` (listras, sublinhados, números e palavra-chave da legenda), Branco `#F5F1E8` (títulos e textos).
+- **Fontes** (`src/fontes.ts`): o guia usa Impact e Bahnschrift, que são do Windows e não estão no Google Fonts. No vídeo vão as equivalentes mais próximas: **Anton** nos títulos (maiúsculas, inclinadas, com sombra vermelha), **Barlow** nas legendas e textos, **Barlow Condensed** nas etiquetas espaçadas.
+- **Peças do estilo** (`src/componentes/Arena.tsx`): título inclinado com sombra vermelha, traço dourado (barra + dois tracinhos), etiqueta em paralelogramo (`[AULA 06] // DO ZERO AO CAMPEONATO`), painel vermelho pontilhado e listras douradas em diagonal.
+- **Emblema**: `public/logo.png` é o emblema oficial do guia (lua dourada no círculo preto e vermelho), extraído do PDF com fundo transparente. Aparece no CTA, na capa e no verso das cartas da mesa. Para trocar, salve outro PNG quadrado transparente com o mesmo nome.
+- **Área segura** (`src/tema.ts`): nada importante nos 250 px de cima, 450 px de baixo e 160 px da direita; a margem da esquerda é igual à da direita, para o conteúdo ficar no centro real da tela. Os painéis vermelhos do fundo ficam de propósito nos cantos, fora do conteúdo.
 
 ## Onde fica cada coisa
 
@@ -178,7 +182,7 @@ aulas/            roteiros (um JSON por aula)
 src/componentes/  gancho, carta em destaque, lista, pirâmide, comparação, riscado, legenda, CTA
 src/mesa/         motor de regras (motor.ts), posições (layout.ts) e animação (Mesa.tsx)
 src/Aula.tsx      junta as cenas; src/Capa.tsx é a capa
-scripts/          comandos (aula, narrar, quadros, studio, logo), a busca de cartas e o narrador
+scripts/          comandos (aula, capa, narrar, quadros, studio), a busca de cartas e o narrador
 narrador.json     a voz do narrador, a mesma para todas as aulas
 audio/            narrações geradas e os seus áudios
 public/cards/     cache das cartas (não vai para o git; baixa de novo quando falta)

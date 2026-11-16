@@ -6,6 +6,7 @@ import {MOLA_PULO, mola} from '../anim';
 import {temposDosItens} from '../tempo';
 import {Titulo} from './Titulo';
 import {Carta} from './Carta';
+import {fundoVermelho} from './Arena';
 import type {CenaPiramide, MapaCartas} from '../tipos';
 
 // Pirâmide ou ranking: barras empilhadas que sobem uma por vez, da base para o topo.
@@ -42,7 +43,7 @@ export const Piramide: React.FC<{cena: CenaPiramide; duracao: number; cartas: Ma
         const dados = ranking && nivel.carta ? cartas[nivel.carta] : undefined;
         const fracao = ranking && nivel.valor !== undefined && maior > 0 ? nivel.valor / maior : 0;
         const enche = mola(quadro, fps, tempos[i] + 0.15);
-        const corTexto = destaque ? CORES.pillOuroTexto : CORES.texto;
+        const corTexto = CORES.texto;
         return (
           <div
             key={i}
@@ -52,9 +53,11 @@ export const Piramide: React.FC<{cena: CenaPiramide; duracao: number; cartas: Ma
               width: largura,
               top: y,
               height: altura,
-              borderRadius: 22,
-              background: destaque ? CORES.ouro : 'rgba(232,184,74,0.08)',
-              boxShadow: destaque ? '0 10px 30px rgba(232,184,74,0.25)' : 'inset 0 0 0 2px rgba(232,184,74,0.5)',
+              borderRadius: 6,
+              ...(destaque ? fundoVermelho(110) : {background: CORES.painel}),
+              boxShadow: destaque
+                ? `inset 0 0 0 2px ${CORES.ouro}, 0 12px 30px rgba(229,50,63,0.35)`
+                : 'inset 0 0 0 1.5px rgba(245,241,232,0.10)',
               display: 'flex',
               alignItems: 'center',
               justifyContent: ranking ? 'flex-start' : 'center',
@@ -66,18 +69,21 @@ export const Piramide: React.FC<{cena: CenaPiramide; duracao: number; cartas: Ma
               transform: `translateY(${(1 - e) * 160}px) scaleX(${0.7 + 0.3 * e})`,
             }}
           >
+            {/* faixa vermelha na borda esquerda das barras comuns */}
+            {!destaque ? <div style={{position: 'absolute', left: 0, top: 0, bottom: 0, width: 6, background: CORES.vermelho}} /> : null}
             {/* preenchimento proporcional ao valor */}
             {fracao > 0 && !destaque ? (
-              <div style={{position: 'absolute', left: 0, top: 0, bottom: 0, width: `${fracao * enche * 100}%`, background: 'rgba(232,184,74,0.26)'}} />
+              <div style={{position: 'absolute', left: 0, top: 0, bottom: 0, width: `${fracao * enche * 100}%`, background: 'rgba(229,50,63,0.28)'}} />
             ) : null}
             {ranking ? (
               <div
                 style={{
                   position: 'relative',
                   fontFamily: FONTE_TITULO,
-                  fontWeight: 700,
-                  fontSize: altura * 0.4,
-                  color: destaque ? CORES.pillOuroTexto : CORES.ouro,
+                  fontWeight: 400,
+                  fontSize: altura * 0.44,
+                  transform: 'skewX(-9deg)',
+                  color: CORES.ouro,
                   minWidth: altura * 0.42,
                   textAlign: 'center',
                 }}
@@ -113,7 +119,7 @@ export const Piramide: React.FC<{cena: CenaPiramide; duracao: number; cartas: Ma
                     letterSpacing: '0.06em',
                     textTransform: 'uppercase',
                     marginTop: 8,
-                    color: destaque ? 'rgba(42,30,5,0.75)' : CORES.secundario,
+                    color: destaque ? 'rgba(245,241,232,0.85)' : CORES.secundario,
                     whiteSpace: 'nowrap',
                   }}
                 >
@@ -127,10 +133,11 @@ export const Piramide: React.FC<{cena: CenaPiramide; duracao: number; cartas: Ma
                   position: 'relative',
                   flex: 'none',
                   fontFamily: FONTE_TITULO,
-                  fontWeight: 700,
-                  fontSize: Math.min(destaque ? 46 : 38, altura * 0.36),
-                  letterSpacing: '-0.02em',
-                  color: destaque ? CORES.pillOuroTexto : CORES.ouro,
+                  fontWeight: 400,
+                  fontSize: Math.min(destaque ? 48 : 40, altura * 0.38),
+                  letterSpacing: '0.01em',
+                  transform: 'skewX(-9deg)',
+                  color: CORES.ouro,
                   whiteSpace: 'nowrap',
                 }}
               >

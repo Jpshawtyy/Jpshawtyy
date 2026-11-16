@@ -7,6 +7,7 @@ import {completarLegendas} from '../tempo';
 import {Carta, VersoCarta} from '../componentes/Carta';
 import {Pill} from '../componentes/Pill';
 import {Estrela} from '../componentes/Estrela';
+import {INCLINACAO, sombraTitulo} from '../componentes/Arena';
 import {LegendaDinamica} from '../componentes/Legenda';
 import {IconeEnergia} from './IconeEnergia';
 import type {CenaMesa, LadoId, Legenda, LegendaPronta, MapaCartas, PalavraFalada} from '../tipos';
@@ -188,8 +189,8 @@ const Espaco: React.FC<{pose: Pose; rotulo?: string; forte?: boolean}> = ({pose,
         height: h,
         borderRadius: pose.w * 0.06,
         boxSizing: 'border-box',
-        border: `${pose.w > 90 ? 2 : 1.5}px dashed rgba(232,184,74,${forte ? 0.4 : 0.24})`,
-        background: 'rgba(232,184,74,0.03)',
+        border: `${pose.w > 90 ? 2 : 1.5}px dashed rgba(245,241,232,${forte ? 0.3 : 0.16})`,
+        background: forte ? 'rgba(229,50,63,0.06)' : 'rgba(245,241,232,0.02)',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
@@ -232,7 +233,7 @@ const Tabuleiro: React.FC<{estado: Estado; deckEu: number; deckOponente: number;
   return (
     <>
       {/* divisor entre os dois lados, com a etiqueta de quem está jogando */}
-      <div style={{position: 'absolute', left: BASE_MESA.x0 + 6, width: BASE_MESA.largura - 12, top: ZONAS.divisorY, height: 1.5, background: 'rgba(232,184,74,0.22)'}} />
+      <div style={{position: 'absolute', left: BASE_MESA.x0 + 6, width: BASE_MESA.largura - 12, top: ZONAS.divisorY, height: 2, background: `linear-gradient(90deg, ${CORES.ouro}, ${CORES.vermelho})`, opacity: 0.55}} />
       <div style={{position: 'absolute', right: 1080 - (BASE_MESA.x1 - 6), top: ZONAS.divisorY - 15}}>
         <Pill tamanho={15} contorno={estado.vez !== 'eu'}>
           {estado.vez === 'eu' ? 'seu turno' : 'turno do oponente'}
@@ -301,7 +302,7 @@ const Marcador: React.FC<{valor: number; tamanho: number}> = ({valor, tamanho}) 
         alignItems: 'center',
         justifyContent: 'center',
         fontFamily: FONTE_TITULO,
-        fontWeight: 700,
+        fontWeight: 400,
         fontSize: tamanho * (valor === 100 ? 0.36 : 0.42),
         letterSpacing: '-0.03em',
         ...estilo,
@@ -654,7 +655,7 @@ export const Mesa: React.FC<{
                   width: p.w * 1.5,
                   height: alturaCarta(p.w) * 1.36,
                   borderRadius: p.w * 0.16,
-                  boxShadow: `0 0 ${30 * (1 - u)}px ${10 * (1 - u)}px rgba(232,184,74,0.55)`,
+                  boxShadow: `0 0 ${30 * (1 - u)}px ${10 * (1 - u)}px rgba(240,193,96,0.55)`,
                   opacity: 1 - u,
                   zIndex: 7,
                 }}
@@ -702,14 +703,15 @@ export const Mesa: React.FC<{
               <div
                 style={{
                   fontFamily: FONTE_TITULO,
-                  fontWeight: 700,
-                  fontSize: 170,
+                  fontWeight: 400,
+                  fontSize: 180,
                   lineHeight: 1,
-                  letterSpacing: '-0.04em',
-                  color: CORES.ouro,
-                  WebkitTextStroke: `14px ${CORES.fundo}`,
+                  letterSpacing: '0.01em',
+                  color: CORES.texto,
+                  WebkitTextStroke: `10px ${CORES.fundo}`,
                   paintOrder: 'stroke fill',
-                  textShadow: '0 10px 30px rgba(0,0,0,0.7)',
+                  transform: `skewX(${INCLINACAO}deg)`,
+                  textShadow: sombraTitulo(150),
                 }}
               >
                 {passo.dano}
@@ -776,14 +778,16 @@ export const Mesa: React.FC<{
             <div
               style={{
                 fontFamily: FONTE_TITULO,
-                fontWeight: 700,
-                fontSize: 120,
+                fontWeight: 400,
+                fontSize: 140,
                 lineHeight: 1,
-                letterSpacing: '-0.03em',
-                color: CORES.ouro,
-                WebkitTextStroke: `12px ${CORES.fundo}`,
+                letterSpacing: '0.01em',
+                textTransform: 'uppercase',
+                color: CORES.texto,
+                WebkitTextStroke: `10px ${CORES.fundo}`,
                 paintOrder: 'stroke fill',
-                textShadow: '0 10px 30px rgba(0,0,0,0.7)',
+                transform: `skewX(${INCLINACAO}deg)`,
+                textShadow: sombraTitulo(120),
                 whiteSpace: 'nowrap',
               }}
             >

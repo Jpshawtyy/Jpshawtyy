@@ -9,9 +9,9 @@
     "previa": "tsx scripts/aula.ts --previa",
     "validar": "tsx scripts/aula.ts --so-validar",
     "quadros": "tsx scripts/quadros.ts",
+    "capa": "tsx scripts/capa.ts",
     "narrar": "tsx scripts/narrar.ts",
     "studio": "tsx scripts/studio.ts",
-    "logo": "tsx scripts/logo.ts",
     "tipos": "tsc --noEmit"
   },
   "dependencies": {
