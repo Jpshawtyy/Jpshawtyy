@@ -15,8 +15,8 @@ export const Capa: React.FC<PropsAula> = ({roteiro, cartas}) => {
   const temCartas = refs.length > 0;
   const larguraCarta = 250;
   // borda de cima do painel vermelho: sobe da esquerda para a direita
-  const yEsq = temCartas ? 1250 : 1420;
-  const yDir = temCartas ? 1080 : 1250;
+  const yEsq = temCartas ? 1250 : 1330;
+  const yDir = temCartas ? 1080 : 1160;
   const numero = `AULA ${String(roteiro.numero).padStart(2, '0')}`;
   const fantasma = roteiro.titulo_capa.split('\n')[0].toLocaleUpperCase('pt-BR');
 
@@ -119,7 +119,7 @@ export const Capa: React.FC<PropsAula> = ({roteiro, cartas}) => {
       {!temCartas ? (
         <Img
           src={staticFile('logo.png')}
-          style={{position: 'absolute', left: L / 2 - 170, top: 1290, width: 340, height: 340, objectFit: 'contain', filter: 'drop-shadow(0 16px 34px rgba(0,0,0,0.55))'}}
+          style={{position: 'absolute', left: L / 2 - 150, top: 1250, width: 300, height: 300, objectFit: 'contain', filter: 'drop-shadow(0 16px 34px rgba(0,0,0,0.55))'}}
         />
       ) : null}
 
@@ -148,7 +148,7 @@ export const Capa: React.FC<PropsAula> = ({roteiro, cartas}) => {
           position: 'absolute',
           left: 0,
           width: L,
-          top: temCartas ? 1585 : 1660,
+          top: 1585,
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
