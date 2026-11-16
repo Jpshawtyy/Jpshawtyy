@@ -78,6 +78,8 @@ export type CenaCartaDestaque = CenaBase & {
   pill_cor?: 'ouro' | 'vermelho';
   titulo?: string;
   texto?: string;
+  // zoom num ponto da carta: x e y de 0 a 1 (0,0 = canto de cima à esquerda), a partir do segundo "em"
+  foco?: {em: number; x: number; y: number; escala?: number};
 };
 
 export type ItemLista = string | {texto: string; detalhe?: string; em?: number; destaque?: boolean; carta?: RefCarta}; // destaque: não apaga quando o próximo entra; carta: miniatura no lugar do número

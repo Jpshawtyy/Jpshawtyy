@@ -69,7 +69,7 @@ Opções úteis de `aula`: `--guias` (área segura por cima), `--sem-capa`, `--a
 | `tipo` | Campos |
 | --- | --- |
 | `gancho` | `texto` (a palavra gigante), `subtitulo` |
-| `carta_destaque` | `carta`, `pill` ("META", "DE VOLTA"), `pill_cor` (`ouro` ou `vermelho`), `titulo` |
+| `carta_destaque` | `carta`, `pill` ("META", "DE VOLTA"), `pill_cor` (`ouro` ou `vermelho`), `titulo`, `foco` (zoom num ponto da carta: `{"em": 2.2, "x": 0.33, "y": 0.87, "escala": 2.4}`, com x e y de 0 a 1; 0.87 de altura é a linha de fraqueza e resistência) |
 | `lista` | `titulo`, `itens` (texto, ou `{"texto", "detalhe", "em", "destaque", "carta"}`; com `destaque` o item não apaga quando o próximo entra, e com `carta` aparece a miniatura da carta no lugar do número) |
 | `piramide` | `titulo`, `modo` (`piramide` ou `ranking`), `fonte` (linha pequena citando a origem dos dados), `niveis` da base ao topo: `{"rotulo", "detalhe", "destaque"}`. No `ranking`, cada nível aceita também `carta` (miniatura) e `valor` (preenche a barra na proporção), e o `detalhe` aparece grande à direita |
 | `comparacao` | `titulo`, `pill_bons`, `pill_ruins`, `bons` e `ruins` (cartas ou `{"texto"}`) |

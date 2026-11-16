@@ -1,0 +1,419 @@
+{
+ "assinatura": "0bc6bf86fd1dba1b41952685d4519e879c023a29",
+ "voz": "pm_santa",
+ "frases": [
+  {
+   "fala": "Dano em dobro.",
+   "duracao": 0.935351
+  },
+  {
+   "fala": "Por que o mesmo ataque muda de dano?",
+   "duracao": 2.049728
+  },
+  {
+   "fala": "Embaixo da carta: fraqueza e resistência",
+   "duracao": 2.471429
+  },
+  {
+   "fala": "Fraqueza a Elétrico: dano em dobro",
+   "duracao": 1.927143
+  },
+  {
+   "fala": "Resistência a Lutador: trinta a menos.",
+   "duracao": 2.219048
+  },
+  {
+   "fala": "Um Pokémon Elétrico ataca",
+   "duracao": 1.606712
+  },
+  {
+   "fala": "O ataque faz duzentos, mas a fraqueza dobra.",
+   "duracao": 2.371043
+  },
+  {
+   "fala": "Quatrocentos, num Pokémon de duzentos e oitenta: nocaute.",
+   "duracao": 3.251837
+  },
+  {
+   "fala": "Era um Mega: três prêmios.",
+   "duracao": 1.5461
+  },
+  {
+   "fala": "Agora um Pokémon Lutador",
+   "duracao": 1.536893
+  },
+  {
+   "fala": "O ataque faz cinquenta, menos trinta da resistência.",
+   "duracao": 2.836757
+  },
+  {
+   "fala": "Entram só vinte de dano.",
+   "duracao": 1.597937
+  },
+  {
+   "fala": "Fraqueza e resistência só contam no Pokémon Ativo.",
+   "duracao": 3.003424
+  },
+  {
+   "fala": "Salva pra próxima partida, e segue a Escola Umbra.",
+   "duracao": 2.837642
+  }
+ ],
+ "words": [
+  {
+   "palavra": "por",
+   "inicio": 1.145351,
+   "fim": 1.366721624
+  },
+  {
+   "palavra": "que",
+   "inicio": 1.366721624,
+   "fim": 1.5880922480000002
+  },
+  {
+   "palavra": "o",
+   "inicio": 1.5880922480000002,
+   "fim": 1.711075928
+  },
+  {
+   "palavra": "mesmo",
+   "inicio": 1.711075928,
+   "fim": 2.030833496
+  },
+  {
+   "palavra": "ataque",
+   "inicio": 2.030833496,
+   "fim": 2.3997845360000003
+  },
+  {
+   "palavra": "muda",
+   "inicio": 2.3997845360000003,
+   "fim": 2.670348632
+  },
+  {
+   "palavra": "de",
+   "inicio": 2.670348632,
+   "fim": 2.842525784
+  },
+  {
+   "palavra": "dano",
+   "inicio": 2.842525784,
+   "fim": 3.11308988
+  },
+  {
+   "palavra": "Embaixo",
+   "inicio": 3.8450789999999997,
+   "fim": 4.293231458666666
+  },
+  {
+   "palavra": "da",
+   "inicio": 4.293231458666666,
+   "fim": 4.477764823999999
+  },
+  {
+   "palavra": "carta:",
+   "inicio": 4.477764823999999,
+   "fim": 4.925917282666666
+  },
+  {
+   "palavra": "fraqueza",
+   "inicio": 4.925917282666666,
+   "fim": 5.42679356
+  },
+  {
+   "palavra": "e",
+   "inicio": 5.42679356,
+   "fim": 5.558603106666666
+  },
+  {
+   "palavra": "resistência",
+   "inicio": 5.558603106666666,
+   "fim": 6.217650839999999
+  },
+  {
+   "palavra": "Fraqueza",
+   "inicio": 6.476508,
+   "fim": 6.9271629784615385
+  },
+  {
+   "palavra": "a",
+   "inicio": 6.9271629784615385,
+   "fim": 7.045756393846154
+  },
+  {
+   "palavra": "Elétrico:",
+   "inicio": 7.045756393846154,
+   "fim": 7.591286104615385
+  },
+  {
+   "palavra": "dano",
+   "inicio": 7.591286104615385,
+   "fim": 7.852191618461538
+  },
+  {
+   "palavra": "em",
+   "inicio": 7.852191618461538,
+   "fim": 8.018222399999999
+  },
+  {
+   "palavra": "dobro",
+   "inicio": 8.018222399999999,
+   "fim": 8.32656528
+  },
+  {
+   "palavra": "Resistência",
+   "inicio": 8.676508,
+   "fim": 9.37726
+  },
+  {
+   "palavra": "a",
+   "inicio": 9.37726,
+   "fim": 9.5174104
+  },
+  {
+   "palavra": "Lutador:",
+   "inicio": 9.5174104,
+   "fim": 10.10604208
+  },
+  {
+   "palavra": "30",
+   "inicio": 10.10604208,
+   "fim": 10.30225264
+  },
+  {
+   "palavra": "a",
+   "inicio": 10.30225264,
+   "fim": 10.44240304
+  },
+  {
+   "palavra": "menos",
+   "inicio": 10.44240304,
+   "fim": 10.80679408
+  },
+  {
+   "palavra": "Um",
+   "inicio": 11.295556,
+   "fim": 11.48836144
+  },
+  {
+   "palavra": "Pokémon",
+   "inicio": 11.48836144,
+   "fim": 11.956603222857142
+  },
+  {
+   "palavra": "Elétrico",
+   "inicio": 11.956603222857142,
+   "fim": 12.479932274285714
+  },
+  {
+   "palavra": "ataca",
+   "inicio": 12.479932274285714,
+   "fim": 12.83799952
+  },
+  {
+   "palavra": "O",
+   "inicio": 13.062268,
+   "fim": 13.191597618181818
+  },
+  {
+   "palavra": "ataque",
+   "inicio": 13.191597618181818,
+   "fim": 13.579586472727271
+  },
+  {
+   "palavra": "faz",
+   "inicio": 13.579586472727271,
+   "fim": 13.812379785454544
+  },
+  {
+   "palavra": "200,",
+   "inicio": 13.812379785454544,
+   "fim": 14.148636792727272
+  },
+  {
+   "palavra": "mas",
+   "inicio": 14.148636792727272,
+   "fim": 14.381430105454545
+  },
+  {
+   "palavra": "a",
+   "inicio": 14.381430105454545,
+   "fim": 14.510759723636363
+  },
+  {
+   "palavra": "fraqueza",
+   "inicio": 14.510759723636363,
+   "fim": 15.002212272727272
+  },
+  {
+   "palavra": "dobra",
+   "inicio": 15.002212272727272,
+   "fim": 15.338469279999998
+  },
+  {
+   "palavra": "400",
+   "inicio": 15.962267999999998,
+   "fim": 16.35248844
+  },
+  {
+   "palavra": "num",
+   "inicio": 16.35248844,
+   "fim": 16.74270888
+  },
+  {
+   "palavra": "Pokémon",
+   "inicio": 16.74270888,
+   "fim": 17.47979193333333
+  },
+  {
+   "palavra": "de",
+   "inicio": 17.47979193333333,
+   "fim": 17.78329672
+  },
+  {
+   "palavra": "280:",
+   "inicio": 17.78329672,
+   "fim": 18.346948466666664
+  },
+  {
+   "palavra": "nocaute",
+   "inicio": 18.346948466666664,
+   "fim": 19.084031519999996
+  },
+  {
+   "palavra": "Era",
+   "inicio": 19.374105,
+   "fim": 19.60051693220339
+  },
+  {
+   "palavra": "um",
+   "inicio": 19.60051693220339,
+   "fim": 19.776615101694915
+  },
+  {
+   "palavra": "Mega:",
+   "inicio": 19.776615101694915,
+   "fim": 20.153968322033897
+  },
+  {
+   "palavra": "três",
+   "inicio": 20.153968322033897,
+   "fim": 20.430694016949154
+  },
+  {
+   "palavra": "prêmios",
+   "inicio": 20.430694016949154,
+   "fim": 20.858361
+  },
+  {
+   "palavra": "Agora",
+   "inicio": 22.124104999999997,
+   "fim": 22.479298048888886
+  },
+  {
+   "palavra": "um",
+   "inicio": 22.479298048888886,
+   "fim": 22.67055584444444
+  },
+  {
+   "palavra": "Pokémon",
+   "inicio": 22.67055584444444,
+   "fim": 23.13503906222222
+  },
+  {
+   "palavra": "Lutador",
+   "inicio": 23.13503906222222,
+   "fim": 23.599522279999995
+  },
+  {
+   "palavra": "O",
+   "inicio": 23.820998,
+   "fim": 23.969002713043476
+  },
+  {
+   "palavra": "ataque",
+   "inicio": 23.969002713043476,
+   "fim": 24.41301685217391
+  },
+  {
+   "palavra": "faz",
+   "inicio": 24.41301685217391,
+   "fim": 24.679425335652173
+  },
+  {
+   "palavra": "50,",
+   "inicio": 24.679425335652173,
+   "fim": 25.005035704347826
+  },
+  {
+   "palavra": "menos",
+   "inicio": 25.005035704347826,
+   "fim": 25.38984795826087
+  },
+  {
+   "palavra": "30",
+   "inicio": 25.38984795826087,
+   "fim": 25.597054556521737
+  },
+  {
+   "palavra": "da",
+   "inicio": 25.597054556521737,
+   "fim": 25.80426115478261
+  },
+  {
+   "palavra": "resistência",
+   "inicio": 25.80426115478261,
+   "fim": 26.54428472
+  },
+  {
+   "palavra": "Entram",
+   "inicio": 26.817755,
+   "fim": 27.30733569787234
+  },
+  {
+   "palavra": "só",
+   "inicio": 27.30733569787234,
+   "fim": 27.535806690212766
+  },
+  {
+   "palavra": "20",
+   "inicio": 27.535806690212766,
+   "fim": 27.76427768255319
+  },
+  {
+   "palavra": "de",
+   "inicio": 27.76427768255319,
+   "fim": 27.992748674893615
+  },
+  {
+   "palavra": "dano",
+   "inicio": 27.992748674893615,
+   "fim": 28.35177452
+  },
+  {
+   "palavra": "Só",
+   "inicio": 29.917755,
+   "fim": 30.27184288210526
+  },
+  {
+   "palavra": "conta",
+   "inicio": 30.27184288210526,
+   "fim": 30.929434663157895
+  },
+  {
+   "palavra": "no",
+   "inicio": 30.929434663157895,
+   "fim": 31.283522545263157
+  },
+  {
+   "palavra": "Pokémon",
+   "inicio": 31.283522545263157,
+   "fim": 32.14345025894737
+  },
+  {
+   "palavra": "Ativo",
+   "inicio": 32.14345025894737,
+   "fim": 32.80104204
+  }
+ ]
+}

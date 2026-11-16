@@ -1,0 +1,110 @@
+{
+  "serie": "Do zero ao campeonato",
+  "numero": 7,
+  "titulo_capa": "dano x2",
+  "subtitulo_capa": "fraqueza e resistência",
+  "capa": {"cartas": ["raikou", "rayquaza", "lunatone"]},
+  "narracao": "auto",
+
+  "cartas": {
+    "rayquaza": {"nome": "Mega Rayquaza ex", "set": "Delta Reign", "numero": 84},
+    "raikou": {"nome": "Raikou ex", "set": "Delta Reign", "numero": 33},
+    "lunatone": {"nome": "Lunatone", "set": "Ascended Heroes", "numero": 105},
+    "dreepy": {"nome": "Dreepy", "set": "Twilight Masquerade", "numero": 128},
+    "energia-eletrica": {"nome": "Basic Lightning Energy", "set": "Scarlet & Violet Energies", "numero": 4},
+    "energia-lutador": {"nome": "Basic Fighting Energy", "set": "Scarlet & Violet Energies", "numero": 6},
+    "energia-fogo": {"nome": "Basic Fire Energy", "set": "Scarlet & Violet Energies", "numero": 2}
+  },
+
+  "cenas": [
+    {
+      "tipo": "gancho",
+      "texto": "dano x2",
+      "subtitulo": "fraqueza e resistência",
+      "duracao": 2.2,
+      "falas": [{"texto": "Dano em dobro.", "em": 0.05}],
+      "legendas": [{"texto": "por que o *mesmo* ataque muda de dano", "em": 1.1, "fala": "Por que o mesmo ataque muda de dano?"}]
+    },
+    {
+      "tipo": "carta_destaque",
+      "carta": "rayquaza",
+      "pill": "olha embaixo",
+      "titulo": "está na carta",
+      "foco": {"em": 2.2, "x": 0.33, "y": 0.873, "escala": 2.4},
+      "duracao": 7,
+      "legendas": [
+        {"texto": "Embaixo da carta: *fraqueza* e resistência", "em": 0.4},
+        {"texto": "Fraqueza a Elétrico: dano em *dobro*", "em": 2.6},
+        {"texto": "Resistência a Lutador: *30* a menos", "em": 4.8, "fala": "Resistência a Lutador: trinta a menos."}
+      ]
+    },
+    {
+      "tipo": "mesa",
+      "legendas": [{"texto": "Um Pokémon *Elétrico* ataca", "em": 0.15}],
+      "estado": {
+        "turno": 5,
+        "quem_comecou": "eu",
+        "eu": {
+          "ativo": {"carta": "raikou", "energias": ["energia-eletrica", "energia-eletrica", "energia-eletrica"], "entrou_no_turno": 1},
+          "banco": [],
+          "mao": ["energia-eletrica"],
+          "deck": 30,
+          "premios": 6
+        },
+        "oponente": {
+          "ativo": {"carta": "rayquaza", "energias": ["energia-fogo", "energia-eletrica"], "entrou_no_turno": 2},
+          "banco": [{"carta": "dreepy", "entrou_no_turno": 4}],
+          "mao": 5,
+          "deck": 30,
+          "premios": 6
+        }
+      },
+      "acoes": [
+        {"acao": "atacar", "ataque": "Power Rush", "legenda": "O ataque faz *200*, mas a fraqueza dobra", "fala": "O ataque faz duzentos, mas a fraqueza dobra."},
+        {"acao": "nocaute", "alvo": "oponente.ativo", "legenda": "*400* num Pokémon de 280: nocaute", "fala": "Quatrocentos, num Pokémon de duzentos e oitenta: nocaute."},
+        {"acao": "pegar_premio", "cartas": ["energia-eletrica", "raikou", "dreepy"], "legenda": "Era um Mega: *três* prêmios", "fala": "Era um Mega: três prêmios."}
+      ]
+    },
+    {
+      "tipo": "mesa",
+      "legendas": [{"texto": "Agora um Pokémon *Lutador*", "em": 0.15}],
+      "estado": {
+        "turno": 3,
+        "quem_comecou": "eu",
+        "eu": {
+          "ativo": {"carta": "lunatone", "energias": ["energia-lutador", "energia-lutador"], "entrou_no_turno": 1},
+          "banco": [],
+          "mao": ["energia-lutador"],
+          "deck": 35,
+          "premios": 6
+        },
+        "oponente": {
+          "ativo": {"carta": "rayquaza", "energias": ["energia-fogo"], "entrou_no_turno": 2},
+          "banco": [{"carta": "dreepy", "entrou_no_turno": 2}],
+          "mao": 5,
+          "deck": 35,
+          "premios": 6
+        }
+      },
+      "acoes": [
+        {"acao": "atacar", "ataque": "Power Gem", "legenda": "O ataque faz *50*, menos 30 da resistência", "fala": "O ataque faz cinquenta, menos trinta da resistência."},
+        {"acao": "pausa", "duracao": 1.6, "legenda": "Entram só *20* de dano", "fala": "Entram só vinte de dano."}
+      ]
+    },
+    {
+      "tipo": "riscado",
+      "titulo": "erro de iniciante",
+      "duracao": 4.2,
+      "itens": [{"texto": "Fraqueza vale no banco", "em": 0.3, "riscar_em": 1.4}],
+      "legendas": [{"texto": "Só conta no Pokémon *Ativo*", "em": 0.6, "fala": "Fraqueza e resistência só contam no Pokémon Ativo."}]
+    },
+    {
+      "tipo": "cta",
+      "duracao": 4.5,
+      "principal": "SALVA",
+      "complemento": "pra próxima partida",
+      "seguir": "segue @escolaumbratcg",
+      "falas": [{"texto": "Salva pra próxima partida, e segue a Escola Umbra.", "em": 0.25}]
+    }
+  ]
+}
