@@ -20,8 +20,9 @@ export const TituloArena: React.FC<{
   largura: number;
   maximo: number;
   cor?: string;
+  alinhar?: 'center' | 'left';
   style?: React.CSSProperties;
-}> = ({texto, largura, maximo, cor = CORES.texto, style}) => {
+}> = ({texto, largura, maximo, cor = CORES.texto, alinhar = 'center', style}) => {
   const maiusculo = texto.toLocaleUpperCase('pt-BR');
   return (
     <div style={{transform: `skewX(${INCLINACAO}deg)`, ...style}}>
@@ -34,7 +35,7 @@ export const TituloArena: React.FC<{
         peso={400}
         espacamento="0.01em"
         alturaLinha={0.98}
-        style={{color: cor, textShadow: sombraTitulo(maximo * 0.85)}}
+        style={{color: cor, textShadow: sombraTitulo(maximo * 0.85), textAlign: alinhar}}
       />
     </div>
   );

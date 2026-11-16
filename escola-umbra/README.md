@@ -36,6 +36,7 @@ Sai em `out/`: `aula-01.mp4` e `aula-01-capa.png`.
 | `npm run quadros -- <roteiro> --guias` | Fotos dos pontos de transição em `out/quadros/`, com a área segura desenhada |
 | `npm run studio -- <roteiro>` | Abre o Remotion Studio para ver e ajustar ao vivo |
 | `npm run capa -- <roteiro>` | Gera só a capa PNG, sem renderizar o vídeo |
+| `npm run loja` | Gera as peças da loja em `out/loja/`: banner 3:1 (2400x800), banner 16:9 (1920x1080) e foto de perfil (1080x1080). O texto fica em `src/Loja.tsx` |
 
 Opções úteis de `aula`: `--guias` (área segura por cima), `--sem-capa`, `--atualizar-cartas` (ignora o cache), `--refazer-narracao`, `--forcar` (renderiza mesmo com regra quebrada).
 
