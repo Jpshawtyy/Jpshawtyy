@@ -1,0 +1,95 @@
+{
+  "serie": "Do zero ao campeonato",
+  "numero": 8,
+  "titulo_capa": "4 tipos",
+  "subtitulo_capa": "de carta de Treinador",
+  "capa": {"cartas": ["busca-energia", "dawn", "ruinas"]},
+  "narracao": "auto",
+
+  "cartas": {
+    "busca-energia": {"nome": "Energy Search", "set": "Perfect Order", "numero": 72},
+    "dawn": {"nome": "Dawn", "set": "Phantasmal Flames", "numero": 87},
+    "ruinas": {"nome": "Risky Ruins", "set": "Mega Evolution", "numero": 127},
+    "prancha": {"nome": "Rescue Board", "set": "Prismatic Evolutions", "numero": 126},
+    "dreepy": {"nome": "Dreepy", "set": "Twilight Masquerade", "numero": 128},
+    "drakloak": {"nome": "Drakloak", "set": "Twilight Masquerade", "numero": 129},
+    "dragapult": {"nome": "Dragapult ex", "set": "Twilight Masquerade", "numero": 130},
+    "energia-psiquica": {"nome": "Basic Psychic Energy", "set": "Scarlet & Violet Energies", "numero": 5},
+    "energia-fogo": {"nome": "Basic Fire Energy", "set": "Scarlet & Violet Energies", "numero": 2},
+    "iron-thorns": {"nome": "Iron Thorns ex", "set": "Twilight Masquerade", "numero": 77},
+    "energia-eletrica": {"nome": "Basic Lightning Energy", "set": "Scarlet & Violet Energies", "numero": 4}
+  },
+
+  "cenas": [
+    {
+      "tipo": "gancho",
+      "texto": "4 tipos",
+      "subtitulo": "de carta de Treinador",
+      "duracao": 2.2,
+      "falas": [{"texto": "Quatro tipos de Treinador.", "em": 0.05}],
+      "legendas": [{"texto": "cada um tem uma *regra* diferente", "em": 1.3}]
+    },
+    {
+      "tipo": "lista",
+      "titulo": "os 4 tipos",
+      "duracao": 10,
+      "itens": [
+        {"texto": "Item", "detalhe": "quantos quiser no turno", "carta": "busca-energia", "destaque": true},
+        {"texto": "Apoiador", "detalhe": "só 1 por turno", "carta": "dawn", "destaque": true},
+        {"texto": "Estádio", "detalhe": "1 por turno, fica em jogo", "carta": "ruinas", "destaque": true},
+        {"texto": "Ferramenta", "detalhe": "presa num Pokémon", "carta": "prancha", "destaque": true}
+      ],
+      "legendas": [
+        {"texto": "Item: joga *quantos quiser*", "fala": "Item: joga quantos quiser."},
+        {"texto": "Apoiador: só *um* por turno", "fala": "Apoiador: só um por turno."},
+        {"texto": "Estádio: um por turno, e *fica* em jogo", "fala": "Estádio: um por turno, e fica em jogo."},
+        {"texto": "Ferramenta: fica *presa* no Pokémon", "fala": "Ferramenta: fica presa no Pokémon."}
+      ]
+    },
+    {
+      "tipo": "mesa",
+      "legendas": [{"texto": "Olha os quatro *num turno só*", "em": 0.15, "fala": "Olha os quatro num turno só."}],
+      "estado": {
+        "turno": 3,
+        "quem_comecou": "eu",
+        "eu": {
+          "ativo": {"carta": "dreepy", "energias": ["energia-psiquica"], "entrou_no_turno": 1},
+          "banco": [],
+          "mao": ["busca-energia", "dawn", "ruinas", "prancha"],
+          "deck": 40,
+          "premios": 6
+        },
+        "oponente": {
+          "ativo": {"carta": "iron-thorns", "energias": ["energia-eletrica"], "entrou_no_turno": 2},
+          "banco": [],
+          "mao": 6,
+          "deck": 40,
+          "premios": 6
+        }
+      },
+      "acoes": [
+        {"acao": "jogar_treinador", "carta": "busca-energia", "legenda": "O Item faz o efeito e vai pro *descarte*", "fala": "O Item faz o efeito e vai pro descarte."},
+        {"acao": "buscar", "cartas": ["energia-fogo"], "duracao": 1.6},
+        {"acao": "jogar_treinador", "carta": "dawn", "legenda": "O *Apoiador* também vai pro descarte", "fala": "O Apoiador também vai pro descarte."},
+        {"acao": "buscar", "cartas": ["dreepy", "drakloak", "dragapult"], "duracao": 2.0},
+        {"acao": "jogar_treinador", "carta": "ruinas", "legenda": "O Estádio *fica* do lado da mesa", "fala": "O Estádio fica do lado da mesa."},
+        {"acao": "jogar_treinador", "carta": "prancha", "alvo": "ativo", "legenda": "A Ferramenta fica *presa* no Pokémon", "fala": "A Ferramenta fica presa no Pokémon."}
+      ]
+    },
+    {
+      "tipo": "riscado",
+      "titulo": "erro de iniciante",
+      "duracao": 4.2,
+      "itens": [{"texto": "Estádio é usado e descartado", "em": 0.3, "riscar_em": 1.4}],
+      "legendas": [{"texto": "Ele fica até *outro Estádio* entrar", "em": 0.6, "fala": "Ele fica em jogo até outro Estádio entrar."}]
+    },
+    {
+      "tipo": "cta",
+      "duracao": 4.5,
+      "principal": "SALVA",
+      "complemento": "pra próxima partida",
+      "seguir": "segue @escolaumbratcg",
+      "falas": [{"texto": "Salva pra próxima partida, e segue a Escola Umbra.", "em": 0.25}]
+    }
+  ]
+}

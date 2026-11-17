@@ -1,0 +1,400 @@
+{
+ "assinatura": "aedd076c1b89513b1d3261208a3241c3d7473344",
+ "voz": "pm_santa",
+ "frases": [
+  {
+   "fala": "Quatro tipos de Treinador.",
+   "duracao": 1.720431
+  },
+  {
+   "fala": "cada um tem uma regra diferente",
+   "duracao": 1.978594
+  },
+  {
+   "fala": "Item: joga quantos quiser.",
+   "duracao": 1.54059
+  },
+  {
+   "fala": "Apoiador: só um por turno.",
+   "duracao": 1.541474
+  },
+  {
+   "fala": "Estádio: um por turno, e fica em jogo.",
+   "duracao": 2.321723
+  },
+  {
+   "fala": "Ferramenta: fica presa no Pokémon.",
+   "duracao": 2.092426
+  },
+  {
+   "fala": "Olha os quatro num turno só.",
+   "duracao": 1.622721
+  },
+  {
+   "fala": "O Item faz o efeito e vai pro descarte.",
+   "duracao": 2.24576
+  },
+  {
+   "fala": "O Apoiador também vai pro descarte.",
+   "duracao": 2.072132
+  },
+  {
+   "fala": "O Estádio fica do lado da mesa.",
+   "duracao": 1.977891
+  },
+  {
+   "fala": "A Ferramenta fica presa no Pokémon.",
+   "duracao": 2.091429
+  },
+  {
+   "fala": "Ele fica em jogo até outro Estádio entrar.",
+   "duracao": 2.675714
+  },
+  {
+   "fala": "Salva pra próxima partida, e segue a Escola Umbra.",
+   "duracao": 2.837642
+  }
+ ],
+ "words": [
+  {
+   "palavra": "cada",
+   "inicio": 1.930431,
+   "fim": 2.228916037714286
+  },
+  {
+   "palavra": "um",
+   "inicio": 2.228916037714286,
+   "fim": 2.418861061714286
+  },
+  {
+   "palavra": "tem",
+   "inicio": 2.418861061714286,
+   "fim": 2.6630760925714285
+  },
+  {
+   "palavra": "uma",
+   "inicio": 2.6630760925714285,
+   "fim": 2.907291123428571
+  },
+  {
+   "palavra": "regra",
+   "inicio": 2.907291123428571,
+   "fim": 3.260046168
+  },
+  {
+   "palavra": "diferente",
+   "inicio": 3.260046168,
+   "fim": 3.8298812399999997
+  },
+  {
+   "palavra": "Item:",
+   "inicio": 4.409025,
+   "fim": 4.791516310344827
+  },
+  {
+   "palavra": "joga",
+   "inicio": 4.791516310344827,
+   "fim": 5.072009937931034
+  },
+  {
+   "palavra": "quantos",
+   "inicio": 5.072009937931034,
+   "fim": 5.505500089655172
+  },
+  {
+   "palavra": "quiser",
+   "inicio": 5.505500089655172,
+   "fim": 5.8879914
+  },
+  {
+   "palavra": "Apoiador:",
+   "inicio": 6.659025,
+   "fim": 7.235902049491525
+  },
+  {
+   "palavra": "só",
+   "inicio": 7.235902049491525,
+   "fim": 7.411473325423729
+  },
+  {
+   "palavra": "um",
+   "inicio": 7.411473325423729,
+   "fim": 7.587044601355932
+  },
+  {
+   "palavra": "por",
+   "inicio": 7.587044601355932,
+   "fim": 7.81277909898305
+  },
+  {
+   "palavra": "turno",
+   "inicio": 7.81277909898305,
+   "fim": 8.13884004
+  },
+  {
+   "palavra": "Estádio:",
+   "inicio": 9.159025,
+   "fim": 9.690910632727272
+  },
+  {
+   "palavra": "um",
+   "inicio": 9.690910632727272,
+   "fim": 9.868205843636364
+  },
+  {
+   "palavra": "por",
+   "inicio": 9.868205843636364,
+   "fim": 10.096156829090909
+  },
+  {
+   "palavra": "turno,",
+   "inicio": 10.096156829090909,
+   "fim": 10.526730912727272
+  },
+  {
+   "palavra": "e",
+   "inicio": 10.526730912727272,
+   "fim": 10.65337034909091
+  },
+  {
+   "palavra": "fica",
+   "inicio": 10.65337034909091,
+   "fim": 10.931977109090909
+  },
+  {
+   "palavra": "em",
+   "inicio": 10.931977109090909,
+   "fim": 11.109272319999999
+  },
+  {
+   "palavra": "jogo",
+   "inicio": 11.109272319999999,
+   "fim": 11.38787908
+  },
+  {
+   "palavra": "Ferramenta:",
+   "inicio": 11.659025,
+   "fim": 12.3821674256
+  },
+  {
+   "palavra": "fica",
+   "inicio": 12.3821674256,
+   "fim": 12.676781006399999
+  },
+  {
+   "palavra": "presa",
+   "inicio": 12.676781006399999,
+   "fim": 13.0249606928
+  },
+  {
+   "palavra": "no",
+   "inicio": 13.0249606928,
+   "fim": 13.2124420624
+  },
+  {
+   "palavra": "Pokémon",
+   "inicio": 13.2124420624,
+   "fim": 13.667753959999999
+  },
+  {
+   "palavra": "Olha",
+   "inicio": 14.309025,
+   "fim": 14.585411028387098
+  },
+  {
+   "palavra": "os",
+   "inicio": 14.585411028387098,
+   "fim": 14.761293046451613
+  },
+  {
+   "palavra": "quatro",
+   "inicio": 14.761293046451613,
+   "fim": 15.138183085161291
+  },
+  {
+   "palavra": "num",
+   "inicio": 15.138183085161291,
+   "fim": 15.364317108387096
+  },
+  {
+   "palavra": "turno",
+   "inicio": 15.364317108387096,
+   "fim": 15.690955141935484
+  },
+  {
+   "palavra": "só",
+   "inicio": 15.690955141935484,
+   "fim": 15.86683716
+  },
+  {
+   "palavra": "O",
+   "inicio": 16.091746,
+   "fim": 16.21565
+  },
+  {
+   "palavra": "Item",
+   "inicio": 16.21565,
+   "fim": 16.4882388
+  },
+  {
+   "palavra": "faz",
+   "inicio": 16.4882388,
+   "fim": 16.711266000000002
+  },
+  {
+   "palavra": "o",
+   "inicio": 16.711266000000002,
+   "fim": 16.83517
+  },
+  {
+   "palavra": "efeito",
+   "inicio": 16.83517,
+   "fim": 17.206882
+  },
+  {
+   "palavra": "e",
+   "inicio": 17.206882,
+   "fim": 17.330786
+  },
+  {
+   "palavra": "vai",
+   "inicio": 17.330786,
+   "fim": 17.5538132
+  },
+  {
+   "palavra": "pro",
+   "inicio": 17.5538132,
+   "fim": 17.7768404
+  },
+  {
+   "palavra": "descarte",
+   "inicio": 17.7768404,
+   "fim": 18.2476756
+  },
+  {
+   "palavra": "O",
+   "inicio": 19.991746,
+   "fim": 20.12261749473684
+  },
+  {
+   "palavra": "Apoiador",
+   "inicio": 20.12261749473684,
+   "fim": 20.619929174736843
+  },
+  {
+   "palavra": "também",
+   "inicio": 20.619929174736843,
+   "fim": 21.01254365894737
+  },
+  {
+   "palavra": "vai",
+   "inicio": 21.01254365894737,
+   "fim": 21.248112349473683
+  },
+  {
+   "palavra": "pro",
+   "inicio": 21.248112349473683,
+   "fim": 21.48368104
+  },
+  {
+   "palavra": "descarte",
+   "inicio": 21.48368104,
+   "fim": 21.98099272
+  },
+  {
+   "palavra": "O",
+   "inicio": 24.291746,
+   "fim": 24.429338417391303
+  },
+  {
+   "palavra": "Estádio",
+   "inicio": 24.429338417391303,
+   "fim": 24.89715263652174
+  },
+  {
+   "palavra": "fica",
+   "inicio": 24.89715263652174,
+   "fim": 25.19985595478261
+  },
+  {
+   "palavra": "do",
+   "inicio": 25.19985595478261,
+   "fim": 25.392485339130435
+  },
+  {
+   "palavra": "lado",
+   "inicio": 25.392485339130435,
+   "fim": 25.695188657391306
+  },
+  {
+   "palavra": "da",
+   "inicio": 25.695188657391306,
+   "fim": 25.88781804173913
+  },
+  {
+   "palavra": "mesa",
+   "inicio": 25.88781804173913,
+   "fim": 26.190521359999998
+  },
+  {
+   "palavra": "A",
+   "inicio": 26.591746,
+   "fim": 26.72383625263158
+  },
+  {
+   "palavra": "Ferramenta",
+   "inicio": 26.72383625263158,
+   "fim": 27.331451414736843
+  },
+  {
+   "palavra": "fica",
+   "inicio": 27.331451414736843,
+   "fim": 27.622049970526316
+  },
+  {
+   "palavra": "presa",
+   "inicio": 27.622049970526316,
+   "fim": 27.965484627368422
+  },
+  {
+   "palavra": "no",
+   "inicio": 27.965484627368422,
+   "fim": 28.150410981052634
+  },
+  {
+   "palavra": "Pokémon",
+   "inicio": 28.150410981052634,
+   "fim": 28.59951784
+  },
+  {
+   "palavra": "Ele",
+   "inicio": 30.391746,
+   "fim": 30.70415368864865
+  },
+  {
+   "palavra": "fica",
+   "inicio": 30.70415368864865,
+   "fim": 31.08598530810811
+  },
+  {
+   "palavra": "até",
+   "inicio": 31.08598530810811,
+   "fim": 31.39839299675676
+  },
+  {
+   "palavra": "outro",
+   "inicio": 31.39839299675676,
+   "fim": 31.84964854702703
+  },
+  {
+   "palavra": "Estádio",
+   "inicio": 31.84964854702703,
+   "fim": 32.43975195891892
+  },
+  {
+   "palavra": "entrar",
+   "inicio": 32.43975195891892,
+   "fim": 32.96043144
+  }
+ ]
+}
