@@ -1,4 +1,5 @@
 import React from 'react';
+import {useLayout} from '../layout';
 import {AbsoluteFill, useCurrentFrame, useVideoConfig} from 'remotion';
 import {AREA, CORES} from '../tema';
 import {FONTE_MONO, FONTE_TITULO} from '../fontes';
@@ -19,7 +20,10 @@ export const Gancho: React.FC<{cena: CenaGancho}> = ({cena}) => {
   const traco = mola(quadro, fps, 0.25);
   const sub = mola(quadro, fps, 0.45, MOLA_PULO);
   const listras = trecho(t, [0, 0.35], [1, 0]);
-  const centroY = 760;
+  // com o Kai grande embaixo, o título sobe e fica um pouco menor
+  const {kai} = useLayout();
+  const comKai = kai === 'grande';
+  const centroY = comKai ? 470 : 760;
 
   return (
     <AbsoluteFill>
@@ -60,7 +64,7 @@ export const Gancho: React.FC<{cena: CenaGancho}> = ({cena}) => {
         }}
       >
         <div style={{transform: `scale(${escala}) translateX(${tremor}px)`}}>
-          <TituloArena texto={cena.texto} largura={AREA.largura - 30} maximo={210} />
+          <TituloArena texto={cena.texto} largura={AREA.largura - 30} maximo={comKai ? 175 : 210} />
         </div>
         <TracoOuro largura={260} progresso={traco} style={{marginTop: 34}} />
         {cena.subtitulo ? (

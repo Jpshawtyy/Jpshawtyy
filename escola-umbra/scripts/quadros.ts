@@ -68,9 +68,9 @@ fs.mkdirSync(pasta, {recursive: true});
 
 const navegador = await prepararNavegador();
 const serveUrl = await bundle({entryPoint: path.join(RAIZ, 'src', 'index.ts'), publicDir: path.join(RAIZ, 'public')});
-const comum = {serveUrl, inputProps: p.props, ...navegador, logLevel: 'error' as const};
+const comum = {serveUrl, inputProps: p.props, ...navegador, logLevel: 'error' as const, chromiumOptions: {gl: 'swangle' as const}};
 const aula = await selectComposition({...comum, id: 'Aula'});
-const instancia = await openBrowser('chrome', {...navegador});
+const instancia = await openBrowser('chrome', {...navegador, chromiumOptions: {gl: 'swangle'}});
 
 const ordenados = [...pontos.entries()].sort((a, b) => a[0] - b[0]);
 console.log(`\nFotografando ${ordenados.length} quadros em ${path.relative(process.cwd(), pasta)}/ ...`);

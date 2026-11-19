@@ -1,5 +1,6 @@
 // Lê o roteiro, confere a estrutura, busca as cartas, simula as mesas e monta as props do vídeo.
 
+import {execFileSync} from 'node:child_process';
 import fs from 'node:fs';
 import path from 'node:path';
 import type {Audio, Cena, PalavraFalada, PropsAula, Roteiro} from '../src/tipos';
@@ -128,6 +129,39 @@ const prepararAudio = (audio: Audio | undefined, pastaRoteiro: string, achados: 
   return {arquivo: destinoRel, volume: def.volume, palavras};
 };
 
+// Abertura da boca do Kai em cada quadro: volume (RMS) da narração, normalizado e suavizado.
+const envelopeDaBoca = (arquivo: string, quadros: number, fps = 30): number[] => {
+  const taxa = 16000;
+  let pcm: Buffer;
+  try {
+    pcm = execFileSync('ffmpeg', ['-loglevel', 'error', '-i', arquivo, '-f', 'f32le', '-ac', '1', '-ar', String(taxa), '-'], {maxBuffer: 512 * 1024 * 1024});
+  } catch {
+    return [];
+  }
+  const amostras = new Float32Array(pcm.buffer, pcm.byteOffset, Math.floor(pcm.byteLength / 4));
+  const porQuadro = taxa / fps;
+  const rms: number[] = [];
+  for (let q = 0; q < quadros; q++) {
+    let soma = 0;
+    let n = 0;
+    for (let i = Math.floor(q * porQuadro); i < Math.min(amostras.length, Math.floor((q + 1) * porQuadro)); i++) {
+      soma += amostras[i] * amostras[i];
+      n++;
+    }
+    rms.push(n ? Math.sqrt(soma / n) : 0);
+  }
+  const ordenado = rms.filter((v) => v > 0.002).sort((a, b) => a - b);
+  const alto = ordenado[Math.floor(ordenado.length * 0.9)] ?? 0.1;
+  const piso = alto * 0.12;
+  let anterior = 0;
+  return rms.map((v) => {
+    const alvo = Math.max(0, Math.min(1, (v - piso) / Math.max(1e-6, alto - piso)));
+    // abre rápido e fecha um pouco mais devagar, como boca de verdade
+    anterior = alvo > anterior ? anterior + (alvo - anterior) * 0.75 : anterior + (alvo - anterior) * 0.45;
+    return Math.round(Math.pow(anterior, 0.8) * 0.85 * 1000) / 1000;
+  });
+};
+
 export const preparar = async (
   caminho: string,
   opcoes: {guias?: boolean; atualizarCartas?: boolean; refazerNarracao?: boolean; log?: (m: string) => void} = {},
@@ -211,6 +245,8 @@ export const preparar = async (
       musicaVolume: musica?.volume ?? 0.15,
     },
     palavras: audioNarracao?.palavras,
+    boca:
+      roteiro.apresentador !== false && audioNarracao ? envelopeDaBoca(path.join(RAIZ, 'public', audioNarracao.arquivo), plano.totalQuadros) : undefined,
     guias: opcoes.guias ?? false,
   };
   return {nome, roteiro, props, plano, achados, escolhas, narracao};

@@ -65,6 +65,8 @@ type CenaBase = {
   legenda?: string; // atalho para uma legenda só
   legendas?: Legenda[];
   falas?: Fala[]; // narração sem legenda (ex.: no CTA)
+  kai?: string | {em: number; animacao: string}[]; // gesto do Kai nesta cena (ex.: "apontando") ou uma lista de gestos
+  faisca?: string; // gesto do Faísca nesta cena
 };
 
 // ---------- Cenas ----------
@@ -212,6 +214,7 @@ export type Roteiro = {
   narracao?: Audio; // caminho de um .mp3 seu, ou "auto" para o narrador gerar a fala das legendas
   musica?: Audio;
   cartas?: Record<string, DefCarta>;
+  apresentador?: boolean; // Kai e Faísca no vídeo (padrão: sim)
   cenas: Cena[];
 };
 
@@ -225,4 +228,5 @@ export type PropsAula = {
   audio?: {narracao?: string; narracaoVolume?: number; musica?: string; musicaVolume?: number};
   palavras?: PalavraFalada[];
   guias?: boolean; // desenha a área segura por cima, para conferência
+  boca?: number[]; // abertura da boca do Kai em cada quadro, tirada do volume da narração
 };

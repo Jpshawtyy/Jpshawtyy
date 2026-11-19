@@ -1,4 +1,5 @@
 import React from 'react';
+import {useLayout} from '../layout';
 import {AbsoluteFill, Img, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
 import {AREA, CORES, MARCA} from '../tema';
 import {FONTE_TEXTO} from '../fontes';
@@ -20,6 +21,8 @@ export const Cta: React.FC<{cena: CenaCta}> = ({cena}) => {
   const preenche = mola(quadro, fps, 1.35, MOLA_PULO);
   const seguir = mola(quadro, fps, 1.9, MOLA_PULO);
   const pulso = t > 2.4 ? 1 + 0.035 * Math.sin((t - 2.4) * 7) : 1;
+  // com o Kai e o Faísca embaixo, o texto sobe e fica mais compacto
+  const comKai = useLayout().kai === 'cta';
 
   return (
     <AbsoluteFill>
@@ -28,8 +31,8 @@ export const Cta: React.FC<{cena: CenaCta}> = ({cena}) => {
           position: 'absolute',
           left: AREA.x0,
           width: AREA.largura,
-          top: 330,
-          height: 1070,
+          top: comKai ? 300 : 330,
+          height: comKai ? 660 : 1070,
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
@@ -39,8 +42,8 @@ export const Cta: React.FC<{cena: CenaCta}> = ({cena}) => {
         <Img
           src={staticFile('logo.png')}
           style={{
-            width: 260,
-            height: 260,
+            width: comKai ? 170 : 260,
+            height: comKai ? 170 : 260,
             objectFit: 'contain',
             filter: 'drop-shadow(0 14px 30px rgba(0,0,0,0.6))',
             opacity: Math.min(1, 0.4 + logo * 1.5),
@@ -48,7 +51,7 @@ export const Cta: React.FC<{cena: CenaCta}> = ({cena}) => {
           }}
         />
         <div style={{marginTop: 34, transform: `scale(${0.7 + 0.3 * principal})`, opacity: Math.min(1, principal * 1.6)}}>
-          <TituloArena texto={cena.principal ?? 'SALVA'} largura={AREA.largura - 60} maximo={210} />
+          <TituloArena texto={cena.principal ?? 'SALVA'} largura={AREA.largura - 60} maximo={comKai ? 170 : 210} />
         </div>
         <TracoOuro largura={220} progresso={traco} style={{marginTop: 26}} />
         <div
@@ -67,7 +70,7 @@ export const Cta: React.FC<{cena: CenaCta}> = ({cena}) => {
           </svg>
           <div style={{fontFamily: FONTE_TEXTO, fontWeight: 600, fontSize: 56, color: CORES.texto}}>{cena.complemento ?? 'pra próxima partida'}</div>
         </div>
-        <div style={{marginTop: 64, transform: `scale(${seguir * pulso})`, opacity: seguir}}>
+        <div style={{marginTop: comKai ? 36 : 64, transform: `scale(${seguir * pulso})`, opacity: seguir}}>
           <Pill cor="vermelho" tamanho={38}>
             {cena.seguir ?? `segue ${MARCA}`}
           </Pill>

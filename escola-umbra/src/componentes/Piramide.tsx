@@ -1,4 +1,5 @@
 import React from 'react';
+import {useLayout} from '../layout';
 import {AbsoluteFill, useCurrentFrame, useVideoConfig} from 'remotion';
 import {AREA, CORES, PROPORCAO_CARTA} from '../tema';
 import {FONTE_MONO, FONTE_TEXTO, FONTE_TITULO} from '../fontes';
@@ -19,7 +20,8 @@ export const Piramide: React.FC<{cena: CenaPiramide; duracao: number; cartas: Ma
   const tempos = temposDosItens(cena.niveis, duracao, 0.4, 0.8);
   const ranking = cena.modo === 'ranking';
 
-  const base = cena.fonte ? 1206 : 1230; // linha de baixo da pilha
+  const {fundo} = useLayout();
+  const base = fundo - (cena.fonte ? 44 : 20); // linha de baixo da pilha
   const topoLivre = cena.titulo ? 470 : 360;
   const vao = 14;
   const altura = Math.min(132, (base - topoLivre - vao * (n - 1)) / n);

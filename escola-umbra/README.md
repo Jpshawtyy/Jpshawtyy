@@ -123,6 +123,20 @@ Para o oponente agir, ponha `"lado": "oponente"` na ação ou use `fim_de_turno`
 
 **Regras conferidas** antes de renderizar: 1 energia da mão por turno, 1 Apoiador por turno, 1 Estádio por turno, recuar 1 vez por turno (e pagar o custo), não evoluir no turno em que o Pokémon entrou nem no primeiro turno do jogador, quem começa não ataca nem joga Apoiador no primeiro turno, nada depois do ataque, só Básico vai para o banco (máximo 5), a evolução precisa bater com a carta de baixo, o ataque precisa existir na carta e a energia precisa pagar o custo. Fraqueza e resistência entram na conta do dano. Se o roteiro quebrar regra, o comando lista os erros e não renderiza.
 
+### Apresentador: Kai e Faísca
+
+O Kai apresenta todas as aulas, com o Faísca de companheiro. Eles são personagens 3D (`public/personagens/kai.glb` e `faisca.glb`, exportados do Blender; os originais `.blend` e `.fbx` ficam em `personagens-fonte/`).
+
+- **Gancho:** Kai grande acenando, Faísca voando ao lado, título em cima.
+- **Durante a aula:** Kai do peito para cima no canto de baixo à esquerda, e a legenda vira um balão de fala ao lado dele. O conteúdo das cenas termina mais acima para dar espaço.
+- **CTA:** Kai fazendo joinha e Faísca feliz, embaixo do "SALVA".
+- A boca do Kai abre e fecha pelo volume da narração, quadro a quadro, e ele pisca sozinho.
+- Na troca de cena eles deslizam de uma posição para a outra.
+
+Gestos do Kai: `parado`, `acenando`, `falando`, `apontando`, `comemorando`, `joinha`, `pensando`. Do Faísca: `parado`, `feliz`, `apontando`, `curioso`, `em_pe`, `falando`. Cada tipo de cena já tem um gesto padrão; para trocar numa cena, use `"kai": "joinha"`, ou uma lista com tempos dentro da cena: `"kai": [{"em": 0, "animacao": "falando"}, {"em": 3.2, "animacao": "joinha"}]`. O Faísca muda com `"faisca": "feliz"`. Para fazer uma aula sem os personagens, ponha `"apresentador": false` no roteiro.
+
+As posições e os gestos padrão ficam em `src/personagens/Apresentador.tsx`; o espaço que eles ocupam na tela, em `src/layout.tsx`. O render usa WebGL por software (`gl: 'swangle'`), então funciona sem placa de vídeo, mas fica mais lento.
+
 ### Narrador
 
 O narrador é um só para todas as aulas e fica em `narrador.json`:
@@ -182,6 +196,8 @@ Segue o guia de identidade (Estilo Arena), com o nome Escola Umbra e o @escolaum
 aulas/            roteiros (um JSON por aula)
 src/componentes/  gancho, carta em destaque, lista, pirâmide, comparação, riscado, legenda, CTA
 src/mesa/         motor de regras (motor.ts), posições (layout.ts) e animação (Mesa.tsx)
+src/personagens/  Kai e Faísca em 3D (Personagem.tsx) e onde eles ficam em cada cena (Apresentador.tsx)
+personagens-fonte/ arquivos originais dos personagens (.blend e .fbx)
 src/Aula.tsx      junta as cenas; src/Capa.tsx é a capa
 scripts/          comandos (aula, capa, narrar, quadros, studio), a busca de cartas e o narrador
 narrador.json     a voz do narrador, a mesma para todas as aulas

@@ -1,4 +1,5 @@
 import React from 'react';
+import {useLayout} from '../layout';
 import {useCurrentFrame, useVideoConfig} from 'remotion';
 import {AREA, CORES, MOLDURA} from '../tema';
 import {FONTE_TEXTO} from '../fontes';
@@ -59,6 +60,7 @@ export const LegendaDinamica: React.FC<{
 }> = ({legendas, falas, inicioDaCena = 0, tamanho = 52, base = MOLDURA.legendaBase}) => {
   const quadro = useCurrentFrame();
   const {fps} = useVideoConfig();
+  const {balao} = useLayout();
   const t = quadro / fps;
   const atual = legendas.find((l) => t >= l.em && t < l.ate);
   if (!atual) return null;
@@ -69,6 +71,69 @@ export const LegendaDinamica: React.FC<{
   const passo = Math.min(0.13, (duracao * 0.45) / Math.max(1, palavras.length));
   const falados = falas?.length ? temposDaFala(palavras, falas, inicioDaCena + atual.em, inicioDaCena + atual.ate) : null;
   const some = trecho(t, [atual.ate - 0.12, atual.ate], [1, 0]);
+
+  const palavrasJsx = palavras.map((p, i) => {
+    const falado = falados?.[i];
+    const entraEm = falado !== null && falado !== undefined ? falado - inicioDaCena : atual.em + i * passo;
+    const e = mola(quadro, fps, entraEm, MOLA_PULO);
+    return (
+      <React.Fragment key={i}>
+        <span
+          style={{
+            display: 'inline-block',
+            color: p.chave ? CORES.ouro : CORES.texto,
+            opacity: Math.min(1, e * 1.6),
+            transform: `translateY(${(1 - e) * 16}px) scale(${0.86 + 0.14 * e})`,
+          }}
+        >
+          {p.texto}
+        </span>
+        {i < palavras.length - 1 ? ' ' : null}
+      </React.Fragment>
+    );
+  });
+
+  // Com o Kai no vídeo, a legenda vira um balão de fala ao lado da boca dele.
+  if (balao) {
+    const entra = mola(quadro, fps, atual.em - 0.05, MOLA_PULO);
+    return (
+      <div
+        style={{
+          position: 'absolute',
+          left: balao.x0,
+          width: balao.x1 - balao.x0,
+          top: balao.y0,
+          height: balao.y1 - balao.y0,
+          display: 'flex',
+          alignItems: 'center',
+          opacity: some,
+          transform: `translateX(${(1 - entra) * -30}px) scale(${0.94 + 0.06 * entra})`,
+          transformOrigin: 'left center',
+        }}
+      >
+        <div
+          style={{
+            position: 'relative',
+            background: 'rgba(20,20,24,0.92)',
+            boxShadow: `inset 5px 0 0 ${CORES.vermelho}, 0 12px 30px rgba(0,0,0,0.5), inset 0 0 0 1.5px rgba(245,241,232,0.10)`,
+            borderRadius: 8,
+            padding: '20px 26px 22px 30px',
+            fontFamily: FONTE_TEXTO,
+            fontWeight: 600,
+            fontSize: tamanho * 0.9,
+            lineHeight: 1.16,
+            textAlign: 'left',
+            textWrap: 'balance',
+            color: CORES.texto,
+          }}
+        >
+          {/* biquinho do balão, apontando para o Kai */}
+          <div style={{position: 'absolute', left: -18, top: 26, width: 0, height: 0, borderTop: '14px solid transparent', borderBottom: '14px solid transparent', borderRight: `18px solid ${CORES.vermelho}`}} />
+          {palavrasJsx}
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div
@@ -96,26 +161,7 @@ export const LegendaDinamica: React.FC<{
           textShadow: '0 2px 0 rgba(10,10,12,0.9), 0 0 22px rgba(10,10,12,0.95), 0 0 44px rgba(10,10,12,0.9)',
         }}
       >
-        {palavras.map((p, i) => {
-          const falado = falados?.[i];
-          const entraEm = falado !== null && falado !== undefined ? falado - inicioDaCena : atual.em + i * passo;
-          const e = mola(quadro, fps, entraEm, MOLA_PULO);
-          return (
-            <React.Fragment key={i}>
-              <span
-                style={{
-                  display: 'inline-block',
-                  color: p.chave ? CORES.ouro : CORES.texto,
-                  opacity: Math.min(1, e * 1.6),
-                  transform: `translateY(${(1 - e) * 16}px) scale(${0.86 + 0.14 * e})`,
-                }}
-              >
-                {p.texto}
-              </span>
-              {i < palavras.length - 1 ? ' ' : null}
-            </React.Fragment>
-          );
-        })}
+        {palavrasJsx}
       </div>
     </div>
   );

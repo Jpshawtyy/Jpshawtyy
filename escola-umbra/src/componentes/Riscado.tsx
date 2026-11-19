@@ -1,4 +1,5 @@
 import React from 'react';
+import {useLayout} from '../layout';
 import {AbsoluteFill, useCurrentFrame, useVideoConfig} from 'remotion';
 import {AREA, CORES} from '../tema';
 import {FONTE_TEXTO} from '../fontes';
@@ -17,7 +18,8 @@ export const Riscado: React.FC<{cena: CenaRiscado; duracao: number}> = ({cena, d
   const tempos = temposDosItens(itens, duracao, 0.4, 1.2);
 
   const topoBanda = cena.titulo ? 460 : 340;
-  const banda = 1250 - topoBanda;
+  const {fundo} = useLayout();
+  const banda = fundo - topoBanda;
   const vao = Math.min(70, banda / itens.length - 130);
 
   return (

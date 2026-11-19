@@ -1,4 +1,5 @@
 import React from 'react';
+import {useLayout} from '../layout';
 import {AbsoluteFill, spring, useCurrentFrame, useVideoConfig} from 'remotion';
 import {AREA, CORES, PROPORCAO_CARTA} from '../tema';
 import {MOLA_PULO, mola} from '../anim';
@@ -17,9 +18,12 @@ export const CartaDestaque: React.FC<{cena: CenaCartaDestaque; cartas: MapaCarta
   const dados = cartas[cena.carta];
   if (!dados) return null;
 
-  const largura = cena.titulo ? 480 : 540;
+  const {fundo} = useLayout();
+  const topoCarta = cena.titulo ? 470 : 360;
+  // a carta cabe entre o título e o fim do conteúdo
+  const largura = Math.min(cena.titulo ? 480 : 540, (fundo - topoCarta - 30) / PROPORCAO_CARTA);
   const altura = largura * PROPORCAO_CARTA;
-  const cy = cena.titulo ? 838 : 790;
+  const cy = topoCarta + (fundo - topoCarta) / 2;
   const e = mola(quadro, fps, 0.05, MOLA_PULO);
   const pill = mola(quadro, fps, 0.45, MOLA_PULO);
   const balanco = Math.sin(t * 1.6) * 1.2;
@@ -74,7 +78,7 @@ export const CartaDestaque: React.FC<{cena: CenaCartaDestaque; cartas: MapaCarta
           position: 'absolute',
           inset: 0,
           // durante o zoom, a carta fica dentro de uma janela entre a etiqueta do topo e a legenda
-          clipPath: zoom > 0.001 ? `inset(${330 * zoom}px ${40 * zoom}px ${(1920 - 1250) * zoom}px ${40 * zoom}px round ${18 * zoom}px)` : undefined,
+          clipPath: zoom > 0.001 ? `inset(${330 * zoom}px ${40 * zoom}px ${(1920 - fundo) * zoom}px ${40 * zoom}px round ${18 * zoom}px)` : undefined,
         }}
       >
       <div

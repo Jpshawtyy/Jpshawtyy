@@ -20,7 +20,7 @@ const navegador = await prepararNavegador();
 const serveUrl = await bundle({entryPoint: path.join(RAIZ, 'src', 'index.ts'), publicDir: path.join(RAIZ, 'public')});
 for (const caminho of caminhos) {
   const p = await preparar(caminho, {log: () => undefined});
-  const comum = {serveUrl, inputProps: p.props, ...navegador, logLevel: 'error' as const};
+  const comum = {serveUrl, inputProps: p.props, ...navegador, logLevel: 'error' as const, chromiumOptions: {gl: 'swangle' as const}};
   const capa = await selectComposition({...comum, id: 'Capa'});
   const png = path.join(RAIZ, 'out', `${p.nome}-capa.png`);
   await renderStill({...comum, composition: capa, output: png, imageFormat: 'png'});

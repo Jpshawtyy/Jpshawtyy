@@ -14,7 +14,8 @@ export const tamanhoEtiqueta = (numero: number, serie: string, largura = AREA.la
 };
 
 // Etiqueta da série no topo ([AULA 06] // DO ZERO AO CAMPEONATO) e o @ no pé. Fica por cima de todas as cenas.
-export const Moldura: React.FC<{numero: number; serie: string}> = ({numero, serie}) => {
+// marcaADireita: com o Kai no canto, o @ vai para a direita, embaixo do balão.
+export const Moldura: React.FC<{numero: number; serie: string; marcaADireita?: boolean}> = ({numero, serie, marcaADireita = false}) => {
   const quadro = useCurrentFrame();
   const {fps} = useVideoConfig();
   // começa quase pronta: no quadro 0 a etiqueta já está legível
@@ -46,7 +47,7 @@ export const Moldura: React.FC<{numero: number; serie: string}> = ({numero, seri
           width: AREA.largura,
           top: MOLDURA.rodapeY,
           display: 'flex',
-          justifyContent: 'center',
+          justifyContent: marcaADireita ? 'flex-end' : 'center',
           alignItems: 'center',
           gap: 12,
           fontFamily: FONTE_MONO,

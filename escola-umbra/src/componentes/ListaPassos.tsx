@@ -1,4 +1,5 @@
 import React from 'react';
+import {useLayout} from '../layout';
 import {AbsoluteFill, useCurrentFrame, useVideoConfig} from 'remotion';
 import {AREA, CORES, PROPORCAO_CARTA} from '../tema';
 import {FONTE_TEXTO, FONTE_TITULO} from '../fontes';
@@ -18,7 +19,8 @@ export const ListaPassos: React.FC<{cena: CenaLista; duracao: number; cartas?: M
   const tempos = temposDosItens(itens, duracao);
 
   const topoBanda = cena.titulo ? 460 : 340;
-  const banda = 1250 - topoBanda;
+  const {fundo} = useLayout();
+  const banda = fundo - topoBanda;
   const passo = Math.min(215, banda / itens.length);
   const bola = Math.min(112, passo * 0.6);
   // com miniaturas de carta, a linha fica da altura da carta e some a linha que liga os números

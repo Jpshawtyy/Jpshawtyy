@@ -4,6 +4,7 @@ import {CORES} from '../tema';
 import {FONTE_MONO, FONTE_TITULO} from '../fontes';
 import {MOLA_PULO, MOLA_SECA, misturar, mola, trecho} from '../anim';
 import {completarLegendas} from '../tempo';
+import {useLayout} from '../layout';
 import {Carta, VersoCarta} from '../componentes/Carta';
 import {Pill} from '../componentes/Pill';
 import {Estrela} from '../componentes/Estrela';
@@ -12,7 +13,7 @@ import {LegendaDinamica} from '../componentes/Legenda';
 import {IconeEnergia} from './IconeEnergia';
 import type {CenaMesa, LadoId, Legenda, LegendaPronta, MapaCartas, PalavraFalada} from '../tipos';
 import {INTRO_MESA, marcadores, simularMesa, topo, type Estado, type Passo, type Simulacao} from './motor';
-import {BASE_MESA, ENCAIXE_MESA, ZONAS, alturaCarta, arranjar, poseAtivo, poseBanco, poseDeck, poseDescarte, poseFora, posePremio, type Arranjo, type Pose} from './layout';
+import {BASE_MESA, encaixeMesa, ZONAS, alturaCarta, arranjar, poseAtivo, poseBanco, poseDeck, poseDescarte, poseFora, posePremio, type Arranjo, type Pose} from './layout';
 
 // ---------- movimento ----------
 
@@ -338,6 +339,7 @@ export const Mesa: React.FC<{
   const quadro = useCurrentFrame();
   const {fps} = useVideoConfig();
   const t = quadro / fps;
+  const encaixe = encaixeMesa(useLayout().fundo);
 
   const {sim, arranjos} = useMemo(() => {
     const s = simularMesa(cena, cartas);
@@ -447,7 +449,7 @@ export const Mesa: React.FC<{
       <AbsoluteFill
         style={{
           transformOrigin: `${BASE_MESA.cx}px ${BASE_MESA.topo}px`,
-          transform: `translate(${ENCAIXE_MESA.dx}px, ${ENCAIXE_MESA.dy}px) scale(${ENCAIXE_MESA.escala})`,
+          transform: `translate(${encaixe.dx}px, ${encaixe.dy}px) scale(${encaixe.escala})`,
         }}
       >
       <AbsoluteFill style={{opacity: surge}}>

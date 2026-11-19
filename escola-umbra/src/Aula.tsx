@@ -14,6 +14,8 @@ import {CartaDestaque} from './componentes/CartaDestaque';
 import {Cta} from './componentes/Cta';
 import {Mesa} from './mesa/Mesa';
 import {trecho} from './anim';
+import {LAYOUT_COM_KAI, LAYOUT_SEM_PALCO, LayoutCtx} from './layout';
+import {Apresentador, PRESET_DA_CENA} from './personagens/Apresentador';
 
 // Cada tipo de cena do roteiro aponta para um componente.
 const desenharCena = (cena: Cena, props: PropsAula, duracao: number, inicio: number): React.ReactNode => {
@@ -48,7 +50,9 @@ const Saida: React.FC<{quadros: number; ultima: boolean; children: React.ReactNo
 };
 
 export const Aula: React.FC<PropsAula> = (props) => {
-  const {roteiro, cartas, audio, palavras, guias} = props;
+  const {roteiro, cartas, audio, palavras, guias, boca} = props;
+  const comKai = roteiro.apresentador !== false;
+  const layoutDe = (cena: Cena) => (comKai ? LAYOUT_COM_KAI[PRESET_DA_CENA(cena)] : LAYOUT_SEM_PALCO);
   const quadro = useCurrentFrame();
   const plano = useMemo(() => planejar(roteiro, cartas), [roteiro, cartas]);
   const atual = plano.cenas.find((c) => quadro >= c.de && quadro < c.de + c.quadros);
@@ -58,15 +62,18 @@ export const Aula: React.FC<PropsAula> = (props) => {
       <Fundo inicios={plano.cenas.map((c) => c.de)} suave={atual?.cena.tipo === 'mesa'} />
       {plano.cenas.map((c, i) => (
         <Sequence key={i} from={c.de} durationInFrames={c.quadros} name={`${i + 1} · ${c.cena.tipo}`}>
-          <Saida quadros={c.quadros} ultima={i === plano.cenas.length - 1}>
-            {desenharCena(c.cena, props, c.duracao, c.inicio)}
-            {c.cena.tipo !== 'mesa' ? (
-              <LegendaDinamica legendas={legendasDaCena(c.cena, c.duracao)} falas={palavras} inicioDaCena={c.inicio} />
-            ) : null}
-          </Saida>
+          <LayoutCtx.Provider value={layoutDe(c.cena)}>
+            <Saida quadros={c.quadros} ultima={i === plano.cenas.length - 1}>
+              {desenharCena(c.cena, props, c.duracao, c.inicio)}
+              {c.cena.tipo !== 'mesa' ? (
+                <LegendaDinamica legendas={legendasDaCena(c.cena, c.duracao)} falas={palavras} inicioDaCena={c.inicio} />
+              ) : null}
+            </Saida>
+          </LayoutCtx.Provider>
         </Sequence>
       ))}
-      <Moldura numero={roteiro.numero} serie={roteiro.serie} />
+      {comKai ? <Apresentador cenas={plano.cenas} boca={boca} /> : null}
+      <Moldura numero={roteiro.numero} serie={roteiro.serie} marcaADireita={comKai && atual ? layoutDe(atual.cena).comPalco : false} />
       {audio?.narracao ? <Audio src={staticFile(audio.narracao)} volume={audio.narracaoVolume ?? 1} /> : null}
       {audio?.musica ? <Audio src={staticFile(audio.musica)} volume={audio.musicaVolume ?? 0.15} loop /> : null}
       {guias ? <Guias /> : null}

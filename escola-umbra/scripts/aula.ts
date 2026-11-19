@@ -55,7 +55,7 @@ try {
   console.log('\nPreparando o navegador e o pacote do vídeo...');
   const navegador = await prepararNavegador();
   const serveUrl = await bundle({entryPoint: path.join(RAIZ, 'src', 'index.ts'), publicDir: path.join(RAIZ, 'public')});
-  const comum = {serveUrl, inputProps: p.props, ...navegador, logLevel: 'error' as const};
+  const comum = {serveUrl, inputProps: p.props, ...navegador, logLevel: 'error' as const, chromiumOptions: {gl: 'swangle' as const}};
 
   const aula = await selectComposition({...comum, id: 'Aula'});
   const mp4 = path.join(saida, `${p.nome}${previa ? '-previa' : ''}${tem('--guias') ? '-guias' : ''}.mp4`);

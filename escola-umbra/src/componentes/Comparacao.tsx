@@ -1,4 +1,5 @@
 import React from 'react';
+import {useLayout} from '../layout';
 import {AbsoluteFill, useCurrentFrame, useVideoConfig} from 'remotion';
 import {AREA, CORES, PROPORCAO_CARTA} from '../tema';
 import {FONTE_TEXTO} from '../fontes';
@@ -20,11 +21,12 @@ const Coluna: React.FC<{
   apagar?: boolean;
 }> = ({itens, cartas, lado, rotulo, x, largura, topo, atraso, apagar = true}) => {
   const quadro = useCurrentFrame();
+  const {fundo} = useLayout();
   const {fps} = useVideoConfig();
   const pill = mola(quadro, fps, atraso, MOLA_PULO);
   const direcao = lado === 'bons' ? -1 : 1;
   const n = itens.length;
-  const alturaLivre = 1240 - (topo + 110);
+  const alturaLivre = fundo - 10 - (topo + 110);
   const vao = 18;
   // a carta ocupa o que der na coluna, sem passar da largura
   const larguraCarta = Math.min(largura - 40, (alturaLivre - vao * (n - 1)) / n / PROPORCAO_CARTA);
@@ -34,7 +36,7 @@ const Coluna: React.FC<{
     return o.carta && cartas[o.carta] ? larguraCarta * PROPORCAO_CARTA : 150;
   });
   const conjunto = 110 + alturas.reduce((s, h) => s + h, 0) + vao * (n - 1);
-  const desce = Math.max(0, (1240 - topo - conjunto) / 2);
+  const desce = Math.max(0, (fundo - 10 - topo - conjunto) / 2);
   let y = topo + desce + 110;
   return (
     <>
@@ -98,6 +100,7 @@ const Coluna: React.FC<{
 // Comparação bom x ruim: duas colunas, pill dourada de um lado e vermelha do outro.
 export const Comparacao: React.FC<{cena: CenaComparacao; cartas: MapaCartas}> = ({cena, cartas}) => {
   const quadro = useCurrentFrame();
+  const {fundo} = useLayout();
   const {fps} = useVideoConfig();
   const topo = cena.titulo ? 450 : 340;
   const vao = 30;
@@ -112,7 +115,7 @@ export const Comparacao: React.FC<{cena: CenaComparacao; cartas: MapaCartas}> = 
           left: AREA.cx - 1,
           top: topo,
           width: 2,
-          height: (1240 - topo) * divisor,
+          height: (fundo - 10 - topo) * divisor,
           background: `linear-gradient(180deg, ${CORES.ouro}, ${CORES.vermelho})`, opacity: 0.6,
         }}
       />

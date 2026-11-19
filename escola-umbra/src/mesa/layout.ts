@@ -5,15 +5,18 @@ import {AREA, PROPORCAO_CARTA} from '../tema';
 // A mesa é desenhada numa base fixa (x de 70 a 920, centro em 495) e depois encaixada, por escala,
 // na área de conteúdo centrada da tela. Assim as medidas das zonas não dependem das margens.
 export const BASE_MESA = {x0: 70, x1: 920, cx: 495, largura: 850, topo: 316, fundo: 1262} as const;
-export const ENCAIXE_MESA = (() => {
-  const escala = Math.min(1, AREA.largura / BASE_MESA.largura);
-  const altura = (BASE_MESA.fundo - BASE_MESA.topo) * escala;
-  // centra na horizontal e, na vertical, entre a etiqueta da série e a legenda
+// Escala e deslocamento da mesa para caber entre a etiqueta do topo e "fundo" (o fim do conteúdo).
+export const encaixeMesa = (fundo = 1262) => {
   const topoLivre = 312;
-  const fundoLivre = 1262;
+  const fundoLivre = Math.min(1262, fundo + 12);
+  const alturaBase = BASE_MESA.fundo - BASE_MESA.topo;
+  const escala = Math.min(1, AREA.largura / BASE_MESA.largura, (fundoLivre - topoLivre) / alturaBase);
+  const altura = alturaBase * escala;
+  // centra na horizontal e, na vertical, no espaço livre
   const dy = topoLivre + (fundoLivre - topoLivre - altura) / 2 - BASE_MESA.topo;
   return {escala, dx: AREA.cx - BASE_MESA.cx, dy};
-})();
+};
+export const ENCAIXE_MESA = encaixeMesa();
 import {acaso} from '../anim';
 import type {LadoId} from '../tipos';
 import type {Estado, Poke} from './motor';
