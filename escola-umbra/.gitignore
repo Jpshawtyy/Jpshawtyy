@@ -7,6 +7,8 @@ out/*
 !out/.gitkeep
 !out/aula-[0-9][0-9].mp4
 !out/aula-[0-9][0-9]-capa.png
+!out/deck-[0-9][0-9].mp4
+!out/deck-[0-9][0-9]-capa.png
 !out/loja/
 .cache/
 # narrador: ambiente Python, vozes baixadas e frases já geradas (refeitos sozinhos quando faltam)
