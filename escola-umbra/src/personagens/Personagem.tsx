@@ -1,12 +1,13 @@
 // Personagens 3D (Kai e Faísca): carrega o .glb, toca as animações do Blender de forma
 // determinística (o mesmo quadro sempre dá a mesma pose) e mexe a boca conforme a narração.
 
-import React, {useEffect, useMemo, useState} from 'react';
+import React, {useEffect, useLayoutEffect, useMemo, useState} from 'react';
 import {continueRender, delayRender, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
 import * as THREE from 'three';
 import {useThree} from '@react-three/fiber';
 import {GLTFLoader, type GLTF} from 'three/examples/jsm/loaders/GLTFLoader.js';
 import {clone as clonarComEsqueleto} from 'three/examples/jsm/utils/SkeletonUtils.js';
+import type {Boca} from '../tipos';
 
 export type NomePersonagem = 'kai' | 'faisca';
 
@@ -29,7 +30,7 @@ const TRANSICAO = 0.35; // segundos de mistura entre um gesto e o próximo
 export const Personagem: React.FC<{
   nome: NomePersonagem;
   gestos: Gesto[]; // em ordem; o primeiro deve começar em 0
-  boca?: number[]; // abertura da boca por quadro da cena (0 a 1), vinda da narração
+  boca?: Boca; // abertura e arredondamento da boca por quadro do vídeo (0 a 1), vindos da narração
   posicao?: [number, number, number];
   rotacaoY?: number;
   escala?: number;
@@ -37,7 +38,6 @@ export const Personagem: React.FC<{
 }> = ({nome, gestos, boca, posicao = [0, 0, 0], rotacaoY = 0, escala = 1, olhar = null}) => {
   const quadro = useCurrentFrame();
   const {fps} = useVideoConfig();
-  const t = quadro / fps;
   const [gltf, setGltf] = useState<GLTF | null>(null);
   const [espera] = useState(() => delayRender(`carregando ${nome}.glb`));
 
@@ -94,9 +94,54 @@ export const Personagem: React.FC<{
     return () => cancelAnimationFrame(id);
   }, [montado, espera, advance]);
 
+  // A pose é aplicada no efeito de layout e o quadro é desenhado logo em seguida. Antes ela era
+  // aplicada durante o render e, com várias abas renderizando em paralelo, cada aba às vezes desenhava
+  // a pose de outro quadro (olhos piscando sem parar, boca fora do tempo).
+  useLayoutEffect(() => {
+    if (!montado) return;
+    aplicarPose(montado, nome, gestos, boca, quadro, fps, olhar);
+    advance(performance.now());
+    const h = delayRender(`desenhando ${nome} no quadro ${quadro}`);
+    const id = requestAnimationFrame(() => {
+      aplicarPose(montado, nome, gestos, boca, quadro, fps, olhar);
+      advance(performance.now());
+      continueRender(h);
+    });
+    return () => {
+      cancelAnimationFrame(id);
+      continueRender(h);
+    };
+  }, [montado, nome, gestos, boca, quadro, fps, olhar, advance]);
+
   if (!montado) return null;
 
-  const {mixer, acoes, rosto} = montado;
+  return <primitive object={montado.cena} position={posicao} rotation={[0, rotacaoY, 0]} scale={escala} />;
+};
+
+type Montado = {cena: THREE.Object3D; mixer: THREE.AnimationMixer; acoes: Map<string, THREE.AnimationAction>; rosto: THREE.Mesh[]};
+
+// Piscada em intervalos irregulares (entre 2,6 e 4,6 s), sempre igual para o mesmo quadro.
+const piscadaEm = (t: number, semente: number) => {
+  let inicio = 0.8 + semente;
+  for (let k = 0; inicio <= t + 1; k++) {
+    const d = t - inicio;
+    if (d >= 0 && d < 0.2) return d < 0.07 ? d / 0.07 : 1 - (d - 0.07) / 0.13;
+    const sorteio = Math.abs(Math.sin((k + 1) * 12.9898 + semente * 78.233) * 43758.5453) % 1;
+    inicio += 2.6 + sorteio * 2;
+  }
+  return 0;
+};
+
+const aplicarPose = (
+  {mixer, acoes, rosto}: Montado,
+  nome: NomePersonagem,
+  gestos: Gesto[],
+  boca: Boca | undefined,
+  quadro: number,
+  fps: number,
+  olhar: 'esq' | 'dir' | 'cima' | null,
+) => {
+  const t = quadro / fps;
   // peso de cada gesto neste instante (mistura suave na troca)
   const pesos = new Map<string, number>();
   gestos.forEach((g, i) => {
@@ -111,7 +156,7 @@ export const Personagem: React.FC<{
   pesos.forEach((p) => (total += p));
   acoes.forEach((acao, nomeClipe) => {
     const p = (pesos.get(nomeClipe) ?? 0) / Math.max(1e-6, total);
-    acao.enabled = p > 0;
+    acao.enabled = true;
     acao.setEffectiveWeight(p);
     const inicio = [...gestos].reverse().find((g) => g.animacao === nomeClipe && g.em <= t)?.em ?? 0;
     const d = acao.getClip().duration || 1;
@@ -119,26 +164,27 @@ export const Personagem: React.FC<{
   });
   mixer.update(0);
 
-  // rosto: boca pela narração, piscada periódica, olhar opcional
-  const abre = boca ? (boca[Math.min(boca.length - 1, Math.max(0, quadro))] ?? 0) : 0;
-  const ciclo = (t + (nome === 'kai' ? 0 : 1.3)) % 3.6;
-  const piscar = ciclo < 0.07 ? ciclo / 0.07 : ciclo < 0.16 ? 1 - (ciclo - 0.07) / 0.09 : 0;
+  // Rosto. As animações do Blender já trazem boca e piscadas próprias; aqui elas são substituídas:
+  // a boca segue a narração e a piscada é uma só, em intervalos naturais.
+  const i = Math.max(0, quadro);
+  const abre = boca ? (boca.aberta[Math.min(boca.aberta.length - 1, i)] ?? 0) : null;
+  const redondo = boca ? (boca.o[Math.min(boca.o.length - 1, i)] ?? 0) : 0;
+  const piscar = piscadaEm(t, nome === 'kai' ? 0 : 1.3);
   for (const m of rosto) {
     const dic = m.morphTargetDictionary!;
     const inf = m.morphTargetInfluences!;
-    if (boca && dic.aberta !== undefined) {
-      inf[dic.aberta] = abre;
-      if (dic.o !== undefined) inf[dic.o] = abre * 0.25;
-      if (dic.fechada !== undefined) inf[dic.fechada] = 0;
+    if (abre !== null && dic.aberta !== undefined) {
+      // "o" arredonda a boca no lugar de abrir larga; "fechada" é a boca em repouso, entre as sílabas
+      inf[dic.aberta] = abre * 1.3 * (1 - 0.45 * redondo); // um pouco além do limite do Blender, para ler bem no celular
+      if (dic.o !== undefined) inf[dic.o] = abre * redondo * 0.9;
+      if (dic.fechada !== undefined) inf[dic.fechada] = 0.7 * Math.max(0, 1 - abre * 1.6);
     }
-    if (dic.piscar !== undefined) inf[dic.piscar] = Math.max(inf[dic.piscar] ?? 0, piscar);
+    if (dic.piscar !== undefined) inf[dic.piscar] = piscar;
     for (const lado of ['esq', 'dir', 'cima'] as const) {
       const chave = `olhar_${lado}`;
       if (dic[chave] !== undefined && olhar === lado) inf[dic[chave]] = 0.6;
     }
   }
-
-  return <primitive object={montado.cena} position={posicao} rotation={[0, rotacaoY, 0]} scale={escala} />;
 };
 
 // Luz no estilo da marca: principal quente pela frente, contraluz vermelha atrás e preenchimento dourado.

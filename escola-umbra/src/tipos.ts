@@ -228,5 +228,8 @@ export type PropsAula = {
   audio?: {narracao?: string; narracaoVolume?: number; musica?: string; musicaVolume?: number};
   palavras?: PalavraFalada[];
   guias?: boolean; // desenha a área segura por cima, para conferência
-  boca?: number[]; // abertura da boca do Kai em cada quadro, tirada do volume da narração
+  boca?: Boca; // movimento da boca do Kai em cada quadro, tirado da narração
 };
+
+// Valores de 0 a 1 por quadro do vídeo: quanto a boca abre e quanto ela arredonda (vogais o, u).
+export type Boca = {aberta: number[]; o: number[]};

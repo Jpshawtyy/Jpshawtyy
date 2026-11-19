@@ -8,7 +8,7 @@ import {ThreeCanvas} from '@remotion/three';
 import {VIDEO} from '../tema';
 import {PALCO} from '../layout';
 import {MOLA_SECA, misturar} from '../anim';
-import type {Cena, TipoCena} from '../tipos';
+import type {Boca, Cena, TipoCena} from '../tipos';
 import type {CenaPlanejada} from '../tempo';
 import {LuzArena, Personagem, type Gesto} from './Personagem';
 
@@ -86,7 +86,7 @@ const misturarLugar = (a: Lugar, b: Lugar, p: number): Lugar => ({
   visivel: misturar(a.visivel, b.visivel, p),
 });
 
-export const Apresentador: React.FC<{cenas: CenaPlanejada[]; boca?: number[]}> = ({cenas, boca}) => {
+export const Apresentador: React.FC<{cenas: CenaPlanejada[]; boca?: Boca}> = ({cenas, boca}) => {
   const quadro = useCurrentFrame();
   const {fps} = useVideoConfig();
   const t = quadro / fps;

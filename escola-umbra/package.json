@@ -13,7 +13,8 @@
     "loja": "tsx scripts/loja.ts",
     "narrar": "tsx scripts/narrar.ts",
     "studio": "tsx scripts/studio.ts",
-    "tipos": "tsc --noEmit"
+    "tipos": "tsc --noEmit",
+    "trecho": "tsx scripts/trecho.ts"
   },
   "dependencies": {
     "@react-three/fiber": "^9.8.2",

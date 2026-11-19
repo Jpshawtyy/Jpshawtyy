@@ -34,6 +34,7 @@ Sai em `out/`: `aula-01.mp4` e `aula-01-capa.png`.
 | `npm run narrar -- <roteiro>` | Gera só a narração e mostra o tempo de cada frase |
 | `npm run narrar -- --amostras` | Grava uma amostra de cada voz em `out/amostras/`, para escolher o narrador |
 | `npm run quadros -- <roteiro> --guias` | Fotos dos pontos de transição em `out/quadros/`, com a área segura desenhada |
+| `npm run trecho -- <roteiro> 240 390` | Renderiza só os quadros 240 a 390 em `out/quadros/`, para conferir boca e gestos sem esperar o vídeo todo |
 | `npm run studio -- <roteiro>` | Abre o Remotion Studio para ver e ajustar ao vivo |
 | `npm run capa -- <roteiro>` | Gera só a capa PNG, sem renderizar o vídeo |
 | `npm run loja` | Gera as peças da loja em `out/loja/`: banner 3:1 (2400x800), banner 16:9 (1920x1080) e foto de perfil (1080x1080). O texto fica em `src/Loja.tsx` |
@@ -130,7 +131,7 @@ O Kai apresenta todas as aulas, com o Faísca de companheiro. Eles são personag
 - **Gancho:** Kai grande acenando, Faísca voando ao lado, título em cima.
 - **Durante a aula:** Kai do peito para cima no canto de baixo à esquerda, e a legenda vira um balão de fala ao lado dele. O conteúdo das cenas termina mais acima para dar espaço.
 - **CTA:** Kai fazendo joinha e Faísca feliz, embaixo do "SALVA".
-- A boca do Kai abre e fecha pelo volume da narração, quadro a quadro, e ele pisca sozinho.
+- A boca do Kai segue a narração quadro a quadro: abre com a energia da voz, fecha entre as sílabas e arredonda nas vogais "o" e "u". Ela se mexe 2 quadros antes do som, como na fala real (`ANTECIPACAO` em `scripts/preparar.ts`). A boca e as piscadas que vêm nas animações do Blender são ignoradas; ele pisca sozinho em intervalos irregulares.
 - Na troca de cena eles deslizam de uma posição para a outra.
 
 Gestos do Kai: `parado`, `acenando`, `falando`, `apontando`, `comemorando`, `joinha`, `pensando`. Do Faísca: `parado`, `feliz`, `apontando`, `curioso`, `em_pe`, `falando`. Cada tipo de cena já tem um gesto padrão; para trocar numa cena, use `"kai": "joinha"`, ou uma lista com tempos dentro da cena: `"kai": [{"em": 0, "animacao": "falando"}, {"em": 3.2, "animacao": "joinha"}]`. O Faísca muda com `"faisca": "feliz"`. Para fazer uma aula sem os personagens, ponha `"apresentador": false` no roteiro.
