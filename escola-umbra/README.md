@@ -26,6 +26,16 @@ Sai em `out/`: `aula-01.mp4` e `aula-01-capa.png`.
 4. Veja uma prévia rápida: `npm run previa -- aulas/aula-02.json`
 5. Renderize a final: `npm run aula -- aulas/aula-02.json`
 
+## Série Deck do Dia
+
+Além das aulas, a página tem a série **Deck do Dia**: um deck do meta por episódio. Os roteiros ficam em `decks/` e usam o mesmo motor das aulas, com `"formato": "deck_do_dia"` no roteiro. Isso troca a etiqueta do topo e da capa para `DECK DO DIA #01 // META STANDARD`.
+
+1. Copie `decks/deck-01.json` para `decks/deck-02.json` e troque `numero`.
+2. Escolha o deck em [limitlesstcg.com/decks](https://limitlesstcg.com/decks?format=standard&time=1months) (Standard, último mês) e copie a lista de um resultado recente.
+3. Monte as cenas: gancho com o nome do deck, ranking do mês, uma ou duas cartas que fazem o deck ganhar, a lista completa (`decklist`) e o CTA.
+4. `npm run validar -- decks/deck-02.json` confere que a lista soma 60 cartas e que todas existem na API.
+5. `npm run aula -- decks/deck-02.json` gera `out/deck-02.mp4` e a capa.
+
 | Comando | O que faz |
 | --- | --- |
 | `npm run aula -- <roteiro>` | MP4 final e capa PNG em `out/` |
@@ -77,6 +87,7 @@ Opções úteis de `aula`: `--guias` (área segura por cima), `--sem-capa`, `--a
 | `comparacao` | `titulo`, `pill_bons`, `pill_ruins`, `bons` e `ruins` (cartas ou `{"texto"}`) |
 | `riscado` | `titulo`, `itens` (texto, ou `{"texto", "em", "riscar_em"}`) |
 | `mesa` | `estado` e `acoes` (abaixo) |
+| `decklist` | `titulo`, `cartas` (a lista do deck: `{"carta", "qtd"}`, somando 60), `destaques` (`{"carta", "em"}`: a carta salta e o resto escurece; sem `em`, cada destaque acende junto com uma das últimas frases da cena) |
 | `cta` | `principal`, `complemento`, `seguir` |
 
 Exemplos de todas: `aulas/demo-componentes.json` e `aulas/demo-mesa.json`. A `aulas/aula-02.json` mostra o ranking com dados de torneio. A `aulas/aula-03.json` mostra a lista com miniaturas de carta.

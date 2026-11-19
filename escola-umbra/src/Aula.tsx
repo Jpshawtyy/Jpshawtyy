@@ -13,6 +13,7 @@ import {Comparacao} from './componentes/Comparacao';
 import {CartaDestaque} from './componentes/CartaDestaque';
 import {Cta} from './componentes/Cta';
 import {Mesa} from './mesa/Mesa';
+import {Decklist} from './componentes/Decklist';
 import {trecho} from './anim';
 import {LAYOUT_COM_KAI, LAYOUT_SEM_PALCO, LayoutCtx} from './layout';
 import {Apresentador, PRESET_DA_CENA} from './personagens/Apresentador';
@@ -32,6 +33,8 @@ const desenharCena = (cena: Cena, props: PropsAula, duracao: number, inicio: num
       return <Comparacao cena={cena} cartas={props.cartas} />;
     case 'carta_destaque':
       return <CartaDestaque cena={cena} cartas={props.cartas} />;
+    case 'decklist':
+      return <Decklist cena={cena} cartas={props.cartas} />;
     case 'cta':
       return <Cta cena={cena} />;
     case 'mesa':
@@ -73,7 +76,7 @@ export const Aula: React.FC<PropsAula> = (props) => {
         </Sequence>
       ))}
       {comKai ? <Apresentador cenas={plano.cenas} boca={boca} /> : null}
-      <Moldura numero={roteiro.numero} serie={roteiro.serie} marcaADireita={comKai && atual ? layoutDe(atual.cena).comPalco : false} />
+      <Moldura numero={roteiro.numero} serie={roteiro.serie} formato={roteiro.formato} marcaADireita={comKai && atual ? layoutDe(atual.cena).comPalco : false} />
       {audio?.narracao ? <Audio src={staticFile(audio.narracao)} volume={audio.narracaoVolume ?? 1} /> : null}
       {audio?.musica ? <Audio src={staticFile(audio.musica)} volume={audio.musicaVolume ?? 0.15} loop /> : null}
       {guias ? <Guias /> : null}

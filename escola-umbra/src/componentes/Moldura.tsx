@@ -4,23 +4,28 @@ import {AREA, CORES, MARCA, MOLDURA, SEGURA, VIDEO} from '../tema';
 import {FONTE_MONO} from '../fontes';
 import {mola} from '../anim';
 import {Etiqueta} from './Arena';
+import type {Formato} from '../tipos';
 
-export const textoDaSerie = (numero: number, serie: string) => `AULA ${String(numero).padStart(2, '0')} · ${serie.toUpperCase()}`;
+// Parte vermelha da etiqueta: "AULA 09" nas aulas, "DECK DO DIA #01" na série Deck do Dia.
+export const rotuloDaSerie = (numero: number, formato: Formato = 'aula') =>
+  formato === 'deck_do_dia' ? `DECK DO DIA #${String(numero).padStart(2, '0')}` : `AULA ${String(numero).padStart(2, '0')}`;
+
+export const textoDaSerie = (numero: number, serie: string, formato: Formato = 'aula') => `${rotuloDaSerie(numero, formato)} · ${serie.toUpperCase()}`;
 
 // Tamanho de letra da etiqueta que cabe na largura útil (Barlow Condensed maiúscula e espaçada).
-export const tamanhoEtiqueta = (numero: number, serie: string, largura = AREA.largura) => {
-  const caracteres = `AULA ${String(numero).padStart(2, '0')}`.length + serie.length + 3;
+export const tamanhoEtiqueta = (numero: number, serie: string, largura = AREA.largura, formato: Formato = 'aula') => {
+  const caracteres = rotuloDaSerie(numero, formato).length + serie.length + 3;
   return Math.max(15, Math.min(30, Math.floor((largura - 80) / (caracteres * 0.68))));
 };
 
 // Etiqueta da série no topo ([AULA 06] // DO ZERO AO CAMPEONATO) e o @ no pé. Fica por cima de todas as cenas.
 // marcaADireita: com o Kai no canto, o @ vai para a direita, embaixo do balão.
-export const Moldura: React.FC<{numero: number; serie: string; marcaADireita?: boolean}> = ({numero, serie, marcaADireita = false}) => {
+export const Moldura: React.FC<{numero: number; serie: string; formato?: Formato; marcaADireita?: boolean}> = ({numero, serie, formato = 'aula', marcaADireita = false}) => {
   const quadro = useCurrentFrame();
   const {fps} = useVideoConfig();
   // começa quase pronta: no quadro 0 a etiqueta já está legível
   const entra = 0.75 + 0.25 * mola(quadro, fps, 0);
-  const tamanho = tamanhoEtiqueta(numero, serie);
+  const tamanho = tamanhoEtiqueta(numero, serie, AREA.largura, formato);
 
   return (
     <AbsoluteFill>
@@ -38,7 +43,7 @@ export const Moldura: React.FC<{numero: number; serie: string; marcaADireita?: b
           transform: `translateY(${(1 - entra) * -16}px)`,
         }}
       >
-        <Etiqueta rotulo={`AULA ${String(numero).padStart(2, '0')}`} complemento={serie} tamanho={tamanho} />
+        <Etiqueta rotulo={rotuloDaSerie(numero, formato)} complemento={serie} tamanho={tamanho} />
       </div>
       <div
         style={{

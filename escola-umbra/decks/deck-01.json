@@ -1,0 +1,410 @@
+{
+  "formato": "deck_do_dia",
+  "serie": "Meta Standard",
+  "numero": 1,
+  "titulo_capa": "Dragapult ex",
+  "subtitulo_capa": "o deck nº 1 do mês",
+  "capa": {
+    "cartas": [
+      "drakloak",
+      "dragapult",
+      "munkidori"
+    ]
+  },
+  "narracao": "auto",
+  "cartas": {
+    "dreepy": {
+      "nome": "Dreepy",
+      "set": "Twilight Masquerade",
+      "numero": 128
+    },
+    "drakloak": {
+      "nome": "Drakloak",
+      "set": "Twilight Masquerade",
+      "numero": 129
+    },
+    "dragapult": {
+      "nome": "Dragapult ex",
+      "set": "Twilight Masquerade",
+      "numero": 130
+    },
+    "munkidori": {
+      "nome": "Munkidori",
+      "set": "Twilight Masquerade",
+      "numero": 95
+    },
+    "budew": {
+      "nome": "Budew",
+      "set": "Ascended Heroes",
+      "numero": 16
+    },
+    "dunsparce": {
+      "nome": "Dunsparce",
+      "set": "Temporal Forces",
+      "numero": 128
+    },
+    "dudunsparce": {
+      "nome": "Dudunsparce",
+      "set": "Temporal Forces",
+      "numero": 129
+    },
+    "meowth": {
+      "nome": "Meowth ex",
+      "set": "Perfect Order",
+      "numero": 62
+    },
+    "fezandipiti": {
+      "nome": "Fezandipiti ex",
+      "set": "Ascended Heroes",
+      "numero": 142
+    },
+    "lillie": {
+      "nome": "Lillie's Determination",
+      "set": "Mega Evolution",
+      "numero": 119
+    },
+    "boss": {
+      "nome": "Boss's Orders",
+      "set": "Mega Evolution",
+      "numero": 114
+    },
+    "crispin": {
+      "nome": "Crispin",
+      "set": "Stellar Crown",
+      "numero": 133
+    },
+    "rosa": {
+      "nome": "Rosa's Encouragement",
+      "set": "Perfect Order",
+      "numero": 84
+    },
+    "judge": {
+      "nome": "Judge",
+      "set": "Perfect Order",
+      "numero": 76
+    },
+    "poffin": {
+      "nome": "Buddy-Buddy Poffin",
+      "set": "Temporal Forces",
+      "numero": 144
+    },
+    "poke-pad": {
+      "nome": "Poké Pad",
+      "set": "Perfect Order",
+      "numero": 81
+    },
+    "hammer": {
+      "nome": "Crushing Hammer",
+      "set": "Perfect Order",
+      "numero": 71
+    },
+    "ultra-ball": {
+      "nome": "Ultra Ball",
+      "set": "Mega Evolution",
+      "numero": 131
+    },
+    "stretcher": {
+      "nome": "Night Stretcher",
+      "set": "Ascended Heroes",
+      "numero": 196
+    },
+    "stamp": {
+      "nome": "Unfair Stamp",
+      "set": "Twilight Masquerade",
+      "numero": 165
+    },
+    "ruins": {
+      "nome": "Risky Ruins",
+      "set": "Mega Evolution",
+      "numero": 127
+    },
+    "energia-fogo": {
+      "nome": "Basic Fire Energy",
+      "set": "Scarlet & Violet Energies",
+      "numero": 2
+    },
+    "energia-psiquica": {
+      "nome": "Basic Psychic Energy",
+      "set": "Scarlet & Violet Energies",
+      "numero": 5
+    },
+    "energia-escura": {
+      "nome": "Basic Darkness Energy",
+      "set": "Scarlet & Violet Energies",
+      "numero": 7
+    }
+  },
+  "cenas": [
+    {
+      "tipo": "gancho",
+      "texto": "Dragapult ex",
+      "subtitulo": "o deck nº 1 do mês",
+      "duracao": 2.4,
+      "falas": [
+        {
+          "texto": "O deck que mais ganha agora:",
+          "em": 0.05
+        }
+      ],
+      "legendas": [
+        {
+          "texto": "o deck que mais *ganha* agora",
+          "em": 0.05,
+          "fala": ""
+        },
+        {
+          "texto": "*Dragapult ex*",
+          "em": 1.3,
+          "fala": "Dragapult ex."
+        }
+      ]
+    },
+    {
+      "tipo": "piramide",
+      "modo": "ranking",
+      "titulo": "mais pontos no mês",
+      "fonte": "Limitless TCG · pontos de torneio · último mês · 19/11/2026",
+      "duracao": 6,
+      "niveis": [
+        {
+          "rotulo": "Alakazam",
+          "detalhe": "7,4%",
+          "valor": 7.4,
+          "em": 0.3
+        },
+        {
+          "rotulo": "Slowking",
+          "detalhe": "7,6%",
+          "valor": 7.6,
+          "em": 0.55
+        },
+        {
+          "rotulo": "Basic Box",
+          "detalhe": "8,4%",
+          "valor": 8.4,
+          "em": 0.8
+        },
+        {
+          "rotulo": "Dragapult ex",
+          "detalhe": "37,3%",
+          "valor": 37.3,
+          "destaque": true,
+          "carta": "dragapult",
+          "em": 1.4
+        }
+      ],
+      "legendas": [
+        {
+          "texto": "*37%* dos pontos do último mês",
+          "em": 0.4,
+          "fala": "Trinta e sete por cento dos pontos de torneio do último mês."
+        },
+        {
+          "texto": "mais que os *três* seguintes juntos",
+          "em": 3.4,
+          "fala": "Mais que os três seguintes juntos."
+        }
+      ]
+    },
+    {
+      "tipo": "carta_destaque",
+      "carta": "dragapult",
+      "pill": "ATAQUE",
+      "pill_cor": "vermelho",
+      "titulo": "Phantom Dive",
+      "foco": {
+        "em": 1.6,
+        "x": 0.5,
+        "y": 0.69,
+        "escala": 1.9
+      },
+      "duracao": 4.5,
+      "legendas": [
+        {
+          "texto": "*200* de dano no ativo",
+          "em": 0.3,
+          "fala": "O Phantom Dive dá duzentos de dano no ativo"
+        },
+        {
+          "texto": "e *6 contadores* no banco",
+          "em": 2.6,
+          "fala": "e espalha seis contadores no banco do oponente."
+        }
+      ]
+    },
+    {
+      "tipo": "carta_destaque",
+      "carta": "munkidori",
+      "pill": "COMBO",
+      "pill_cor": "ouro",
+      "titulo": "Munkidori",
+      "duracao": 4,
+      "legendas": [
+        {
+          "texto": "com *Energia Escura* ligada",
+          "em": 0.3,
+          "fala": "Com Energia Escura, o Munkidori"
+        },
+        {
+          "texto": "move *3 contadores* pro oponente",
+          "em": 1.8,
+          "fala": "move mais três contadores pro oponente"
+        },
+        {
+          "texto": "e *fecha* o nocaute",
+          "em": 3.2,
+          "fala": "e fecha o nocaute."
+        }
+      ]
+    },
+    {
+      "tipo": "decklist",
+      "titulo": "a lista campeã",
+      "duracao": 8,
+      "cartas": [
+        {
+          "carta": "dreepy",
+          "qtd": 4
+        },
+        {
+          "carta": "drakloak",
+          "qtd": 4
+        },
+        {
+          "carta": "dragapult",
+          "qtd": 3
+        },
+        {
+          "carta": "munkidori",
+          "qtd": 2
+        },
+        {
+          "carta": "budew",
+          "qtd": 2
+        },
+        {
+          "carta": "dunsparce",
+          "qtd": 1
+        },
+        {
+          "carta": "dudunsparce",
+          "qtd": 1
+        },
+        {
+          "carta": "meowth",
+          "qtd": 1
+        },
+        {
+          "carta": "fezandipiti",
+          "qtd": 1
+        },
+        {
+          "carta": "lillie",
+          "qtd": 4
+        },
+        {
+          "carta": "boss",
+          "qtd": 3
+        },
+        {
+          "carta": "crispin",
+          "qtd": 2
+        },
+        {
+          "carta": "rosa",
+          "qtd": 1
+        },
+        {
+          "carta": "judge",
+          "qtd": 1
+        },
+        {
+          "carta": "poffin",
+          "qtd": 4
+        },
+        {
+          "carta": "poke-pad",
+          "qtd": 4
+        },
+        {
+          "carta": "hammer",
+          "qtd": 4
+        },
+        {
+          "carta": "ultra-ball",
+          "qtd": 3
+        },
+        {
+          "carta": "stretcher",
+          "qtd": 3
+        },
+        {
+          "carta": "stamp",
+          "qtd": 1
+        },
+        {
+          "carta": "ruins",
+          "qtd": 2
+        },
+        {
+          "carta": "energia-fogo",
+          "qtd": 3
+        },
+        {
+          "carta": "energia-psiquica",
+          "qtd": 3
+        },
+        {
+          "carta": "energia-escura",
+          "qtd": 3
+        }
+      ],
+      "destaques": [
+        {
+          "carta": "drakloak"
+        },
+        {
+          "carta": "poke-pad"
+        },
+        {
+          "carta": "hammer"
+        }
+      ],
+      "legendas": [
+        {
+          "texto": "campeã em *Buenos Aires*",
+          "fala": "Essa lista ganhou o Special Event de Buenos Aires,"
+        },
+        {
+          "texto": "contra *553* jogadores",
+          "fala": "contra quinhentos e cinquenta e três jogadores."
+        },
+        {
+          "texto": "*Drakloak* escolhe 1 de 2 cartas do topo",
+          "fala": "O Drakloak escolhe uma carta do topo todo turno."
+        },
+        {
+          "texto": "*Poké Pad* busca Dreepy e Drakloak",
+          "fala": "O Poké Pad busca Dreepy e Drakloak."
+        },
+        {
+          "texto": "*4 Crushing Hammer* pra tirar energia",
+          "fala": "Quatro Crushing Hammer tiram energia do oponente."
+        }
+      ]
+    },
+    {
+      "tipo": "cta",
+      "duracao": 4.5,
+      "principal": "SALVA",
+      "complemento": "pra copiar a lista",
+      "seguir": "amanhã tem outro deck",
+      "falas": [
+        {
+          "texto": "Salva pra copiar a lista. Amanhã tem outro deck do meta.",
+          "em": 0.25
+        }
+      ]
+    }
+  ]
+}

@@ -55,6 +55,9 @@ const materializar = (roteiro: Roteiro, cartas: MapaCartas): Roteiro => {
       const t = temposDosItens(cena.niveis, dur, 0.4, 0.8);
       cena.niveis = cena.niveis.map((n, j) => ({...n, em: t[j]}));
     }
+    if (cena.tipo === 'decklist' && cena.destaques) {
+      cena.destaques = cena.destaques.map((d, j) => ({...d, em: d.em ?? 1.6 + j * 1.2}));
+    }
     const brutas: Legenda[] = [...(cena.legenda ? [{texto: cena.legenda}] : []), ...(cena.legendas ?? [])];
     delete cena.legenda;
     if (cena.tipo === 'mesa') {
@@ -79,6 +82,16 @@ const materializar = (roteiro: Roteiro, cartas: MapaCartas): Roteiro => {
           const em = Math.max(0.1, legendas[j].em! - 0.2);
           it.em = em;
           if ('riscar_em' in it) it.riscar_em = em + 0.9;
+        });
+      }
+    }
+    // Decklist: cada destaque acende junto com a sua frase (as últimas frases da cena; as primeiras apresentam a lista).
+    if (cena.tipo === 'decklist' && original.tipo === 'decklist' && cena.destaques?.length) {
+      const semTempo = (original.destaques ?? []).every((d) => d.em === undefined);
+      const sobra = legendas.length - cena.destaques.length;
+      if (semTempo && sobra >= 0) {
+        cena.destaques.forEach((d, j) => {
+          d.em = Math.max(0.1, legendas[sobra + j].em! - 0.15);
         });
       }
     }
@@ -143,6 +156,7 @@ const esticarCena = (cena: Cena, frases: (FraseBruta & {duracao: number})[]): nu
   }
   if (cena.tipo === 'piramide') for (const n of cena.niveis) n.em = wOpcional(n.em);
   if (cena.tipo === 'mesa') for (const a of cena.acoes) a.em = wOpcional(a.em);
+  if (cena.tipo === 'decklist') for (const d of cena.destaques ?? []) d.em = wOpcional(d.em);
   for (const f of frases) f.em = w(f.em);
   cena.duracao = w(cena.duracao!);
   return esticou;

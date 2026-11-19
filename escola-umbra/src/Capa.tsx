@@ -5,7 +5,7 @@ import {CORES, MARCA, VIDEO} from './tema';
 import {FONTE_MONO, FONTE_TITULO} from './fontes';
 import {Carta} from './componentes/Carta';
 import {Etiqueta, INCLINACAO, TituloArena, TracoOuro} from './componentes/Arena';
-import {tamanhoEtiqueta} from './componentes/Moldura';
+import {rotuloDaSerie, tamanhoEtiqueta} from './componentes/Moldura';
 
 // Capa do reel (imagem parada, 1080x1920) no "Estilo Arena".
 // O essencial fica entre y = 240 e 1680, que é o recorte 3:4 que aparece na grade do perfil.
@@ -17,7 +17,7 @@ export const Capa: React.FC<PropsAula> = ({roteiro, cartas}) => {
   // borda de cima do painel vermelho: sobe da esquerda para a direita
   const yEsq = temCartas ? 1250 : 1330;
   const yDir = temCartas ? 1080 : 1160;
-  const numero = `AULA ${String(roteiro.numero).padStart(2, '0')}`;
+  const numero = rotuloDaSerie(roteiro.numero, roteiro.formato);
   const fantasma = roteiro.titulo_capa.split('\n')[0].toLocaleUpperCase('pt-BR');
 
   return (
@@ -92,7 +92,7 @@ export const Capa: React.FC<PropsAula> = ({roteiro, cartas}) => {
         <Etiqueta
           rotulo={numero}
           complemento={roteiro.serie}
-          tamanho={Math.min(30, tamanhoEtiqueta(roteiro.numero, roteiro.serie, L - 160) * 1.25)}
+          tamanho={Math.min(30, tamanhoEtiqueta(roteiro.numero, roteiro.serie, L - 160, roteiro.formato) * 1.25)}
           style={{marginTop: 34}}
         />
         <TituloArena texto={roteiro.titulo_capa} largura={L - 130} maximo={250} style={{marginTop: 34}} />

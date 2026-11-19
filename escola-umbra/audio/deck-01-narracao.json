@@ -1,0 +1,388 @@
+{
+ "assinatura": "7cfac2e6ffc006ece73db85efee1cbdd48474e9f",
+ "voz": "pm_santa",
+ "frases": [
+  {
+   "fala": "O deck que mais ganha agora:",
+   "duracao": 1.628005
+  },
+  {
+   "fala": "Dragapult ex.",
+   "duracao": 1.048685
+  },
+  {
+   "fala": "Trinta e sete por cento dos pontos de torneio do último mês.",
+   "duracao": 3.485215
+  },
+  {
+   "fala": "Mais que os três seguintes juntos.",
+   "duracao": 1.837551
+  },
+  {
+   "fala": "O Phantom Dive dá duzentos de dano no ativo",
+   "duracao": 2.627596
+  },
+  {
+   "fala": "e espalha seis contadores no banco do oponente.",
+   "duracao": 2.675261
+  },
+  {
+   "fala": "Com Energia Escura, o Munkidori",
+   "duracao": 1.765805
+  },
+  {
+   "fala": "move mais três contadores pro oponente",
+   "duracao": 2.350839
+  },
+  {
+   "fala": "e fecha o nocaute.",
+   "duracao": 1.206054
+  },
+  {
+   "fala": "Essa lista ganhou o Special Event de Buenos Aires,",
+   "duracao": 2.935918
+  },
+  {
+   "fala": "contra quinhentos e cinquenta e três jogadores.",
+   "duracao": 2.790794
+  },
+  {
+   "fala": "O Drakloak escolhe uma carta do topo todo turno.",
+   "duracao": 2.771882
+  },
+  {
+   "fala": "O Poké Pad busca Dreepy e Drakloak.",
+   "duracao": 2.226168
+  },
+  {
+   "fala": "Quatro Crushing Hammer tiram energia do oponente.",
+   "duracao": 2.790181
+  },
+  {
+   "fala": "Salva pra copiar a lista. Amanhã tem outro deck do meta.",
+   "duracao": 3.126009
+  }
+ ],
+ "words": [
+  {
+   "palavra": "Dragapult",
+   "inicio": 1.8380049999999999,
+   "fim": 2.5930581999999998
+  },
+  {
+   "palavra": "ex",
+   "inicio": 2.5930581999999998,
+   "fim": 2.8447426
+  },
+  {
+   "palavra": "37%",
+   "inicio": 3.5366899999999997,
+   "fim": 3.9144423354838707
+  },
+  {
+   "palavra": "dos",
+   "inicio": 3.9144423354838707,
+   "fim": 4.4001239096774185
+  },
+  {
+   "palavra": "pontos",
+   "inicio": 4.4001239096774185,
+   "fim": 5.2095932
+  },
+  {
+   "palavra": "do",
+   "inicio": 5.2095932,
+   "fim": 5.587345535483871
+  },
+  {
+   "palavra": "último",
+   "inicio": 5.587345535483871,
+   "fim": 6.396814825806452
+  },
+  {
+   "palavra": "mês",
+   "inicio": 6.396814825806452,
+   "fim": 6.882496399999999
+  },
+  {
+   "palavra": "mais",
+   "inicio": 7.1819049999999995,
+   "fim": 7.444128494054054
+  },
+  {
+   "palavra": "que",
+   "inicio": 7.444128494054054,
+   "fim": 7.658674989189189
+  },
+  {
+   "palavra": "os",
+   "inicio": 7.658674989189189,
+   "fim": 7.825544485405405
+  },
+  {
+   "palavra": "três",
+   "inicio": 7.825544485405405,
+   "fim": 8.087767979459459
+  },
+  {
+   "palavra": "seguintes",
+   "inicio": 8.087767979459459,
+   "fim": 8.588376468108107
+  },
+  {
+   "palavra": "juntos",
+   "inicio": 8.588376468108107,
+   "fim": 8.945953959999999
+  },
+  {
+   "palavra": "200",
+   "inicio": 10.081905,
+   "fim": 10.564935413617022
+  },
+  {
+   "palavra": "de",
+   "inicio": 10.564935413617022,
+   "fim": 10.94062573531915
+  },
+  {
+   "palavra": "dano",
+   "inicio": 10.94062573531915,
+   "fim": 11.530996240851065
+  },
+  {
+   "palavra": "no",
+   "inicio": 11.530996240851065,
+   "fim": 11.906686562553192
+  },
+  {
+   "palavra": "ativo",
+   "inicio": 11.906686562553192,
+   "fim": 12.604397160000001
+  },
+  {
+   "palavra": "e",
+   "inicio": 12.869501,
+   "fim": 13.111788788679245
+  },
+  {
+   "palavra": "6",
+   "inicio": 13.111788788679245,
+   "fim": 13.35407657735849
+  },
+  {
+   "palavra": "contadores",
+   "inicio": 13.35407657735849,
+   "fim": 14.468600405283018
+  },
+  {
+   "palavra": "no",
+   "inicio": 14.468600405283018,
+   "fim": 14.807803309433961
+  },
+  {
+   "palavra": "banco",
+   "inicio": 14.807803309433961,
+   "fim": 15.437751559999999
+  },
+  {
+   "palavra": "com",
+   "inicio": 16.094762,
+   "fim": 16.367200485714285
+  },
+  {
+   "palavra": "Energia",
+   "inicio": 16.367200485714285,
+   "fim": 16.881806514285714
+  },
+  {
+   "palavra": "Escura",
+   "inicio": 16.881806514285714,
+   "fim": 17.335870657142856
+  },
+  {
+   "palavra": "ligada",
+   "inicio": 17.335870657142856,
+   "fim": 17.789934799999997
+  },
+  {
+   "palavra": "move",
+   "inicio": 18.020567,
+   "fim": 18.3910872961194
+  },
+  {
+   "palavra": "3",
+   "inicio": 18.3910872961194,
+   "fim": 18.559505612537315
+  },
+  {
+   "palavra": "contadores",
+   "inicio": 18.559505612537315,
+   "fim": 19.3342298680597
+  },
+  {
+   "palavra": "pro",
+   "inicio": 19.3342298680597,
+   "fim": 19.63738283761194
+  },
+  {
+   "palavra": "oponente",
+   "inicio": 19.63738283761194,
+   "fim": 20.27737244
+  },
+  {
+   "palavra": "e",
+   "inicio": 20.531406,
+   "fim": 20.67613248
+  },
+  {
+   "palavra": "fecha",
+   "inicio": 20.67613248,
+   "fim": 21.052421328
+  },
+  {
+   "palavra": "o",
+   "inicio": 21.052421328,
+   "fim": 21.197147808
+  },
+  {
+   "palavra": "nocaute",
+   "inicio": 21.197147808,
+   "fim": 21.68921784
+  },
+  {
+   "palavra": "campeã",
+   "inicio": 22.237460000000002,
+   "fim": 23.083004384000002
+  },
+  {
+   "palavra": "em",
+   "inicio": 23.083004384000002,
+   "fim": 23.477591763200003
+  },
+  {
+   "palavra": "Buenos",
+   "inicio": 23.477591763200003,
+   "fim": 24.323136147200003
+  },
+  {
+   "palavra": "Aires",
+   "inicio": 24.323136147200003,
+   "fim": 25.055941280000003
+  },
+  {
+   "palavra": "contra",
+   "inicio": 25.333378000000003,
+   "fim": 26.226432080000002
+  },
+  {
+   "palavra": "553",
+   "inicio": 26.226432080000002,
+   "fim": 26.762264528000003
+  },
+  {
+   "palavra": "jogadores",
+   "inicio": 26.762264528000003,
+   "fim": 28.012540240000003
+  },
+  {
+   "palavra": "Drakloak",
+   "inicio": 28.284172,
+   "fim": 28.872068833488374
+  },
+  {
+   "palavra": "escolhe",
+   "inicio": 28.872068833488374,
+   "fim": 29.398081789767442
+  },
+  {
+   "palavra": "1",
+   "inicio": 29.398081789767442,
+   "fim": 29.5527914827907
+  },
+  {
+   "palavra": "de",
+   "inicio": 29.5527914827907,
+   "fim": 29.769385053023257
+  },
+  {
+   "palavra": "2",
+   "inicio": 29.769385053023257,
+   "fim": 29.924094746046514
+  },
+  {
+   "palavra": "cartas",
+   "inicio": 29.924094746046514,
+   "fim": 30.38822382511628
+  },
+  {
+   "palavra": "do",
+   "inicio": 30.38822382511628,
+   "fim": 30.60481739534884
+  },
+  {
+   "palavra": "topo",
+   "inicio": 30.60481739534884,
+   "fim": 30.94517872
+  },
+  {
+   "palavra": "Poké",
+   "inicio": 31.216054000000003,
+   "fim": 31.542558640000003
+  },
+  {
+   "palavra": "Pad",
+   "inicio": 31.542558640000003,
+   "fim": 31.809698800000003
+  },
+  {
+   "palavra": "busca",
+   "inicio": 31.809698800000003,
+   "fim": 32.19556792
+  },
+  {
+   "palavra": "Dreepy",
+   "inicio": 32.19556792,
+   "fim": 32.640801520000004
+  },
+  {
+   "palavra": "e",
+   "inicio": 32.640801520000004,
+   "fim": 32.78921272
+  },
+  {
+   "palavra": "Drakloak",
+   "inicio": 32.78921272,
+   "fim": 33.35317528
+  },
+  {
+   "palavra": "4",
+   "inicio": 33.602222000000005,
+   "fim": 33.773925446153854
+  },
+  {
+   "palavra": "Crushing",
+   "inicio": 33.773925446153854,
+   "fim": 34.42639854153847
+  },
+  {
+   "palavra": "Hammer",
+   "inicio": 34.42639854153847,
+   "fim": 34.94150888000001
+  },
+  {
+   "palavra": "pra",
+   "inicio": 34.94150888000001,
+   "fim": 35.250575083076924
+  },
+  {
+   "palavra": "tirar",
+   "inicio": 35.250575083076924,
+   "fim": 35.69700404307693
+  },
+  {
+   "palavra": "energia",
+   "inicio": 35.69700404307693,
+   "fim": 36.280795760000004
+  }
+ ]
+}

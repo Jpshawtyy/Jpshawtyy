@@ -117,6 +117,15 @@ export type CenaComparacao = CenaBase & {
 export type ItemRiscado = string | {texto: string; em?: number; riscar_em?: number};
 export type CenaRiscado = CenaBase & {tipo: 'riscado'; titulo?: string; itens: ItemRiscado[]};
 
+// Lista do deck em grade: cada carta com a quantidade. "destaques" ganham moldura dourada a partir de "em".
+export type ItemDecklist = {carta: RefCarta; qtd: number};
+export type CenaDecklist = CenaBase & {
+  tipo: 'decklist';
+  titulo?: string;
+  cartas: ItemDecklist[];
+  destaques?: {carta: RefCarta; em?: number}[];
+};
+
 export type CenaCta = CenaBase & {
   tipo: 'cta';
   principal?: string; // "SALVA"
@@ -197,6 +206,7 @@ export type Cena =
   | CenaComparacao
   | CenaRiscado
   | CenaMesa
+  | CenaDecklist
   | CenaCta;
 
 export type TipoCena = Cena['tipo'];
@@ -205,7 +215,11 @@ export type TipoCena = Cena['tipo'];
 
 export type Audio = string | {arquivo: string; volume?: number; transcricao?: string};
 
+// "aula": as aulas do Do zero ao campeonato. "deck_do_dia": a série Deck do Dia (um deck do meta por episódio).
+export type Formato = 'aula' | 'deck_do_dia';
+
 export type Roteiro = {
+  formato?: Formato; // padrão: "aula"
   serie: string;
   numero: number;
   titulo_capa: string;

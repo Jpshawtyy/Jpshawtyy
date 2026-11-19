@@ -24,7 +24,7 @@ export type Preparo = {
   narracao?: Narracao; // quando o roteiro usa "narracao": "auto"
 };
 
-const TIPOS = ['gancho', 'carta_destaque', 'lista', 'piramide', 'comparacao', 'riscado', 'mesa', 'cta'];
+const TIPOS = ['gancho', 'carta_destaque', 'lista', 'piramide', 'comparacao', 'riscado', 'mesa', 'decklist', 'cta'];
 const EMOJI = /\p{Extended_Pictographic}/u;
 
 const textosDe = (valor: unknown, caminho: string, saida: {caminho: string; texto: string}[]) => {
@@ -54,6 +54,14 @@ const conferirEstrutura = (r: Roteiro, achados: Achado[]) => {
     if (c.tipo === 'piramide' && !(c.niveis?.length > 0)) erro(onde, 'Falta "niveis".');
     if (c.tipo === 'comparacao' && !(c.bons?.length > 0 && c.ruins?.length > 0)) erro(onde, 'Faltam "bons" e "ruins".');
     if (c.tipo === 'riscado' && !(c.itens?.length > 0)) erro(onde, 'Falta "itens".');
+    if (c.tipo === 'decklist') {
+      if (!(c.cartas?.length > 0)) erro(onde, 'Falta "cartas" (a lista do deck, com "carta" e "qtd").');
+      else {
+        const total = c.cartas.reduce((s, i) => s + (Number(i.qtd) || 0), 0);
+        if (total !== 60) erro(onde, `A lista soma ${total} cartas; um deck do Standard tem 60.`);
+        for (const d of c.destaques ?? []) if (!c.cartas.some((i) => i.carta === d.carta)) erro(onde, `O destaque "${d.carta}" não está na lista.`);
+      }
+    }
     if (c.tipo === 'mesa') {
       if (!c.estado?.eu) erro(onde, 'Falta "estado.eu" (a sua mesa no começo da cena).');
       if (typeof c.estado?.turno !== 'number') erro(onde, 'Falta "estado.turno" (1 = primeiro turno do jogo).');
@@ -69,8 +77,8 @@ const conferirEstrutura = (r: Roteiro, achados: Achado[]) => {
   for (const t of textos) {
     if (EMOJI.test(t.texto)) erro(t.caminho, `Tem emoji no texto ("${t.texto}"). A identidade da Escola Umbra não usa emoji.`);
   }
-  const etiqueta = textoDaSerie(r.numero ?? 0, r.serie ?? '');
-  if (tamanhoEtiqueta(r.numero ?? 0, r.serie ?? '') <= 15) {
+  const etiqueta = textoDaSerie(r.numero ?? 0, r.serie ?? '', r.formato);
+  if (tamanhoEtiqueta(r.numero ?? 0, r.serie ?? '', undefined, r.formato) <= 15) {
     achados.push({nivel: 'aviso', onde: 'roteiro', mensagem: `A etiqueta "${etiqueta}" é comprida e vai ficar com letra pequena. Um nome de série mais curto lê melhor.`});
   }
 };
@@ -88,6 +96,7 @@ const eventosDaCena = (cena: Cena, duracao: number, temposAcoes: number[]): numb
   if (cena.tipo === 'gancho') eventos.push(0.3, 0.55);
   if (cena.tipo === 'carta_destaque') eventos.push(0.2, 0.7, 1.4, 2.4);
   if (cena.tipo === 'cta') eventos.push(0.2, 0.8, 1.6, 2.6);
+  if (cena.tipo === 'decklist') eventos.push(0.2, 0.7, 1.3, ...(cena.destaques ?? []).map((d) => d.em ?? 1.6));
   if (cena.tipo === 'mesa') eventos.push(...temposAcoes, ...temposAcoes.map((t) => t + 0.9));
   return [...new Set(eventos)].filter((t) => t < duracao).sort((a, b) => a - b);
 };
