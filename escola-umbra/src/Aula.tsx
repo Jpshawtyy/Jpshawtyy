@@ -1,6 +1,7 @@
 import React, {useMemo} from 'react';
 import {AbsoluteFill, Audio, Sequence, staticFile, useCurrentFrame} from 'remotion';
-import type {Cena, PropsAula} from './tipos';
+import {temApresentador, type Cena, type PropsAula} from './tipos';
+import {DeckDoDia} from './deckdodia/DeckDoDia';
 import {legendasDaCena, planejar} from './tempo';
 import {Fundo} from './componentes/Fundo';
 import {Guias, Moldura} from './componentes/Moldura';
@@ -52,9 +53,12 @@ const Saida: React.FC<{quadros: number; ultima: boolean; children: React.ReactNo
   return <AbsoluteFill style={{opacity: some, transform: `scale(${1 + (1 - some) * 0.03})`}}>{children}</AbsoluteFill>;
 };
 
-export const Aula: React.FC<PropsAula> = (props) => {
+// A série Deck do Dia tem a edição própria; o resto é aula.
+export const Aula: React.FC<PropsAula> = (props) => (props.roteiro.formato === 'deck_do_dia' ? <DeckDoDia {...props} /> : <AulaPadrao {...props} />);
+
+const AulaPadrao: React.FC<PropsAula> = (props) => {
   const {roteiro, cartas, audio, palavras, guias, boca} = props;
-  const comKai = roteiro.apresentador !== false;
+  const comKai = temApresentador(roteiro);
   const layoutDe = (cena: Cena) => (comKai ? LAYOUT_COM_KAI[PRESET_DA_CENA(cena)] : LAYOUT_SEM_PALCO);
   const quadro = useCurrentFrame();
   const plano = useMemo(() => planejar(roteiro, cartas), [roteiro, cartas]);

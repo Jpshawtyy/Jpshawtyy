@@ -71,7 +71,7 @@ type CenaBase = {
 
 // ---------- Cenas ----------
 
-export type CenaGancho = CenaBase & {tipo: 'gancho'; texto: string; subtitulo?: string};
+export type CenaGancho = CenaBase & {tipo: 'gancho'; texto: string; subtitulo?: string; carta?: RefCarta}; // carta: só no Deck do Dia (a que voa para a tela)
 
 export type CenaCartaDestaque = CenaBase & {
   tipo: 'carta_destaque';
@@ -218,6 +218,9 @@ export type Audio = string | {arquivo: string; volume?: number; transcricao?: st
 // "aula": as aulas do Do zero ao campeonato. "deck_do_dia": a série Deck do Dia (um deck do meta por episódio).
 export type Formato = 'aula' | 'deck_do_dia';
 
+// O Kai apresenta as aulas; o Deck do Dia é só cartas.
+export const temApresentador = (r: {formato?: Formato; apresentador?: boolean}) => r.apresentador ?? r.formato !== 'deck_do_dia';
+
 export type Roteiro = {
   formato?: Formato; // padrão: "aula"
   serie: string;
@@ -228,7 +231,7 @@ export type Roteiro = {
   narracao?: Audio; // caminho de um .mp3 seu, ou "auto" para o narrador gerar a fala das legendas
   musica?: Audio;
   cartas?: Record<string, DefCarta>;
-  apresentador?: boolean; // Kai e Faísca no vídeo (padrão: sim)
+  apresentador?: boolean; // Kai e Faísca no vídeo (padrão: sim nas aulas, não no Deck do Dia)
   cenas: Cena[];
 };
 

@@ -6,7 +6,7 @@ import {FONTE_TEXTO} from '../fontes';
 import {MOLA_PULO, mola, trecho} from '../anim';
 import type {LegendaPronta, PalavraFalada} from '../tipos';
 
-type Palavra = {texto: string; chave: boolean};
+export type Palavra = {texto: string; chave: boolean};
 
 // "Você *compra* uma carta" -> palavras, com a marcada entre asteriscos em dourado.
 export const quebrarPalavras = (texto: string): Palavra[] => {
@@ -35,7 +35,7 @@ const normalizar = (s: string) =>
     .replace(/[^a-z0-9]/g, '');
 
 // Acha, na transcrição da narração, o momento em que cada palavra da legenda é falada.
-const temposDaFala = (palavras: Palavra[], falas: PalavraFalada[], de: number, ate: number): (number | null)[] => {
+export const temposDaFala = (palavras: Palavra[], falas: PalavraFalada[], de: number, ate: number): (number | null)[] => {
   const janela = falas.filter((f) => f.inicio >= de - 0.4 && f.inicio < ate + 0.4);
   let cursor = 0;
   return palavras.map((p) => {

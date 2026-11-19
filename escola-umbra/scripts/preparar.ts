@@ -3,6 +3,7 @@
 import {execFileSync} from 'node:child_process';
 import fs from 'node:fs';
 import path from 'node:path';
+import {temApresentador} from '../src/tipos';
 import type {Audio, Boca, Cena, PalavraFalada, PropsAula, Roteiro} from '../src/tipos';
 import {RAIZ, resolverCartas, type Escolha} from './cartas';
 import {simularMesa, type Problema} from '../src/mesa/motor';
@@ -283,7 +284,7 @@ export const preparar = async (
     },
     palavras: audioNarracao?.palavras,
     boca:
-      roteiro.apresentador !== false && audioNarracao ? envelopeDaBoca(path.join(RAIZ, 'public', audioNarracao.arquivo), plano.totalQuadros) : undefined,
+      temApresentador(roteiro) && audioNarracao ? envelopeDaBoca(path.join(RAIZ, 'public', audioNarracao.arquivo), plano.totalQuadros) : undefined,
     guias: opcoes.guias ?? false,
   };
   return {nome, roteiro, props, plano, achados, escolhas, narracao};
