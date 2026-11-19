@@ -283,9 +283,11 @@ export const CartaShow: React.FC<{cena: CenaCartaDestaque; cartas: MapaCartas; d
           />
         </AbsoluteFill>
         {cena.titulo ? (
-          <Batida em={0.1} style={{left: AREA.x0, width: AREA.largura, top: 330, display: 'flex', justifyContent: 'center'}}>
-            <TituloArena texto={cena.titulo} largura={AREA.largura} maximo={92} />
-          </Batida>
+          <AbsoluteFill style={{opacity: 1 - Math.min(1, zoom), transform: `translateY(${-60 * Math.min(1, zoom)}px)`}}>
+            <Batida em={0.1} style={{left: AREA.x0, width: AREA.largura, top: 330, display: 'flex', justifyContent: 'center'}}>
+              <TituloArena texto={cena.titulo} largura={AREA.largura} maximo={92} />
+            </Batida>
+          </AbsoluteFill>
         ) : null}
         {cena.pill ? (
           <div

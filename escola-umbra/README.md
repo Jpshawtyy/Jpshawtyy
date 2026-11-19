@@ -28,11 +28,21 @@ Sai em `out/`: `aula-01.mp4` e `aula-01-capa.png`.
 
 ## Série Deck do Dia
 
-Além das aulas, a página tem a série **Deck do Dia**: um deck do meta por episódio. Os roteiros ficam em `decks/` e usam o mesmo motor das aulas, com `"formato": "deck_do_dia"` no roteiro. Isso troca a etiqueta do topo e da capa para `DECK DO DIA #01 // META STANDARD`.
+Além das aulas, a página tem a série **Deck do Dia**: um deck do meta por episódio. Os roteiros ficam em `decks/` e usam o mesmo motor das aulas, com `"formato": "deck_do_dia"` no roteiro. Isso troca a etiqueta do topo e da capa para `DECK DO DIA #01 // META STANDARD` e liga a edição própria da série (`src/deckdodia/`). Ela não tem o Kai: o vídeo é só cartas em movimento.
+
+- **Gancho:** a carta de `"carta"` voa girando até o centro, bate com tremor, flash e linhas de velocidade, e as outras cartas da capa abrem em leque atrás. O nome do deck bate na tela.
+- **Ranking:** a carta entra girando e o número do 1º lugar conta de 0 até o valor; os seguintes entram deslizando.
+- **Carta em destaque:** a carta chega inclinada, fica balançando com reflexo holográfico, e o `foco` dá um zoom de câmera no ataque.
+- **Lista (`decklist`):** as cartas são distribuídas uma a uma, virando no ar até a grade. Cada destaque sai da grade, gira e cresce no centro.
+- **CTA:** carrossel girando com as cartas da capa.
+- Legenda grande palavra por palavra (a palavra falada ganha tarja vermelha), corte com zoom e desfoque entre cenas, faíscas no fundo.
+- Efeitos sonoros (whoosh, impacto, carta, brilho, subida) sintetizados por `scripts/sfx.sh` em `public/sfx/`, sem direitos de terceiros.
+
+O render leva uns 14 minutos para 40 s.
 
 1. Copie `decks/deck-01.json` para `decks/deck-02.json` e troque `numero`.
 2. Escolha o deck em [limitlesstcg.com/decks](https://limitlesstcg.com/decks?format=standard&time=1months) (Standard, último mês) e copie a lista de um resultado recente.
-3. Monte as cenas: gancho com o nome do deck, ranking do mês, uma ou duas cartas que fazem o deck ganhar, a lista completa (`decklist`) e o CTA.
+3. Monte as cenas: gancho com o nome do deck (e `"carta"`, a que voa para a tela), ranking do mês, uma ou duas cartas que fazem o deck ganhar, a lista completa (`decklist`) e o CTA.
 4. `npm run validar -- decks/deck-02.json` confere que a lista soma 60 cartas e que todas existem na API.
 5. `npm run aula -- decks/deck-02.json` gera `out/deck-02.mp4` e a capa.
 
