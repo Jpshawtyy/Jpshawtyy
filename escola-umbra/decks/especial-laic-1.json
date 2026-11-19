@@ -1,0 +1,107 @@
+{
+  "formato": "deck_do_dia",
+  "rotulo": "Especial LAIC",
+  "serie": "São Paulo 2026",
+  "numero": 1,
+  "titulo_capa": "LAIC 2026",
+  "subtitulo_capa": "os decks que vão lotar",
+  "capa": {"cartas": ["zoroark", "dragapult", "hydrapple"]},
+  "narracao": "auto",
+
+  "cartas": {
+    "dragapult": {"nome": "Dragapult ex", "set": "Twilight Masquerade", "numero": 130},
+    "zoroark": {"nome": "N's Zoroark ex", "set": "Journey Together", "numero": 98},
+    "slowking": {"nome": "Slowking", "set": "Stellar Crown", "numero": 58},
+    "hydrapple": {"nome": "Hydrapple ex", "set": "Stellar Crown", "numero": 14}
+  },
+
+  "cenas": [
+    {
+      "tipo": "gancho",
+      "texto": "LAIC 2026",
+      "subtitulo": "os decks que vão lotar",
+      "carta": "dragapult",
+      "duracao": 2.6,
+      "legendas": [
+        {"texto": "o *LAIC* começa amanhã", "em": 0.05, "fala": "O Laique começa amanhã, em São Paulo."},
+        {"texto": "e esses decks vão *lotar* as mesas", "em": 1.5, "fala": "E esses decks vão lotar as mesas."}
+      ]
+    },
+    {
+      "tipo": "piramide",
+      "modo": "ranking",
+      "titulo": "dia 2 em Buenos Aires",
+      "fonte": "Limitless TCG · Special Event Buenos Aires 14/11 · 96 jogadores no dia 2",
+      "duracao": 6.5,
+      "niveis": [
+        {"rotulo": "Alakazam", "detalhe": "8,3%", "valor": 8.3, "em": 2.6},
+        {"rotulo": "Hydrapple", "detalhe": "9,4%", "valor": 9.4, "em": 2.4},
+        {"rotulo": "Slowking", "detalhe": "9,4%", "valor": 9.4, "em": 2.2},
+        {"rotulo": "N's Zoroark", "detalhe": "10,4%", "valor": 10.4, "em": 2.0},
+        {"rotulo": "Dragapult ex", "detalhe": "32,3%", "valor": 32.3, "destaque": true, "carta": "dragapult"}
+      ],
+      "legendas": [
+        {"texto": "no último grande torneio da *América Latina*", "em": 0.2, "fala": "No último grande torneio da América Latina,"},
+        {"texto": "*1 em cada 3* do dia 2 era Dragapult", "em": 2.4, "fala": "um em cada três jogadores do dia dois estava de Dragapult."}
+      ]
+    },
+    {
+      "tipo": "carta_destaque",
+      "carta": "zoroark",
+      "pill": "10,4%",
+      "pill_cor": "vermelho",
+      "titulo": "N's Zoroark ex",
+      "duracao": 3.5,
+      "legendas": [
+        {"texto": "*Night Joker* usa o ataque de outro Pokémon de N", "em": 0.3, "fala": "O Night Joker usa o ataque de outro Pokémon de N do banco."}
+      ]
+    },
+    {
+      "tipo": "carta_destaque",
+      "carta": "slowking",
+      "pill": "9,4%",
+      "pill_cor": "ouro",
+      "titulo": "Slowking",
+      "duracao": 3.5,
+      "legendas": [
+        {"texto": "descarta o topo e *usa o ataque* dele", "em": 0.3, "fala": "O Slowking descarta o topo do deck e usa o ataque daquela carta."}
+      ]
+    },
+    {
+      "tipo": "carta_destaque",
+      "carta": "hydrapple",
+      "pill": "9,4%",
+      "pill_cor": "ouro",
+      "titulo": "Hydrapple ex",
+      "duracao": 3.5,
+      "legendas": [
+        {"texto": "*+30 de dano* por Energia de Planta", "em": 0.3, "fala": "O Hydrapple bate mais trinta por Energia de Planta ligada nos seus Pokémon."}
+      ]
+    },
+    {
+      "tipo": "piramide",
+      "modo": "ranking",
+      "titulo": "na Europa, igual",
+      "fonte": "Limitless TCG · Regional Gdańsk 31/10 · 323 jogadores no dia 2",
+      "duracao": 6,
+      "niveis": [
+        {"rotulo": "N's Zoroark", "detalhe": "7,7%", "valor": 7.7, "em": 2.4},
+        {"rotulo": "Hydrapple", "detalhe": "8,1%", "valor": 8.1, "em": 2.2},
+        {"rotulo": "Basic Box", "detalhe": "8,7%", "valor": 8.7, "em": 2.0},
+        {"rotulo": "Dragapult ex", "detalhe": "33,1%", "valor": 33.1, "destaque": true, "carta": "dragapult"}
+      ],
+      "legendas": [
+        {"texto": "no Regional de *Gdańsk*, 1.739 jogadores", "em": 0.2, "fala": "No Regional de Gdansk, com mil setecentos e trinta e nove jogadores,"},
+        {"texto": "Dragapult de novo: *1 em cada 3*", "em": 3.0, "fala": "Dragapult de novo: um em cada três."}
+      ]
+    },
+    {
+      "tipo": "cta",
+      "duracao": 4.5,
+      "principal": "COMENTA",
+      "complemento": "qual deck você levaria",
+      "seguir": "segue @escolaumbratcg",
+      "falas": [{"texto": "Comenta qual deck você levaria pro Laique, e segue a Escola Umbra.", "em": 0.25}]
+    }
+  ]
+}

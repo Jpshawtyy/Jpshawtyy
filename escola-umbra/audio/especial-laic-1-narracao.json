@@ -1,0 +1,373 @@
+{
+ "assinatura": "71ece3b698c7b8677b6685608253f4f9fd77c1b8",
+ "voz": "pm_santa",
+ "frases": [
+  {
+   "fala": "O Laique começa amanhã, em São Paulo.",
+   "duracao": 1.998481
+  },
+  {
+   "fala": "E esses decks vão lotar as mesas.",
+   "duracao": 1.98805
+  },
+  {
+   "fala": "No último grande torneio da América Latina,",
+   "duracao": 2.671179
+  },
+  {
+   "fala": "um em cada três jogadores do dia dois estava de Dragapult.",
+   "duracao": 3.593129
+  },
+  {
+   "fala": "O Night Joker usa o ataque de outro Pokémon de N do banco.",
+   "duracao": 3.265102
+  },
+  {
+   "fala": "O Slowking descarta o topo do deck e usa o ataque daquela carta.",
+   "duracao": 3.57746
+  },
+  {
+   "fala": "O Hydrapple bate mais trinta por Energia de Planta ligada nos seus Pokémon.",
+   "duracao": 4.128549
+  },
+  {
+   "fala": "No Regional de Gdansk, com mil setecentos e trinta e nove jogadores,",
+   "duracao": 3.836803
+  },
+  {
+   "fala": "Dragapult de novo: um em cada três.",
+   "duracao": 2.264059
+  },
+  {
+   "fala": "Comenta qual deck você levaria pro Laique, e segue a Escola Umbra.",
+   "duracao": 3.524807
+  }
+ ],
+ "words": [
+  {
+   "palavra": "o",
+   "inicio": 0.05,
+   "fim": 0.25853714782608694
+  },
+  {
+   "palavra": "LAIC",
+   "inicio": 0.25853714782608694,
+   "fim": 0.7173188730434783
+  },
+  {
+   "palavra": "começa",
+   "inicio": 0.7173188730434783,
+   "fim": 1.3429303165217392
+  },
+  {
+   "palavra": "amanhã",
+   "inicio": 1.3429303165217392,
+   "fim": 1.96854176
+  },
+  {
+   "palavra": "e",
+   "inicio": 2.208481,
+   "fim": 2.339202095890411
+  },
+  {
+   "palavra": "esses",
+   "inicio": 2.339202095890411,
+   "fim": 2.6790769452054795
+  },
+  {
+   "palavra": "decks",
+   "inicio": 2.6790769452054795,
+   "fim": 3.018951794520548
+  },
+  {
+   "palavra": "vão",
+   "inicio": 3.018951794520548,
+   "fim": 3.2542497671232877
+  },
+  {
+   "palavra": "lotar",
+   "inicio": 3.2542497671232877,
+   "fim": 3.5941246164383562
+  },
+  {
+   "palavra": "as",
+   "inicio": 3.5941246164383562,
+   "fim": 3.7771341506849314
+  },
+  {
+   "palavra": "mesas",
+   "inicio": 3.7771341506849314,
+   "fim": 4.1170089999999995
+  },
+  {
+   "palavra": "no",
+   "inicio": 4.646531,
+   "fim": 4.8395452245161295
+  },
+  {
+   "palavra": "último",
+   "inicio": 4.8395452245161295,
+   "fim": 5.253147134193549
+  },
+  {
+   "palavra": "grande",
+   "inicio": 5.253147134193549,
+   "fim": 5.6667490438709684
+  },
+  {
+   "palavra": "torneio",
+   "inicio": 5.6667490438709684,
+   "fim": 6.13549787483871
+  },
+  {
+   "palavra": "da",
+   "inicio": 6.13549787483871,
+   "fim": 6.328512099354839
+  },
+  {
+   "palavra": "América",
+   "inicio": 6.328512099354839,
+   "fim": 6.797260930322581
+  },
+  {
+   "palavra": "Latina",
+   "inicio": 6.797260930322581,
+   "fim": 7.210862840000001
+  },
+  {
+   "palavra": "1",
+   "inicio": 7.47771,
+   "fim": 7.696026698734177
+  },
+  {
+   "palavra": "em",
+   "inicio": 7.696026698734177,
+   "fim": 8.001670076962025
+  },
+  {
+   "palavra": "cada",
+   "inicio": 8.001670076962025,
+   "fim": 8.481966814177214
+  },
+  {
+   "palavra": "3",
+   "inicio": 8.481966814177214,
+   "fim": 8.700283512911392
+  },
+  {
+   "palavra": "do",
+   "inicio": 8.700283512911392,
+   "fim": 9.00592689113924
+  },
+  {
+   "palavra": "dia",
+   "inicio": 9.00592689113924,
+   "fim": 9.39889694886076
+  },
+  {
+   "palavra": "2",
+   "inicio": 9.39889694886076,
+   "fim": 9.617213647594937
+  },
+  {
+   "palavra": "era",
+   "inicio": 9.617213647594937,
+   "fim": 10.010183705316456
+  },
+  {
+   "palavra": "Dragapult",
+   "inicio": 10.010183705316456,
+   "fim": 10.92711384
+  },
+  {
+   "palavra": "Night",
+   "inicio": 11.87771,
+   "fim": 12.26952224
+  },
+  {
+   "palavra": "Joker",
+   "inicio": 12.26952224,
+   "fim": 12.66133448
+  },
+  {
+   "palavra": "usa",
+   "inicio": 12.66133448,
+   "fim": 12.932589107692309
+  },
+  {
+   "palavra": "o",
+   "inicio": 12.932589107692309,
+   "fim": 13.083286123076924
+  },
+  {
+   "palavra": "ataque",
+   "inicio": 13.083286123076924,
+   "fim": 13.53537716923077
+  },
+  {
+   "palavra": "de",
+   "inicio": 13.53537716923077,
+   "fim": 13.746352990769232
+  },
+  {
+   "palavra": "outro",
+   "inicio": 13.746352990769232,
+   "fim": 14.138165230769232
+  },
+  {
+   "palavra": "Pokémon",
+   "inicio": 14.138165230769232,
+   "fim": 14.650535083076925
+  },
+  {
+   "palavra": "de",
+   "inicio": 14.650535083076925,
+   "fim": 14.861510904615386
+  },
+  {
+   "palavra": "N",
+   "inicio": 14.861510904615386,
+   "fim": 15.012207920000002
+  },
+  {
+   "palavra": "descarta",
+   "inicio": 15.692812,
+   "fim": 16.50847288
+  },
+  {
+   "palavra": "o",
+   "inicio": 16.50847288,
+   "fim": 16.72312048
+  },
+  {
+   "palavra": "topo",
+   "inicio": 16.72312048,
+   "fim": 17.1953452
+  },
+  {
+   "palavra": "e",
+   "inicio": 17.1953452,
+   "fim": 17.4099928
+  },
+  {
+   "palavra": "usa",
+   "inicio": 17.4099928,
+   "fim": 17.79635848
+  },
+  {
+   "palavra": "o",
+   "inicio": 17.79635848,
+   "fim": 18.01100608
+  },
+  {
+   "palavra": "ataque",
+   "inicio": 18.01100608,
+   "fim": 18.65494888
+  },
+  {
+   "palavra": "dele",
+   "inicio": 18.65494888,
+   "fim": 19.1271736
+  },
+  {
+   "palavra": "+30",
+   "inicio": 19.820272,
+   "fim": 20.200324729863013
+  },
+  {
+   "palavra": "de",
+   "inicio": 20.200324729863013,
+   "fim": 20.580377459726027
+  },
+  {
+   "palavra": "dano",
+   "inicio": 20.580377459726027,
+   "fim": 21.17760317808219
+  },
+  {
+   "palavra": "por",
+   "inicio": 21.17760317808219,
+   "fim": 21.66624240219178
+  },
+  {
+   "palavra": "Energia",
+   "inicio": 21.66624240219178,
+   "fim": 22.58922760328767
+  },
+  {
+   "palavra": "de",
+   "inicio": 22.58922760328767,
+   "fim": 22.969280333150685
+  },
+  {
+   "palavra": "Planta",
+   "inicio": 22.969280333150685,
+   "fim": 23.78367904
+  },
+  {
+   "palavra": "no",
+   "inicio": 24.398820999999998,
+   "fim": 24.705765239999998
+  },
+  {
+   "palavra": "Regional",
+   "inicio": 24.705765239999998,
+   "fim": 25.538899605714285
+  },
+  {
+   "palavra": "de",
+   "inicio": 25.538899605714285,
+   "fim": 25.845843845714285
+  },
+  {
+   "palavra": "Gdańsk,",
+   "inicio": 25.845843845714285,
+   "fim": 26.67897821142857
+  },
+  {
+   "palavra": "1.739",
+   "inicio": 26.67897821142857,
+   "fim": 27.161319159999998
+  },
+  {
+   "palavra": "jogadores",
+   "inicio": 27.161319159999998,
+   "fim": 28.082151879999998
+  },
+  {
+   "palavra": "Dragapult",
+   "inicio": 28.395623999999998,
+   "fim": 29.03848920338028
+  },
+  {
+   "palavra": "de",
+   "inicio": 29.03848920338028,
+   "fim": 29.252777604507042
+  },
+  {
+   "palavra": "novo:",
+   "inicio": 29.252777604507042,
+   "fim": 29.711967035492954
+  },
+  {
+   "palavra": "1",
+   "inicio": 29.711967035492954,
+   "fim": 29.865030179154928
+  },
+  {
+   "palavra": "em",
+   "inicio": 29.865030179154928,
+   "fim": 30.079318580281686
+  },
+  {
+   "palavra": "cada",
+   "inicio": 30.079318580281686,
+   "fim": 30.416057496338027
+  },
+  {
+   "palavra": "3",
+   "inicio": 30.416057496338027,
+   "fim": 30.569120639999998
+  }
+ ]
+}

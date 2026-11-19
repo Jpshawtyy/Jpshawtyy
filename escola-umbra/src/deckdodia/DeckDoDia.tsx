@@ -106,7 +106,7 @@ export const DeckDoDia: React.FC<PropsAula> = (props) => {
           </Sequence>
         );
       })}
-      <Moldura numero={roteiro.numero} serie={roteiro.serie} formato={roteiro.formato} />
+      <Moldura numero={roteiro.numero} serie={roteiro.serie} formato={roteiro.formato} rotulo={roteiro.rotulo} />
       {audio?.narracao ? <Audio src={staticFile(audio.narracao)} volume={audio.narracaoVolume ?? 1} /> : null}
       {audio?.musica ? <Audio src={staticFile(audio.musica)} volume={audio.musicaVolume ?? 0.15} loop /> : null}
       {guias ? <Guias /> : null}

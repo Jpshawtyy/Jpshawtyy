@@ -223,6 +223,7 @@ export const temApresentador = (r: {formato?: Formato; apresentador?: boolean}) 
 
 export type Roteiro = {
   formato?: Formato; // padrão: "aula"
+  rotulo?: string; // troca a parte vermelha da etiqueta (ex.: "ESPECIAL LAIC" num episódio especial)
   serie: string;
   numero: number;
   titulo_capa: string;

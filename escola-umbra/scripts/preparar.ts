@@ -78,8 +78,8 @@ const conferirEstrutura = (r: Roteiro, achados: Achado[]) => {
   for (const t of textos) {
     if (EMOJI.test(t.texto)) erro(t.caminho, `Tem emoji no texto ("${t.texto}"). A identidade da Escola Umbra não usa emoji.`);
   }
-  const etiqueta = textoDaSerie(r.numero ?? 0, r.serie ?? '', r.formato);
-  if (tamanhoEtiqueta(r.numero ?? 0, r.serie ?? '', undefined, r.formato) <= 15) {
+  const etiqueta = textoDaSerie(r.numero ?? 0, r.serie ?? '', r.formato, r.rotulo);
+  if (tamanhoEtiqueta(r.numero ?? 0, r.serie ?? '', undefined, r.formato, r.rotulo) <= 15) {
     achados.push({nivel: 'aviso', onde: 'roteiro', mensagem: `A etiqueta "${etiqueta}" é comprida e vai ficar com letra pequena. Um nome de série mais curto lê melhor.`});
   }
 };

@@ -17,7 +17,7 @@ export const Capa: React.FC<PropsAula> = ({roteiro, cartas}) => {
   // borda de cima do painel vermelho: sobe da esquerda para a direita
   const yEsq = temCartas ? 1250 : 1330;
   const yDir = temCartas ? 1080 : 1160;
-  const numero = rotuloDaSerie(roteiro.numero, roteiro.formato);
+  const numero = rotuloDaSerie(roteiro.numero, roteiro.formato, roteiro.rotulo);
   const fantasma = roteiro.titulo_capa.split('\n')[0].toLocaleUpperCase('pt-BR');
 
   return (
@@ -92,7 +92,7 @@ export const Capa: React.FC<PropsAula> = ({roteiro, cartas}) => {
         <Etiqueta
           rotulo={numero}
           complemento={roteiro.serie}
-          tamanho={Math.min(30, tamanhoEtiqueta(roteiro.numero, roteiro.serie, L - 160, roteiro.formato) * 1.25)}
+          tamanho={Math.min(30, tamanhoEtiqueta(roteiro.numero, roteiro.serie, L - 160, roteiro.formato, roteiro.rotulo) * 1.25)}
           style={{marginTop: 34}}
         />
         <TituloArena texto={roteiro.titulo_capa} largura={L - 130} maximo={250} style={{marginTop: 34}} />

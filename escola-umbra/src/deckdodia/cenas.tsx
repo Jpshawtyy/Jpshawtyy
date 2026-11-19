@@ -127,6 +127,9 @@ export const RankingDeck: React.FC<{cena: CenaPiramide; cartas: MapaCartas; dura
   const maior = Math.max(valor, ...outros.map((n) => n.valor ?? 0)) || 1;
   const frases = batidasDasFrases(cena, duracao);
   const tempoLinha = (i: number) => Math.max(1.6, outros[i]?.em ?? 1.6 + i * 0.25);
+  const ALTURA = outros.length > 3 ? 82 : 98; // com 4 linhas, ficam mais baixas para não encostar na legenda
+  // empate divide a posição (dois "3")
+  const posicao = (v: number | undefined) => 1 + cena.niveis.filter((n) => (n.valor ?? 0) > (v ?? 0)).length;
   return (
     <AbsoluteFill>
       <Raios x={300} y={640} forca={trecho(t, [CONTA[1], CONTA[1] + 0.3], [0, 0.8])} raio={700} />
@@ -188,7 +191,7 @@ export const RankingDeck: React.FC<{cena: CenaPiramide; cartas: MapaCartas; dura
         </div>
         {outros.map((n, i) => {
           const e = mola(quadro, fps, tempoLinha(i), MOLA_SECA);
-          const y = 900 + i * 98;
+          const y = 900 + i * ALTURA;
           const barra = ((n.valor ?? 0) / maior) * 100;
           return (
             <div
@@ -198,7 +201,7 @@ export const RankingDeck: React.FC<{cena: CenaPiramide; cartas: MapaCartas; dura
                 left: AREA.x0,
                 width: AREA.largura,
                 top: y,
-                height: 82,
+                height: ALTURA - 14,
                 transform: `translateX(${(1 - e) * 900}px) skewX(-9deg)`,
                 opacity: Math.min(1, e * 2),
                 background: 'rgba(245,241,232,0.06)',
@@ -208,7 +211,7 @@ export const RankingDeck: React.FC<{cena: CenaPiramide; cartas: MapaCartas; dura
             >
               <div style={{position: 'absolute', left: 0, top: 0, bottom: 0, width: `${barra * Math.min(1, e)}%`, background: `linear-gradient(90deg, ${CORES.vermelhoEscuro}, ${CORES.vermelho})`}} />
               <div style={{position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', gap: 22, padding: '0 26px', transform: 'skewX(9deg)'}}>
-                <span style={{fontFamily: FONTE_TITULO, fontSize: 50, color: CORES.ouro, width: 40}}>{i + 2}</span>
+                <span style={{fontFamily: FONTE_TITULO, fontSize: 50, color: CORES.ouro, width: 40}}>{posicao(n.valor)}</span>
                 <span style={{fontFamily: FONTE_TEXTO, fontWeight: 600, fontSize: 40, color: CORES.texto, flex: 1}}>{n.rotulo}</span>
                 <span style={{fontFamily: FONTE_TITULO, fontSize: 46, color: CORES.texto}}>{n.detalhe}</span>
               </div>
@@ -221,7 +224,7 @@ export const RankingDeck: React.FC<{cena: CenaPiramide; cartas: MapaCartas; dura
               position: 'absolute',
               left: AREA.x0,
               width: AREA.largura,
-              top: 900 + outros.length * 98 + 6,
+              top: 900 + outros.length * ALTURA + 2,
               textAlign: 'center',
               fontFamily: FONTE_MONO,
               fontSize: 19,
