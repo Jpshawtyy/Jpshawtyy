@@ -17,7 +17,8 @@ const Coluna: React.FC<{
   largura: number;
   topo: number;
   atraso: number;
-}> = ({itens, cartas, lado, rotulo, x, largura, topo, atraso}) => {
+  apagar?: boolean;
+}> = ({itens, cartas, lado, rotulo, x, largura, topo, atraso, apagar = true}) => {
   const quadro = useCurrentFrame();
   const {fps} = useVideoConfig();
   const pill = mola(quadro, fps, atraso, MOLA_PULO);
@@ -66,7 +67,7 @@ const Coluna: React.FC<{
             }}
           >
             {dados ? (
-              <Carta imagem={dados.imagem} largura={larguraCarta} style={lado === 'ruins' ? {filter: 'saturate(0.55) brightness(0.8)'} : undefined} />
+              <Carta imagem={dados.imagem} largura={larguraCarta} style={lado === 'ruins' && apagar ? {filter: 'saturate(0.55) brightness(0.8)'} : undefined} />
             ) : (
               <div
                 style={{
@@ -116,7 +117,7 @@ export const Comparacao: React.FC<{cena: CenaComparacao; cartas: MapaCartas}> = 
         }}
       />
       <Coluna itens={cena.bons} cartas={cartas} lado="bons" rotulo={cena.pill_bons ?? 'bons'} x={AREA.x0} largura={largura} topo={topo} atraso={0.25} />
-      <Coluna itens={cena.ruins} cartas={cartas} lado="ruins" rotulo={cena.pill_ruins ?? 'ruins'} x={AREA.x0 + largura + vao} largura={largura} topo={topo} atraso={0.55} />
+      <Coluna itens={cena.ruins} cartas={cartas} lado="ruins" apagar={cena.apagar_ruins ?? true} rotulo={cena.pill_ruins ?? 'ruins'} x={AREA.x0 + largura + vao} largura={largura} topo={topo} atraso={0.55} />
     </AbsoluteFill>
   );
 };

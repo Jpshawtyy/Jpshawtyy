@@ -107,6 +107,7 @@ export type CenaComparacao = CenaBase & {
   titulo?: string;
   pill_bons?: string;
   pill_ruins?: string;
+  apagar_ruins?: boolean; // as cartas do lado "ruins" ficam desbotadas (padrão: sim)
   bons: ItemComparacao[];
   ruins: ItemComparacao[];
 };

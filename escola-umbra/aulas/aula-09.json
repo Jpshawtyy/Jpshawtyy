@@ -1,0 +1,210 @@
+{
+  "serie": "Do zero ao campeonato",
+  "numero": 9,
+  "titulo_capa": "deck de luxo",
+  "subtitulo_capa": "quanto custa um campeão",
+  "capa": {
+    "cartas": [
+      "dp-comum",
+      "ultra-ball",
+      "dp-raro"
+    ]
+  },
+  "narracao": "auto",
+  "cartas": {
+    "dp-comum": {
+      "nome": "Dragapult ex",
+      "set": "Ascended Heroes",
+      "numero": 160
+    },
+    "dp-raro": {
+      "nome": "Dragapult ex",
+      "set": "Prismatic Evolutions",
+      "numero": 165
+    },
+    "ultra-ball": {
+      "nome": "Ultra Ball",
+      "set": "Plasma Freeze",
+      "numero": 122,
+      "fora_do_standard": true
+    }
+  },
+  "cenas": [
+    {
+      "tipo": "gancho",
+      "texto": "US$ 6.534",
+      "subtitulo": "o deck campeão mais caro",
+      "duracao": 2.4,
+      "falas": [
+        {
+          "texto": "Mais de seis mil e quinhentos dólares.",
+          "em": 0.05
+        }
+      ],
+      "legendas": [
+        {
+          "texto": "por um deck que *ganhou* Regional",
+          "em": 1.3,
+          "fala": "Por um deck que ganhou Regional."
+        }
+      ]
+    },
+    {
+      "tipo": "piramide",
+      "modo": "ranking",
+      "titulo": "na versão mais rara",
+      "fonte": "Limitless TCG · preços TCGplayer · 19/11/2026",
+      "duracao": 8,
+      "niveis": [
+        {
+          "rotulo": "Ogerpon Meganium",
+          "detalhe": "US$ 4.431",
+          "valor": 4431,
+          "em": 0.4
+        },
+        {
+          "rotulo": "Dragapult ex",
+          "detalhe": "US$ 5.085",
+          "valor": 5085,
+          "em": 0.8
+        },
+        {
+          "rotulo": "Slowking",
+          "detalhe": "US$ 5.917",
+          "valor": 5917,
+          "em": 1.2
+        },
+        {
+          "rotulo": "Basic Box",
+          "detalhe": "US$ 6.534",
+          "valor": 6534,
+          "destaque": true,
+          "em": 2.4
+        }
+      ],
+      "legendas": [
+        {
+          "texto": "Os campeões de *outubro*",
+          "em": 0.3,
+          "fala": "Os campeões de outubro,"
+        },
+        {
+          "texto": "com a versão *mais rara* de cada carta",
+          "em": 1.8,
+          "fala": "com a versão mais rara de cada carta."
+        },
+        {
+          "texto": "No topo, a *Basic Box*",
+          "em": 3.6,
+          "fala": "No topo, a Basic Box:"
+        },
+        {
+          "texto": "*6.534* dólares",
+          "em": 5.0,
+          "fala": "seis mil, quinhentos e trinta e quatro dólares."
+        }
+      ]
+    },
+    {
+      "tipo": "comparacao",
+      "titulo": "o mesmo Dragapult",
+      "pill_bons": "US$ 0,84",
+      "pill_ruins": "US$ 76",
+      "apagar_ruins": false,
+      "bons": [
+        "dp-comum"
+      ],
+      "ruins": [
+        "dp-raro"
+      ],
+      "duracao": 6,
+      "legendas": [
+        {
+          "texto": "Mesmo ataque, mesmo *dano*",
+          "em": 0.5,
+          "fala": "Mesmo ataque, mesmo dano."
+        },
+        {
+          "texto": "Um custa *84 centavos*",
+          "em": 2.2,
+          "fala": "Um custa oitenta e quatro centavos."
+        },
+        {
+          "texto": "o outro, *76 dólares*",
+          "em": 3.9,
+          "fala": "O outro, setenta e seis dólares."
+        }
+      ]
+    },
+    {
+      "tipo": "carta_destaque",
+      "carta": "ultra-ball",
+      "pill": "US$ 1.200",
+      "titulo": "a mais cara do deck",
+      "duracao": 7,
+      "legendas": [
+        {
+          "texto": "A carta mais cara nem é *Pokémon*",
+          "em": 0.4
+        },
+        {
+          "texto": "É esta Ultra Ball dourada, de *2013*",
+          "em": 2.4,
+          "fala": "É esta Ultra Ball dourada, de dois mil e treze."
+        },
+        {
+          "texto": "Quatro cópias",
+          "em": 4.6,
+          "fala": "Quatro cópias:"
+        },
+        {
+          "texto": "quase *4.800 dólares*",
+          "em": 5.6,
+          "fala": "quase quatro mil e oitocentos dólares."
+        }
+      ]
+    },
+    {
+      "tipo": "riscado",
+      "titulo": "esquece isso",
+      "duracao": 6,
+      "itens": [
+        {
+          "texto": "Deck caro ganha mais",
+          "em": 0.3,
+          "riscar_em": 1.4
+        }
+      ],
+      "legendas": [
+        {
+          "texto": "O poder é o *mesmo*: só muda a arte",
+          "em": 0.6,
+          "fala": "O poder é o mesmo: só muda a arte."
+        },
+        {
+          "texto": "O Dragapult campeão",
+          "em": 3.0,
+          "fala": "O Dragapult campeão"
+        },
+        {
+          "texto": "sai por *33 dólares*, na versão mais barata",
+          "em": 4.2,
+          "fala": "sai por trinta e três dólares, na versão mais barata."
+        }
+      ]
+    },
+    {
+      "tipo": "cta",
+      "duracao": 4.5,
+      "principal": "SALVA",
+      "complemento": "pra montar o seu deck",
+      "seguir": "segue @escolaumbratcg",
+      "falas": [
+        {
+          "texto": "Salva pra montar o seu, e segue a Escola Umbra.",
+          "em": 0.25
+        }
+      ]
+    }
+  ]
+}

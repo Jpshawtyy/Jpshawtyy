@@ -1,0 +1,456 @@
+{
+ "assinatura": "3d77edf818bea50dd1f0e2c46132c5f7865741c9",
+ "voz": "pm_santa",
+ "frases": [
+  {
+   "fala": "Mais de seis mil e quinhentos dólares.",
+   "duracao": 2.185714
+  },
+  {
+   "fala": "Por um deck que ganhou Regional.",
+   "duracao": 1.680091
+  },
+  {
+   "fala": "Os campeões de outubro,",
+   "duracao": 1.513605
+  },
+  {
+   "fala": "com a versão mais rara de cada carta.",
+   "duracao": 2.161678
+  },
+  {
+   "fala": "No topo, a Basic Box:",
+   "duracao": 1.486667
+  },
+  {
+   "fala": "seis mil, quinhentos e trinta e quatro dólares.",
+   "duracao": 2.692268
+  },
+  {
+   "fala": "Mesmo ataque, mesmo dano.",
+   "duracao": 1.532381
+  },
+  {
+   "fala": "Um custa oitenta e quatro centavos.",
+   "duracao": 2.14873
+  },
+  {
+   "fala": "O outro, setenta e seis dólares.",
+   "duracao": 2.013311
+  },
+  {
+   "fala": "A carta mais cara nem é Pokémon",
+   "duracao": 2.020726
+  },
+  {
+   "fala": "É esta Ultra Ball dourada, de dois mil e treze.",
+   "duracao": 2.490726
+  },
+  {
+   "fala": "Quatro cópias:",
+   "duracao": 0.985057
+  },
+  {
+   "fala": "quase quatro mil e oitocentos dólares.",
+   "duracao": 2.306803
+  },
+  {
+   "fala": "O poder é o mesmo: só muda a arte.",
+   "duracao": 1.966463
+  },
+  {
+   "fala": "O Dragapult campeão",
+   "duracao": 1.392925
+  },
+  {
+   "fala": "sai por trinta e três dólares, na versão mais barata.",
+   "duracao": 2.902517
+  },
+  {
+   "fala": "Salva pra montar o seu, e segue a Escola Umbra.",
+   "duracao": 2.442336
+  }
+ ],
+ "words": [
+  {
+   "palavra": "por",
+   "inicio": 2.395714,
+   "fim": 2.6030852319999997
+  },
+  {
+   "palavra": "um",
+   "inicio": 2.6030852319999997,
+   "fim": 2.764373968
+  },
+  {
+   "palavra": "deck",
+   "inicio": 2.764373968,
+   "fim": 3.017827696
+  },
+  {
+   "palavra": "que",
+   "inicio": 3.017827696,
+   "fim": 3.2251989279999997
+  },
+  {
+   "palavra": "ganhou",
+   "inicio": 3.2251989279999997,
+   "fim": 3.5708176480000002
+  },
+  {
+   "palavra": "Regional",
+   "inicio": 3.5708176480000002,
+   "fim": 4.00860136
+  },
+  {
+   "palavra": "Os",
+   "inicio": 4.625805,
+   "fim": 4.829233512
+  },
+  {
+   "palavra": "campeões",
+   "inicio": 4.829233512,
+   "fim": 5.381396616
+  },
+  {
+   "palavra": "de",
+   "inicio": 5.381396616,
+   "fim": 5.584825128
+  },
+  {
+   "palavra": "outubro",
+   "inicio": 5.584825128,
+   "fim": 6.0788658
+  },
+  {
+   "palavra": "com",
+   "inicio": 6.29941,
+   "fim": 6.527177047804878
+  },
+  {
+   "palavra": "a",
+   "inicio": 6.527177047804878,
+   "fim": 6.653714296585366
+  },
+  {
+   "palavra": "versão",
+   "inicio": 6.653714296585366,
+   "fim": 7.033326042926829
+  },
+  {
+   "palavra": "mais",
+   "inicio": 7.033326042926829,
+   "fim": 7.311707990243902
+  },
+  {
+   "palavra": "rara",
+   "inicio": 7.311707990243902,
+   "fim": 7.590089937560975
+  },
+  {
+   "palavra": "de",
+   "inicio": 7.590089937560975,
+   "fim": 7.767242085853659
+  },
+  {
+   "palavra": "cada",
+   "inicio": 7.767242085853659,
+   "fim": 8.045624033170732
+  },
+  {
+   "palavra": "carta",
+   "inicio": 8.045624033170732,
+   "fim": 8.37462088
+  },
+  {
+   "palavra": "No",
+   "inicio": 8.621088,
+   "fim": 8.82497376
+  },
+  {
+   "palavra": "topo,",
+   "inicio": 8.82497376,
+   "fim": 9.261871817142858
+  },
+  {
+   "palavra": "a",
+   "inicio": 9.261871817142858,
+   "fim": 9.407504502857144
+  },
+  {
+   "palavra": "Basic",
+   "inicio": 9.407504502857144,
+   "fim": 9.786149485714287
+  },
+  {
+   "palavra": "Box",
+   "inicio": 9.786149485714287,
+   "fim": 10.048288320000001
+  },
+  {
+   "palavra": "6.534",
+   "inicio": 10.267755000000001,
+   "fim": 11.283124645714286
+  },
+  {
+   "palavra": "dólares",
+   "inicio": 11.283124645714286,
+   "fim": 12.85233228
+  },
+  {
+   "palavra": "Mesmo",
+   "inicio": 13.767755000000001,
+   "fim": 14.109257051428573
+  },
+  {
+   "palavra": "ataque,",
+   "inicio": 14.109257051428573,
+   "fim": 14.608375434285715
+  },
+  {
+   "palavra": "mesmo",
+   "inicio": 14.608375434285715,
+   "fim": 14.949877485714287
+  },
+  {
+   "palavra": "dano",
+   "inicio": 14.949877485714287,
+   "fim": 15.23884076
+  },
+  {
+   "palavra": "Um",
+   "inicio": 15.467755,
+   "fim": 15.781656426086958
+  },
+  {
+   "palavra": "custa",
+   "inicio": 15.781656426086958,
+   "fim": 16.364616217391305
+  },
+  {
+   "palavra": "84",
+   "inicio": 16.364616217391305,
+   "fim": 16.678517643478262
+  },
+  {
+   "palavra": "centavos",
+   "inicio": 16.678517643478262,
+   "fim": 17.5305358
+  },
+  {
+   "palavra": "o",
+   "inicio": 17.776485,
+   "fim": 17.986569626086958
+  },
+  {
+   "palavra": "outro,",
+   "inicio": 17.986569626086958,
+   "fim": 18.70085735478261
+  },
+  {
+   "palavra": "76",
+   "inicio": 18.70085735478261,
+   "fim": 18.994975831304348
+  },
+  {
+   "palavra": "dólares",
+   "inicio": 18.994975831304348,
+   "fim": 19.70926356
+  },
+  {
+   "palavra": "A",
+   "inicio": 20.439796,
+   "fim": 20.57640846197183
+  },
+  {
+   "palavra": "carta",
+   "inicio": 20.57640846197183,
+   "fim": 20.93160086309859
+  },
+  {
+   "palavra": "mais",
+   "inicio": 20.93160086309859,
+   "fim": 21.232148279436622
+  },
+  {
+   "palavra": "cara",
+   "inicio": 21.232148279436622,
+   "fim": 21.53269569577465
+  },
+  {
+   "palavra": "nem",
+   "inicio": 21.53269569577465,
+   "fim": 21.778598127323946
+  },
+  {
+   "palavra": "é",
+   "inicio": 21.778598127323946,
+   "fim": 21.915210589295775
+  },
+  {
+   "palavra": "Pokémon",
+   "inicio": 21.915210589295775,
+   "fim": 22.37969296
+  },
+  {
+   "palavra": "É",
+   "inicio": 22.620522,
+   "fim": 22.771857250632912
+  },
+  {
+   "palavra": "esta",
+   "inicio": 22.771857250632912,
+   "fim": 23.104794802025317
+  },
+  {
+   "palavra": "Ultra",
+   "inicio": 23.104794802025317,
+   "fim": 23.498266453670887
+  },
+  {
+   "palavra": "Ball",
+   "inicio": 23.498266453670887,
+   "fim": 23.83120400506329
+  },
+  {
+   "palavra": "dourada,",
+   "inicio": 23.83120400506329,
+   "fim": 24.46681205772152
+  },
+  {
+   "palavra": "de",
+   "inicio": 24.46681205772152,
+   "fim": 24.678681408607595
+  },
+  {
+   "palavra": "2013",
+   "inicio": 24.678681408607595,
+   "fim": 25.01161896
+  },
+  {
+   "palavra": "Quatro",
+   "inicio": 25.271248000000003,
+   "fim": 25.744075360000004
+  },
+  {
+   "palavra": "cópias",
+   "inicio": 25.744075360000004,
+   "fim": 26.216902720000004
+  },
+  {
+   "palavra": "quase",
+   "inicio": 26.416305,
+   "fim": 27.118473327804878
+  },
+  {
+   "palavra": "4.800",
+   "inicio": 27.118473327804878,
+   "fim": 27.71261575902439
+  },
+  {
+   "palavra": "dólares",
+   "inicio": 27.71261575902439,
+   "fim": 28.63083588
+  },
+  {
+   "palavra": "O",
+   "inicio": 29.573108000000005,
+   "fim": 29.692589296202538
+  },
+  {
+   "palavra": "poder",
+   "inicio": 29.692589296202538,
+   "fim": 30.00324066632912
+  },
+  {
+   "palavra": "é",
+   "inicio": 30.00324066632912,
+   "fim": 30.12272196253165
+  },
+  {
+   "palavra": "o",
+   "inicio": 30.12272196253165,
+   "fim": 30.242203258734182
+  },
+  {
+   "palavra": "mesmo:",
+   "inicio": 30.242203258734182,
+   "fim": 30.64843966582279
+  },
+  {
+   "palavra": "só",
+   "inicio": 30.64843966582279,
+   "fim": 30.815713480506332
+  },
+  {
+   "palavra": "muda",
+   "inicio": 30.815713480506332,
+   "fim": 31.078572332151904
+  },
+  {
+   "palavra": "a",
+   "inicio": 31.078572332151904,
+   "fim": 31.198053628354437
+  },
+  {
+   "palavra": "arte",
+   "inicio": 31.198053628354437,
+   "fim": 31.460912480000005
+  },
+  {
+   "palavra": "O",
+   "inicio": 31.973108000000003,
+   "fim": 32.12859730232559
+  },
+  {
+   "palavra": "Dragapult",
+   "inicio": 32.12859730232559,
+   "fim": 32.78165237209303
+  },
+  {
+   "palavra": "campeão",
+   "inicio": 32.78165237209303,
+   "fim": 33.310316
+  },
+  {
+   "palavra": "sai",
+   "inicio": 33.526033000000005,
+   "fim": 33.7928175412766
+  },
+  {
+   "palavra": "por",
+   "inicio": 33.7928175412766,
+   "fim": 34.0596020825532
+  },
+  {
+   "palavra": "33",
+   "inicio": 34.0596020825532,
+   "fim": 34.26710117021277
+  },
+  {
+   "palavra": "dólares,",
+   "inicio": 34.26710117021277,
+   "fim": 34.889598433191495
+  },
+  {
+   "palavra": "na",
+   "inicio": 34.889598433191495,
+   "fim": 35.09709752085107
+  },
+  {
+   "palavra": "versão",
+   "inicio": 35.09709752085107,
+   "fim": 35.54173842297873
+  },
+  {
+   "palavra": "mais",
+   "inicio": 35.54173842297873,
+   "fim": 35.86780841787235
+  },
+  {
+   "palavra": "barata",
+   "inicio": 35.86780841787235,
+   "fim": 36.312449320000006
+  }
+ ]
+}
