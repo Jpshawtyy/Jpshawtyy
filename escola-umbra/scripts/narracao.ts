@@ -208,7 +208,7 @@ export const narrar = async (
   if (roteiro.cenas.some((c) => c.inicio !== undefined)) {
     throw new ErroNarrador('"narracao": "auto" calcula o tempo das cenas sozinho: tire o "inicio" das cenas.');
   }
-  const config: ConfigNarrador = lerConfigNarrador();
+  const config: ConfigNarrador = {...lerConfigNarrador(), ...(roteiro.narrador ?? {})};
   const pasta = path.join(RAIZ, 'audio');
   fs.mkdirSync(pasta, {recursive: true});
   const arquivoRel = `audio/${nome}-narracao.mp3`;

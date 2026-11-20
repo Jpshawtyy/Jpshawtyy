@@ -52,6 +52,7 @@ const GESTO_KAI: Record<TipoCena, string> = {
   decklist: 'falando',
   confronto: 'pensando',
   impacto: 'falando',
+  contagem: 'comemorando',
   cta: 'joinha',
 };
 const GESTO_FAISCA: Record<TipoCena, string> = {
@@ -65,6 +66,7 @@ const GESTO_FAISCA: Record<TipoCena, string> = {
   decklist: 'curioso',
   confronto: 'curioso',
   impacto: 'feliz',
+  contagem: 'feliz',
   cta: 'feliz',
 };
 

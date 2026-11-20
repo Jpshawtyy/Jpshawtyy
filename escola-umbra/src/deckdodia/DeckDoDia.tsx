@@ -5,14 +5,16 @@ import React, {useMemo} from 'react';
 import {AbsoluteFill, Audio, Sequence, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
 import type {LegendaPronta, PalavraFalada, PropsAula} from '../tipos';
 import {legendasDaCena, planejar} from '../tempo';
-import {AREA, CORES} from '../tema';
+import {AREA, CORES, VIDEO} from '../tema';
+
+const VIDEO_FPS = VIDEO.fps;
 import {FONTE_TITULO} from '../fontes';
 import {MOLA_PULO, mola, trecho} from '../anim';
 import {Fundo} from '../componentes/Fundo';
 import {Guias, Moldura} from '../componentes/Moldura';
 import {quebrarPalavras, temposDaFala} from '../componentes/Legenda';
 import {Faiscas, Flash, Sfx} from './efeitos';
-import {CartaShow, Confronto, CtaDeck, DecklistDeal, GanchoDeck, ImpactoDeck, RankingDeck} from './cenas';
+import {CartaShow, Confronto, ContagemDeck, CtaDeck, DecklistDeal, GanchoDeck, ImpactoDeck, RankingDeck} from './cenas';
 
 // Legenda de impacto: maiúsculas grossas, a palavra que está sendo falada ganha uma tarja vermelha.
 const LegendaImpacto: React.FC<{legendas: LegendaPronta[]; falas?: PalavraFalada[]; inicioDaCena: number}> = ({legendas, falas, inicioDaCena}) => {
@@ -94,7 +96,8 @@ export const DeckDoDia: React.FC<PropsAula> = (props) => {
         } else if (cena.tipo === 'piramide') corpo = <RankingDeck cena={cena} cartas={cartas} duracao={c.duracao} />;
         else if (cena.tipo === 'carta_destaque') corpo = <CartaShow cena={cena} cartas={cartas} duracao={c.duracao} />;
         else if (cena.tipo === 'decklist') corpo = <DecklistDeal cena={cena} cartas={cartas} duracao={c.duracao} />;
-        else if (cena.tipo === 'impacto') corpo = <ImpactoDeck cena={cena} />;
+        else if (cena.tipo === 'impacto') corpo = <ImpactoDeck cena={cena} cartas={cartas} />;
+        else if (cena.tipo === 'contagem') corpo = <ContagemDeck cena={cena} />;
         else if (cena.tipo === 'confronto') corpo = <Confronto cena={cena} cartas={cartas} duracao={c.duracao} />;
         else if (cena.tipo === 'cta') corpo = <CtaDeck cena={cena} cartas={cartas} refs={capa} />;
         return (
@@ -110,7 +113,17 @@ export const DeckDoDia: React.FC<PropsAula> = (props) => {
       })}
       <Moldura numero={roteiro.numero} serie={roteiro.serie} formato={roteiro.formato} rotulo={roteiro.rotulo} />
       {audio?.narracao ? <Audio src={staticFile(audio.narracao)} volume={audio.narracaoVolume ?? 1} /> : null}
-      {audio?.musica ? <Audio src={staticFile(audio.musica)} volume={audio.musicaVolume ?? 0.15} loop /> : null}
+      {audio?.musica ? (
+        <Audio
+          src={staticFile(audio.musica)}
+          // abaixa a música enquanto o narrador fala (palavras com tempo vindas da narração)
+          volume={(q) => {
+            const t = q / VIDEO_FPS;
+            const falando = (palavras ?? []).some((p) => t >= p.inicio - 0.12 && t <= p.fim + 0.2);
+            return (audio.musicaVolume ?? 0.15) * (falando ? 0.45 : 1);
+          }}
+        />
+      ) : null}
       {guias ? <Guias /> : null}
     </AbsoluteFill>
   );

@@ -234,8 +234,8 @@ export const LinhasDeVelocidade: React.FC<{em: number; x?: number; y?: number}> 
 
 // ---------- Som ----------
 
-export type Som = 'whoosh' | 'impacto' | 'carta' | 'brilho' | 'subida' | 'boing' | 'pop' | 'ding' | 'trombone';
-const VOLUME: Record<Som, number> = {whoosh: 0.32, impacto: 0.5, carta: 0.22, brilho: 0.2, subida: 0.18, boing: 0.4, pop: 0.4, ding: 0.35, trombone: 0.42};
+export type Som = 'whoosh' | 'impacto' | 'carta' | 'brilho' | 'subida' | 'boing' | 'pop' | 'ding' | 'trombone' | 'boom' | 'buzina' | 'arranhao' | 'tique';
+const VOLUME: Record<Som, number> = {whoosh: 0.32, impacto: 0.5, carta: 0.22, brilho: 0.2, subida: 0.18, boing: 0.4, pop: 0.4, ding: 0.35, trombone: 0.42, boom: 0.55, buzina: 0.3, arranhao: 0.35, tique: 0.4};
 
 // Efeito sonoro num segundo da cena.
 export const Sfx: React.FC<{som: Som; em: number; volume?: number}> = ({som, em, volume}) => {

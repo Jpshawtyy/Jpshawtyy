@@ -7,7 +7,7 @@ import {FONTE_MONO, FONTE_TEXTO, FONTE_TITULO} from '../fontes';
 import {MOLA_PULO, MOLA_SECA, acaso, mola, trecho} from '../anim';
 import {TituloArena, sombraTitulo} from '../componentes/Arena';
 import {legendasDaCena} from '../tempo';
-import type {Cena, CenaCartaDestaque, CenaConfronto, CenaImpacto, CenaCta, CenaDecklist, CenaGancho, CenaPiramide, MapaCartas} from '../tipos';
+import type {Cena, CenaCartaDestaque, CenaConfronto, CenaContagem, CenaImpacto, CenaCta, CenaDecklist, CenaGancho, CenaPiramide, MapaCartas} from '../tipos';
 import {Carta3D, Flash, LinhasDeVelocidade, Raios, Sfx, Tremer, balanco, passadaDeBrilho} from './efeitos';
 
 const sair = Easing.out(Easing.cubic);
@@ -771,58 +771,195 @@ const VersosVoando: React.FC<{quantidade?: number; semente?: number}> = ({quanti
   );
 };
 
-export const ImpactoDeck: React.FC<{cena: CenaImpacto}> = ({cena}) => {
+// Confete dourado e vermelho explodindo de um ponto, com gravidade.
+const Confete: React.FC<{em: number; x: number; y: number; quantidade?: number}> = ({em, x, y, quantidade = 70}) => {
+  const quadro = useCurrentFrame();
+  const {fps} = useVideoConfig();
+  const d = quadro / fps - em;
+  if (d < 0 || d > 3) return null;
+  return (
+    <>
+      {Array.from({length: quantidade}, (_, i) => {
+        const ang = acaso(i * 3.3) * Math.PI * 2;
+        const vel = 700 + acaso(i * 5.1) * 1300;
+        const px = x + Math.cos(ang) * vel * d * Math.exp(-d * 0.9);
+        const py = y + Math.sin(ang) * vel * d * Math.exp(-d * 0.9) + 900 * d * d;
+        const giro = d * (300 + acaso(i) * 700) * (i % 2 ? 1 : -1);
+        const cor = i % 3 === 0 ? CORES.vermelho : i % 3 === 1 ? CORES.ouro : CORES.texto;
+        return (
+          <div
+            key={i}
+            style={{
+              position: 'absolute',
+              left: px,
+              top: py,
+              width: 14 + acaso(i * 7) * 14,
+              height: 8 + acaso(i * 2) * 8,
+              background: cor,
+              transform: `rotate(${giro}deg) rotateX(${giro * 1.3}deg)`,
+              opacity: Math.min(1, (3 - d) * 1.5),
+              zIndex: 20,
+            }}
+          />
+        );
+      })}
+    </>
+  );
+};
+
+// Cartas explodindo do centro para fora, girando (a "galera" chegando).
+const CartasExplodindo: React.FC<{refs: string[]; cartas: MapaCartas; em: number}> = ({refs, cartas, em}) => {
   const quadro = useCurrentFrame();
   const {fps} = useVideoConfig();
   const t = quadro / fps;
-  const BATE = cena.logo ? 0.35 : 0.15;
+  const lista = refs.filter((r) => cartas[r]);
+  return (
+    <>
+      {lista.map((ref, i) => {
+        const p = voo(t, em + i * 0.05, 0.45);
+        if (p <= 0) return null;
+        const ang = -Math.PI / 2 + (i - (lista.length - 1) / 2) * 0.62;
+        const raio = 470 * p;
+        const flutua = Math.sin(t * 2 + i) * 10;
+        return (
+          <Carta3D
+            key={ref}
+            imagem={cartas[ref].imagem}
+            x={AREA.cx + Math.cos(ang) * raio * 0.95}
+            y={860 + Math.sin(ang) * raio * 0.7 + 230 + flutua}
+            w={210}
+            ry={(1 - p) * 540 + Math.sin(t * 1.4 + i) * 12}
+            rz={(i - (lista.length - 1) / 2) * 14 * p}
+            escala={0.3 + 0.7 * p}
+            z={1}
+            brilho={passadaDeBrilho(t, 1.3, em + 0.5 + i * 0.1)}
+          />
+        );
+      })}
+    </>
+  );
+};
+
+export const ImpactoDeck: React.FC<{cena: CenaImpacto; cartas: MapaCartas}> = ({cena, cartas}) => {
+  const quadro = useCurrentFrame();
+  const {fps} = useVideoConfig();
+  const t = quadro / fps;
+  const BATE = cena.bate ?? (cena.logo ? 0.35 : 0.15);
   const logo = mola(quadro, fps, BATE, MOLA_PULO);
-  const textoEm = cena.logo ? 0.75 : BATE;
-  const textoTop = cena.logo ? 1060 : 720;
+  const textoEm = cena.logo ? BATE + 0.4 : BATE;
+  const comCartas = (cena.cartas?.length ?? 0) > 0;
+  const textoTop = cena.logo ? 1060 : comCartas ? 560 : 720;
   const semente = cena.texto.length;
+  // dramático: a câmera vai entrando devagar e a vinheta vermelha fecha
+  const zoom = cena.dramatico ? 1 + 0.12 * trecho(t, [BATE, BATE + 3], [0, 1]) : 1;
+  const glitch = cena.logo ? trecho(t, [textoEm, textoEm + 0.05], [0, 1]) * (1 - trecho(t, [textoEm + 0.3, textoEm + 0.45], [0, 1])) : 0;
+  const tremido = glitch > 0 ? Math.round(Math.sin(t * 90) * 10 * glitch) : 0;
   return (
     <AbsoluteFill>
-      <Raios x={AREA.cx} y={cena.logo ? 760 : 800} forca={trecho(t, [BATE, BATE + 0.3], [0, 1])} cor={cena.logo ? 'rgba(240,193,96,0.45)' : 'rgba(229,50,63,0.55)'} />
-      <VersosVoando semente={semente} />
-      <Tremer impactos={[BATE, textoEm, ...(cena.logo ? [textoEm] : [])]}>
-        {cena.logo && t >= BATE ? (
+      <Raios x={AREA.cx} y={cena.logo ? 760 : 800} forca={trecho(t, [BATE, BATE + 0.3], [0, 1]) * (cena.dramatico ? 0.5 : 1)} cor={cena.logo ? 'rgba(240,193,96,0.45)' : 'rgba(229,50,63,0.55)'} />
+      {cena.dramatico ? null : <VersosVoando semente={semente} />}
+      <AbsoluteFill style={{transform: `scale(${zoom})`}}>
+        <Tremer impactos={[BATE, textoEm]} forca={cena.dramatico ? 34 : 22}>
+          {comCartas ? <CartasExplodindo refs={cena.cartas!} cartas={cartas} em={BATE} /> : null}
+          {cena.logo && t >= BATE ? (
+            <div
+              style={{
+                position: 'absolute',
+                left: AREA.cx - 230,
+                top: 760 - 230,
+                width: 460,
+                height: 460,
+                opacity: Math.min(1, logo * 2),
+                transform: `scale(${3.2 - 2.2 * logo}) rotate(${(1 - logo) * -40 + Math.sin(t * 1.3) * 2}deg)`,
+                filter: `drop-shadow(0 0 ${40 * Math.min(1, logo)}px rgba(240,193,96,0.7))`,
+                zIndex: 5,
+              }}
+            >
+              <Img src={staticFile('logo.png')} style={{width: '100%', height: '100%', objectFit: 'contain'}} />
+            </div>
+          ) : null}
+          {cena.antes ? (
+            <Batida em={Math.max(0, BATE - 0.12)} style={{left: AREA.x0, width: AREA.largura, top: textoTop - 110, display: 'flex', justifyContent: 'center', zIndex: 6}}>
+              <div style={{fontFamily: FONTE_TITULO, fontSize: 84, color: CORES.ouro, textShadow: sombraTitulo(84), transform: 'skewX(-9deg)'}}>{cena.antes}</div>
+            </Batida>
+          ) : null}
+          <Batida em={textoEm} style={{left: AREA.x0, width: AREA.largura, top: textoTop, display: 'flex', justifyContent: 'center', zIndex: 6}}>
+            <div style={{transform: `translateX(${tremido}px)`, filter: glitch > 0 ? `drop-shadow(${6 * glitch}px 0 0 rgba(0,255,255,0.7)) drop-shadow(${-6 * glitch}px 0 0 rgba(255,0,80,0.8))` : undefined}}>
+              <TituloArena texto={cena.texto} largura={AREA.largura} maximo={cena.logo ? 150 : comCartas ? 150 : 170} />
+            </div>
+          </Batida>
+          {cena.subtitulo ? (
+            <Batida em={textoEm + 0.3} style={{left: AREA.x0, width: AREA.largura, top: textoTop + (cena.logo ? 175 : 200), display: 'flex', justifyContent: 'center', zIndex: 6}}>
+              <div style={{background: CORES.vermelho, transform: 'skewX(-12deg)', padding: '8px 30px', boxShadow: '0 10px 26px rgba(0,0,0,0.6)'}}>
+                <div style={{transform: 'skewX(12deg)', fontFamily: FONTE_MONO, fontWeight: 700, fontSize: 40, letterSpacing: '0.16em', textTransform: 'uppercase', color: CORES.texto}}>{cena.subtitulo}</div>
+              </div>
+            </Batida>
+          ) : null}
+        </Tremer>
+      </AbsoluteFill>
+      {cena.dramatico ? (
+        <AbsoluteFill
+          style={{
+            pointerEvents: 'none',
+            background: `radial-gradient(ellipse at 50% 45%, rgba(0,0,0,0) ${55 - 15 * trecho(t, [BATE, BATE + 2], [0, 1])}%, rgba(125,15,26,0.75) 100%)`,
+          }}
+        />
+      ) : null}
+      {cena.logo ? <Confete em={BATE} x={AREA.cx} y={760} /> : null}
+      {cena.logo ? <LinhasDeVelocidade em={BATE} x={AREA.cx} y={760} /> : null}
+      <Flash em={[BATE]} forca={cena.logo ? 0.95 : cena.dramatico ? 0.3 : 0.5} />
+      {cena.dramatico ? <Sfx som="arranhao" em={0} /> : <Sfx som="whoosh" em={0} volume={0.3} />}
+      {cena.dramatico ? <Sfx som="boom" em={BATE} /> : <Sfx som="impacto" em={BATE} volume={cena.logo ? 0.6 : 0.45} />}
+      {cena.logo ? <Sfx som="buzina" em={textoEm} /> : null}
+      {cena.logo ? <Sfx som="brilho" em={BATE + 0.1} volume={0.3} /> : null}
+      {comCartas ? cena.cartas!.map((_, i) => <Sfx key={i} som="carta" em={BATE + i * 0.05} volume={0.25} />) : null}
+      {cena.subtitulo ? <Sfx som="pop" em={textoEm + 0.3} volume={0.3} /> : null}
+    </AbsoluteFill>
+  );
+};
+
+// ---------- Contagem regressiva ----------
+
+export const ContagemDeck: React.FC<{cena: CenaContagem}> = ({cena}) => {
+  const quadro = useCurrentFrame();
+  const {fps} = useVideoConfig();
+  const t = quadro / fps;
+  const de = cena.de ?? 3;
+  const passo = cena.passo ?? 0.5;
+  const k = Math.floor(t / passo);
+  const numero = de - k;
+  const inicio = k * passo;
+  const e = mola(quadro, fps, inicio, MOLA_PULO);
+  const impactos = Array.from({length: de}, (_, i) => i * passo);
+  return (
+    <AbsoluteFill>
+      <Raios x={AREA.cx} y={820} forca={0.4 + 0.2 * k} cor={k % 2 ? 'rgba(240,193,96,0.45)' : 'rgba(229,50,63,0.6)'} />
+      <Tremer impactos={impactos} forca={18 + 8 * k}>
+        {numero >= 1 ? (
           <div
             style={{
               position: 'absolute',
-              left: AREA.cx - 230,
-              top: 760 - 230,
-              width: 460,
-              height: 460,
-              opacity: Math.min(1, logo * 2),
-              transform: `scale(${3.2 - 2.2 * logo}) rotate(${(1 - logo) * -40 + Math.sin(t * 1.3) * 2}deg)`,
-              filter: `drop-shadow(0 0 ${40 * Math.min(1, logo)}px rgba(240,193,96,0.7))`,
-              zIndex: 5,
+              left: 0,
+              width: '100%',
+              top: 520,
+              textAlign: 'center',
+              fontFamily: FONTE_TITULO,
+              fontSize: 560,
+              lineHeight: 1,
+              color: k % 2 ? CORES.ouro : CORES.texto,
+              textShadow: sombraTitulo(560),
+              transform: `skewX(-9deg) scale(${(2.2 - 1.2 * e) * (1 + 0.08 * k)})`,
+              opacity: Math.min(1, e * 2) * (1 - trecho(t - inicio, [passo * 0.8, passo], [0, 1])),
             }}
           >
-            <Img src={staticFile('logo.png')} style={{width: '100%', height: '100%', objectFit: 'contain'}} />
+            {numero}
           </div>
         ) : null}
-        <Batida em={textoEm} style={{left: AREA.x0, width: AREA.largura, top: textoTop, display: 'flex', justifyContent: 'center', zIndex: 6}}>
-          <TituloArena texto={cena.texto} largura={AREA.largura} maximo={cena.logo ? 150 : 170} />
-        </Batida>
-        {cena.subtitulo ? (
-          <Batida
-            em={textoEm + 0.3}
-            style={{left: AREA.x0, width: AREA.largura, top: textoTop + (cena.logo ? 175 : 200), display: 'flex', justifyContent: 'center', zIndex: 6}}
-          >
-            <div style={{background: CORES.vermelho, transform: 'skewX(-12deg)', padding: '8px 30px', boxShadow: '0 10px 26px rgba(0,0,0,0.6)'}}>
-              <div style={{transform: 'skewX(12deg)', fontFamily: FONTE_MONO, fontWeight: 700, fontSize: 40, letterSpacing: '0.16em', textTransform: 'uppercase', color: CORES.texto}}>{cena.subtitulo}</div>
-            </div>
-          </Batida>
-        ) : null}
       </Tremer>
-      {cena.logo ? <LinhasDeVelocidade em={BATE} x={AREA.cx} y={760} /> : null}
-      <Flash em={[BATE]} forca={cena.logo ? 0.9 : 0.5} />
-      <Sfx som="whoosh" em={0} volume={0.3} />
-      <Sfx som="impacto" em={BATE} volume={cena.logo ? 0.6 : 0.45} />
-      {cena.logo ? <Sfx som="impacto" em={textoEm} volume={0.4} /> : null}
-      {cena.logo ? <Sfx som="brilho" em={BATE + 0.1} volume={0.3} /> : null}
-      {cena.subtitulo ? <Sfx som="pop" em={textoEm + 0.3} volume={0.3} /> : null}
+      <Flash em={impactos} forca={0.35} />
+      {impactos.map((m, i) => (
+        <Sfx key={i} som="tique" em={m} />
+      ))}
     </AbsoluteFill>
   );
 };

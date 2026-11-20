@@ -130,7 +130,19 @@ export type CenaDecklist = CenaBase & {
 };
 
 // Impacto: frase gigante batendo na tela, com versos de carta voando atrás. Com "logo", o emblema cai na tela (revelação).
-export type CenaImpacto = CenaBase & {tipo: 'impacto'; texto: string; subtitulo?: string; logo?: boolean};
+export type CenaImpacto = CenaBase & {
+  tipo: 'impacto';
+  texto: string;
+  subtitulo?: string;
+  logo?: boolean;
+  antes?: string; // rótulo pequeno em cima do texto, no formato de meme (ex.: "POV:")
+  dramatico?: boolean; // zoom lento, vinheta vermelha e estrondo grave
+  cartas?: RefCarta[]; // cartas explodindo do centro para fora
+  bate?: number; // segundo em que a frase (ou o emblema) bate na tela
+};
+
+// Contagem regressiva (3, 2, 1), um número por tempo da música.
+export type CenaContagem = CenaBase & {tipo: 'contagem'; de?: number; passo?: number};
 
 // Confronto: o atacante dá o golpe no defensor e aparece o dano que entrou de verdade (ex.: 200 vira 0).
 export type CenaConfronto = CenaBase & {
@@ -226,6 +238,7 @@ export type Cena =
   | CenaDecklist
   | CenaConfronto
   | CenaImpacto
+  | CenaContagem
   | CenaCta;
 
 export type TipoCena = Cena['tipo'];
@@ -251,6 +264,7 @@ export type Roteiro = {
   narracao?: Audio; // caminho de um .mp3 seu, ou "auto" para o narrador gerar a fala das legendas
   musica?: Audio;
   cartas?: Record<string, DefCarta>;
+  narrador?: {motor?: 'piper' | 'kokoro'; voz?: string; velocidade?: number}; // troca a voz só neste roteiro
   apresentador?: boolean; // Kai e Faísca no vídeo (padrão: sim nas aulas, não no Deck do Dia)
   cenas: Cena[];
 };
