@@ -213,6 +213,10 @@ export const coletarRefs = (roteiro: Roteiro): string[] => {
     if (cena.tipo === 'carta_destaque') add(cena.carta);
     if (cena.tipo === 'gancho') add(cena.carta);
     if (cena.tipo === 'impacto') (cena.cartas ?? []).forEach(add);
+    if (cena.tipo === 'combo') {
+      add(cena.alvo);
+      cena.passos.forEach((p) => add(p.carta));
+    }
     if (cena.tipo === 'confronto') {
       add(cena.atacante);
       add(cena.defensor);

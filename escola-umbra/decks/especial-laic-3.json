@@ -1,0 +1,488 @@
+{
+  "formato": "deck_do_dia",
+  "rotulo": "Especial LAIC",
+  "serie": "Deck maluco #2",
+  "numero": 3,
+  "titulo_capa": "deck maluco 2",
+  "subtitulo_capa": "greninja + dusknoir",
+  "capa": {
+    "cartas": [
+      "dusknoir",
+      "greninja",
+      "gravity"
+    ]
+  },
+  "narracao": "auto",
+  "cartas": {
+    "froakie": {
+      "nome": "Froakie",
+      "set": "Chaos Rising",
+      "numero": 20
+    },
+    "frogadier": {
+      "nome": "Frogadier",
+      "set": "Chaos Rising",
+      "numero": 21
+    },
+    "greninja": {
+      "nome": "Greninja ex",
+      "set": "Twilight Masquerade",
+      "numero": 106
+    },
+    "snorunt": {
+      "nome": "Snorunt",
+      "set": "Ascended Heroes",
+      "numero": 46
+    },
+    "froslass": {
+      "nome": "Mega Froslass ex",
+      "set": "Ascended Heroes",
+      "numero": 47
+    },
+    "duskull": {
+      "nome": "Duskull",
+      "set": "Prismatic Evolutions",
+      "numero": 35
+    },
+    "dusclops": {
+      "nome": "Dusclops",
+      "set": "Prismatic Evolutions",
+      "numero": 36
+    },
+    "dusknoir": {
+      "nome": "Dusknoir",
+      "set": "Prismatic Evolutions",
+      "numero": 37
+    },
+    "meowth": {
+      "nome": "Meowth ex",
+      "set": "Perfect Order",
+      "numero": 62
+    },
+    "staryu": {
+      "nome": "Staryu",
+      "set": "Perfect Order",
+      "numero": 20
+    },
+    "starmie": {
+      "nome": "Mega Starmie ex",
+      "set": "Perfect Order",
+      "numero": 21
+    },
+    "fezandipiti": {
+      "nome": "Fezandipiti ex",
+      "set": "Ascended Heroes",
+      "numero": 142
+    },
+    "latias": {
+      "nome": "Latias ex",
+      "set": "Surging Sparks",
+      "numero": 76
+    },
+    "budew": {
+      "nome": "Budew",
+      "set": "Ascended Heroes",
+      "numero": 16
+    },
+    "lillie": {
+      "nome": "Lillie's Determination",
+      "set": "Mega Evolution",
+      "numero": 119
+    },
+    "hilda": {
+      "nome": "Hilda",
+      "set": "White Flare",
+      "numero": 84
+    },
+    "colress": {
+      "nome": "Colress's Tenacity",
+      "set": "Shrouded Fable",
+      "numero": 57
+    },
+    "boss": {
+      "nome": "Boss's Orders",
+      "set": "Mega Evolution",
+      "numero": 114
+    },
+    "ultra-ball": {
+      "nome": "Ultra Ball",
+      "set": "Mega Evolution",
+      "numero": 131
+    },
+    "poffin": {
+      "nome": "Buddy-Buddy Poffin",
+      "set": "Temporal Forces",
+      "numero": 144
+    },
+    "poke-pad": {
+      "nome": "Poké Pad",
+      "set": "Perfect Order",
+      "numero": 81
+    },
+    "candy": {
+      "nome": "Rare Candy",
+      "set": "Mega Evolution",
+      "numero": 125
+    },
+    "switch": {
+      "nome": "Switch",
+      "set": "Mega Evolution",
+      "numero": 130
+    },
+    "stretcher": {
+      "nome": "Night Stretcher",
+      "set": "Ascended Heroes",
+      "numero": 196
+    },
+    "red-card": {
+      "nome": "Special Red Card",
+      "set": "Chaos Rising",
+      "numero": 82
+    },
+    "grand-tree": {
+      "nome": "Grand Tree",
+      "set": "Stellar Crown",
+      "numero": 136
+    },
+    "gravity": {
+      "nome": "Gravity Mountain",
+      "set": "Surging Sparks",
+      "numero": 177
+    },
+    "agua": {
+      "nome": "Basic Water Energy",
+      "set": "Scarlet & Violet Energies",
+      "numero": 3
+    },
+    "ignition": {
+      "nome": "Ignition Energy",
+      "set": "White Flare",
+      "numero": 86
+    },
+    "bubbly": {
+      "nome": "Bubbly Water Energy",
+      "set": "Chaos Rising",
+      "numero": 84
+    },
+    "dragapult": {
+      "nome": "Dragapult ex",
+      "set": "Twilight Masquerade",
+      "numero": 130
+    }
+  },
+  "cenas": [
+    {
+      "tipo": "gancho",
+      "texto": "deck maluco",
+      "subtitulo": "parte 2",
+      "carta": "greninja",
+      "duracao": 2.6,
+      "legendas": [
+        {
+          "texto": "mais um deck *maluco* pro LAIC",
+          "em": 0.05,
+          "fala": "Mais um deck maluco pro Laique."
+        },
+        {
+          "texto": "Greninja... com *Dusknoir*?",
+          "em": 1.5,
+          "fala": "Greninja com Dusknoir?"
+        }
+      ]
+    },
+    {
+      "tipo": "carta_destaque",
+      "carta": "greninja",
+      "pill": "6º LUGAR",
+      "pill_cor": "ouro",
+      "titulo": "Greninja ex",
+      "foco": {
+        "em": 3.9,
+        "x": 0.5,
+        "y": 0.66,
+        "escala": 1.9
+      },
+      "duracao": 6,
+      "legendas": [
+        {
+          "texto": "*6º* no Regional de Gdańsk",
+          "em": 0.3,
+          "fala": "Sexto lugar no Regional de Gdansk."
+        },
+        {
+          "texto": "e só *2* chegaram no dia 2 com ele",
+          "em": 1.9,
+          "fala": "E só dois chegaram no dia dois com ele."
+        },
+        {
+          "texto": "*Shinobi Blade*: 170 e busca uma carta",
+          "em": 3.8,
+          "fala": "Shinobi Blade: cento e setenta, e busca uma carta."
+        }
+      ]
+    },
+    {
+      "tipo": "carta_destaque",
+      "carta": "dusknoir",
+      "pill": "KAMIKAZE",
+      "pill_cor": "vermelho",
+      "titulo": "Dusknoir",
+      "foco": {
+        "em": 0.7,
+        "x": 0.5,
+        "y": 0.55,
+        "escala": 1.9
+      },
+      "duracao": 4.2,
+      "legendas": [
+        {
+          "texto": "*Cursed Blast*: 13 contadores onde quiser",
+          "em": 0.3,
+          "fala": "Cursed Blast: treze contadores onde quiser."
+        },
+        {
+          "texto": "e o Dusknoir *se explode*",
+          "em": 2.4,
+          "fala": "E o Dusknoir se nocauteia."
+        }
+      ]
+    },
+    {
+      "tipo": "combo",
+      "alvo": "dragapult",
+      "selo": "NOCAUTE",
+      "duracao": 7,
+      "passos": [
+        {
+          "carta": "gravity",
+          "tipo": "hp",
+          "valor": 30
+        },
+        {
+          "carta": "dusknoir",
+          "tipo": "dano",
+          "valor": 130
+        },
+        {
+          "carta": "greninja",
+          "tipo": "dano",
+          "valor": 170
+        }
+      ],
+      "legendas": [
+        {
+          "texto": "contra o *Dragapult*: 320 de HP",
+          "fala": "Contra o Dragapult, com trezentos e vinte de HP:"
+        },
+        {
+          "texto": "*Gravity Mountain*: -30 de HP",
+          "fala": "Gravity Mountain tira trinta de HP."
+        },
+        {
+          "texto": "*Dusknoir*: 130",
+          "fala": "Dusknoir: cento e trinta."
+        },
+        {
+          "texto": "*Greninja*: 170. *Nocaute!*",
+          "fala": "Greninja: cento e setenta. Nocaute!"
+        }
+      ]
+    },
+    {
+      "tipo": "decklist",
+      "titulo": "montando o deck",
+      "duracao": 9,
+      "cartas": [
+        {
+          "carta": "froakie",
+          "qtd": 3
+        },
+        {
+          "carta": "frogadier",
+          "qtd": 2
+        },
+        {
+          "carta": "greninja",
+          "qtd": 2
+        },
+        {
+          "carta": "duskull",
+          "qtd": 2
+        },
+        {
+          "carta": "dusclops",
+          "qtd": 2
+        },
+        {
+          "carta": "dusknoir",
+          "qtd": 2
+        },
+        {
+          "carta": "snorunt",
+          "qtd": 2
+        },
+        {
+          "carta": "froslass",
+          "qtd": 1
+        },
+        {
+          "carta": "staryu",
+          "qtd": 1
+        },
+        {
+          "carta": "starmie",
+          "qtd": 1
+        },
+        {
+          "carta": "gravity",
+          "qtd": 1
+        },
+        {
+          "carta": "ignition",
+          "qtd": 3
+        },
+        {
+          "carta": "meowth",
+          "qtd": 2
+        },
+        {
+          "carta": "fezandipiti",
+          "qtd": 1
+        },
+        {
+          "carta": "latias",
+          "qtd": 1
+        },
+        {
+          "carta": "budew",
+          "qtd": 1
+        },
+        {
+          "carta": "lillie",
+          "qtd": 4
+        },
+        {
+          "carta": "hilda",
+          "qtd": 2
+        },
+        {
+          "carta": "colress",
+          "qtd": 2
+        },
+        {
+          "carta": "boss",
+          "qtd": 2
+        },
+        {
+          "carta": "ultra-ball",
+          "qtd": 4
+        },
+        {
+          "carta": "poffin",
+          "qtd": 4
+        },
+        {
+          "carta": "poke-pad",
+          "qtd": 3
+        },
+        {
+          "carta": "candy",
+          "qtd": 2
+        },
+        {
+          "carta": "switch",
+          "qtd": 1
+        },
+        {
+          "carta": "stretcher",
+          "qtd": 1
+        },
+        {
+          "carta": "red-card",
+          "qtd": 1
+        },
+        {
+          "carta": "grand-tree",
+          "qtd": 1
+        },
+        {
+          "carta": "agua",
+          "qtd": 5
+        },
+        {
+          "carta": "bubbly",
+          "qtd": 1
+        }
+      ],
+      "grupos": [
+        {
+          "cartas": [
+            "froakie",
+            "frogadier",
+            "greninja"
+          ],
+          "adesivo": "o sapo ninja"
+        },
+        {
+          "cartas": [
+            "duskull",
+            "dusclops",
+            "dusknoir"
+          ],
+          "adesivo": "o kamikaze"
+        },
+        {
+          "cartas": [
+            "snorunt",
+            "froslass",
+            "staryu",
+            "starmie"
+          ],
+          "adesivo": "+2 megas?!"
+        },
+        {
+          "cartas": [
+            "gravity",
+            "ignition"
+          ],
+          "adesivo": "vale 3\nenergias"
+        }
+      ],
+      "legendas": [
+        {
+          "texto": "agora, *montando*:",
+          "fala": "Agora, montando."
+        },
+        {
+          "texto": "a linha do *Greninja*",
+          "fala": "A linha do Greninja."
+        },
+        {
+          "texto": "a linha do *Dusknoir*",
+          "fala": "A linha do Dusknoir."
+        },
+        {
+          "texto": "e ainda *2 Megas*: Froslass e Starmie",
+          "fala": "E ainda dois Megas: Froslass e Starmie."
+        },
+        {
+          "texto": "*Ignition Energy*: vale 3 num evoluído",
+          "fala": "Ignition Energy: vale três num evoluído."
+        }
+      ]
+    },
+    {
+      "tipo": "cta",
+      "duracao": 4.5,
+      "principal": "COMENTA",
+      "complemento": "qual o próximo deck maluco?",
+      "seguir": "segue @escolaumbratcg",
+      "falas": [
+        {
+          "texto": "Qual o próximo deck maluco? Comenta aí.",
+          "em": 0.25
+        }
+      ]
+    }
+  ]
+}

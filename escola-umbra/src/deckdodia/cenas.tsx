@@ -7,7 +7,7 @@ import {FONTE_MONO, FONTE_TEXTO, FONTE_TITULO} from '../fontes';
 import {MOLA_PULO, MOLA_SECA, acaso, mola, trecho} from '../anim';
 import {TituloArena, sombraTitulo} from '../componentes/Arena';
 import {legendasDaCena} from '../tempo';
-import type {Cena, CenaCartaDestaque, CenaConfronto, CenaContagem, CenaImpacto, CenaCta, CenaDecklist, CenaGancho, CenaPiramide, MapaCartas} from '../tipos';
+import type {Cena, CenaCartaDestaque, CenaCombo, CenaConfronto, CenaContagem, CenaImpacto, CenaCta, CenaDecklist, CenaGancho, CenaPiramide, MapaCartas} from '../tipos';
 import {Carta3D, Flash, LinhasDeVelocidade, Raios, Sfx, Tremer, balanco, passadaDeBrilho} from './efeitos';
 
 const sair = Easing.out(Easing.cubic);
@@ -960,6 +960,139 @@ export const ContagemDeck: React.FC<{cena: CenaContagem}> = ({cena}) => {
       {impactos.map((m, i) => (
         <Sfx key={i} som="tique" em={m} />
       ))}
+    </AbsoluteFill>
+  );
+};
+
+// ---------- Combo: barra de HP descendo até o nocaute ----------
+
+export const ComboDeck: React.FC<{cena: CenaCombo; cartas: MapaCartas; duracao: number}> = ({cena, cartas, duracao}) => {
+  const quadro = useCurrentFrame();
+  const {fps} = useVideoConfig();
+  const t = quadro / fps;
+  const alvo = cartas[cena.alvo];
+  const hpCarta = alvo.hp ?? 0;
+  const BATE = 0.45; // segundos entre a carta entrar e o golpe
+  const passos = cena.passos.map((p, i) => ({...p, em: p.em ?? 0.8 + i * 1.3}));
+  const golpe = (p: {em: number}) => p.em + BATE;
+  // valores animados até agora
+  const aplicado = (p: {em: number}) => voo(t, golpe(p), 0.3);
+  const hpMax = hpCarta - passos.filter((p) => p.tipo === 'hp').reduce((s, p) => s + p.valor * aplicado(p), 0);
+  const dano = passos.filter((p) => p.tipo === 'dano').reduce((s, p) => s + p.valor * aplicado(p), 0);
+  const restante = Math.max(0, hpMax - dano);
+  const ultimo = passos[passos.length - 1];
+  const nocaute = cena.selo && ultimo ? golpe(ultimo) + 0.35 : Infinity;
+  const ko = t >= nocaute ? voo(t, nocaute, 0.6) : 0;
+  const entra = voo(t, 0, 0.4);
+  const bal = balanco(t, 0.6 * (1 - ko));
+  const alvoPos = {x: AREA.cx, y: 600, w: 320};
+  const barra = {x: AREA.x0 + 40, y: 860, w: AREA.largura - 80, h: 44};
+  const carimbo = mola(quadro, fps, nocaute + 0.15, MOLA_SECA);
+  return (
+    <AbsoluteFill>
+      <Raios x={alvoPos.x} y={alvoPos.y} forca={0.6 + 0.4 * ko} cor={ko > 0 ? 'rgba(240,193,96,0.5)' : 'rgba(229,50,63,0.5)'} />
+      <Tremer impactos={[...passos.map(golpe), ...(isFinite(nocaute) ? [nocaute] : [])]} forca={26}>
+        <Carta3D
+          imagem={alvo.imagem}
+          x={alvoPos.x + ko * 120}
+          y={interpolate(entra, [0, 1], [-400, alvoPos.y]) + bal.dy + ko * 260}
+          w={alvoPos.w}
+          ry={interpolate(entra, [0, 1], [-300, 0]) + bal.ry}
+          rx={bal.rx}
+          rz={bal.rz + ko * 38}
+          apagar={ko}
+          opacidade={1 - 0.5 * ko}
+          z={2}
+        />
+        {/* barra de HP: o trilho encolhe quando o HP máximo cai; o preenchimento cai com o dano */}
+        <div style={{position: 'absolute', left: barra.x, top: barra.y, width: barra.w, height: barra.h, opacity: trecho(t, [0.2, 0.4], [0, 1])}}>
+          <div style={{position: 'absolute', inset: 0, background: 'rgba(245,241,232,0.08)', transform: 'skewX(-12deg)'}} />
+          <div style={{position: 'absolute', left: 0, top: 0, bottom: 0, width: `${(hpMax / hpCarta) * 100}%`, background: 'rgba(10,10,13,0.85)', boxShadow: `inset 0 0 0 3px ${CORES.ouro}`, transform: 'skewX(-12deg)'}} />
+          <div
+            style={{
+              position: 'absolute',
+              left: 4,
+              top: 4,
+              bottom: 4,
+              width: `calc(${(restante / hpCarta) * 100}% - 8px)`,
+              background: restante / Math.max(1, hpMax) > 0.5 ? 'linear-gradient(90deg, #3FBF5F, #8BE36A)' : restante > 0 ? `linear-gradient(90deg, ${CORES.vermelhoEscuro}, ${CORES.vermelho})` : 'transparent',
+              transform: 'skewX(-12deg)',
+            }}
+          />
+          <div style={{position: 'absolute', right: 0, top: -64, fontFamily: FONTE_TITULO, fontSize: 52, color: restante <= 0 ? CORES.vermelho : CORES.texto, textShadow: sombraTitulo(52)}}>
+            HP {Math.round(restante)}
+            <span style={{opacity: 0.55}}>/{Math.round(hpMax)}</span>
+          </div>
+        </div>
+        {passos.map((p, i) => {
+          const prox = passos[i + 1]?.em ?? duracao + 1;
+          if (t < p.em || t > prox + 0.2) return null;
+          const c = cartas[p.carta];
+          const chega = voo(t, p.em, 0.35);
+          const avanca = trecho(t, [golpe(p) - 0.12, golpe(p)], [0, 1]) * (1 - voo(t, golpe(p) + 0.05, 0.3));
+          const sai = trecho(t, [prox - 0.05, prox + 0.2], [0, 1]);
+          return (
+            <Carta3D
+              key={i}
+              imagem={c.imagem}
+              x={interpolate(chega, [0, 1], [i % 2 ? 1300 : -220, AREA.cx + (i % 2 ? 150 : -150)]) - (i % 2 ? 150 : -150) * avanca}
+              y={interpolate(chega, [0, 1], [1450, 1130]) - 260 * avanca + sai * 600}
+              w={250}
+              rz={interpolate(chega, [0, 1], [i % 2 ? 40 : -40, i % 2 ? 8 : -8]) + avanca * (i % 2 ? -10 : 10)}
+              ry={interpolate(chega, [0, 1], [180, 0])}
+              aura={0.7 * chega}
+              opacidade={1 - sai}
+              z={4}
+            />
+          );
+        })}
+        {passos.map((p, i) => {
+          const g = golpe(p);
+          if (t < g || t > g + 1.1) return null;
+          const e = mola(quadro, fps, g, MOLA_PULO);
+          const some = trecho(t, [g + 0.8, g + 1.1], [1, 0]);
+          const texto = p.rotulo ?? (p.tipo === 'hp' ? `-${p.valor} HP` : `-${p.valor}`);
+          return (
+            <div
+              key={`n${i}`}
+              style={{
+                position: 'absolute',
+                left: alvoPos.x - 300,
+                width: 600,
+                top: alvoPos.y - 120 - e * 70,
+                textAlign: 'center',
+                zIndex: 9,
+                opacity: some,
+                fontFamily: FONTE_TITULO,
+                fontSize: p.tipo === 'hp' ? 110 : 150,
+                lineHeight: 1,
+                color: p.tipo === 'hp' ? CORES.ouro : CORES.texto,
+                textShadow: sombraTitulo(150),
+                transform: `rotate(${i % 2 ? 7 : -7}deg) scale(${2 - e})`,
+              }}
+            >
+              {texto}
+            </div>
+          );
+        })}
+        {cena.selo && t >= nocaute + 0.15 ? (
+          <div style={{position: 'absolute', left: AREA.x0, width: AREA.largura, top: 520, display: 'flex', justifyContent: 'center', zIndex: 10, opacity: Math.min(1, carimbo * 1.5), transform: `rotate(-12deg) scale(${2.6 - 1.6 * carimbo})`}}>
+            <div style={{border: `9px solid ${CORES.vermelho}`, padding: '0 30px', background: 'rgba(10,10,13,0.8)', fontFamily: FONTE_TITULO, fontSize: 120, lineHeight: 1.08, color: CORES.vermelho, textTransform: 'uppercase'}}>{cena.selo}</div>
+          </div>
+        ) : null}
+      </Tremer>
+      {isFinite(nocaute) ? <Confete em={nocaute + 0.15} x={alvoPos.x} y={alvoPos.y} /> : null}
+      <Flash em={[...passos.map(golpe), ...(isFinite(nocaute) ? [nocaute] : [])]} forca={0.45} />
+      <Sfx som="whoosh" em={0} />
+      {passos.map((p, i) => (
+        <React.Fragment key={i}>
+          <Sfx som="carta" em={p.em} volume={0.25} />
+          <Sfx som="whoosh" em={Math.max(0, golpe(p) - 0.15)} volume={0.3} />
+          <Sfx som={p.tipo === 'hp' ? 'boing' : 'impacto'} em={golpe(p)} volume={p.tipo === 'hp' ? 0.4 : 0.45} />
+        </React.Fragment>
+      ))}
+      {isFinite(nocaute) ? <Sfx som="boom" em={nocaute} volume={0.45} /> : null}
+      {isFinite(nocaute) ? <Sfx som="buzina" em={nocaute + 0.15} volume={0.28} /> : null}
     </AbsoluteFill>
   );
 };

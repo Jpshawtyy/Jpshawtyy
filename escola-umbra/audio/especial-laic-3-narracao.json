@@ -1,0 +1,476 @@
+{
+ "assinatura": "4caf60f85e6039cf438024fb6e4da2acfd31158c",
+ "voz": "pm_santa",
+ "frases": [
+  {
+   "fala": "Mais um deck maluco pro Laique.",
+   "duracao": 1.773379
+  },
+  {
+   "fala": "Greninja com Dusknoir?",
+   "duracao": 1.455714
+  },
+  {
+   "fala": "Sexto lugar no Regional de Gdansk.",
+   "duracao": 1.975102
+  },
+  {
+   "fala": "E só dois chegaram no dia dois com ele.",
+   "duracao": 2.271519
+  },
+  {
+   "fala": "Shinobi Blade: cento e setenta, e busca uma carta.",
+   "duracao": 2.796508
+  },
+  {
+   "fala": "Cursed Blast: treze contadores onde quiser.",
+   "duracao": 2.68322
+  },
+  {
+   "fala": "E o Dusknoir se nocauteia.",
+   "duracao": 1.612381
+  },
+  {
+   "fala": "Contra o Dragapult, com trezentos e vinte de HP:",
+   "duracao": 2.944626
+  },
+  {
+   "fala": "Gravity Mountain tira trinta de HP.",
+   "duracao": 2.386893
+  },
+  {
+   "fala": "Dusknoir: cento e trinta.",
+   "duracao": 1.544014
+  },
+  {
+   "fala": "Greninja: cento e setenta. Nocaute!",
+   "duracao": 1.999433
+  },
+  {
+   "fala": "Agora, montando.",
+   "duracao": 1.104921
+  },
+  {
+   "fala": "A linha do Greninja.",
+   "duracao": 1.244467
+  },
+  {
+   "fala": "A linha do Dusknoir.",
+   "duracao": 1.257937
+  },
+  {
+   "fala": "E ainda dois Megas: Froslass e Starmie.",
+   "duracao": 2.276259
+  },
+  {
+   "fala": "Ignition Energy: vale três num evoluído.",
+   "duracao": 2.428435
+  },
+  {
+   "fala": "Qual o próximo deck maluco? Comenta aí.",
+   "duracao": 2.080295
+  }
+ ],
+ "words": [
+  {
+   "palavra": "mais",
+   "inicio": 0.05,
+   "fim": 0.34260753499999996
+  },
+  {
+   "palavra": "um",
+   "inicio": 0.34260753499999996,
+   "fim": 0.52881233
+  },
+  {
+   "palavra": "deck",
+   "inicio": 0.52881233,
+   "fim": 0.821419865
+  },
+  {
+   "palavra": "maluco",
+   "inicio": 0.821419865,
+   "fim": 1.22043014
+  },
+  {
+   "palavra": "pro",
+   "inicio": 1.22043014,
+   "fim": 1.459836305
+  },
+  {
+   "palavra": "LAIC",
+   "inicio": 1.459836305,
+   "fim": 1.75244384
+  },
+  {
+   "palavra": "Greninja...",
+   "inicio": 1.983379,
+   "fim": 2.575533847457627
+  },
+  {
+   "palavra": "com",
+   "inicio": 2.575533847457627,
+   "fim": 2.788709592542373
+  },
+  {
+   "palavra": "Dusknoir?",
+   "inicio": 2.788709592542373,
+   "fim": 3.38086444
+  },
+  {
+   "palavra": "6º",
+   "inicio": 3.9890929999999996,
+   "fim": 4.230414553454545
+  },
+  {
+   "palavra": "no",
+   "inicio": 4.230414553454545,
+   "fim": 4.47173610690909
+  },
+  {
+   "palavra": "Regional",
+   "inicio": 4.47173610690909,
+   "fim": 5.126751752
+  },
+  {
+   "palavra": "de",
+   "inicio": 5.126751752,
+   "fim": 5.368073305454545
+  },
+  {
+   "palavra": "Gdańsk",
+   "inicio": 5.368073305454545,
+   "fim": 5.885190919999999
+  },
+  {
+   "palavra": "e",
+   "inicio": 6.124195,
+   "fim": 6.269572216
+  },
+  {
+   "palavra": "só",
+   "inicio": 6.269572216,
+   "fim": 6.4731003184
+  },
+  {
+   "palavra": "2",
+   "inicio": 6.4731003184,
+   "fim": 6.6184775344
+  },
+  {
+   "palavra": "chegaram",
+   "inicio": 6.6184775344,
+   "fim": 7.1709109552
+  },
+  {
+   "palavra": "no",
+   "inicio": 7.1709109552,
+   "fim": 7.3744390576
+  },
+  {
+   "palavra": "dia",
+   "inicio": 7.3744390576,
+   "fim": 7.6361180464
+  },
+  {
+   "palavra": "2",
+   "inicio": 7.6361180464,
+   "fim": 7.7814952624
+  },
+  {
+   "palavra": "com",
+   "inicio": 7.7814952624,
+   "fim": 8.0431742512
+  },
+  {
+   "palavra": "ele",
+   "inicio": 8.0431742512,
+   "fim": 8.30485324
+  },
+  {
+   "palavra": "Shinobi",
+   "inicio": 8.555714,
+   "fim": 9.105581597108435
+  },
+  {
+   "palavra": "Blade:",
+   "inicio": 9.105581597108435,
+   "fim": 9.655449194216867
+  },
+  {
+   "palavra": "170",
+   "inicio": 9.655449194216867,
+   "fim": 9.946555569156626
+  },
+  {
+   "palavra": "e",
+   "inicio": 9.946555569156626,
+   "fim": 10.108281333012048
+  },
+  {
+   "palavra": "busca",
+   "inicio": 10.108281333012048,
+   "fim": 10.528768319036145
+  },
+  {
+   "palavra": "uma",
+   "inicio": 10.528768319036145,
+   "fim": 10.819874693975905
+  },
+  {
+   "palavra": "carta",
+   "inicio": 10.819874693975905,
+   "fim": 11.24036168
+  },
+  {
+   "palavra": "Cursed",
+   "inicio": 11.902222000000002,
+   "fim": 12.341294363636365
+  },
+  {
+   "palavra": "Blast:",
+   "inicio": 12.341294363636365,
+   "fim": 12.838909709090911
+  },
+  {
+   "palavra": "13",
+   "inicio": 12.838909709090911,
+   "fim": 13.043810145454547
+  },
+  {
+   "palavra": "contadores",
+   "inicio": 13.043810145454547,
+   "fim": 13.717054436363638
+  },
+  {
+   "palavra": "onde",
+   "inicio": 13.717054436363638,
+   "fim": 14.039040836363638
+  },
+  {
+   "palavra": "quiser",
+   "inicio": 14.039040836363638,
+   "fim": 14.478113200000003
+  },
+  {
+   "palavra": "e",
+   "inicio": 14.745442,
+   "fim": 14.891468958490567
+  },
+  {
+   "palavra": "o",
+   "inicio": 14.891468958490567,
+   "fim": 15.037495916981133
+  },
+  {
+   "palavra": "Dusknoir",
+   "inicio": 15.037495916981133,
+   "fim": 15.592398359245284
+  },
+  {
+   "palavra": "se",
+   "inicio": 15.592398359245284,
+   "fim": 15.796836101132076
+  },
+  {
+   "palavra": "explode",
+   "inicio": 15.796836101132076,
+   "fim": 16.29332776
+  },
+  {
+   "palavra": "contra",
+   "inicio": 16.857823,
+   "fim": 17.48139085882353
+  },
+  {
+   "palavra": "o",
+   "inicio": 17.48139085882353,
+   "fim": 17.689246811764704
+  },
+  {
+   "palavra": "Dragapult:",
+   "inicio": 17.689246811764704,
+   "fim": 18.72852657647059
+  },
+  {
+   "palavra": "320",
+   "inicio": 18.72852657647059,
+   "fim": 19.102667291764707
+  },
+  {
+   "palavra": "de",
+   "inicio": 19.102667291764707,
+   "fim": 19.393665625882353
+  },
+  {
+   "palavra": "HP",
+   "inicio": 19.393665625882353,
+   "fim": 19.684663959999998
+  },
+  {
+   "palavra": "Gravity",
+   "inicio": 19.962449,
+   "fim": 20.601040700983607
+  },
+  {
+   "palavra": "Mountain:",
+   "inicio": 20.601040700983607,
+   "fim": 21.465017708196722
+  },
+  {
+   "palavra": "-30",
+   "inicio": 21.465017708196722,
+   "fim": 21.727967232131146
+  },
+  {
+   "palavra": "de",
+   "inicio": 21.727967232131146,
+   "fim": 21.990916756065573
+  },
+  {
+   "palavra": "HP",
+   "inicio": 21.990916756065573,
+   "fim": 22.25386628
+  },
+  {
+   "palavra": "Dusknoir:",
+   "inicio": 22.509342,
+   "fim": 23.57471166
+  },
+  {
+   "palavra": "130",
+   "inicio": 23.57471166,
+   "fim": 23.99159544
+  },
+  {
+   "palavra": "Greninja:",
+   "inicio": 24.259342,
+   "fim": 24.983071190819672
+  },
+  {
+   "palavra": "170.",
+   "inicio": 24.983071190819672,
+   "fim": 25.455068489180327
+  },
+  {
+   "palavra": "Nocaute!",
+   "inicio": 25.455068489180327,
+   "fim": 26.17879768
+  },
+  {
+   "palavra": "agora,",
+   "inicio": 26.758775,
+   "fim": 27.209582768
+  },
+  {
+   "palavra": "montando:",
+   "inicio": 27.209582768,
+   "fim": 27.81949916
+  },
+  {
+   "palavra": "a",
+   "inicio": 28.308775,
+   "fim": 28.444535036363636
+  },
+  {
+   "palavra": "linha",
+   "inicio": 28.444535036363636,
+   "fim": 28.797511130909093
+  },
+  {
+   "palavra": "do",
+   "inicio": 28.797511130909093,
+   "fim": 28.987575181818183
+  },
+  {
+   "palavra": "Greninja",
+   "inicio": 28.987575181818183,
+   "fim": 29.50346332
+  },
+  {
+   "palavra": "a",
+   "inicio": 30.108775,
+   "fim": 30.246004490909094
+  },
+  {
+   "palavra": "linha",
+   "inicio": 30.246004490909094,
+   "fim": 30.60280116727273
+  },
+  {
+   "palavra": "do",
+   "inicio": 30.60280116727273,
+   "fim": 30.794922454545457
+  },
+  {
+   "palavra": "Dusknoir",
+   "inicio": 30.794922454545457,
+   "fim": 31.316394520000003
+  },
+  {
+   "palavra": "e",
+   "inicio": 31.908775,
+   "fim": 32.04366442222222
+  },
+  {
+   "palavra": "ainda",
+   "inicio": 32.04366442222222,
+   "fim": 32.39437692
+  },
+  {
+   "palavra": "2",
+   "inicio": 32.39437692,
+   "fim": 32.52926634222222
+  },
+  {
+   "palavra": "Megas:",
+   "inicio": 32.52926634222222,
+   "fim": 32.987890377777774
+  },
+  {
+   "palavra": "Froslass",
+   "inicio": 32.987890377777774,
+   "fim": 33.50047018222222
+  },
+  {
+   "palavra": "e",
+   "inicio": 33.50047018222222,
+   "fim": 33.635359604444446
+  },
+  {
+   "palavra": "Starmie",
+   "inicio": 33.635359604444446,
+   "fim": 34.09398364
+  },
+  {
+   "palavra": "Ignition",
+   "inicio": 34.345034,
+   "fim": 34.88521271219512
+  },
+  {
+   "palavra": "Energy:",
+   "inicio": 34.88521271219512,
+   "fim": 35.42539142439024
+  },
+  {
+   "palavra": "vale",
+   "inicio": 35.42539142439024,
+   "fim": 35.738126468292684
+  },
+  {
+   "palavra": "3",
+   "inicio": 35.738126468292684,
+   "fim": 35.88027876097561
+  },
+  {
+   "palavra": "num",
+   "inicio": 35.88027876097561,
+   "fim": 36.136152887804876
+  },
+  {
+   "palavra": "evoluído",
+   "inicio": 36.136152887804876,
+   "fim": 36.6763316
+  }
+ ]
+}

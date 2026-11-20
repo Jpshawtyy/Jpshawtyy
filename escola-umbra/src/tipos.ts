@@ -141,6 +141,11 @@ export type CenaImpacto = CenaBase & {
   bate?: number; // segundo em que a frase (ou o emblema) bate na tela
 };
 
+// Combo: o alvo fica com a barra de HP e cada passo bate nele (dano) ou tira HP máximo (ex.: Gravity Mountain).
+// Os passos entram junto com as últimas frases da cena. Com "selo", o carimbo aparece se o HP chegar a zero.
+export type PassoCombo = {carta: RefCarta; tipo: 'dano' | 'hp'; valor: number; rotulo?: string; em?: number};
+export type CenaCombo = CenaBase & {tipo: 'combo'; alvo: RefCarta; passos: PassoCombo[]; selo?: string};
+
 // Contagem regressiva (3, 2, 1), um número por tempo da música.
 export type CenaContagem = CenaBase & {tipo: 'contagem'; de?: number; passo?: number};
 
@@ -239,6 +244,7 @@ export type Cena =
   | CenaConfronto
   | CenaImpacto
   | CenaContagem
+  | CenaCombo
   | CenaCta;
 
 export type TipoCena = Cena['tipo'];
