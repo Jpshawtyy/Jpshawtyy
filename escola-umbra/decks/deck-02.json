@@ -1,0 +1,400 @@
+{
+  "formato": "deck_do_dia",
+  "serie": "Anti-meta",
+  "numero": 2,
+  "titulo_capa": "anti-meta",
+  "subtitulo_capa": "mega rayquaza ex",
+  "capa": {
+    "cartas": [
+      "thorns",
+      "rayquaza",
+      "pyroduct"
+    ]
+  },
+  "narracao": "auto",
+  "cartas": {
+    "rayquaza": {
+      "nome": "Mega Rayquaza ex",
+      "set": "Delta Reign",
+      "numero": 84
+    },
+    "talonflame": {
+      "nome": "Talonflame ex",
+      "set": "Delta Reign",
+      "numero": 88
+    },
+    "kangaskhan": {
+      "nome": "Mega Kangaskhan ex",
+      "set": "Mega Evolution",
+      "numero": 104
+    },
+    "hooh": {
+      "nome": "Ethan's Ho-Oh ex",
+      "set": "Destined Rivals",
+      "numero": 39
+    },
+    "latias": {
+      "nome": "Latias ex",
+      "set": "Surging Sparks",
+      "numero": 76
+    },
+    "meowth": {
+      "nome": "Meowth ex",
+      "set": "Perfect Order",
+      "numero": 62
+    },
+    "thorns": {
+      "nome": "Iron Thorns ex",
+      "set": "Twilight Masquerade",
+      "numero": 77
+    },
+    "ursaluna": {
+      "nome": "Bloodmoon Ursaluna ex",
+      "set": "Twilight Masquerade",
+      "numero": 141
+    },
+    "fezandipiti": {
+      "nome": "Fezandipiti ex",
+      "set": "Ascended Heroes",
+      "numero": 142
+    },
+    "cyrano": {
+      "nome": "Cyrano",
+      "set": "Surging Sparks",
+      "numero": 170
+    },
+    "lillie": {
+      "nome": "Lillie's Determination",
+      "set": "Mega Evolution",
+      "numero": 119
+    },
+    "judge": {
+      "nome": "Judge",
+      "set": "Perfect Order",
+      "numero": 76
+    },
+    "boss": {
+      "nome": "Boss's Orders",
+      "set": "Mega Evolution",
+      "numero": 114
+    },
+    "crispin": {
+      "nome": "Crispin",
+      "set": "Stellar Crown",
+      "numero": 133
+    },
+    "ultra-ball": {
+      "nome": "Ultra Ball",
+      "set": "Mega Evolution",
+      "numero": 131
+    },
+    "energy-switch": {
+      "nome": "Energy Switch",
+      "set": "Mega Evolution",
+      "numero": 115
+    },
+    "switch": {
+      "nome": "Switch",
+      "set": "Mega Evolution",
+      "numero": 130
+    },
+    "lantern": {
+      "nome": "Adventure Lantern",
+      "set": "Delta Reign",
+      "numero": 90
+    },
+    "stamp": {
+      "nome": "Unfair Stamp",
+      "set": "Twilight Masquerade",
+      "numero": 165
+    },
+    "pyroduct": {
+      "nome": "Legendary Pyroduct",
+      "set": "Delta Reign",
+      "numero": 94
+    },
+    "pyroduct2": {
+      "nome": "Legendary Pyroduct",
+      "set": "Delta Reign",
+      "numero": 95
+    },
+    "jamming": {
+      "nome": "Jamming Tower",
+      "set": "Twilight Masquerade",
+      "numero": 153
+    },
+    "fogo": {
+      "nome": "Basic Fire Energy",
+      "set": "Scarlet & Violet Energies",
+      "numero": 2
+    },
+    "raio": {
+      "nome": "Basic Lightning Energy",
+      "set": "Scarlet & Violet Energies",
+      "numero": 4
+    }
+  },
+  "cenas": [
+    {
+      "tipo": "gancho",
+      "texto": "anti-meta",
+      "subtitulo": "mega rayquaza ex",
+      "carta": "rayquaza",
+      "duracao": 2.6,
+      "legendas": [
+        {
+          "texto": "o deck *anti-meta* que veio do Japão",
+          "em": 0.05,
+          "fala": "O deck anti-meta que veio do Japão."
+        },
+        {
+          "texto": "*Mega Rayquaza ex*, da coleção nova",
+          "em": 1.6,
+          "fala": "Mega Rayquaza ex."
+        }
+      ]
+    },
+    {
+      "tipo": "carta_destaque",
+      "carta": "rayquaza",
+      "pill": "DELTA REIGN",
+      "pill_cor": "ouro",
+      "titulo": "Mega Rayquaza ex",
+      "foco": {
+        "em": 2.0,
+        "x": 0.5,
+        "y": 0.72,
+        "escala": 1.9
+      },
+      "duracao": 6,
+      "legendas": [
+        {
+          "texto": "*13º* na Champions League de Yokohama",
+          "em": 0.3,
+          "fala": "Décimo terceiro em Yokohama."
+        },
+        {
+          "texto": "*Storm Emerald*: 50 por Energia de Fogo e de Raio",
+          "em": 1.9,
+          "fala": "Storm Emerald: cinquenta por Energia de Fogo e de Raio."
+        },
+        {
+          "texto": "7 energias em jogo: *350* de dano",
+          "em": 4.6,
+          "fala": "Sete energias em jogo: trezentos e cinquenta."
+        }
+      ]
+    },
+    {
+      "tipo": "carta_destaque",
+      "carta": "pyroduct",
+      "pill": "ANTI-META",
+      "pill_cor": "vermelho",
+      "titulo": "Legendary Pyroduct",
+      "duracao": 5.5,
+      "legendas": [
+        {
+          "texto": "Pokémon de *evolução* ficam sem habilidade",
+          "em": 0.3,
+          "fala": "Pyroduct: Pokémon de evolução ficam sem habilidade."
+        },
+        {
+          "texto": "*Drakloak*, Alakazam, Hydrapple: travados",
+          "em": 2.3,
+          "fala": "Drakloak, Alakazam e Hydrapple: travados."
+        },
+        {
+          "texto": "e o deck dele é quase todo de *Básicos*",
+          "em": 4.0,
+          "fala": "E o deck dele é quase todo de Básicos."
+        }
+      ]
+    },
+    {
+      "tipo": "carta_destaque",
+      "carta": "thorns",
+      "pill": "ANTI-META",
+      "pill_cor": "vermelho",
+      "titulo": "Iron Thorns ex",
+      "duracao": 4.5,
+      "legendas": [
+        {
+          "texto": "no ativo, *Pokémon ex* ficam sem habilidade",
+          "em": 0.3,
+          "fala": "Iron Thorns no ativo: Pokémon ex sem habilidade."
+        },
+        {
+          "texto": "*Meowth ex* e *Fezandipiti ex*: desligados",
+          "em": 2.6,
+          "fala": "Meowth ex e Fezandipiti ex: desligados."
+        }
+      ]
+    },
+    {
+      "tipo": "decklist",
+      "titulo": "montando o deck",
+      "duracao": 9,
+      "cartas": [
+        {
+          "carta": "rayquaza",
+          "qtd": 2
+        },
+        {
+          "carta": "talonflame",
+          "qtd": 2
+        },
+        {
+          "carta": "hooh",
+          "qtd": 2
+        },
+        {
+          "carta": "kangaskhan",
+          "qtd": 3
+        },
+        {
+          "carta": "thorns",
+          "qtd": 1
+        },
+        {
+          "carta": "pyroduct",
+          "qtd": 2
+        },
+        {
+          "carta": "pyroduct2",
+          "qtd": 2
+        },
+        {
+          "carta": "jamming",
+          "qtd": 1
+        },
+        {
+          "carta": "fogo",
+          "qtd": 10
+        },
+        {
+          "carta": "raio",
+          "qtd": 5
+        },
+        {
+          "carta": "latias",
+          "qtd": 2
+        },
+        {
+          "carta": "meowth",
+          "qtd": 2
+        },
+        {
+          "carta": "ursaluna",
+          "qtd": 1
+        },
+        {
+          "carta": "fezandipiti",
+          "qtd": 1
+        },
+        {
+          "carta": "cyrano",
+          "qtd": 4
+        },
+        {
+          "carta": "lillie",
+          "qtd": 2
+        },
+        {
+          "carta": "judge",
+          "qtd": 2
+        },
+        {
+          "carta": "boss",
+          "qtd": 2
+        },
+        {
+          "carta": "crispin",
+          "qtd": 2
+        },
+        {
+          "carta": "ultra-ball",
+          "qtd": 4
+        },
+        {
+          "carta": "energy-switch",
+          "qtd": 4
+        },
+        {
+          "carta": "switch",
+          "qtd": 2
+        },
+        {
+          "carta": "lantern",
+          "qtd": 1
+        },
+        {
+          "carta": "stamp",
+          "qtd": 1
+        }
+      ],
+      "grupos": [
+        {
+          "cartas": [
+            "rayquaza",
+            "talonflame"
+          ],
+          "adesivo": "o dragão"
+        },
+        {
+          "cartas": [
+            "hooh",
+            "kangaskhan"
+          ],
+          "adesivo": "energia em\nqualquer um conta"
+        },
+        {
+          "cartas": [
+            "thorns",
+            "pyroduct",
+            "pyroduct2",
+            "jamming"
+          ],
+          "adesivo": "trava tudo"
+        },
+        {
+          "cartas": [
+            "fogo",
+            "raio"
+          ],
+          "adesivo": "15 energias"
+        }
+      ],
+      "legendas": [
+        {
+          "texto": "*2 Rayquaza e 2 Talonflame*",
+          "fala": "Dois Rayquaza e dois Talonflame."
+        },
+        {
+          "texto": "energia em *qualquer* Pokémon conta pro dano",
+          "fala": "Energia em qualquer Pokémon seu conta pro dano."
+        },
+        {
+          "texto": "Iron Thorns, *4 Pyroduct* e Jamming Tower",
+          "fala": "Iron Thorns, quatro Pyroduct e Jamming Tower."
+        },
+        {
+          "texto": "*15 energias*: 10 de Fogo e 5 de Raio",
+          "fala": "Quinze energias: dez de Fogo e cinco de Raio."
+        }
+      ]
+    },
+    {
+      "tipo": "cta",
+      "duracao": 4.5,
+      "principal": "COMENTA",
+      "complemento": "você jogaria contra o meta?",
+      "seguir": "segue @escolaumbratcg",
+      "falas": [
+        {
+          "texto": "Você jogaria contra o meta? Comenta aí.",
+          "em": 0.25
+        }
+      ]
+    }
+  ]
+}

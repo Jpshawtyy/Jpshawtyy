@@ -1,0 +1,548 @@
+{
+ "assinatura": "52229a7fc5349a290adb0b34948c4ee4869e6a79",
+ "voz": "pm_santa",
+ "frases": [
+  {
+   "fala": "O deck anti-meta que veio do Japão.",
+   "duracao": 2.00898
+  },
+  {
+   "fala": "Mega Rayquaza ex.",
+   "duracao": 1.345669
+  },
+  {
+   "fala": "Décimo terceiro em Yokohama.",
+   "duracao": 1.75771
+  },
+  {
+   "fala": "Storm Emerald: cinquenta por Energia de Fogo e de Raio.",
+   "duracao": 3.307596
+  },
+  {
+   "fala": "Sete energias em jogo: trezentos e cinquenta.",
+   "duracao": 2.750272
+  },
+  {
+   "fala": "Pyroduct: Pokémon de evolução ficam sem habilidade.",
+   "duracao": 3.123855
+  },
+  {
+   "fala": "Drakloak, Alakazam e Hydrapple: travados.",
+   "duracao": 2.374104
+  },
+  {
+   "fala": "E o deck dele é quase todo de Básicos.",
+   "duracao": 2.200726
+  },
+  {
+   "fala": "Iron Thorns no ativo: Pokémon ex sem habilidade.",
+   "duracao": 2.922426
+  },
+  {
+   "fala": "Meowth ex e Fezandipiti ex: desligados.",
+   "duracao": 2.341587
+  },
+  {
+   "fala": "Dois Rayquaza e dois Talonflame.",
+   "duracao": 1.977551
+  },
+  {
+   "fala": "Energia em qualquer Pokémon seu conta pro dano.",
+   "duracao": 2.57898
+  },
+  {
+   "fala": "Iron Thorns, quatro Pyroduct e Jamming Tower.",
+   "duracao": 2.598639
+  },
+  {
+   "fala": "Quinze energias: dez de Fogo e cinco de Raio.",
+   "duracao": 2.638685
+  },
+  {
+   "fala": "Você jogaria contra o meta? Comenta aí.",
+   "duracao": 2.226757
+  }
+ ],
+ "words": [
+  {
+   "palavra": "o",
+   "inicio": 0.05,
+   "fim": 0.17857472000000002
+  },
+  {
+   "palavra": "deck",
+   "inicio": 0.17857472000000002,
+   "fim": 0.461439104
+  },
+  {
+   "palavra": "anti-meta",
+   "inicio": 0.461439104,
+   "fim": 0.95002304
+  },
+  {
+   "palavra": "que",
+   "inicio": 0.95002304,
+   "fim": 1.181457536
+  },
+  {
+   "palavra": "veio",
+   "inicio": 1.181457536,
+   "fim": 1.4643219200000002
+  },
+  {
+   "palavra": "do",
+   "inicio": 1.4643219200000002,
+   "fim": 1.6443265280000001
+  },
+  {
+   "palavra": "Japão",
+   "inicio": 1.6443265280000001,
+   "fim": 1.9786208
+  },
+  {
+   "palavra": "Mega",
+   "inicio": 2.21898,
+   "fim": 2.4059571663157895
+  },
+  {
+   "palavra": "Rayquaza",
+   "inicio": 2.4059571663157895,
+   "fim": 2.7289177263157898
+  },
+  {
+   "palavra": "ex,",
+   "inicio": 2.7289177263157898,
+   "fim": 2.915894892631579
+  },
+  {
+   "palavra": "da",
+   "inicio": 2.915894892631579,
+   "fim": 3.0348803621052634
+  },
+  {
+   "palavra": "coleção",
+   "inicio": 3.0348803621052634,
+   "fim": 3.3238450736842107
+  },
+  {
+   "palavra": "nova",
+   "inicio": 3.3238450736842107,
+   "fim": 3.5108222400000004
+  },
+  {
+   "palavra": "13º",
+   "inicio": 4.114649,
+   "fim": 4.309349184615384
+  },
+  {
+   "palavra": "na",
+   "inicio": 4.309349184615384,
+   "fim": 4.460782661538461
+  },
+  {
+   "palavra": "Champions",
+   "inicio": 4.460782661538461,
+   "fim": 4.915083092307692
+  },
+  {
+   "palavra": "League",
+   "inicio": 4.915083092307692,
+   "fim": 5.2395834
+  },
+  {
+   "palavra": "de",
+   "inicio": 5.2395834,
+   "fim": 5.391016876923077
+  },
+  {
+   "palavra": "Yokohama",
+   "inicio": 5.391016876923077,
+   "fim": 5.8020506
+  },
+  {
+   "palavra": "Storm",
+   "inicio": 6.0323590000000005,
+   "fim": 6.414570093333333
+  },
+  {
+   "palavra": "Emerald:",
+   "inicio": 6.414570093333333,
+   "fim": 7.031988013333334
+  },
+  {
+   "palavra": "50",
+   "inicio": 7.031988013333334,
+   "fim": 7.237793986666667
+  },
+  {
+   "palavra": "por",
+   "inicio": 7.237793986666667,
+   "fim": 7.5024016666666675
+  },
+  {
+   "palavra": "Energia",
+   "inicio": 7.5024016666666675,
+   "fim": 8.002216173333334
+  },
+  {
+   "palavra": "de",
+   "inicio": 8.002216173333334,
+   "fim": 8.208022146666668
+  },
+  {
+   "palavra": "Fogo",
+   "inicio": 8.208022146666668,
+   "fim": 8.531431533333334
+  },
+  {
+   "palavra": "e",
+   "inicio": 8.531431533333334,
+   "fim": 8.6784358
+  },
+  {
+   "palavra": "de",
+   "inicio": 8.6784358,
+   "fim": 8.884241773333333
+  },
+  {
+   "palavra": "Raio",
+   "inicio": 8.884241773333333,
+   "fim": 9.207651160000001
+  },
+  {
+   "palavra": "7",
+   "inicio": 9.499955,
+   "fim": 9.680794802739726
+  },
+  {
+   "palavra": "energias",
+   "inicio": 9.680794802739726,
+   "fim": 10.367986053150684
+  },
+  {
+   "palavra": "em",
+   "inicio": 10.367986053150684,
+   "fim": 10.621161776986302
+  },
+  {
+   "palavra": "jogo:",
+   "inicio": 10.621161776986302,
+   "fim": 11.16368118520548
+  },
+  {
+   "palavra": "350",
+   "inicio": 11.16368118520548,
+   "fim": 11.489192830136986
+  },
+  {
+   "palavra": "de",
+   "inicio": 11.489192830136986,
+   "fim": 11.742368553972602
+  },
+  {
+   "palavra": "dano",
+   "inicio": 11.742368553972602,
+   "fim": 12.14021612
+  },
+  {
+   "palavra": "Pokémon",
+   "inicio": 12.800227000000003,
+   "fim": 13.379560109090912
+  },
+  {
+   "palavra": "de",
+   "inicio": 13.379560109090912,
+   "fim": 13.61810903636364
+  },
+  {
+   "palavra": "evolução",
+   "inicio": 13.61810903636364,
+   "fim": 14.265598981818185
+  },
+  {
+   "palavra": "ficam",
+   "inicio": 14.265598981818185,
+   "fim": 14.708618418181821
+  },
+  {
+   "palavra": "sem",
+   "inicio": 14.708618418181821,
+   "fim": 15.015324181818185
+  },
+  {
+   "palavra": "habilidade",
+   "inicio": 15.015324181818185,
+   "fim": 15.799127800000003
+  },
+  {
+   "palavra": "Drakloak,",
+   "inicio": 16.084082000000002,
+   "fim": 16.666528848000002
+  },
+  {
+   "palavra": "Alakazam,",
+   "inicio": 16.666528848000002,
+   "fim": 17.248975696000002
+  },
+  {
+   "palavra": "Hydrapple:",
+   "inicio": 17.248975696000002,
+   "fim": 17.882070096000003
+  },
+  {
+   "palavra": "travados",
+   "inicio": 17.882070096000003,
+   "fim": 18.36322184
+  },
+  {
+   "palavra": "e",
+   "inicio": 18.618186,
+   "fim": 18.742462291764706
+  },
+  {
+   "palavra": "o",
+   "inicio": 18.742462291764706,
+   "fim": 18.866738583529415
+  },
+  {
+   "palavra": "deck",
+   "inicio": 18.866738583529415,
+   "fim": 19.140146425411768
+  },
+  {
+   "palavra": "dele",
+   "inicio": 19.140146425411768,
+   "fim": 19.41355426729412
+  },
+  {
+   "palavra": "é",
+   "inicio": 19.41355426729412,
+   "fim": 19.537830559058825
+  },
+  {
+   "palavra": "quase",
+   "inicio": 19.537830559058825,
+   "fim": 19.86094891764706
+  },
+  {
+   "palavra": "todo",
+   "inicio": 19.86094891764706,
+   "fim": 20.134356759529414
+  },
+  {
+   "palavra": "de",
+   "inicio": 20.134356759529414,
+   "fim": 20.308343568
+  },
+  {
+   "palavra": "Básicos",
+   "inicio": 20.308343568,
+   "fim": 20.730882960000002
+  },
+  {
+   "palavra": "no",
+   "inicio": 21.368912,
+   "fim": 21.580080846451615
+  },
+  {
+   "palavra": "ativo,",
+   "inicio": 21.580080846451615,
+   "fim": 22.09291947354839
+  },
+  {
+   "palavra": "Pokémon",
+   "inicio": 22.09291947354839,
+   "fim": 22.60575810064516
+  },
+  {
+   "palavra": "ex",
+   "inicio": 22.60575810064516,
+   "fim": 22.816926947096775
+  },
+  {
+   "palavra": "ficam",
+   "inicio": 22.816926947096775,
+   "fim": 23.209097661935484
+  },
+  {
+   "palavra": "sem",
+   "inicio": 23.209097661935484,
+   "fim": 23.48060046451613
+  },
+  {
+   "palavra": "habilidade",
+   "inicio": 23.48060046451613,
+   "fim": 24.174440960000002
+  },
+  {
+   "palavra": "Meowth",
+   "inicio": 24.451338,
+   "fim": 24.84341768372093
+  },
+  {
+   "palavra": "ex",
+   "inicio": 24.84341768372093,
+   "fim": 25.0263882027907
+  },
+  {
+   "palavra": "e",
+   "inicio": 25.0263882027907,
+   "fim": 25.157081430697673
+  },
+  {
+   "palavra": "Fezandipiti",
+   "inicio": 25.157081430697673,
+   "fim": 25.810547570232558
+  },
+  {
+   "palavra": "ex:",
+   "inicio": 25.810547570232558,
+   "fim": 26.098072671627907
+  },
+  {
+   "palavra": "desligados",
+   "inicio": 26.098072671627907,
+   "fim": 26.69926152
+  },
+  {
+   "palavra": "2",
+   "inicio": 27.292925,
+   "fim": 27.459455610526316
+  },
+  {
+   "palavra": "Rayquaza",
+   "inicio": 27.459455610526316,
+   "fim": 28.092271930526316
+  },
+  {
+   "palavra": "e",
+   "inicio": 28.092271930526316,
+   "fim": 28.25880254105263
+  },
+  {
+   "palavra": "2",
+   "inicio": 28.25880254105263,
+   "fim": 28.425333151578947
+  },
+  {
+   "palavra": "Talonflame",
+   "inicio": 28.425333151578947,
+   "fim": 29.19137396
+  },
+  {
+   "palavra": "energia",
+   "inicio": 29.430476,
+   "fim": 29.883045393548386
+  },
+  {
+   "palavra": "em",
+   "inicio": 29.883045393548386,
+   "fim": 30.069397496774194
+  },
+  {
+   "palavra": "qualquer",
+   "inicio": 30.069397496774194,
+   "fim": 30.575210348387095
+  },
+  {
+   "palavra": "Pokémon",
+   "inicio": 30.575210348387095,
+   "fim": 31.027779741935483
+  },
+  {
+   "palavra": "conta",
+   "inicio": 31.027779741935483,
+   "fim": 31.373862219354837
+  },
+  {
+   "palavra": "pro",
+   "inicio": 31.373862219354837,
+   "fim": 31.61345778064516
+  },
+  {
+   "palavra": "dano",
+   "inicio": 31.61345778064516,
+   "fim": 31.9062968
+  },
+  {
+   "palavra": "Iron",
+   "inicio": 32.169456,
+   "fim": 32.477788897078646
+  },
+  {
+   "palavra": "Thorns,",
+   "inicio": 32.477788897078646,
+   "fim": 33.01036390112359
+  },
+  {
+   "palavra": "4",
+   "inicio": 33.01036390112359,
+   "fim": 33.15051521797753
+  },
+  {
+   "palavra": "Pyroduct",
+   "inicio": 33.15051521797753,
+   "fim": 33.68309022202247
+  },
+  {
+   "palavra": "e",
+   "inicio": 33.68309022202247,
+   "fim": 33.8232415388764
+  },
+  {
+   "palavra": "Jamming",
+   "inicio": 33.8232415388764,
+   "fim": 34.29975601617977
+  },
+  {
+   "palavra": "Tower",
+   "inicio": 34.29975601617977,
+   "fim": 34.664149439999996
+  },
+  {
+   "palavra": "15",
+   "inicio": 34.928095,
+   "fim": 35.141733110843376
+  },
+  {
+   "palavra": "energias:",
+   "inicio": 35.141733110843376,
+   "fim": 35.843686903614454
+  },
+  {
+   "palavra": "10",
+   "inicio": 35.843686903614454,
+   "fim": 36.05732501445783
+  },
+  {
+   "palavra": "de",
+   "inicio": 36.05732501445783,
+   "fim": 36.2709631253012
+  },
+  {
+   "palavra": "Fogo",
+   "inicio": 36.2709631253012,
+   "fim": 36.6066801566265
+  },
+  {
+   "palavra": "e",
+   "inicio": 36.6066801566265,
+   "fim": 36.75927880722892
+  },
+  {
+   "palavra": "5",
+   "inicio": 36.75927880722892,
+   "fim": 36.911877457831324
+  },
+  {
+   "palavra": "de",
+   "inicio": 36.911877457831324,
+   "fim": 37.1255155686747
+  },
+  {
+   "palavra": "Raio",
+   "inicio": 37.1255155686747,
+   "fim": 37.4612326
+  }
+ ]
+}
