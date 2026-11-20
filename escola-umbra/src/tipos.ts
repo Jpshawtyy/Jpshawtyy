@@ -146,6 +146,9 @@ export type CenaImpacto = CenaBase & {
 export type PassoCombo = {carta: RefCarta; tipo: 'dano' | 'hp'; valor: number; rotulo?: string; em?: number};
 export type CenaCombo = CenaBase & {tipo: 'combo'; alvo: RefCarta; passos: PassoCombo[]; selo?: string};
 
+// Respiração guiada: o círculo cresce (puxa), para (segura) e diminui (solta), com contagem.
+export type CenaRespira = CenaBase & {tipo: 'respira'; puxa?: number; segura?: number; solta?: number; em?: number};
+
 // Contagem regressiva (3, 2, 1), um número por tempo da música.
 export type CenaContagem = CenaBase & {tipo: 'contagem'; de?: number; passo?: number};
 
@@ -245,6 +248,7 @@ export type Cena =
   | CenaImpacto
   | CenaContagem
   | CenaCombo
+  | CenaRespira
   | CenaCta;
 
 export type TipoCena = Cena['tipo'];

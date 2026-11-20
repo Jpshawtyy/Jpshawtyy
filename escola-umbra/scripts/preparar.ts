@@ -25,7 +25,7 @@ export type Preparo = {
   narracao?: Narracao; // quando o roteiro usa "narracao": "auto"
 };
 
-const TIPOS = ['gancho', 'carta_destaque', 'lista', 'piramide', 'comparacao', 'riscado', 'mesa', 'decklist', 'confronto', 'impacto', 'contagem', 'combo', 'cta'];
+const TIPOS = ['gancho', 'carta_destaque', 'lista', 'piramide', 'comparacao', 'riscado', 'mesa', 'decklist', 'confronto', 'impacto', 'contagem', 'combo', 'respira', 'cta'];
 const EMOJI = /\p{Extended_Pictographic}/u;
 
 const textosDe = (valor: unknown, caminho: string, saida: {caminho: string; texto: string}[]) => {
@@ -106,6 +106,10 @@ const eventosDaCena = (cena: Cena, duracao: number, temposAcoes: number[]): numb
   if (cena.tipo === 'cta') eventos.push(0.2, 0.8, 1.6, 2.6);
   if (cena.tipo === 'impacto') eventos.push(0.15, 0.35, 0.7, 1.0);
   if (cena.tipo === 'combo') cena.passos.forEach((p, i) => eventos.push(p.em ?? 0.8 + i * 1.3, (p.em ?? 0.8 + i * 1.3) + 0.45));
+  if (cena.tipo === 'respira') {
+    const e = cena.em ?? 0.4;
+    for (let k = 0; k < 9; k++) eventos.push(e + k);
+  }
   if (cena.tipo === 'contagem') for (let k = 0; k <= (cena.de ?? 3); k++) eventos.push(k * (cena.passo ?? 0.5));
   if (cena.tipo === 'confronto') eventos.push(0.1, 0.5, cena.em ?? 1, (cena.em ?? 1) + 0.5);
   if (cena.tipo === 'decklist') eventos.push(...(cena.grupos ?? []).map((g) => g.em ?? 1.6), 0.2, 0.7, 1.3, ...(cena.destaques ?? []).map((d) => d.em ?? 1.6));

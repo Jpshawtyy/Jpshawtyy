@@ -59,6 +59,7 @@ const materializar = (roteiro: Roteiro, cartas: MapaCartas): Roteiro => {
       cena.destaques = cena.destaques.map((d, j) => ({...d, em: d.em ?? 1.6 + j * 1.2}));
     }
     if (cena.tipo === 'confronto') cena.em = cena.em ?? 1;
+    if (cena.tipo === 'respira') cena.em = cena.em ?? 0.4;
     if (cena.tipo === 'combo') cena.passos = cena.passos.map((p, j) => ({...p, em: p.em ?? 0.8 + j * 1.3}));
     if (cena.tipo === 'decklist' && cena.grupos) {
       cena.grupos = cena.grupos.map((g, j) => ({...g, em: g.em ?? 0.6 + j * 1.2}));
@@ -180,6 +181,7 @@ const esticarCena = (cena: Cena, frases: (FraseBruta & {duracao: number})[]): nu
   if (cena.tipo === 'decklist') for (const g of cena.grupos ?? []) g.em = wOpcional(g.em);
   if (cena.tipo === 'confronto') cena.em = wOpcional(cena.em);
   if (cena.tipo === 'combo') for (const p of cena.passos) p.em = wOpcional(p.em);
+  if (cena.tipo === 'respira') cena.em = wOpcional(cena.em);
   if (cena.tipo === 'carta_destaque' && cena.foco) cena.foco.em = w(cena.foco.em);
   for (const f of frases) f.em = w(f.em);
   cena.duracao = w(cena.duracao!);

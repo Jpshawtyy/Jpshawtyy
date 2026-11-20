@@ -1,0 +1,98 @@
+{
+  "formato": "deck_do_dia",
+  "rotulo": "Especial LAIC",
+  "serie": "Cabeça no lugar",
+  "numero": 4,
+  "titulo_capa": "sem ansiedade",
+  "subtitulo_capa": "pra jogar o LAIC",
+  "capa": {"cartas": ["zoroark", "dragapult", "crustle"]},
+  "narracao": "auto",
+
+  "cartas": {
+    "dragapult": {"nome": "Dragapult ex", "set": "Twilight Masquerade", "numero": 130},
+    "crustle": {"nome": "Crustle", "set": "Destined Rivals", "numero": 12},
+    "zoroark": {"nome": "N's Zoroark ex", "set": "Journey Together", "numero": 98},
+    "hydrapple": {"nome": "Hydrapple ex", "set": "Stellar Crown", "numero": 14},
+    "kangaskhan": {"nome": "Mega Kangaskhan ex", "set": "Mega Evolution", "numero": 104}
+  },
+
+  "cenas": [
+    {
+      "tipo": "impacto",
+      "antes": "POV:",
+      "texto": "rodada 1 do LAIC",
+      "dramatico": true,
+      "bate": 0.05,
+      "duracao": 2.6,
+      "legendas": [{"texto": "e o coração *a mil*?", "em": 0.2, "fala": "Rodada um do Laique, e o coração a mil?"}]
+    },
+    {
+      "tipo": "impacto",
+      "antes": "DICA 1",
+      "texto": "respira",
+      "subtitulo": "puxa, segura, solta",
+      "duracao": 1.8,
+      "legendas": [{"texto": "primeiro: *respira*", "em": 0.1, "fala": "Primeiro: respira comigo."}]
+    },
+    {
+      "tipo": "respira",
+      "puxa": 3,
+      "segura": 2,
+      "solta": 3,
+      "em": 0.3,
+      "falas": [
+        {"texto": "Puxa o ar.", "em": 0.35},
+        {"texto": "Segura.", "em": 3.35},
+        {"texto": "Solta devagar.", "em": 5.35}
+      ]
+    },
+    {
+      "tipo": "impacto",
+      "antes": "DICA 2",
+      "texto": "dorme e come",
+      "subtitulo": "antes da rodada 1",
+      "duracao": 2,
+      "legendas": [{"texto": "dorme bem e *come* antes de jogar", "em": 0.1, "fala": "Dorme bem e come antes de jogar."}]
+    },
+    {
+      "tipo": "impacto",
+      "antes": "DICA 3",
+      "texto": "não muda o deck",
+      "subtitulo": "na véspera",
+      "duracao": 2,
+      "legendas": [{"texto": "joga o deck que você *treinou*", "em": 0.1, "fala": "Não muda o deck na véspera. Joga o que você treinou."}]
+    },
+    {
+      "tipo": "impacto",
+      "antes": "DICA 4",
+      "texto": "uma de cada vez",
+      "subtitulo": "perdeu? próxima",
+      "duracao": 2,
+      "legendas": [{"texto": "perdeu? respira e foca na *próxima*", "em": 0.1, "fala": "Uma partida de cada vez. Perdeu? Foca na próxima."}]
+    },
+    {
+      "tipo": "impacto",
+      "antes": "DICA 5",
+      "texto": "chama o juiz",
+      "subtitulo": "é normal",
+      "duracao": 2,
+      "legendas": [{"texto": "o juiz tá lá pra *ajudar*", "em": 0.1, "fala": "Ficou na dúvida? Chama o juiz. Ele tá lá pra ajudar."}]
+    },
+    {
+      "tipo": "impacto",
+      "texto": "todo mundo tá nervoso",
+      "cartas": ["dragapult", "crustle", "zoroark", "hydrapple", "kangaskhan"],
+      "bate": 0.05,
+      "duracao": 2.2,
+      "legendas": [{"texto": "você *não* tá sozinho", "em": 0.1, "fala": "E lembra: todo mundo ali tá nervoso também."}]
+    },
+    {
+      "tipo": "cta",
+      "duracao": 4.2,
+      "principal": "BOA SORTE",
+      "complemento": "no LAIC",
+      "seguir": "segue @escolaumbratcg",
+      "falas": [{"texto": "Boa sorte no Laique! Manda pra quem vai jogar.", "em": 0.25}]
+    }
+  ]
+}

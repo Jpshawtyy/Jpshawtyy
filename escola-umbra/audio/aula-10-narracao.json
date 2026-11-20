@@ -1,0 +1,551 @@
+{
+ "assinatura": "8ecea2a9ee18e6b04343c3a9ce7bfddc6894f1bd",
+ "voz": "pm_santa",
+ "frases": [
+  {
+   "fala": "Cinco Condições Especiais.",
+   "duracao": 1.76356
+  },
+  {
+   "fala": "Cada uma trava de um jeito.",
+   "duracao": 1.586213
+  },
+  {
+   "fala": "Dormindo: não ataca nem recua.",
+   "duracao": 1.811338
+  },
+  {
+   "fala": "Paralisado: igual, mas passa depois do seu turno.",
+   "duracao": 2.758005
+  },
+  {
+   "fala": "Confuso: pra atacar, joga a moeda.",
+   "duracao": 1.946667
+  },
+  {
+   "fala": "Envenenado: um contador entre os turnos.",
+   "duracao": 2.273175
+  },
+  {
+   "fala": "Queimado: dois contadores e moeda. Cara, cura.",
+   "duracao": 2.627891
+  },
+  {
+   "fala": "Absolute Snow: cento e cinquenta, e o ativo dorme.",
+   "duracao": 2.921224
+  },
+  {
+   "fala": "Pra acordar: cara na moeda, entre os turnos.",
+   "duracao": 2.419388
+  },
+  {
+   "fala": "O Mind Bend deixa o ativo confuso.",
+   "duracao": 2.127211
+  },
+  {
+   "fala": "Coroa: o ataque falha e ele toma três contadores.",
+   "duracao": 2.694218
+  },
+  {
+   "fala": "Recuou ou trocou pro banco: sai tudo.",
+   "duracao": 2.07551
+  },
+  {
+   "fala": "Evoluiu: sai tudo também.",
+   "duracao": 1.56059
+  },
+  {
+   "fala": "E cartas como a Pokémon Center Lady.",
+   "duracao": 2.120726
+  },
+  {
+   "fala": "Dormindo, Confuso e Paralisado: só uma por vez.",
+   "duracao": 2.814263
+  },
+  {
+   "fala": "Veneno e Queimadura somam com elas.",
+   "duracao": 2.14059
+  },
+  {
+   "fala": "Salva, e segue a Escola Umbra.",
+   "duracao": 1.634218
+  }
+ ],
+ "words": [
+  {
+   "palavra": "cada",
+   "inicio": 1.97356,
+   "fim": 2.252733488
+  },
+  {
+   "palavra": "uma",
+   "inicio": 2.252733488,
+   "fim": 2.48114816
+  },
+  {
+   "palavra": "trava",
+   "inicio": 2.48114816,
+   "fim": 2.811080464
+  },
+  {
+   "palavra": "de",
+   "inicio": 2.811080464,
+   "fim": 2.98873632
+  },
+  {
+   "palavra": "um",
+   "inicio": 2.98873632,
+   "fim": 3.166392176
+  },
+  {
+   "palavra": "jeito",
+   "inicio": 3.166392176,
+   "fim": 3.49632448
+  },
+  {
+   "palavra": "Dormindo:",
+   "inicio": 4.059773,
+   "fim": 4.656703493134328
+  },
+  {
+   "palavra": "não",
+   "inicio": 4.656703493134328,
+   "fim": 4.8902849904477605
+  },
+  {
+   "palavra": "ataca",
+   "inicio": 4.8902849904477605,
+   "fim": 5.227680486567164
+  },
+  {
+   "palavra": "nem",
+   "inicio": 5.227680486567164,
+   "fim": 5.461261983880597
+  },
+  {
+   "palavra": "recua",
+   "inicio": 5.461261983880597,
+   "fim": 5.798657479999999
+  },
+  {
+   "palavra": "Paralisado:",
+   "inicio": 6.031111,
+   "fim": 6.76809542886598
+  },
+  {
+   "palavra": "sai",
+   "inicio": 6.76809542886598,
+   "fim": 7.013756905154639
+  },
+  {
+   "palavra": "depois",
+   "inicio": 7.013756905154639,
+   "fim": 7.423192698969072
+  },
+  {
+   "palavra": "do",
+   "inicio": 7.423192698969072,
+   "fim": 7.614262736082474
+  },
+  {
+   "palavra": "seu",
+   "inicio": 7.614262736082474,
+   "fim": 7.8599242123711335
+  },
+  {
+   "palavra": "próximo",
+   "inicio": 7.8599242123711335,
+   "fim": 8.323951445360825
+  },
+  {
+   "palavra": "turno",
+   "inicio": 8.323951445360825,
+   "fim": 8.6787958
+  },
+  {
+   "palavra": "Confuso:",
+   "inicio": 8.949116,
+   "fim": 9.452254547692307
+  },
+  {
+   "palavra": "pra",
+   "inicio": 9.452254547692307,
+   "fim": 9.667885353846154
+  },
+  {
+   "palavra": "atacar,",
+   "inicio": 9.667885353846154,
+   "fim": 10.123105944615384
+  },
+  {
+   "palavra": "joga",
+   "inicio": 10.123105944615384,
+   "fim": 10.386654707692308
+  },
+  {
+   "palavra": "a",
+   "inicio": 10.386654707692308,
+   "fim": 10.5064496
+  },
+  {
+   "palavra": "moeda",
+   "inicio": 10.5064496,
+   "fim": 10.81791632
+  },
+  {
+   "palavra": "Envenenado:",
+   "inicio": 11.055783,
+   "fim": 11.740907372093023
+  },
+  {
+   "palavra": "1",
+   "inicio": 11.740907372093023,
+   "fim": 11.867782255813953
+  },
+  {
+   "palavra": "contador",
+   "inicio": 11.867782255813953,
+   "fim": 12.349906813953488
+  },
+  {
+   "palavra": "entre",
+   "inicio": 12.349906813953488,
+   "fim": 12.679781511627906
+  },
+  {
+   "palavra": "os",
+   "inicio": 12.679781511627906,
+   "fim": 12.857406348837209
+  },
+  {
+   "palavra": "turnos",
+   "inicio": 12.857406348837209,
+   "fim": 13.238031
+  },
+  {
+   "palavra": "Queimado:",
+   "inicio": 13.488958,
+   "fim": 14.19656572292683
+  },
+  {
+   "palavra": "2",
+   "inicio": 14.19656572292683,
+   "fim": 14.350393488780488
+  },
+  {
+   "palavra": "contadores,",
+   "inicio": 14.350393488780488,
+   "fim": 15.181063424390244
+  },
+  {
+   "palavra": "e",
+   "inicio": 15.181063424390244,
+   "fim": 15.334891190243903
+  },
+  {
+   "palavra": "cara",
+   "inicio": 15.334891190243903,
+   "fim": 15.673312275121951
+  },
+  {
+   "palavra": "cura",
+   "inicio": 15.673312275121951,
+   "fim": 16.01173336
+  },
+  {
+   "palavra": "150",
+   "inicio": 16.666849000000003,
+   "fim": 17.06747400571429
+  },
+  {
+   "palavra": "de",
+   "inicio": 17.06747400571429,
+   "fim": 17.379071232380955
+  },
+  {
+   "palavra": "dano",
+   "inicio": 17.379071232380955,
+   "fim": 17.86872401714286
+  },
+  {
+   "palavra": "e",
+   "inicio": 17.86872401714286,
+   "fim": 18.091293464761907
+  },
+  {
+   "palavra": "o",
+   "inicio": 18.091293464761907,
+   "fim": 18.313862912380955
+  },
+  {
+   "palavra": "ativo",
+   "inicio": 18.313862912380955,
+   "fim": 18.89254347619048
+  },
+  {
+   "palavra": "dorme",
+   "inicio": 18.89254347619048,
+   "fim": 19.471224040000003
+  },
+  {
+   "palavra": "pra",
+   "inicio": 19.748073,
+   "fim": 19.9571081232
+  },
+  {
+   "palavra": "acordar:",
+   "inicio": 19.9571081232,
+   "fim": 20.444856744000003
+  },
+  {
+   "palavra": "cara",
+   "inicio": 20.444856744000003,
+   "fim": 20.7003441168
+  },
+  {
+   "palavra": "na",
+   "inicio": 20.7003441168,
+   "fim": 20.862926990400002
+  },
+  {
+   "palavra": "moeda,",
+   "inicio": 20.862926990400002,
+   "fim": 21.257771112
+  },
+  {
+   "palavra": "entre",
+   "inicio": 21.257771112,
+   "fim": 21.559710734400003
+  },
+  {
+   "palavra": "os",
+   "inicio": 21.559710734400003,
+   "fim": 21.722293608
+  },
+  {
+   "palavra": "turnos",
+   "inicio": 21.722293608,
+   "fim": 22.07068548
+  },
+  {
+   "palavra": "Mind",
+   "inicio": 22.717461000000004,
+   "fim": 23.03836597371429
+  },
+  {
+   "palavra": "Bend",
+   "inicio": 23.03836597371429,
+   "fim": 23.359270947428573
+  },
+  {
+   "palavra": "deixa",
+   "inicio": 23.359270947428573,
+   "fim": 23.738522280000005
+  },
+  {
+   "palavra": "o",
+   "inicio": 23.738522280000005,
+   "fim": 23.88438817714286
+  },
+  {
+   "palavra": "ativo",
+   "inicio": 23.88438817714286,
+   "fim": 24.263639509714288
+  },
+  {
+   "palavra": "confuso",
+   "inicio": 24.263639509714288,
+   "fim": 24.759583560000003
+  },
+  {
+   "palavra": "coroa:",
+   "inicio": 25.004672000000003,
+   "fim": 25.431561686990293
+  },
+  {
+   "palavra": "o",
+   "inicio": 25.431561686990293,
+   "fim": 25.557117477281555
+  },
+  {
+   "palavra": "ataque",
+   "inicio": 25.557117477281555,
+   "fim": 25.93378484815534
+  },
+  {
+   "palavra": "falha",
+   "inicio": 25.93378484815534,
+   "fim": 26.260229902912624
+  },
+  {
+   "palavra": "e",
+   "inicio": 26.260229902912624,
+   "fim": 26.385785693203886
+  },
+  {
+   "palavra": "ele",
+   "inicio": 26.385785693203886,
+   "fim": 26.611786115728158
+  },
+  {
+   "palavra": "toma",
+   "inicio": 26.611786115728158,
+   "fim": 26.888008854368934
+  },
+  {
+   "palavra": "3",
+   "inicio": 26.888008854368934,
+   "fim": 27.013564644660196
+  },
+  {
+   "palavra": "contadores",
+   "inicio": 27.013564644660196,
+   "fim": 27.591121280000003
+  },
+  {
+   "palavra": "foi",
+   "inicio": 28.198890000000002,
+   "fim": 28.524933752727275
+  },
+  {
+   "palavra": "pro",
+   "inicio": 28.524933752727275,
+   "fim": 28.850977505454548
+  },
+  {
+   "palavra": "banco:",
+   "inicio": 28.850977505454548,
+   "fim": 29.466837927272728
+  },
+  {
+   "palavra": "sai",
+   "inicio": 29.466837927272728,
+   "fim": 29.79288168
+  },
+  {
+   "palavra": "tudo",
+   "inicio": 29.79288168,
+   "fim": 30.1913796
+  },
+  {
+   "palavra": "evoluiu:",
+   "inicio": 30.434400000000004,
+   "fim": 30.996212400000005
+  },
+  {
+   "palavra": "sai",
+   "inicio": 30.996212400000005,
+   "fim": 31.236989142857148
+  },
+  {
+   "palavra": "tudo",
+   "inicio": 31.236989142857148,
+   "fim": 31.531271828571434
+  },
+  {
+   "palavra": "também",
+   "inicio": 31.531271828571434,
+   "fim": 31.932566400000002
+  },
+  {
+   "palavra": "e",
+   "inicio": 32.76773333333334,
+   "fim": 32.905293938738744
+  },
+  {
+   "palavra": "cartas",
+   "inicio": 32.905293938738744,
+   "fim": 33.31797575495496
+  },
+  {
+   "palavra": "como",
+   "inicio": 33.31797575495496,
+   "fim": 33.620609086846855
+  },
+  {
+   "palavra": "Pokémon",
+   "inicio": 33.620609086846855,
+   "fim": 34.08831514522523
+  },
+  {
+   "palavra": "Center",
+   "inicio": 34.08831514522523,
+   "fim": 34.500996961441444
+  },
+  {
+   "palavra": "Lady",
+   "inicio": 34.500996961441444,
+   "fim": 34.80363029333334
+  },
+  {
+   "palavra": "Dormindo,",
+   "inicio": 35.73845933333334,
+   "fim": 36.324675626163526
+  },
+  {
+   "palavra": "Confuso",
+   "inicio": 36.324675626163526,
+   "fim": 36.75796592955975
+  },
+  {
+   "palavra": "e",
+   "inicio": 36.75796592955975,
+   "fim": 36.88540425408806
+  },
+  {
+   "palavra": "Paralisado:",
+   "inicio": 36.88540425408806,
+   "fim": 37.57357120654088
+  },
+  {
+   "palavra": "só",
+   "inicio": 37.57357120654088,
+   "fim": 37.751984860880505
+  },
+  {
+   "palavra": "uma",
+   "inicio": 37.751984860880505,
+   "fim": 37.98137384503145
+  },
+  {
+   "palavra": "por",
+   "inicio": 37.98137384503145,
+   "fim": 38.21076282918239
+  },
+  {
+   "palavra": "vez",
+   "inicio": 38.21076282918239,
+   "fim": 38.44015181333334
+  },
+  {
+   "palavra": "Veneno",
+   "inicio": 38.71272233333334,
+   "fim": 39.11830780701755
+  },
+  {
+   "palavra": "e",
+   "inicio": 39.11830780701755,
+   "fim": 39.253502964912286
+  },
+  {
+   "palavra": "Queimadura",
+   "inicio": 39.253502964912286,
+   "fim": 39.87540069122807
+  },
+  {
+   "palavra": "somam",
+   "inicio": 39.87540069122807,
+   "fim": 40.22690810175439
+  },
+  {
+   "palavra": "com",
+   "inicio": 40.22690810175439,
+   "fim": 40.470259385964916
+  },
+  {
+   "palavra": "elas",
+   "inicio": 40.470259385964916,
+   "fim": 40.76768873333334
+  }
+ ]
+}

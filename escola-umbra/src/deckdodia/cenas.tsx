@@ -7,7 +7,7 @@ import {FONTE_MONO, FONTE_TEXTO, FONTE_TITULO} from '../fontes';
 import {MOLA_PULO, MOLA_SECA, acaso, mola, trecho} from '../anim';
 import {TituloArena, sombraTitulo} from '../componentes/Arena';
 import {legendasDaCena} from '../tempo';
-import type {Cena, CenaCartaDestaque, CenaCombo, CenaConfronto, CenaContagem, CenaImpacto, CenaCta, CenaDecklist, CenaGancho, CenaPiramide, MapaCartas} from '../tipos';
+import type {Cena, CenaCartaDestaque, CenaCombo, CenaConfronto, CenaContagem, CenaImpacto, CenaRespira, CenaCta, CenaDecklist, CenaGancho, CenaPiramide, MapaCartas} from '../tipos';
 import {Carta3D, Flash, LinhasDeVelocidade, Raios, Sfx, Tremer, balanco, passadaDeBrilho} from './efeitos';
 
 const sair = Easing.out(Easing.cubic);
@@ -1093,6 +1093,59 @@ export const ComboDeck: React.FC<{cena: CenaCombo; cartas: MapaCartas; duracao: 
       ))}
       {isFinite(nocaute) ? <Sfx som="boom" em={nocaute} volume={0.45} /> : null}
       {isFinite(nocaute) ? <Sfx som="buzina" em={nocaute + 0.15} volume={0.28} /> : null}
+    </AbsoluteFill>
+  );
+};
+
+// ---------- Respiração guiada ----------
+
+export const RespiraDeck: React.FC<{cena: CenaRespira}> = ({cena}) => {
+  const quadro = useCurrentFrame();
+  const {fps} = useVideoConfig();
+  const t = quadro / fps;
+  const E = cena.em ?? 0.4;
+  const P = cena.puxa ?? 3;
+  const S = cena.segura ?? 2;
+  const L = cena.solta ?? 3;
+  const fases = [
+    {nome: 'puxa', de: E, ate: E + P},
+    {nome: 'segura', de: E + P, ate: E + P + S},
+    {nome: 'solta', de: E + P + S, ate: E + P + S + L},
+  ];
+  const suave = Easing.inOut(Easing.sin);
+  // tamanho do círculo: cresce ao puxar, fica parado ao segurar, encolhe ao soltar
+  const tam =
+    t < E
+      ? 0.35
+      : t < fases[0].ate
+        ? 0.35 + 0.65 * suave((t - E) / P)
+        : t < fases[1].ate
+          ? 1
+          : 1 - 0.65 * suave(Math.min(1, (t - fases[2].de) / L));
+  const fase = fases.find((f) => t >= f.de && t < f.ate);
+  const restante = fase ? Math.ceil(fase.ate - t - 1e-6) : null;
+  const entra = mola(quadro, fps, 0, MOLA_PULO);
+  const D = 760 * tam;
+  const cx = AREA.cx;
+  const cy = 820;
+  return (
+    <AbsoluteFill>
+      <div style={{position: 'absolute', left: cx - D / 2, top: cy - D / 2, width: D, height: D, borderRadius: '50%', opacity: Math.min(1, entra * 2), background: `radial-gradient(circle, rgba(229,50,63,0.55) 0%, rgba(125,15,26,0.35) 55%, rgba(240,193,96,0) 72%)`, boxShadow: `0 0 ${120 * tam}px rgba(229,50,63,0.45), inset 0 0 0 ${4 + 4 * tam}px ${CORES.ouro}`}} />
+      <div style={{position: 'absolute', left: cx - D * 0.36, top: cy - D * 0.36, width: D * 0.72, height: D * 0.72, borderRadius: '50%', border: `3px dashed rgba(240,193,96,0.55)`, transform: `rotate(${t * 20}deg)`, opacity: Math.min(1, entra * 2)}} />
+      {fase ? (
+        <div style={{position: 'absolute', left: 0, width: '100%', top: cy - 140, textAlign: 'center'}}>
+          <div key={fase.nome} style={{display: 'inline-block', transform: `skewX(-9deg) scale(${0.6 + 0.4 * mola(quadro, fps, fase.de, MOLA_PULO)})`}}>
+            <div style={{fontFamily: FONTE_TITULO, fontSize: 150, lineHeight: 1, color: CORES.texto, textShadow: sombraTitulo(150), textTransform: 'uppercase'}}>{fase.nome}</div>
+            <div style={{fontFamily: FONTE_TITULO, fontSize: 120, lineHeight: 1.05, color: CORES.ouro, textShadow: sombraTitulo(120)}}>{restante}</div>
+          </div>
+        </div>
+      ) : null}
+      <Batida em={0.05} style={{left: AREA.x0, width: AREA.largura, top: 330, display: 'flex', justifyContent: 'center'}}>
+        <TituloArena texto="respira comigo" largura={AREA.largura} maximo={90} />
+      </Batida>
+      {fases.map((f, i) => (
+        <Sfx key={i} som="brilho" em={f.de} volume={0.22} />
+      ))}
     </AbsoluteFill>
   );
 };

@@ -1,0 +1,232 @@
+{
+  "serie": "Do zero ao campeonato",
+  "numero": 10,
+  "titulo_capa": "condições especiais",
+  "subtitulo_capa": "dormir, confuso e mais",
+  "capa": {
+    "cartas": [
+      "munkidori",
+      "froslass",
+      "lady"
+    ]
+  },
+  "narracao": "auto",
+  "cartas": {
+    "froslass": {
+      "nome": "Mega Froslass ex",
+      "set": "Ascended Heroes",
+      "numero": 47
+    },
+    "munkidori": {
+      "nome": "Munkidori",
+      "set": "Twilight Masquerade",
+      "numero": 95
+    },
+    "lady": {
+      "nome": "Pokémon Center Lady",
+      "set": "Mega Evolution",
+      "numero": 123
+    }
+  },
+  "cenas": [
+    {
+      "tipo": "gancho",
+      "texto": "5 condições",
+      "subtitulo": "que travam o seu Pokémon",
+      "duracao": 2.4,
+      "falas": [
+        {
+          "texto": "Cinco Condições Especiais.",
+          "em": 0.05
+        }
+      ],
+      "legendas": [
+        {
+          "texto": "cada uma *trava* de um jeito",
+          "em": 1.3,
+          "fala": "Cada uma trava de um jeito."
+        }
+      ]
+    },
+    {
+      "tipo": "lista",
+      "titulo": "as 5 condições",
+      "duracao": 10,
+      "itens": [
+        {
+          "texto": "Dormindo",
+          "detalhe": "não ataca nem recua",
+          "destaque": true
+        },
+        {
+          "texto": "Paralisado",
+          "detalhe": "não ataca nem recua",
+          "destaque": true
+        },
+        {
+          "texto": "Confuso",
+          "detalhe": "ataque depende da moeda",
+          "destaque": true
+        },
+        {
+          "texto": "Envenenado",
+          "detalhe": "1 contador entre os turnos",
+          "destaque": true
+        },
+        {
+          "texto": "Queimado",
+          "detalhe": "2 contadores e moeda",
+          "destaque": true
+        }
+      ],
+      "legendas": [
+        {
+          "texto": "Dormindo: *não ataca* nem recua",
+          "fala": "Dormindo: não ataca nem recua."
+        },
+        {
+          "texto": "Paralisado: sai *depois do seu próximo turno*",
+          "fala": "Paralisado: igual, mas passa depois do seu turno."
+        },
+        {
+          "texto": "Confuso: pra atacar, *joga a moeda*",
+          "fala": "Confuso: pra atacar, joga a moeda."
+        },
+        {
+          "texto": "Envenenado: *1 contador* entre os turnos",
+          "fala": "Envenenado: um contador entre os turnos."
+        },
+        {
+          "texto": "Queimado: *2 contadores*, e cara cura",
+          "fala": "Queimado: dois contadores e moeda. Cara, cura."
+        }
+      ]
+    },
+    {
+      "tipo": "carta_destaque",
+      "carta": "froslass",
+      "pill": "DORMINDO",
+      "pill_cor": "vermelho",
+      "titulo": "Absolute Snow",
+      "duracao": 4.5,
+      "legendas": [
+        {
+          "texto": "150 de dano e o ativo *dorme*",
+          "em": 0.3,
+          "fala": "Absolute Snow: cento e cinquenta, e o ativo dorme."
+        },
+        {
+          "texto": "pra acordar: *cara* na moeda, entre os turnos",
+          "em": 2.2,
+          "fala": "Pra acordar: cara na moeda, entre os turnos."
+        }
+      ],
+      "foco": {
+        "em": 2.3,
+        "x": 0.5,
+        "y": 0.74,
+        "escala": 1.9
+      }
+    },
+    {
+      "tipo": "carta_destaque",
+      "carta": "munkidori",
+      "pill": "CONFUSO",
+      "pill_cor": "ouro",
+      "titulo": "Mind Bend",
+      "duracao": 4.2,
+      "legendas": [
+        {
+          "texto": "Mind Bend deixa o ativo *confuso*",
+          "em": 0.3,
+          "fala": "O Mind Bend deixa o ativo confuso."
+        },
+        {
+          "texto": "coroa: o ataque falha e ele toma *3 contadores*",
+          "em": 1.8,
+          "fala": "Coroa: o ataque falha e ele toma três contadores."
+        }
+      ],
+      "foco": {
+        "em": 1.9,
+        "x": 0.5,
+        "y": 0.74,
+        "escala": 1.9
+      }
+    },
+    {
+      "tipo": "lista",
+      "titulo": "como tirar",
+      "duracao": 7,
+      "itens": [
+        {
+          "texto": "Recuar ou trocar",
+          "detalhe": "foi pro banco, saiu tudo",
+          "destaque": true
+        },
+        {
+          "texto": "Evoluir",
+          "detalhe": "a evolução chega limpa",
+          "destaque": true
+        },
+        {
+          "texto": "Cartas de cura",
+          "detalhe": "como Pokémon Center Lady",
+          "carta": "lady",
+          "destaque": true
+        }
+      ],
+      "legendas": [
+        {
+          "texto": "foi pro *banco*: sai tudo",
+          "fala": "Recuou ou trocou pro banco: sai tudo."
+        },
+        {
+          "texto": "*evoluiu*: sai tudo também",
+          "fala": "Evoluiu: sai tudo também."
+        },
+        {
+          "texto": "e cartas como *Pokémon Center Lady*",
+          "fala": "E cartas como a Pokémon Center Lady."
+        }
+      ]
+    },
+    {
+      "tipo": "riscado",
+      "titulo": "erro de iniciante",
+      "duracao": 5,
+      "itens": [
+        {
+          "texto": "Dormindo e Confuso ao mesmo tempo",
+          "em": 0.3,
+          "riscar_em": 1.4
+        }
+      ],
+      "legendas": [
+        {
+          "texto": "Dormindo, Confuso e Paralisado: *só uma* por vez",
+          "em": 0.6,
+          "fala": "Dormindo, Confuso e Paralisado: só uma por vez."
+        },
+        {
+          "texto": "Veneno e Queimadura *somam* com elas",
+          "em": 3.0,
+          "fala": "Veneno e Queimadura somam com elas."
+        }
+      ]
+    },
+    {
+      "tipo": "cta",
+      "duracao": 4.5,
+      "principal": "SALVA",
+      "complemento": "pra próxima partida",
+      "seguir": "segue @escolaumbratcg",
+      "falas": [
+        {
+          "texto": "Salva, e segue a Escola Umbra.",
+          "em": 0.25
+        }
+      ]
+    }
+  ]
+}

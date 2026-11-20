@@ -1,0 +1,232 @@
+{
+ "assinatura": "53826d93fff5a8ee12565c5463d18a8b9b584186",
+ "voz": "pm_santa",
+ "frases": [
+  {
+   "fala": "Rodada um do Laique, e o coração a mil?",
+   "duracao": 1.944354
+  },
+  {
+   "fala": "Primeiro: respira comigo.",
+   "duracao": 1.505714
+  },
+  {
+   "fala": "Puxa o ar.",
+   "duracao": 0.79068
+  },
+  {
+   "fala": "Segura.",
+   "duracao": 0.68
+  },
+  {
+   "fala": "Solta devagar.",
+   "duracao": 0.970476
+  },
+  {
+   "fala": "Dorme bem e come antes de jogar.",
+   "duracao": 2.107302
+  },
+  {
+   "fala": "Não muda o deck na véspera. Joga o que você treinou.",
+   "duracao": 2.814671
+  },
+  {
+   "fala": "Uma partida de cada vez. Perdeu? Foca na próxima.",
+   "duracao": 2.900975
+  },
+  {
+   "fala": "Ficou na dúvida? Chama o juiz. Ele tá lá pra ajudar.",
+   "duracao": 2.683175
+  },
+  {
+   "fala": "E lembra: todo mundo ali tá nervoso também.",
+   "duracao": 2.385669
+  },
+  {
+   "fala": "Boa sorte no Laique! Manda pra quem vai jogar.",
+   "duracao": 2.53381
+  }
+ ],
+ "words": [
+  {
+   "palavra": "e",
+   "inicio": 0.2,
+   "fim": 0.3985723234042553
+  },
+  {
+   "palavra": "o",
+   "inicio": 0.3985723234042553,
+   "fim": 0.5971446468085106
+  },
+  {
+   "palavra": "coração",
+   "inicio": 0.5971446468085106,
+   "fim": 1.2722905463829786
+  },
+  {
+   "palavra": "a",
+   "inicio": 1.2722905463829786,
+   "fim": 1.470862869787234
+  },
+  {
+   "palavra": "mil?",
+   "inicio": 1.470862869787234,
+   "fim": 2.0665798399999997
+  },
+  {
+   "palavra": "primeiro:",
+   "inicio": 2.7,
+   "fim": 3.5311541280000003
+  },
+  {
+   "palavra": "respira",
+   "inicio": 3.5311541280000003,
+   "fim": 4.14548544
+  },
+  {
+   "palavra": "dorme",
+   "inicio": 13.255714000000001,
+   "fim": 13.626124267042254
+  },
+  {
+   "palavra": "bem",
+   "inicio": 13.626124267042254,
+   "fim": 13.882562144225354
+  },
+  {
+   "palavra": "e",
+   "inicio": 13.882562144225354,
+   "fim": 14.025027631549296
+  },
+  {
+   "palavra": "come",
+   "inicio": 14.025027631549296,
+   "fim": 14.338451703661972
+  },
+  {
+   "palavra": "antes",
+   "inicio": 14.338451703661972,
+   "fim": 14.708861970704227
+  },
+  {
+   "palavra": "de",
+   "inicio": 14.708861970704227,
+   "fim": 14.908313652957748
+  },
+  {
+   "palavra": "jogar",
+   "inicio": 14.908313652957748,
+   "fim": 15.278723920000001
+  },
+  {
+   "palavra": "joga",
+   "inicio": 15.713016000000001,
+   "fim": 16.177436715000002
+  },
+  {
+   "palavra": "o",
+   "inicio": 16.177436715000002,
+   "fim": 16.388537040000003
+  },
+  {
+   "palavra": "deck",
+   "inicio": 16.388537040000003,
+   "fim": 16.852957755000002
+  },
+  {
+   "palavra": "que",
+   "inicio": 16.852957755000002,
+   "fim": 17.23293834
+  },
+  {
+   "palavra": "você",
+   "inicio": 17.23293834,
+   "fim": 17.697359055
+  },
+  {
+   "palavra": "treinou",
+   "inicio": 17.697359055,
+   "fim": 18.41510016
+  },
+  {
+   "palavra": "perdeu?",
+   "inicio": 18.877687,
+   "fim": 19.62747746153846
+  },
+  {
+   "palavra": "respira",
+   "inicio": 19.62747746153846,
+   "fim": 20.234450692307693
+  },
+  {
+   "palavra": "e",
+   "inicio": 20.234450692307693,
+   "fim": 20.41297223076923
+  },
+  {
+   "palavra": "foca",
+   "inicio": 20.41297223076923,
+   "fim": 20.805719615384618
+  },
+  {
+   "palavra": "na",
+   "inicio": 20.805719615384618,
+   "fim": 21.055649769230772
+  },
+  {
+   "palavra": "próxima",
+   "inicio": 21.055649769230772,
+   "fim": 21.662623
+  },
+  {
+   "palavra": "o",
+   "inicio": 22.128662000000002,
+   "fim": 22.367166444444447
+  },
+  {
+   "palavra": "juiz",
+   "inicio": 22.367166444444447,
+   "fim": 22.891876222222223
+  },
+  {
+   "palavra": "tá",
+   "inicio": 22.891876222222223,
+   "fim": 23.225782444444448
+  },
+  {
+   "palavra": "lá",
+   "inicio": 23.225782444444448,
+   "fim": 23.55968866666667
+  },
+  {
+   "palavra": "pra",
+   "inicio": 23.55968866666667,
+   "fim": 23.98899666666667
+  },
+  {
+   "palavra": "ajudar",
+   "inicio": 23.98899666666667,
+   "fim": 24.704510000000003
+  },
+  {
+   "palavra": "você",
+   "inicio": 25.161837000000002,
+   "fim": 25.73439756
+  },
+  {
+   "palavra": "não",
+   "inicio": 25.73439756,
+   "fim": 26.202856200000003
+  },
+  {
+   "palavra": "tá",
+   "inicio": 26.202856200000003,
+   "fim": 26.567212920000003
+  },
+  {
+   "palavra": "sozinho",
+   "inicio": 26.567212920000003,
+   "fim": 27.452079240000003
+  }
+ ]
+}
