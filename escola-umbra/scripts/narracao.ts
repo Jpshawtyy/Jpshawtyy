@@ -58,6 +58,10 @@ const materializar = (roteiro: Roteiro, cartas: MapaCartas): Roteiro => {
     if (cena.tipo === 'decklist' && cena.destaques) {
       cena.destaques = cena.destaques.map((d, j) => ({...d, em: d.em ?? 1.6 + j * 1.2}));
     }
+    if (cena.tipo === 'confronto') cena.em = cena.em ?? 1;
+    if (cena.tipo === 'decklist' && cena.grupos) {
+      cena.grupos = cena.grupos.map((g, j) => ({...g, em: g.em ?? 0.6 + j * 1.2}));
+    }
     const brutas: Legenda[] = [...(cena.legenda ? [{texto: cena.legenda}] : []), ...(cena.legendas ?? [])];
     delete cena.legenda;
     if (cena.tipo === 'mesa') {
@@ -86,6 +90,15 @@ const materializar = (roteiro: Roteiro, cartas: MapaCartas): Roteiro => {
       }
     }
     // Decklist: cada destaque acende junto com a sua frase (as últimas frases da cena; as primeiras apresentam a lista).
+    if (cena.tipo === 'decklist' && original.tipo === 'decklist' && cena.grupos?.length && !cena.destaques?.length) {
+      const semTempo = (original.grupos ?? []).every((g) => g.em === undefined);
+      const sobra = legendas.length - cena.grupos.length;
+      if (semTempo && sobra >= 0) {
+        cena.grupos.forEach((g, j) => {
+          g.em = Math.max(0.1, legendas[sobra + j].em! - 0.1);
+        });
+      }
+    }
     if (cena.tipo === 'decklist' && original.tipo === 'decklist' && cena.destaques?.length) {
       const semTempo = (original.destaques ?? []).every((d) => d.em === undefined);
       const sobra = legendas.length - cena.destaques.length;
@@ -157,6 +170,9 @@ const esticarCena = (cena: Cena, frases: (FraseBruta & {duracao: number})[]): nu
   if (cena.tipo === 'piramide') for (const n of cena.niveis) n.em = wOpcional(n.em);
   if (cena.tipo === 'mesa') for (const a of cena.acoes) a.em = wOpcional(a.em);
   if (cena.tipo === 'decklist') for (const d of cena.destaques ?? []) d.em = wOpcional(d.em);
+  if (cena.tipo === 'decklist') for (const g of cena.grupos ?? []) g.em = wOpcional(g.em);
+  if (cena.tipo === 'confronto') cena.em = wOpcional(cena.em);
+  if (cena.tipo === 'carta_destaque' && cena.foco) cena.foco.em = w(cena.foco.em);
   for (const f of frases) f.em = w(f.em);
   cena.duracao = w(cena.duracao!);
   return esticou;

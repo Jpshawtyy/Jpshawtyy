@@ -1,0 +1,503 @@
+{
+ "assinatura": "9ee7316736fa8e2ff4c478166d1de5ab42513cc7",
+ "voz": "pm_santa",
+ "frases": [
+  {
+   "fala": "Bora montar um deck maluco pro Laique?",
+   "duracao": 2.145918
+  },
+  {
+   "fala": "Quase ninguém joga.",
+   "duracao": 1.342834
+  },
+  {
+   "fala": "Mas ficou em quarto em Gdansk, com mil setecentos e trinta e nove jogadores,",
+   "duracao": 4.237211
+  },
+  {
+   "fala": "e em quarto em Buenos Aires.",
+   "duracao": 1.797302
+  },
+  {
+   "fala": "O segredo: ataque de Pokémon ex não dá dano nele.",
+   "duracao": 2.7561
+  },
+  {
+   "fala": "O Dragapult vem com duzentos...",
+   "duracao": 2.011927
+  },
+  {
+   "fala": "e dá zero.",
+   "duracao": 0.828186
+  },
+  {
+   "fala": "E ele é um em cada três decks do meta.",
+   "duracao": 2.135669
+  },
+  {
+   "fala": "Agora, montando o deck.",
+   "duracao": 1.327007
+  },
+  {
+   "fala": "Três Dwebble e três Crustle.",
+   "duracao": 1.68542
+  },
+  {
+   "fala": "Quatro Mega Kangaskhan, batendo duzentos ou mais.",
+   "duracao": 2.886939
+  },
+  {
+   "fala": "E quatro sorvetes gigantes. Cada um cura oitenta.",
+   "duracao": 2.859977
+  },
+  {
+   "fala": "A Spiky Energy põe dois contadores em quem bate.",
+   "duracao": 2.951224
+  },
+  {
+   "fala": "E a Hero's Cape, com mais cem de HP.",
+   "duracao": 2.023129
+  },
+  {
+   "fala": "Você levaria isso pro Laique? Comenta aí.",
+   "duracao": 2.275964
+  }
+ ],
+ "words": [
+  {
+   "palavra": "bora",
+   "inicio": 0.05,
+   "fim": 0.3165987538823529
+  },
+  {
+   "palavra": "montar",
+   "inicio": 0.3165987538823529,
+   "fim": 0.6801425091764706
+  },
+  {
+   "palavra": "um",
+   "inicio": 0.6801425091764706,
+   "fim": 0.8497962616470589
+  },
+  {
+   "palavra": "deck",
+   "inicio": 0.8497962616470589,
+   "fim": 1.1163950155294118
+  },
+  {
+   "palavra": "maluco",
+   "inicio": 1.1163950155294118,
+   "fim": 1.4799387708235294
+  },
+  {
+   "palavra": "pro",
+   "inicio": 1.4799387708235294,
+   "fim": 1.698065024
+  },
+  {
+   "palavra": "LAIC?",
+   "inicio": 1.698065024,
+   "fim": 2.1100812799999997
+  },
+  {
+   "palavra": "quase",
+   "inicio": 2.355918,
+   "fim": 2.7646635687804877
+  },
+  {
+   "palavra": "ninguém",
+   "inicio": 2.7646635687804877,
+   "fim": 3.2991770048780484
+  },
+  {
+   "palavra": "joga",
+   "inicio": 3.2991770048780484,
+   "fim": 3.64503864
+  },
+  {
+   "palavra": "mas",
+   "inicio": 4.2487520000000005,
+   "fim": 4.638214798297873
+  },
+  {
+   "palavra": "ficou",
+   "inicio": 4.638214798297873,
+   "fim": 5.200772173617022
+  },
+  {
+   "palavra": "em",
+   "inicio": 5.200772173617022,
+   "fim": 5.503687683404256
+  },
+  {
+   "palavra": "4º",
+   "inicio": 5.503687683404256,
+   "fim": 5.80660319319149
+  },
+  {
+   "palavra": "em",
+   "inicio": 5.80660319319149,
+   "fim": 6.109518702978724
+  },
+  {
+   "palavra": "Gdańsk,",
+   "inicio": 6.109518702978724,
+   "fim": 6.9317179438297885
+  },
+  {
+   "palavra": "1.739",
+   "inicio": 6.9317179438297885,
+   "fim": 7.407728030638298
+  },
+  {
+   "palavra": "jogadores",
+   "inicio": 7.407728030638298,
+   "fim": 8.31647456
+  },
+  {
+   "palavra": "e",
+   "inicio": 8.645963,
+   "fim": 8.805723177777779
+  },
+  {
+   "palavra": "em",
+   "inicio": 8.805723177777779,
+   "fim": 9.029387426666666
+  },
+  {
+   "palavra": "4º",
+   "inicio": 9.029387426666666,
+   "fim": 9.253051675555556
+  },
+  {
+   "palavra": "em",
+   "inicio": 9.253051675555556,
+   "fim": 9.476715924444445
+  },
+  {
+   "palavra": "Buenos",
+   "inicio": 9.476715924444445,
+   "fim": 9.955996457777777
+  },
+  {
+   "palavra": "Aires",
+   "inicio": 9.955996457777777,
+   "fim": 10.37137292
+  },
+  {
+   "palavra": "o",
+   "inicio": 10.603265,
+   "fim": 10.723531181818181
+  },
+  {
+   "palavra": "segredo:",
+   "inicio": 10.723531181818181,
+   "fim": 11.228649145454545
+  },
+  {
+   "palavra": "ataque",
+   "inicio": 11.228649145454545,
+   "fim": 11.589447690909092
+  },
+  {
+   "palavra": "de",
+   "inicio": 11.589447690909092,
+   "fim": 11.757820345454546
+  },
+  {
+   "palavra": "Pokémon",
+   "inicio": 11.757820345454546,
+   "fim": 12.166725363636363
+  },
+  {
+   "palavra": "ex",
+   "inicio": 12.166725363636363,
+   "fim": 12.335098018181819
+  },
+  {
+   "palavra": "não",
+   "inicio": 12.335098018181819,
+   "fim": 12.551577145454546
+  },
+  {
+   "palavra": "dá",
+   "inicio": 12.551577145454546,
+   "fim": 12.7199498
+  },
+  {
+   "palavra": "dano",
+   "inicio": 12.7199498,
+   "fim": 12.9845354
+  },
+  {
+   "palavra": "nele",
+   "inicio": 12.9845354,
+   "fim": 13.249121
+  },
+  {
+   "palavra": "o",
+   "inicio": 13.709365,
+   "fim": 13.891577256603773
+  },
+  {
+   "palavra": "Dragapult",
+   "inicio": 13.891577256603773,
+   "fim": 14.656868734339623
+  },
+  {
+   "palavra": "vem",
+   "inicio": 14.656868734339623,
+   "fim": 14.984850796226414
+  },
+  {
+   "palavra": "com",
+   "inicio": 14.984850796226414,
+   "fim": 15.312832858113207
+  },
+  {
+   "palavra": "200",
+   "inicio": 15.312832858113207,
+   "fim": 15.64081492
+  },
+  {
+   "palavra": "e",
+   "inicio": 15.881292,
+   "fim": 16.054130817391304
+  },
+  {
+   "palavra": "dá",
+   "inicio": 16.054130817391304,
+   "fim": 16.29610516173913
+  },
+  {
+   "palavra": "zero",
+   "inicio": 16.29610516173913,
+   "fim": 16.67635056
+  },
+  {
+   "palavra": "e",
+   "inicio": 16.981292,
+   "fim": 17.112717784615384
+  },
+  {
+   "palavra": "ele",
+   "inicio": 17.112717784615384,
+   "fim": 17.349284196923076
+  },
+  {
+   "palavra": "é",
+   "inicio": 17.349284196923076,
+   "fim": 17.48070998153846
+  },
+  {
+   "palavra": "1",
+   "inicio": 17.48070998153846,
+   "fim": 17.612135766153845
+  },
+  {
+   "palavra": "em",
+   "inicio": 17.612135766153845,
+   "fim": 17.796131864615383
+  },
+  {
+   "palavra": "cada",
+   "inicio": 17.796131864615383,
+   "fim": 18.085268590769232
+  },
+  {
+   "palavra": "3",
+   "inicio": 18.085268590769232,
+   "fim": 18.216694375384616
+  },
+  {
+   "palavra": "decks",
+   "inicio": 18.216694375384616,
+   "fim": 18.558401415384616
+  },
+  {
+   "palavra": "do",
+   "inicio": 18.558401415384616,
+   "fim": 18.742397513846154
+  },
+  {
+   "palavra": "meta",
+   "inicio": 18.742397513846154,
+   "fim": 19.03153424
+  },
+  {
+   "palavra": "agora,",
+   "inicio": 19.616961,
+   "fim": 20.158379856
+  },
+  {
+   "palavra": "montando:",
+   "inicio": 20.158379856,
+   "fim": 20.89088772
+  },
+  {
+   "palavra": "3",
+   "inicio": 21.103968,
+   "fim": 21.269070367346938
+  },
+  {
+   "palavra": "Dwebble",
+   "inicio": 21.269070367346938,
+   "fim": 21.83041841632653
+  },
+  {
+   "palavra": "e",
+   "inicio": 21.83041841632653,
+   "fim": 21.995520783673467
+  },
+  {
+   "palavra": "3",
+   "inicio": 21.995520783673467,
+   "fim": 22.160623151020406
+  },
+  {
+   "palavra": "Crustle",
+   "inicio": 22.160623151020406,
+   "fim": 22.7219712
+  },
+  {
+   "palavra": "4",
+   "inicio": 22.949388,
+   "fim": 23.14734953142857
+  },
+  {
+   "palavra": "Mega",
+   "inicio": 23.14734953142857,
+   "fim": 23.582864900571426
+  },
+  {
+   "palavra": "Kangaskhan:",
+   "inicio": 23.582864900571426,
+   "fim": 24.651857170285712
+  },
+  {
+   "palavra": "200",
+   "inicio": 24.651857170285712,
+   "fim": 25.00818792685714
+  },
+  {
+   "palavra": "ou",
+   "inicio": 25.00818792685714,
+   "fim": 25.285334070857143
+  },
+  {
+   "palavra": "mais",
+   "inicio": 25.285334070857143,
+   "fim": 25.72084944
+  },
+  {
+   "palavra": "e",
+   "inicio": 25.996327,
+   "fim": 26.152325745454547
+  },
+  {
+   "palavra": "4",
+   "inicio": 26.152325745454547,
+   "fim": 26.30832449090909
+  },
+  {
+   "palavra": "sorvetes",
+   "inicio": 26.30832449090909,
+   "fim": 26.901119723636363
+  },
+  {
+   "palavra": "gigantes:",
+   "inicio": 26.901119723636363,
+   "fim": 27.618713952727273
+  },
+  {
+   "palavra": "cada",
+   "inicio": 27.618713952727273,
+   "fim": 27.961911192727275
+  },
+  {
+   "palavra": "um",
+   "inicio": 27.961911192727275,
+   "fim": 28.180309436363636
+  },
+  {
+   "palavra": "cura",
+   "inicio": 28.180309436363636,
+   "fim": 28.52350667636364
+  },
+  {
+   "palavra": "80",
+   "inicio": 28.52350667636364,
+   "fim": 28.74190492
+  },
+  {
+   "palavra": "a",
+   "inicio": 29.016304,
+   "fim": 29.179130151724138
+  },
+  {
+   "palavra": "Spiky",
+   "inicio": 29.179130151724138,
+   "fim": 29.6024781462069
+  },
+  {
+   "palavra": "espeta",
+   "inicio": 29.6024781462069,
+   "fim": 30.09095660137931
+  },
+  {
+   "palavra": "quem",
+   "inicio": 30.09095660137931,
+   "fim": 30.449174135172417
+  },
+  {
+   "palavra": "bate:",
+   "inicio": 30.449174135172417,
+   "fim": 30.93765259034483
+  },
+  {
+   "palavra": "2",
+   "inicio": 30.93765259034483,
+   "fim": 31.100478742068965
+  },
+  {
+   "palavra": "contadores",
+   "inicio": 31.100478742068965,
+   "fim": 31.849479040000002
+  },
+  {
+   "palavra": "e",
+   "inicio": 32.127528,
+   "fim": 32.28672503606557
+  },
+  {
+   "palavra": "a",
+   "inicio": 32.28672503606557,
+   "fim": 32.44592207213115
+  },
+  {
+   "palavra": "Hero's",
+   "inicio": 32.44592207213115,
+   "fim": 32.85983436590164
+  },
+  {
+   "palavra": "Cape:",
+   "inicio": 32.85983436590164,
+   "fim": 33.33742547409836
+  },
+  {
+   "palavra": "+100",
+   "inicio": 33.33742547409836,
+   "fim": 33.62398013901639
+  },
+  {
+   "palavra": "de",
+   "inicio": 33.62398013901639,
+   "fim": 33.84685598950819
+  },
+  {
+   "palavra": "HP",
+   "inicio": 33.84685598950819,
+   "fim": 34.069731839999996
+  }
+ ]
+}

@@ -1,0 +1,137 @@
+{
+  "formato": "deck_do_dia",
+  "rotulo": "Especial LAIC",
+  "serie": "Deck maluco",
+  "numero": 2,
+  "titulo_capa": "deck maluco",
+  "subtitulo_capa": "pokémon ex não dá dano",
+  "capa": {"cartas": ["kangaskhan", "crustle", "sorvete"]},
+  "narracao": "auto",
+
+  "cartas": {
+    "dwebble": {"nome": "Dwebble", "set": "Destined Rivals", "numero": 11},
+    "crustle": {"nome": "Crustle", "set": "Destined Rivals", "numero": 12},
+    "kangaskhan": {"nome": "Mega Kangaskhan ex", "set": "Mega Evolution", "numero": 104},
+    "dragapult": {"nome": "Dragapult ex", "set": "Twilight Masquerade", "numero": 130},
+    "sorvete": {"nome": "Jumbo Ice Cream", "set": "Phantasmal Flames", "numero": 91},
+    "mist": {"nome": "Mist Energy", "set": "Temporal Forces", "numero": 161},
+    "growing": {"nome": "Growing Grass Energy", "set": "Perfect Order", "numero": 86},
+    "spiky": {"nome": "Spiky Energy", "set": "Journey Together", "numero": 159},
+    "capa": {"nome": "Hero's Cape", "set": "Temporal Forces", "numero": 152},
+    "lillie": {"nome": "Lillie's Determination", "set": "Mega Evolution", "numero": 119},
+    "boss": {"nome": "Boss's Orders", "set": "Mega Evolution", "numero": 114},
+    "petrel": {"nome": "Team Rocket's Petrel", "set": "Destined Rivals", "numero": 176},
+    "hilda": {"nome": "Hilda", "set": "White Flare", "numero": 84},
+    "eri": {"nome": "Eri", "set": "Temporal Forces", "numero": 146},
+    "bianca": {"nome": "Bianca's Devotion", "set": "Temporal Forces", "numero": 142},
+    "xerosic": {"nome": "Xerosic's Machinations", "set": "Shrouded Fable", "numero": 64},
+    "lady": {"nome": "Pokémon Center Lady", "set": "Mega Evolution", "numero": 123},
+    "pokegear": {"nome": "Pokégear 3.0", "set": "Black Bolt", "numero": 84},
+    "poffin": {"nome": "Buddy-Buddy Poffin", "set": "Temporal Forces", "numero": 144},
+    "switch": {"nome": "Switch", "set": "Mega Evolution", "numero": 130},
+    "scrapper": {"nome": "Tool Scrapper", "set": "Ascended Heroes", "numero": 212},
+    "ultra-ball": {"nome": "Ultra Ball", "set": "Mega Evolution", "numero": 131},
+    "gemstone": {"nome": "Gravity Gemstone", "set": "Stellar Crown", "numero": 137},
+    "leque": {"nome": "Handheld Fan", "set": "Twilight Masquerade", "numero": 150},
+    "fabrica": {"nome": "Team Rocket's Factory", "set": "Destined Rivals", "numero": 173},
+    "lumiose": {"nome": "Lumiose City", "set": "Perfect Order", "numero": 77}
+  },
+
+  "cenas": [
+    {
+      "tipo": "gancho",
+      "texto": "deck maluco",
+      "subtitulo": "pro LAIC",
+      "carta": "crustle",
+      "duracao": 2.6,
+      "legendas": [
+        {"texto": "bora montar um deck *maluco* pro LAIC?", "em": 0.05, "fala": "Bora montar um deck maluco pro Laique?"},
+        {"texto": "quase *ninguém* joga", "em": 1.6, "fala": "Quase ninguém joga."}
+      ]
+    },
+    {
+      "tipo": "carta_destaque",
+      "carta": "crustle",
+      "pill": "4º LUGAR",
+      "pill_cor": "ouro",
+      "titulo": "Crustle",
+      "foco": {"em": 4.4, "x": 0.5, "y": 0.56, "escala": 2.0},
+      "duracao": 7,
+      "legendas": [
+        {"texto": "mas ficou em *4º* em Gdańsk, 1.739 jogadores", "em": 0.3, "fala": "Mas ficou em quarto em Gdansk, com mil setecentos e trinta e nove jogadores,"},
+        {"texto": "e em *4º* em Buenos Aires", "em": 2.6, "fala": "e em quarto em Buenos Aires."},
+        {"texto": "o segredo: ataque de *Pokémon ex* não dá dano nele", "em": 4.3, "fala": "O segredo: ataque de Pokémon ex não dá dano nele."}
+      ]
+    },
+    {
+      "tipo": "confronto",
+      "atacante": "dragapult",
+      "defensor": "crustle",
+      "ataque": "Phantom Dive",
+      "resultado": 0,
+      "selo": "IMUNE",
+      "em": 1.4,
+      "duracao": 5,
+      "legendas": [
+        {"texto": "o Dragapult vem com *200*", "em": 0.1, "fala": "O Dragapult vem com duzentos..."},
+        {"texto": "e dá *zero*", "em": 1.9, "fala": "e dá zero."},
+        {"texto": "e ele é *1 em cada 3* decks do meta", "em": 3.0, "fala": "E ele é um em cada três decks do meta."}
+      ]
+    },
+    {
+      "tipo": "decklist",
+      "titulo": "montando o deck",
+      "duracao": 10,
+      "cartas": [
+        {"carta": "dwebble", "qtd": 3},
+        {"carta": "crustle", "qtd": 3},
+        {"carta": "kangaskhan", "qtd": 4},
+        {"carta": "sorvete", "qtd": 4},
+        {"carta": "mist", "qtd": 4},
+        {"carta": "growing", "qtd": 4},
+        {"carta": "spiky", "qtd": 4},
+        {"carta": "capa", "qtd": 1},
+        {"carta": "lillie", "qtd": 4},
+        {"carta": "boss", "qtd": 4},
+        {"carta": "petrel", "qtd": 4},
+        {"carta": "hilda", "qtd": 3},
+        {"carta": "eri", "qtd": 2},
+        {"carta": "bianca", "qtd": 1},
+        {"carta": "xerosic", "qtd": 1},
+        {"carta": "lady", "qtd": 1},
+        {"carta": "pokegear", "qtd": 3},
+        {"carta": "poffin", "qtd": 2},
+        {"carta": "switch", "qtd": 1},
+        {"carta": "scrapper", "qtd": 1},
+        {"carta": "ultra-ball", "qtd": 1},
+        {"carta": "gemstone", "qtd": 1},
+        {"carta": "leque", "qtd": 1},
+        {"carta": "fabrica", "qtd": 2},
+        {"carta": "lumiose", "qtd": 1}
+      ],
+      "grupos": [
+        {"cartas": ["dwebble", "crustle"], "adesivo": "só 6 pokémon\nde parede"},
+        {"cartas": ["kangaskhan"], "adesivo": "200 de dano"},
+        {"cartas": ["sorvete"], "adesivo": "4 sorvetes?!"},
+        {"cartas": ["mist", "growing", "spiky"], "adesivo": "energia\ncom espinho"},
+        {"cartas": ["capa"], "adesivo": "+100 HP"}
+      ],
+      "legendas": [
+        {"texto": "agora, *montando*:", "fala": "Agora, montando o deck."},
+        {"texto": "*3 Dwebble e 3 Crustle*", "fala": "Três Dwebble e três Crustle."},
+        {"texto": "*4 Mega Kangaskhan*: 200 ou mais", "fala": "Quatro Mega Kangaskhan, batendo duzentos ou mais."},
+        {"texto": "e *4 sorvetes gigantes*: cada um cura 80", "fala": "E quatro sorvetes gigantes. Cada um cura oitenta."},
+        {"texto": "a Spiky *espeta* quem bate: 2 contadores", "fala": "A Spiky Energy põe dois contadores em quem bate."},
+        {"texto": "e a *Hero's Cape*: +100 de HP", "fala": "E a Hero's Cape, com mais cem de HP."}
+      ]
+    },
+    {
+      "tipo": "cta",
+      "duracao": 4.5,
+      "principal": "COMENTA",
+      "complemento": "você levaria isso pro LAIC?",
+      "seguir": "segue @escolaumbratcg",
+      "falas": [{"texto": "Você levaria isso pro Laique? Comenta aí.", "em": 0.25}]
+    }
+  ]
+}

@@ -124,6 +124,20 @@ export type CenaDecklist = CenaBase & {
   titulo?: string;
   cartas: ItemDecklist[];
   destaques?: {carta: RefCarta; em?: number}[];
+  // Montagem: o deck vai sendo montado em grupos, com contador 0/60. Cada grupo entra junto com uma das
+  // últimas frases da cena; as cartas que não estão em nenhum grupo entram com o último.
+  grupos?: {cartas: RefCarta[]; adesivo?: string; em?: number}[];
+};
+
+// Confronto: o atacante dá o golpe no defensor e aparece o dano que entrou de verdade (ex.: 200 vira 0).
+export type CenaConfronto = CenaBase & {
+  tipo: 'confronto';
+  atacante: RefCarta;
+  defensor: RefCarta;
+  ataque: string; // nome do ataque, como na carta
+  resultado: number; // dano que o defensor recebe
+  selo?: string; // carimbo grande (ex.: "IMUNE")
+  em?: number; // segundo do golpe (padrão 1,0)
 };
 
 export type CenaCta = CenaBase & {
@@ -207,6 +221,7 @@ export type Cena =
   | CenaRiscado
   | CenaMesa
   | CenaDecklist
+  | CenaConfronto
   | CenaCta;
 
 export type TipoCena = Cena['tipo'];

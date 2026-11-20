@@ -15,4 +15,12 @@ $F -f lavfi -i "anoisesrc=color=white:duration=0.05:amplitude=0.7:seed=11" -af "
 $F -f lavfi -i "aevalsrc='(0.25*sin(2*PI*2637*t)+0.2*sin(2*PI*3951*t))*exp(-4*t)*(0.6+0.4*sin(2*PI*18*t))':d=0.9:s=44100" brilho.wav
 # subida: chirp de 300 a 1400 Hz para a contagem do número
 $F -f lavfi -i "aevalsrc='0.22*sin(2*PI*(300*t+550*t*t))*min(1,t*4)':d=1.0:s=44100" -af "afade=t=out:st=0.85:d=0.15" subida.wav
+# boing: mola, frequência oscilando e caindo
+$F -f lavfi -i "aevalsrc='0.5*sin(2*PI*(180*t+60*sin(2*PI*9*t)*exp(-3*t)/(2*PI*9)*9))*exp(-3.5*t)':d=0.8:s=44100" boing.wav
+# pop: bolha estourando (adesivo aparecendo)
+$F -f lavfi -i "aevalsrc='0.7*sin(2*PI*(900*t-2600*t*t))*exp(-38*t)':d=0.15:s=44100" pop.wav
+# ding: sininho do contador
+$F -f lavfi -i "aevalsrc='(0.35*sin(2*PI*1568*t)+0.18*sin(2*PI*3136*t)+0.08*sin(2*PI*4704*t))*exp(-5*t)':d=1.0:s=44100" ding.wav
+# trombone triste: quatro notas descendo (wah wah wah waaah)
+$F -f lavfi -i "aevalsrc='0.3*(2*(mod(t*(if(lt(t,0.32),311,if(lt(t,0.64),294,if(lt(t,0.96),277,262+4*sin(2*PI*6*t))))),1))-1)*(0.6+0.4*sin(PI*mod(t,0.32)/0.32))*if(lt(t,0.96),1,exp(-1.8*(t-0.96)))':d=2.0:s=44100" -af "lowpass=f=1800,volume=1.3" trombone.wav
 ls -la

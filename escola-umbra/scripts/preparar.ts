@@ -25,7 +25,7 @@ export type Preparo = {
   narracao?: Narracao; // quando o roteiro usa "narracao": "auto"
 };
 
-const TIPOS = ['gancho', 'carta_destaque', 'lista', 'piramide', 'comparacao', 'riscado', 'mesa', 'decklist', 'cta'];
+const TIPOS = ['gancho', 'carta_destaque', 'lista', 'piramide', 'comparacao', 'riscado', 'mesa', 'decklist', 'confronto', 'cta'];
 const EMOJI = /\p{Extended_Pictographic}/u;
 
 const textosDe = (valor: unknown, caminho: string, saida: {caminho: string; texto: string}[]) => {
@@ -55,12 +55,17 @@ const conferirEstrutura = (r: Roteiro, achados: Achado[]) => {
     if (c.tipo === 'piramide' && !(c.niveis?.length > 0)) erro(onde, 'Falta "niveis".');
     if (c.tipo === 'comparacao' && !(c.bons?.length > 0 && c.ruins?.length > 0)) erro(onde, 'Faltam "bons" e "ruins".');
     if (c.tipo === 'riscado' && !(c.itens?.length > 0)) erro(onde, 'Falta "itens".');
+    if (c.tipo === 'confronto') {
+      if (!c.atacante || !c.defensor || !c.ataque) erro(onde, 'Faltam "atacante", "defensor" e "ataque".');
+      if (typeof c.resultado !== 'number') erro(onde, 'Falta "resultado" (o dano que o defensor recebe).');
+    }
     if (c.tipo === 'decklist') {
       if (!(c.cartas?.length > 0)) erro(onde, 'Falta "cartas" (a lista do deck, com "carta" e "qtd").');
       else {
         const total = c.cartas.reduce((s, i) => s + (Number(i.qtd) || 0), 0);
         if (total !== 60) erro(onde, `A lista soma ${total} cartas; um deck do Standard tem 60.`);
         for (const d of c.destaques ?? []) if (!c.cartas.some((i) => i.carta === d.carta)) erro(onde, `O destaque "${d.carta}" não está na lista.`);
+        for (const g of c.grupos ?? []) for (const r of g.cartas) if (!c.cartas.some((i) => i.carta === r)) erro(onde, `A carta "${r}" do grupo não está na lista.`);
       }
     }
     if (c.tipo === 'mesa') {
@@ -97,7 +102,8 @@ const eventosDaCena = (cena: Cena, duracao: number, temposAcoes: number[]): numb
   if (cena.tipo === 'gancho') eventos.push(0.3, 0.55);
   if (cena.tipo === 'carta_destaque') eventos.push(0.2, 0.7, 1.4, 2.4);
   if (cena.tipo === 'cta') eventos.push(0.2, 0.8, 1.6, 2.6);
-  if (cena.tipo === 'decklist') eventos.push(0.2, 0.7, 1.3, ...(cena.destaques ?? []).map((d) => d.em ?? 1.6));
+  if (cena.tipo === 'confronto') eventos.push(0.1, 0.5, cena.em ?? 1, (cena.em ?? 1) + 0.5);
+  if (cena.tipo === 'decklist') eventos.push(...(cena.grupos ?? []).map((g) => g.em ?? 1.6), 0.2, 0.7, 1.3, ...(cena.destaques ?? []).map((d) => d.em ?? 1.6));
   if (cena.tipo === 'mesa') eventos.push(...temposAcoes, ...temposAcoes.map((t) => t + 0.9));
   return [...new Set(eventos)].filter((t) => t < duracao).sort((a, b) => a - b);
 };
@@ -223,6 +229,14 @@ export const preparar = async (
   log('Cartas (Pokémon TCG API, com cache em public/cards/):');
   const {cartas, escolhas} = await resolverCartas(roteiro, {atualizar: opcoes.atualizarCartas, log});
   for (const e of escolhas) if (e.aviso) achados.push({nivel: 'aviso', onde: `carta "${e.ref}"`, mensagem: e.aviso});
+  // Confronto: o ataque tem que existir na carta do atacante (o dano mostrado vem da própria carta).
+  roteiro.cenas.forEach((c, i) => {
+    if (c.tipo !== 'confronto') return;
+    const a = cartas[c.atacante];
+    if (a && !a.ataques.some((x) => x.nome === c.ataque)) {
+      achados.push({nivel: 'erro', onde: `cena ${i + 1} (confronto)`, mensagem: `${a.nome} não tem o ataque "${c.ataque}". Ataques da carta: ${a.ataques.map((x) => x.nome).join(', ')}.`});
+    }
+  });
 
   // narrador automático: fala as legendas e ajusta o tempo das cenas ao áudio
   let narracao: Narracao | undefined;

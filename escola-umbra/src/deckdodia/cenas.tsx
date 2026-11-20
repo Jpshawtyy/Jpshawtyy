@@ -7,7 +7,7 @@ import {FONTE_MONO, FONTE_TEXTO, FONTE_TITULO} from '../fontes';
 import {MOLA_PULO, MOLA_SECA, acaso, mola, trecho} from '../anim';
 import {TituloArena, sombraTitulo} from '../componentes/Arena';
 import {legendasDaCena} from '../tempo';
-import type {Cena, CenaCartaDestaque, CenaCta, CenaDecklist, CenaGancho, CenaPiramide, MapaCartas} from '../tipos';
+import type {Cena, CenaCartaDestaque, CenaConfronto, CenaCta, CenaDecklist, CenaGancho, CenaPiramide, MapaCartas} from '../tipos';
 import {Carta3D, Flash, LinhasDeVelocidade, Raios, Sfx, Tremer, balanco, passadaDeBrilho} from './efeitos';
 
 const sair = Easing.out(Easing.cubic);
@@ -346,7 +346,8 @@ export const DecklistDeal: React.FC<{cena: CenaDecklist; cartas: MapaCartas; dur
   const t = quadro / fps;
   const itens = cena.cartas.filter((i) => cartas[i.carta]);
   const topo = cena.titulo ? 460 : 340;
-  const fundo = 1240;
+  const montagem = (cena.grupos?.length ?? 0) > 0;
+  const fundo = montagem ? 1160 : 1240; // na montagem, o contador fica embaixo da grade
   const {colunas, linhas, w} = grade(itens.length, AREA.largura, fundo - topo);
   const h = w * PROPORCAO_CARTA;
   const x0 = AREA.cx - (colunas * w + (colunas - 1) * VAO) / 2;
@@ -354,7 +355,23 @@ export const DecklistDeal: React.FC<{cena: CenaDecklist; cartas: MapaCartas; dur
   const INICIO = 0.25;
   const PASSO = Math.min(0.06, 1.3 / Math.max(1, itens.length));
   const VOO = 0.3;
-  const fimDistribuir = INICIO + (itens.length - 1) * PASSO + VOO;
+  // Montagem: cada carta entra com o seu grupo; as que não estão em grupo nenhum entram com o último.
+  const grupos = (cena.grupos ?? []).map((g, j) => ({...g, em: g.em ?? 0.6 + j * 1.2}));
+  const grupoDe = (ref: string) => {
+    const j = grupos.findIndex((g) => g.cartas.includes(ref));
+    return j >= 0 ? j : grupos.length - 1;
+  };
+  const inicioCarta = itens.map((item, i) => {
+    if (!montagem) return INICIO + i * PASSO;
+    const j = grupoDe(item.carta);
+    const irmas = itens.filter((x) => grupoDe(x.carta) === j);
+    const k = irmas.indexOf(item);
+    return grupos[j].em + k * Math.min(0.09, 0.9 / Math.max(1, irmas.length));
+  });
+  const fimDistribuir = Math.max(...inicioCarta) + VOO;
+  const total = itens.reduce((soma, x) => soma + x.qtd, 0);
+  const contado = itens.reduce((soma, x, i) => soma + (t >= inicioCarta[i] + VOO * 0.8 ? x.qtd : 0), 0);
+  const fimContagem = fimDistribuir;
 
   const destaques = (cena.destaques ?? []).map((d, i, l) => {
     const em = d.em ?? 1.6 + i * 1.2;
@@ -370,7 +387,7 @@ export const DecklistDeal: React.FC<{cena: CenaDecklist; cartas: MapaCartas; dur
   return (
     <AbsoluteFill>
       <Raios x={centro.x} y={centro.y} forca={escurece * 0.9} />
-      <Tremer impactos={[fimDistribuir, ...destaques.map((d) => d.em + 0.3)]} forca={16}>
+      <Tremer impactos={[fimDistribuir, ...destaques.map((d) => d.em + 0.3), ...grupos.map((g) => g.em + VOO)]} forca={16}>
         {cena.titulo ? (
           <Batida em={0.02} style={{left: AREA.x0, width: AREA.largura, top: 340, display: 'flex', justifyContent: 'center'}}>
             <TituloArena texto={cena.titulo} largura={AREA.largura} maximo={84} />
@@ -382,8 +399,8 @@ export const DecklistDeal: React.FC<{cena: CenaDecklist; cartas: MapaCartas; dur
           const naLinha = lin === linhas - 1 ? itens.length - lin * colunas : colunas;
           const gx = x0 + ((colunas - naLinha) * (w + VAO)) / 2 + col * (w + VAO) + w / 2;
           const gy = y0 + lin * (h + VAO) + h / 2;
-          const p = voo(t, INICIO + i * PASSO, VOO);
-          if (t < INICIO + i * PASSO) return null;
+          const p = voo(t, inicioCarta[i], VOO);
+          if (t < inicioCarta[i]) return null;
           const d = ativo.find((a) => a.carta === item.carta);
           const sobe = d ? d.p : 0;
           const x = interpolate(p, [0, 1], [AREA.cx + (acaso(i) - 0.5) * 200, gx]);
@@ -429,11 +446,68 @@ export const DecklistDeal: React.FC<{cena: CenaDecklist; cartas: MapaCartas; dur
             </React.Fragment>
           );
         })}
+        {montagem ? (
+          <div
+            style={{
+              position: 'absolute',
+              left: AREA.x0,
+              width: AREA.largura,
+              top: 1172,
+              display: 'flex',
+              justifyContent: 'center',
+              transform: `scale(${1 + 0.25 * (1 - mola(quadro, fps, fimContagem, MOLA_PULO)) * (t >= fimContagem ? 1 : 0)})`,
+            }}
+          >
+            <div style={{background: contado >= total ? CORES.ouro : 'rgba(20,20,24,0.92)', boxShadow: `inset 0 0 0 3px ${CORES.ouro}, 0 10px 26px rgba(0,0,0,0.6)`, transform: 'skewX(-12deg)', padding: '4px 30px'}}>
+              <div style={{transform: 'skewX(12deg)', fontFamily: FONTE_TITULO, fontSize: 54, lineHeight: 1.1, color: contado >= total ? CORES.pillOuroTexto : CORES.texto}}>
+                {contado}
+                <span style={{opacity: 0.6}}>/{total}</span>
+              </div>
+            </div>
+          </div>
+        ) : null}
+        {grupos.map((g, j) => {
+          if (!g.adesivo) return null;
+          const fim = grupos[j + 1]?.em ?? duracao;
+          if (t < g.em + 0.3 || t > fim) return null;
+          const e = mola(quadro, fps, g.em + 0.3, MOLA_PULO);
+          const sai = trecho(t, [fim - 0.12, fim], [1, 0]);
+          const primeira = itens.findIndex((x) => grupoDe(x.carta) === j);
+          const col = primeira % colunas;
+          const lado = col < colunas / 2 ? 1 : -1;
+          return (
+            <div
+              key={j}
+              style={{
+                position: 'absolute',
+                left: AREA.x0,
+                width: AREA.largura,
+                top: 640,
+                display: 'flex',
+                justifyContent: 'center',
+                zIndex: 40,
+                opacity: sai,
+                transform: `translateX(${lado * 40}px) rotate(${-8 * lado + Math.sin(t * 9) * 3}deg) scale(${(0.2 + 0.8 * e) * sai})`,
+              }}
+            >
+              <div style={{background: j % 2 === 0 ? CORES.ouro : CORES.vermelho, padding: '10px 34px', boxShadow: '0 16px 40px rgba(0,0,0,0.7), inset 0 0 0 4px rgba(10,10,13,0.85)'}}>
+                <div style={{fontFamily: FONTE_TITULO, fontSize: 78, lineHeight: 1.05, color: j % 2 === 0 ? CORES.pillOuroTexto : CORES.texto, textTransform: 'uppercase', textAlign: 'center', whiteSpace: 'pre-line'}}>{g.adesivo}</div>
+              </div>
+            </div>
+          );
+        })}
       </Tremer>
-      <Flash em={destaques.map((d) => d.em + 0.3)} forca={0.4} />
+      <Flash em={[...destaques.map((d) => d.em + 0.3), ...(montagem ? [fimContagem] : [])]} forca={0.4} />
       {itens.map((_, i) => (
-        <Sfx key={i} som="carta" em={INICIO + i * PASSO} volume={0.16 + 0.08 * acaso(i)} />
+        <Sfx key={i} som="carta" em={inicioCarta[i]} volume={0.16 + 0.08 * acaso(i)} />
       ))}
+      {grupos.map((g, j) => (
+        <React.Fragment key={`g${j}`}>
+          <Sfx som="whoosh" em={Math.max(0, g.em - 0.05)} volume={0.22} />
+          {g.adesivo ? <Sfx som={j % 2 === 0 ? 'pop' : 'boing'} em={g.em + 0.3} volume={0.4} /> : null}
+        </React.Fragment>
+      ))}
+      {montagem ? <Sfx som="ding" em={fimContagem} volume={0.35} /> : null}
       <Sfx som="impacto" em={fimDistribuir} volume={0.3} />
       {destaques.map((d, i) => (
         <React.Fragment key={i}>
@@ -489,6 +563,150 @@ export const CtaDeck: React.FC<{cena: CenaCta; cartas: MapaCartas; refs: string[
       <Sfx som="impacto" em={0.3} />
       <Sfx som="whoosh" em={0.65} volume={0.22} />
       <Sfx som="brilho" em={1.1} />
+    </AbsoluteFill>
+  );
+};
+
+// ---------- Confronto: o golpe e o dano que entrou de verdade ----------
+
+export const Confronto: React.FC<{cena: CenaConfronto; cartas: MapaCartas; duracao: number}> = ({cena, cartas, duracao}) => {
+  const quadro = useCurrentFrame();
+  const {fps} = useVideoConfig();
+  const t = quadro / fps;
+  const G = cena.em ?? 1;
+  const atk = cartas[cena.atacante];
+  const def = cartas[cena.defensor];
+  const ataque = atk.ataques.find((a) => a.nome === cena.ataque);
+  const dano = ataque?.dano ?? '?';
+  const entra = voo(t, 0, 0.4);
+  const entraDef = voo(t, 0.12, 0.4);
+  // atacante: recua e avança até o defensor no instante do golpe, depois volta
+  const recua = trecho(t, [G - 0.45, G - 0.2], [0, 1]) * (1 - trecho(t, [G - 0.2, G], [0, 1]));
+  const avanca = trecho(t, [G - 0.2, G], [0, 1]) * (1 - voo(t, G + 0.15, 0.4));
+  const base = {x: 340, y: 640}; // atacante em cima, à esquerda
+  const alvo = {x: 730, y: 1000}; // defensor embaixo, à direita
+  const xa = interpolate(entra, [0, 1], [-400, base.x]) - recua * 60 + avanca * (alvo.x - 170 - base.x);
+  const ya = base.y - recua * 30 + avanca * (alvo.y - 120 - base.y);
+  const balA = balanco(t, 0.7);
+  const balD = balanco(t + 2, 0.5);
+  const escudo = trecho(t, [G, G + 0.1], [0, 1]) * (1 - trecho(t, [G + 0.25, G + 0.9], [0, 1]));
+  const numero = mola(quadro, fps, G, MOLA_PULO);
+  const risca = trecho(t, [G + 0.5, G + 0.7], [0, 1]);
+  const vira = G + 0.85;
+  const zero = mola(quadro, fps, vira, MOLA_PULO);
+  const carimbo = mola(quadro, fps, G + 1.25, MOLA_SECA);
+  const frases = batidasDasFrases(cena, duracao);
+  return (
+    <AbsoluteFill>
+      <Raios x={alvo.x} y={alvo.y} forca={trecho(t, [G, G + 0.3], [0, 0.9])} cor="rgba(240,193,96,0.4)" />
+      <Tremer impactos={[G, vira, G + 1.25, ...frases]}>
+        <Carta3D
+          imagem={def.imagem}
+          x={interpolate(entraDef, [0, 1], [1450, alvo.x])}
+          y={alvo.y + balD.dy}
+          w={340}
+          rz={interpolate(entraDef, [0, 1], [40, 6]) + balD.rz}
+          ry={interpolate(entraDef, [0, 1], [160, 0]) + balD.ry * 0.6}
+          rx={balD.rx}
+          aura={escudo}
+          brilho={passadaDeBrilho(t, 1.6, G + 0.2)}
+          z={2}
+        />
+        {escudo > 0.01 ? (
+          <div
+            style={{
+              position: 'absolute',
+              left: alvo.x - 300,
+              top: alvo.y - 330,
+              width: 600,
+              height: 660,
+              borderRadius: '50%',
+              zIndex: 3,
+              opacity: escudo,
+              transform: `scale(${0.85 + 0.2 * escudo})`,
+              background: 'radial-gradient(ellipse, rgba(240,193,96,0) 55%, rgba(240,193,96,0.55) 68%, rgba(255,250,235,0.9) 72%, rgba(240,193,96,0) 78%)',
+            }}
+          />
+        ) : null}
+        <Carta3D
+          imagem={atk.imagem}
+          x={xa}
+          y={ya + balA.dy * (1 - avanca)}
+          w={330}
+          rz={interpolate(entra, [0, 1], [-50, -8]) - avanca * 14 + balA.rz}
+          ry={interpolate(entra, [0, 1], [-200, 0]) + balA.ry * (1 - avanca)}
+          rx={balA.rx}
+          z={4}
+        />
+        <div
+          style={{
+            position: 'absolute',
+            left: AREA.x0,
+            top: 340,
+            opacity: trecho(t, [0.35, 0.5], [0, 1]),
+            transform: `skewX(-12deg) translateX(${(1 - mola(quadro, fps, 0.35, MOLA_PULO)) * -200}px)`,
+            background: CORES.vermelho,
+            padding: '6px 22px',
+            boxShadow: '0 10px 24px rgba(0,0,0,0.6)',
+            zIndex: 6,
+          }}
+        >
+          <div style={{transform: 'skewX(12deg)', fontFamily: FONTE_TITULO, fontSize: 46, color: CORES.texto, textTransform: 'uppercase'}}>
+            {cena.ataque} · {dano}
+          </div>
+        </div>
+        {t >= G ? (
+          <div
+            style={{
+              position: 'absolute',
+              left: alvo.x - 260,
+              width: 520,
+              top: alvo.y - 330 - numero * 60,
+              textAlign: 'center',
+              zIndex: 8,
+              fontFamily: FONTE_TITULO,
+              lineHeight: 1,
+              transform: `rotate(${-8 + (t < vira ? Math.sin(t * 60) * 3 * risca : 0)}deg)`,
+            }}
+          >
+            {t < vira ? (
+              <div style={{position: 'relative', display: 'inline-block', fontSize: 170, color: CORES.texto, transform: `scale(${0.3 + 0.7 * numero})`, textShadow: sombraTitulo(170)}}>
+                -{dano}
+                <div style={{position: 'absolute', left: -10, right: -10, top: '48%', height: 18, background: CORES.vermelho, transform: `scaleX(${risca}) rotate(-6deg)`, transformOrigin: 'left center', boxShadow: '0 4px 10px rgba(0,0,0,0.6)'}} />
+              </div>
+            ) : (
+              <div style={{display: 'inline-block', fontSize: 230, color: CORES.ouro, transform: `scale(${2.2 - 1.2 * zero})`, textShadow: sombraTitulo(230)}}>{cena.resultado}</div>
+            )}
+          </div>
+        ) : null}
+        {cena.selo && t >= G + 1.25 ? (
+          <div
+            style={{
+              position: 'absolute',
+              left: alvo.x - 250,
+              width: 500,
+              top: alvo.y + 60,
+              display: 'flex',
+              justifyContent: 'center',
+              zIndex: 9,
+              opacity: Math.min(1, carimbo * 1.5),
+              transform: `rotate(-14deg) scale(${2.6 - 1.6 * carimbo})`,
+            }}
+          >
+            <div style={{border: `8px solid ${CORES.vermelho}`, padding: '0 26px', background: 'rgba(10,10,13,0.75)', fontFamily: FONTE_TITULO, fontSize: 104, lineHeight: 1.08, color: CORES.vermelho, letterSpacing: '0.04em', textTransform: 'uppercase'}}>
+              {cena.selo}
+            </div>
+          </div>
+        ) : null}
+      </Tremer>
+      <LinhasDeVelocidade em={G} x={alvo.x - 120} y={alvo.y - 80} />
+      <Flash em={[G]} forca={0.75} />
+      <Sfx som="whoosh" em={0} />
+      <Sfx som="carta" em={0.12} />
+      <Sfx som="whoosh" em={Math.max(0, G - 0.25)} volume={0.4} />
+      <Sfx som="impacto" em={G} />
+      <Sfx som="trombone" em={vira} />
+      <Sfx som="impacto" em={G + 1.25} volume={0.35} />
     </AbsoluteFill>
   );
 };
