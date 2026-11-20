@@ -1,0 +1,78 @@
+{
+ "assinatura": "d35d948888f58b984cbcc55c95ace66d1dcced2a",
+ "voz": "pm_santa",
+ "frases": [
+  {
+   "fala": "Prepara o deck.",
+   "duracao": 0.958141
+  },
+  {
+   "fala": "Chama a galera.",
+   "duracao": 0.956009
+  },
+  {
+   "fala": "A arena vai abrir.",
+   "duracao": 1.200227
+  },
+  {
+   "fala": "Liga Umbra. Em breve.",
+   "duracao": 1.346009
+  },
+  {
+   "fala": "Segue a Escola Umbra pra saber primeiro.",
+   "duracao": 2.102177
+  }
+ ],
+ "words": [
+  {
+   "palavra": "prepara",
+   "inicio": 0.1,
+   "fim": 0.5738442763636363
+  },
+  {
+   "palavra": "o",
+   "inicio": 0.5738442763636363,
+   "fim": 0.7132102399999999
+  },
+  {
+   "palavra": "deck",
+   "inicio": 0.7132102399999999,
+   "fim": 1.01981536
+  },
+  {
+   "palavra": "chama",
+   "inicio": 2.1,
+   "fim": 2.4615452218181817
+  },
+  {
+   "palavra": "a",
+   "inicio": 2.4615452218181817,
+   "fim": 2.6006010763636365
+  },
+  {
+   "palavra": "galera",
+   "inicio": 2.6006010763636365,
+   "fim": 3.01776864
+  },
+  {
+   "palavra": "a",
+   "inicio": 4.1,
+   "fim": 4.244027239999999
+  },
+  {
+   "palavra": "arena",
+   "inicio": 4.244027239999999,
+   "fim": 4.618498064
+  },
+  {
+   "palavra": "vai",
+   "inicio": 4.618498064,
+   "fim": 4.877747095999999
+  },
+  {
+   "palavra": "abrir",
+   "inicio": 4.877747095999999,
+   "fim": 5.25221792
+  }
+ ]
+}

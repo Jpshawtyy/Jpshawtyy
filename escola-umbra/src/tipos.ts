@@ -129,6 +129,9 @@ export type CenaDecklist = CenaBase & {
   grupos?: {cartas: RefCarta[]; adesivo?: string; em?: number}[];
 };
 
+// Impacto: frase gigante batendo na tela, com versos de carta voando atrás. Com "logo", o emblema cai na tela (revelação).
+export type CenaImpacto = CenaBase & {tipo: 'impacto'; texto: string; subtitulo?: string; logo?: boolean};
+
 // Confronto: o atacante dá o golpe no defensor e aparece o dano que entrou de verdade (ex.: 200 vira 0).
 export type CenaConfronto = CenaBase & {
   tipo: 'confronto';
@@ -222,6 +225,7 @@ export type Cena =
   | CenaMesa
   | CenaDecklist
   | CenaConfronto
+  | CenaImpacto
   | CenaCta;
 
 export type TipoCena = Cena['tipo'];

@@ -1,13 +1,13 @@
 // Cenas da série Deck do Dia: tudo gira em torno das cartas se mexendo.
 
 import React from 'react';
-import {AbsoluteFill, Easing, interpolate, useCurrentFrame, useVideoConfig} from 'remotion';
+import {AbsoluteFill, Easing, Img, interpolate, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
 import {AREA, CORES, PROPORCAO_CARTA} from '../tema';
 import {FONTE_MONO, FONTE_TEXTO, FONTE_TITULO} from '../fontes';
 import {MOLA_PULO, MOLA_SECA, acaso, mola, trecho} from '../anim';
 import {TituloArena, sombraTitulo} from '../componentes/Arena';
 import {legendasDaCena} from '../tempo';
-import type {Cena, CenaCartaDestaque, CenaConfronto, CenaCta, CenaDecklist, CenaGancho, CenaPiramide, MapaCartas} from '../tipos';
+import type {Cena, CenaCartaDestaque, CenaConfronto, CenaImpacto, CenaCta, CenaDecklist, CenaGancho, CenaPiramide, MapaCartas} from '../tipos';
 import {Carta3D, Flash, LinhasDeVelocidade, Raios, Sfx, Tremer, balanco, passadaDeBrilho} from './efeitos';
 
 const sair = Easing.out(Easing.cubic);
@@ -361,12 +361,28 @@ export const DecklistDeal: React.FC<{cena: CenaDecklist; cartas: MapaCartas; dur
     const j = grupos.findIndex((g) => g.cartas.includes(ref));
     return j >= 0 ? j : grupos.length - 1;
   };
+  // Vitrine: as cartas nomeadas do grupo aparecem grandes, em leque no centro, e depois descem para a grade.
+  // As que não estão em grupo nenhum ("o resto") vão direto para a grade, depois da vitrine do último grupo.
+  const saiDaVitrine = (j: number) => grupos[j + 1]?.em ?? grupos[j].em + 1.1;
+  const vitrine = itens.map((item) => {
+    if (!montagem) return null;
+    const j = grupoDe(item.carta);
+    const nomeadas = itens.filter((x) => grupos[j].cartas.includes(x.carta));
+    const k = nomeadas.indexOf(item);
+    if (k < 0) return null;
+    const n = nomeadas.length;
+    const wv = n > 2 ? 240 : 300;
+    const passo = Math.min(wv * 0.8, 640 / Math.max(1, n - 1));
+    const d = k - (n - 1) / 2;
+    return {j, k, x: AREA.cx + d * passo, y: 720 + Math.abs(d) * 18, w: wv, rz: d * 9};
+  });
   const inicioCarta = itens.map((item, i) => {
     if (!montagem) return INICIO + i * PASSO;
-    const j = grupoDe(item.carta);
-    const irmas = itens.filter((x) => grupoDe(x.carta) === j);
-    const k = irmas.indexOf(item);
-    return grupos[j].em + k * Math.min(0.09, 0.9 / Math.max(1, irmas.length));
+    const v = vitrine[i];
+    if (v) return grupos[v.j].em + v.k * 0.12;
+    const resto = itens.filter((_, x) => !vitrine[x]);
+    const k = resto.indexOf(item);
+    return saiDaVitrine(grupos.length - 1) + k * Math.min(0.06, 0.9 / Math.max(1, resto.length));
   });
   const fimDistribuir = Math.max(...inicioCarta) + VOO;
   const total = itens.reduce((soma, x) => soma + x.qtd, 0);
@@ -403,12 +419,19 @@ export const DecklistDeal: React.FC<{cena: CenaDecklist; cartas: MapaCartas; dur
           if (t < inicioCarta[i]) return null;
           const d = ativo.find((a) => a.carta === item.carta);
           const sobe = d ? d.p : 0;
-          const x = interpolate(p, [0, 1], [AREA.cx + (acaso(i) - 0.5) * 200, gx]);
-          const y = interpolate(p, [0, 1], [2150, gy]);
+          const v = vitrine[i];
+          // da vitrine para a grade
+          const desce = v ? voo(t, saiDaVitrine(v.j), 0.35) : 1;
+          const parada = v ? {x: v.x, y: v.y + Math.sin(t * 2 + i) * 8, w: v.w} : {x: gx, y: gy, w};
+          const destino = {x: parada.x + (gx - parada.x) * desce, y: parada.y + (gy - parada.y) * desce, w: parada.w + (w - parada.w) * desce};
+          const x = interpolate(p, [0, 1], [AREA.cx + (acaso(i) - 0.5) * 200, destino.x]);
+          const y = interpolate(p, [0, 1], [2150, destino.y]);
+          const largura = interpolate(p, [0, 1], [destino.w * 1.3, destino.w]);
+          const naVitrine = v ? 1 - desce : 0;
           const pose = {
             x: x + (centro.x - x) * sobe,
             y: y + (centro.y - y) * sobe + (sobe > 0 ? Math.sin(t * 1.9) * 8 * sobe : 0),
-            w: w + (centro.w - w) * sobe,
+            w: largura + (centro.w - largura) * sobe,
           };
           return (
             <React.Fragment key={i}>
@@ -418,19 +441,19 @@ export const DecklistDeal: React.FC<{cena: CenaDecklist; cartas: MapaCartas; dur
                 y={pose.y}
                 w={pose.w}
                 ry={interpolate(p, [0, 1], [180, 0]) + (d ? d.g : 0) + (sobe > 0.9 ? Math.sin(t * 1.1) * 10 : 0)}
-                rz={interpolate(p, [0, 1], [(acaso(i + 3) - 0.5) * 60, 0])}
+                rz={interpolate(p, [0, 1], [(acaso(i + 3) - 0.5) * 60, 0]) + (v ? v.rz * naVitrine : 0)}
                 apagar={sobe > 0 ? 0 : escurece}
-                aura={sobe}
-                brilho={sobe > 0.95 ? passadaDeBrilho(t, 1.4, d!.em + 0.4) : null}
-                z={sobe > 0 ? 20 : 1}
+                aura={Math.max(sobe, naVitrine * 0.8)}
+                brilho={sobe > 0.95 ? passadaDeBrilho(t, 1.4, d!.em + 0.4) : naVitrine > 0.9 ? passadaDeBrilho(t, 1.1, inicioCarta[i] + 0.3) : null}
+                z={sobe > 0 || naVitrine > 0 ? 20 + (v?.k ?? 0) : 1}
               >
                 <div
                   style={{
                     position: 'absolute',
                     right: -pose.w * 0.06,
                     bottom: -pose.w * 0.05,
-                    background: sobe > 0.5 ? CORES.ouro : CORES.vermelho,
-                    color: sobe > 0.5 ? CORES.pillOuroTexto : CORES.texto,
+                    background: (sobe > 0.5 || naVitrine > 0.5) ? CORES.ouro : CORES.vermelho,
+                    color: (sobe > 0.5 || naVitrine > 0.5) ? CORES.pillOuroTexto : CORES.texto,
                     transform: 'skewX(-14deg)',
                     padding: `0 ${pose.w * 0.09}px`,
                     fontFamily: FONTE_TITULO,
@@ -440,7 +463,7 @@ export const DecklistDeal: React.FC<{cena: CenaDecklist; cartas: MapaCartas; dur
                     opacity: trecho(p, [0.7, 1], [0, 1]) * (1 - 0.55 * (sobe > 0 ? 0 : escurece)),
                   }}
                 >
-                  <span style={{display: 'inline-block', transform: 'skewX(14deg)'}}>{sobe > 0.5 ? `${item.qtd}x` : item.qtd}</span>
+                  <span style={{display: 'inline-block', transform: 'skewX(14deg)'}}>{(sobe > 0.5 || naVitrine > 0.5) ? `${item.qtd}x` : item.qtd}</span>
                 </div>
               </Carta3D>
             </React.Fragment>
@@ -482,7 +505,7 @@ export const DecklistDeal: React.FC<{cena: CenaDecklist; cartas: MapaCartas; dur
                 position: 'absolute',
                 left: AREA.x0,
                 width: AREA.largura,
-                top: 640,
+                top: 975,
                 display: 'flex',
                 justifyContent: 'center',
                 zIndex: 40,
@@ -707,6 +730,99 @@ export const Confronto: React.FC<{cena: CenaConfronto; cartas: MapaCartas; durac
       <Sfx som="impacto" em={G} />
       <Sfx som="trombone" em={vira} />
       <Sfx som="impacto" em={G + 1.25} volume={0.35} />
+    </AbsoluteFill>
+  );
+};
+
+// ---------- Impacto: frase gigante (ou o emblema) com versos de carta voando ----------
+
+// Versos de carta (a sleeve da Escola Umbra) cruzando a tela em 3D.
+const VersosVoando: React.FC<{quantidade?: number; semente?: number}> = ({quantidade = 9, semente = 0}) => {
+  const quadro = useCurrentFrame();
+  const {fps} = useVideoConfig();
+  const t = quadro / fps;
+  return (
+    <>
+      {Array.from({length: quantidade}, (_, i) => {
+        const a = (k: number) => acaso(i * 7.3 + semente * 13 + k);
+        const inicio = a(1) * 1.6;
+        const dur = 0.9 + a(2) * 0.9;
+        const p = (t - inicio) / dur;
+        if (p < 0 || p > 1) return null;
+        const daEsquerda = a(3) > 0.5;
+        const x = daEsquerda ? -250 + p * 1600 : 1330 - p * 1600;
+        const y = 300 + a(4) * 1200 + (p - 0.5) * (a(5) - 0.5) * 500;
+        return (
+          <Carta3D
+            key={i}
+            imagem="logo.png"
+            x={x}
+            y={y}
+            w={170 + a(6) * 170}
+            ry={180 + p * (daEsquerda ? 540 : -540)}
+            rx={(a(7) - 0.5) * 60}
+            rz={(a(8) - 0.5) * 90 + p * (daEsquerda ? 120 : -120)}
+            opacidade={0.55 + a(9) * 0.45}
+            z={0}
+          />
+        );
+      })}
+    </>
+  );
+};
+
+export const ImpactoDeck: React.FC<{cena: CenaImpacto}> = ({cena}) => {
+  const quadro = useCurrentFrame();
+  const {fps} = useVideoConfig();
+  const t = quadro / fps;
+  const BATE = cena.logo ? 0.35 : 0.15;
+  const logo = mola(quadro, fps, BATE, MOLA_PULO);
+  const textoEm = cena.logo ? 0.75 : BATE;
+  const textoTop = cena.logo ? 1060 : 720;
+  const semente = cena.texto.length;
+  return (
+    <AbsoluteFill>
+      <Raios x={AREA.cx} y={cena.logo ? 760 : 800} forca={trecho(t, [BATE, BATE + 0.3], [0, 1])} cor={cena.logo ? 'rgba(240,193,96,0.45)' : 'rgba(229,50,63,0.55)'} />
+      <VersosVoando semente={semente} />
+      <Tremer impactos={[BATE, textoEm, ...(cena.logo ? [textoEm] : [])]}>
+        {cena.logo && t >= BATE ? (
+          <div
+            style={{
+              position: 'absolute',
+              left: AREA.cx - 230,
+              top: 760 - 230,
+              width: 460,
+              height: 460,
+              opacity: Math.min(1, logo * 2),
+              transform: `scale(${3.2 - 2.2 * logo}) rotate(${(1 - logo) * -40 + Math.sin(t * 1.3) * 2}deg)`,
+              filter: `drop-shadow(0 0 ${40 * Math.min(1, logo)}px rgba(240,193,96,0.7))`,
+              zIndex: 5,
+            }}
+          >
+            <Img src={staticFile('logo.png')} style={{width: '100%', height: '100%', objectFit: 'contain'}} />
+          </div>
+        ) : null}
+        <Batida em={textoEm} style={{left: AREA.x0, width: AREA.largura, top: textoTop, display: 'flex', justifyContent: 'center', zIndex: 6}}>
+          <TituloArena texto={cena.texto} largura={AREA.largura} maximo={cena.logo ? 150 : 170} />
+        </Batida>
+        {cena.subtitulo ? (
+          <Batida
+            em={textoEm + 0.3}
+            style={{left: AREA.x0, width: AREA.largura, top: textoTop + (cena.logo ? 175 : 200), display: 'flex', justifyContent: 'center', zIndex: 6}}
+          >
+            <div style={{background: CORES.vermelho, transform: 'skewX(-12deg)', padding: '8px 30px', boxShadow: '0 10px 26px rgba(0,0,0,0.6)'}}>
+              <div style={{transform: 'skewX(12deg)', fontFamily: FONTE_MONO, fontWeight: 700, fontSize: 40, letterSpacing: '0.16em', textTransform: 'uppercase', color: CORES.texto}}>{cena.subtitulo}</div>
+            </div>
+          </Batida>
+        ) : null}
+      </Tremer>
+      {cena.logo ? <LinhasDeVelocidade em={BATE} x={AREA.cx} y={760} /> : null}
+      <Flash em={[BATE]} forca={cena.logo ? 0.9 : 0.5} />
+      <Sfx som="whoosh" em={0} volume={0.3} />
+      <Sfx som="impacto" em={BATE} volume={cena.logo ? 0.6 : 0.45} />
+      {cena.logo ? <Sfx som="impacto" em={textoEm} volume={0.4} /> : null}
+      {cena.logo ? <Sfx som="brilho" em={BATE + 0.1} volume={0.3} /> : null}
+      {cena.subtitulo ? <Sfx som="pop" em={textoEm + 0.3} volume={0.3} /> : null}
     </AbsoluteFill>
   );
 };

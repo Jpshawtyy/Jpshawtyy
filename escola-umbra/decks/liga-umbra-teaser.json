@@ -1,0 +1,46 @@
+{
+  "formato": "deck_do_dia",
+  "rotulo": "Liga Umbra",
+  "serie": "Em breve",
+  "numero": 1,
+  "titulo_capa": "Liga Umbra",
+  "subtitulo_capa": "em breve",
+  "narracao": "auto",
+
+  "cenas": [
+    {
+      "tipo": "impacto",
+      "texto": "prepara o deck",
+      "duracao": 2,
+      "legendas": [{"texto": "*prepara* o deck", "em": 0.1, "fala": "Prepara o deck."}]
+    },
+    {
+      "tipo": "impacto",
+      "texto": "chama a galera",
+      "duracao": 2,
+      "legendas": [{"texto": "chama a *galera*", "em": 0.1, "fala": "Chama a galera."}]
+    },
+    {
+      "tipo": "impacto",
+      "texto": "a arena vai abrir",
+      "duracao": 2.2,
+      "legendas": [{"texto": "a *arena* vai abrir", "em": 0.1, "fala": "A arena vai abrir."}]
+    },
+    {
+      "tipo": "impacto",
+      "texto": "Liga Umbra",
+      "subtitulo": "em breve",
+      "logo": true,
+      "duracao": 3.2,
+      "falas": [{"texto": "Liga Umbra. Em breve.", "em": 0.6}]
+    },
+    {
+      "tipo": "cta",
+      "duracao": 3.6,
+      "principal": "SEGUE",
+      "complemento": "pra saber primeiro",
+      "seguir": "@escolaumbratcg",
+      "falas": [{"texto": "Segue a Escola Umbra pra saber primeiro.", "em": 0.25}]
+    }
+  ]
+}

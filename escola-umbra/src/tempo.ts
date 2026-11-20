@@ -32,6 +32,8 @@ export const duracaoPadrao = (cena: Cena, cartas: MapaCartas): number => {
       return simularMesa(cena, cartas).duracaoMinima;
     case 'confronto':
       return 4;
+    case 'impacto':
+      return 2.4;
     case 'decklist':
       return 2 + ((cena.destaques?.length ?? 0) + (cena.grupos?.length ?? 0)) * 1.2;
     case 'cta':

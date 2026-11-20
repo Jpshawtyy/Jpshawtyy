@@ -25,7 +25,7 @@ export type Preparo = {
   narracao?: Narracao; // quando o roteiro usa "narracao": "auto"
 };
 
-const TIPOS = ['gancho', 'carta_destaque', 'lista', 'piramide', 'comparacao', 'riscado', 'mesa', 'decklist', 'confronto', 'cta'];
+const TIPOS = ['gancho', 'carta_destaque', 'lista', 'piramide', 'comparacao', 'riscado', 'mesa', 'decklist', 'confronto', 'impacto', 'cta'];
 const EMOJI = /\p{Extended_Pictographic}/u;
 
 const textosDe = (valor: unknown, caminho: string, saida: {caminho: string; texto: string}[]) => {
@@ -55,6 +55,7 @@ const conferirEstrutura = (r: Roteiro, achados: Achado[]) => {
     if (c.tipo === 'piramide' && !(c.niveis?.length > 0)) erro(onde, 'Falta "niveis".');
     if (c.tipo === 'comparacao' && !(c.bons?.length > 0 && c.ruins?.length > 0)) erro(onde, 'Faltam "bons" e "ruins".');
     if (c.tipo === 'riscado' && !(c.itens?.length > 0)) erro(onde, 'Falta "itens".');
+    if (c.tipo === 'impacto' && !c.texto) erro(onde, 'Falta "texto".');
     if (c.tipo === 'confronto') {
       if (!c.atacante || !c.defensor || !c.ataque) erro(onde, 'Faltam "atacante", "defensor" e "ataque".');
       if (typeof c.resultado !== 'number') erro(onde, 'Falta "resultado" (o dano que o defensor recebe).');
@@ -102,6 +103,7 @@ const eventosDaCena = (cena: Cena, duracao: number, temposAcoes: number[]): numb
   if (cena.tipo === 'gancho') eventos.push(0.3, 0.55);
   if (cena.tipo === 'carta_destaque') eventos.push(0.2, 0.7, 1.4, 2.4);
   if (cena.tipo === 'cta') eventos.push(0.2, 0.8, 1.6, 2.6);
+  if (cena.tipo === 'impacto') eventos.push(0.15, 0.35, 0.7, 1.0);
   if (cena.tipo === 'confronto') eventos.push(0.1, 0.5, cena.em ?? 1, (cena.em ?? 1) + 0.5);
   if (cena.tipo === 'decklist') eventos.push(...(cena.grupos ?? []).map((g) => g.em ?? 1.6), 0.2, 0.7, 1.3, ...(cena.destaques ?? []).map((d) => d.em ?? 1.6));
   if (cena.tipo === 'mesa') eventos.push(...temposAcoes, ...temposAcoes.map((t) => t + 0.9));

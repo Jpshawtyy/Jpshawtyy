@@ -12,7 +12,7 @@ import {Fundo} from '../componentes/Fundo';
 import {Guias, Moldura} from '../componentes/Moldura';
 import {quebrarPalavras, temposDaFala} from '../componentes/Legenda';
 import {Faiscas, Flash, Sfx} from './efeitos';
-import {CartaShow, Confronto, CtaDeck, DecklistDeal, GanchoDeck, RankingDeck} from './cenas';
+import {CartaShow, Confronto, CtaDeck, DecklistDeal, GanchoDeck, ImpactoDeck, RankingDeck} from './cenas';
 
 // Legenda de impacto: maiúsculas grossas, a palavra que está sendo falada ganha uma tarja vermelha.
 const LegendaImpacto: React.FC<{legendas: LegendaPronta[]; falas?: PalavraFalada[]; inicioDaCena: number}> = ({legendas, falas, inicioDaCena}) => {
@@ -94,6 +94,7 @@ export const DeckDoDia: React.FC<PropsAula> = (props) => {
         } else if (cena.tipo === 'piramide') corpo = <RankingDeck cena={cena} cartas={cartas} duracao={c.duracao} />;
         else if (cena.tipo === 'carta_destaque') corpo = <CartaShow cena={cena} cartas={cartas} duracao={c.duracao} />;
         else if (cena.tipo === 'decklist') corpo = <DecklistDeal cena={cena} cartas={cartas} duracao={c.duracao} />;
+        else if (cena.tipo === 'impacto') corpo = <ImpactoDeck cena={cena} />;
         else if (cena.tipo === 'confronto') corpo = <Confronto cena={cena} cartas={cartas} duracao={c.duracao} />;
         else if (cena.tipo === 'cta') corpo = <CtaDeck cena={cena} cartas={cartas} refs={capa} />;
         return (
