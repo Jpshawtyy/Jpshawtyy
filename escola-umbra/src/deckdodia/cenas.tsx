@@ -570,8 +570,8 @@ export const CtaDeck: React.FC<{cena: CenaCta; cartas: MapaCartas; refs: string[
           <TituloArena texto={cena.principal ?? 'SALVA'} largura={AREA.largura} maximo={170} />
         </Batida>
         {cena.complemento ? (
-          <Batida em={0.7} style={{left: AREA.x0, width: AREA.largura, top: 1110, display: 'flex', justifyContent: 'center', zIndex: 30, fontFamily: FONTE_TEXTO, fontWeight: 700, fontSize: 52, color: CORES.texto, textShadow: '0 3px 14px rgba(0,0,0,0.9)'}}>
-            {cena.complemento}
+          <Batida em={0.7} style={{left: AREA.x0, width: AREA.largura, top: 1090, display: 'flex', justifyContent: 'center', zIndex: 30}}>
+            <TituloArena texto={cena.complemento} largura={AREA.largura} maximo={76} cor={CORES.ouro} />
           </Batida>
         ) : null}
         {cena.seguir ? (

@@ -5,43 +5,95 @@
   "numero": 1,
   "titulo_capa": "Liga Umbra",
   "subtitulo_capa": "novidades semana que vem",
-  "capa": {"cartas": ["zoroark", "dragapult", "crustle"]},
-  "narracao": "auto",
-  "narrador": {"motor": "kokoro", "voz": "pm_alex", "velocidade": 1.15},
-  "musica": {"arquivo": "musica/liga-inauguracao.wav", "volume": 0.5},
-
-  "cartas": {
-    "dragapult": {"nome": "Dragapult ex", "set": "Twilight Masquerade", "numero": 130},
-    "crustle": {"nome": "Crustle", "set": "Destined Rivals", "numero": 12},
-    "zoroark": {"nome": "N's Zoroark ex", "set": "Journey Together", "numero": 98},
-    "hydrapple": {"nome": "Hydrapple ex", "set": "Stellar Crown", "numero": 14},
-    "kangaskhan": {"nome": "Mega Kangaskhan ex", "set": "Mega Evolution", "numero": 104}
+  "capa": {
+    "cartas": [
+      "zoroark",
+      "dragapult",
+      "crustle"
+    ]
   },
-
+  "narracao": "auto",
+  "narrador": {
+    "motor": "kokoro",
+    "voz": "pm_alex",
+    "velocidade": 1.15
+  },
+  "musica": {
+    "arquivo": "musica/liga-inauguracao.wav",
+    "volume": 0.5
+  },
+  "cartas": {
+    "dragapult": {
+      "nome": "Dragapult ex",
+      "set": "Twilight Masquerade",
+      "numero": 130
+    },
+    "crustle": {
+      "nome": "Crustle",
+      "set": "Destined Rivals",
+      "numero": 12
+    },
+    "zoroark": {
+      "nome": "N's Zoroark ex",
+      "set": "Journey Together",
+      "numero": 98
+    },
+    "hydrapple": {
+      "nome": "Hydrapple ex",
+      "set": "Stellar Crown",
+      "numero": 14
+    },
+    "kangaskhan": {
+      "nome": "Mega Kangaskhan ex",
+      "set": "Mega Evolution",
+      "numero": 104
+    }
+  },
   "cenas": [
     {
       "tipo": "impacto",
       "antes": "POV:",
-      "texto": "vai ter liga na Escola Umbra",
+      "texto": "vai ter liga\nna Escola Umbra",
       "dramatico": true,
-      "bate": 0.47,
+      "bate": 0.05,
       "duracao": 3.75,
-      "falas": [{"texto": "Vai ter liga na Escola Umbra.", "em": 0.5}]
+      "falas": [
+        {
+          "texto": "Vai ter liga na Escola Umbra.",
+          "em": 0.15
+        }
+      ]
     },
     {
       "tipo": "impacto",
       "texto": "prepara o deck",
       "bate": 0.05,
       "duracao": 1.875,
-      "falas": [{"texto": "Prepara o deck!", "em": 0.1}]
+      "falas": [
+        {
+          "texto": "Prepara o deck!",
+          "em": 0.1
+        }
+      ]
     },
     {
       "tipo": "impacto",
       "texto": "chama a galera",
-      "cartas": ["dragapult", "crustle", "zoroark", "hydrapple", "kangaskhan"],
+      "cartas": [
+        "dragapult",
+        "crustle",
+        "zoroark",
+        "hydrapple",
+        "kangaskhan"
+      ],
       "bate": 0.05,
       "duracao": 1.875,
-      "falas": [{"texto": "Chama a galera!", "em": 0.1}]
+      "falas": [
+        {
+          "texto": "Chama a galera!",
+          "em": 0.1
+        }
+      ]
     },
     {
       "tipo": "contagem",
@@ -56,7 +108,12 @@
       "logo": true,
       "bate": 0,
       "duracao": 3.75,
-      "falas": [{"texto": "Liga Umbra!", "em": 0.5}]
+      "falas": [
+        {
+          "texto": "Liga Umbra!",
+          "em": 0.5
+        }
+      ]
     },
     {
       "tipo": "cta",
@@ -64,7 +121,12 @@
       "principal": "NOVIDADES",
       "complemento": "semana que vem",
       "seguir": "segue @escolaumbratcg",
-      "falas": [{"texto": "Novidades semana que vem. Segue a Escola Umbra!", "em": 0.3}]
+      "falas": [
+        {
+          "texto": "Novidades semana que vem. Segue a Escola Umbra!",
+          "em": 0.3
+        }
+      ]
     }
   ]
 }
