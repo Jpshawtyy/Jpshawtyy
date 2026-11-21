@@ -14,7 +14,8 @@
     "narrar": "tsx scripts/narrar.ts",
     "studio": "tsx scripts/studio.ts",
     "tipos": "tsc --noEmit",
-    "trecho": "tsx scripts/trecho.ts"
+    "trecho": "tsx scripts/trecho.ts",
+    "stories": "tsx scripts/stories.ts"
   },
   "dependencies": {
     "@react-three/fiber": "^9.8.2",

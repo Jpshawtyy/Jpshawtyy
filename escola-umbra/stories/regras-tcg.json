@@ -1,0 +1,85 @@
+{
+  "serie": "Regras do TCG",
+  "destaque": {"titulo": "Regras", "subtitulo": "pokémon tcg"},
+  "paginas": [
+    {"tipo": "capa", "titulo": "Regras do Pokémon TCG", "subtitulo": "o básico em 8 stories"},
+    {
+      "tipo": "lista",
+      "titulo": "como ganhar",
+      "itens": [
+        {"titulo": "Pegar os 6 prêmios", "texto": "cada nocaute dá 1 prêmio; Pokémon ex dá 2 e Mega ex dá 3"},
+        {"titulo": "Deixar o oponente sem Pokémon", "texto": "nocauteou o ativo e ele não tem ninguém no banco"},
+        {"titulo": "O deck dele acabar", "texto": "se não der pra comprar no começo do turno, ele perde"}
+      ]
+    },
+    {
+      "tipo": "lista",
+      "titulo": "começando a partida",
+      "itens": [
+        {"titulo": "Embaralha e compra 7", "texto": "a moeda decide quem começa"},
+        {"titulo": "1 Básico no ativo", "texto": "e até 5 no banco, virados pra baixo"},
+        {"titulo": "Sem Básico? Mulligan", "texto": "mostra, embaralha e compra 7 de novo; o oponente pode comprar 1 carta a mais por mulligan"},
+        {"titulo": "6 prêmios", "texto": "do topo do deck, virados pra baixo"}
+      ]
+    },
+    {
+      "tipo": "lista",
+      "titulo": "o seu turno",
+      "itens": [
+        {"titulo": "Compra 1 carta", "texto": "sempre, no começo do turno"},
+        {"titulo": "Faz as ações", "texto": "na ordem que quiser (próximo story)"},
+        {"titulo": "Ataca", "texto": "atacou, acabou o turno"}
+      ]
+    },
+    {
+      "tipo": "lista",
+      "titulo": "o que dá pra fazer",
+      "itens": [
+        {"titulo": "Básicos no banco", "texto": "quantos quiser, até 5 no banco"},
+        {"titulo": "Evoluir", "texto": "um Pokémon que já estava em jogo desde o seu turno anterior"},
+        {"titulo": "1 Energia por turno", "texto": "em qualquer Pokémon seu"},
+        {"titulo": "Treinadores", "texto": "Itens à vontade; 1 Apoiador e 1 Estádio por turno"},
+        {"titulo": "Recuar 1 vez", "texto": "pagando o custo de recuo"}
+      ]
+    },
+    {
+      "tipo": "lista",
+      "titulo": "o primeiro turno",
+      "itens": [
+        {"titulo": "Quem começa não ataca", "texto": "só no primeiro turno do jogo"},
+        {"titulo": "Quem começa não joga Apoiador", "texto": "Itens e Estádio pode"},
+        {"titulo": "Ninguém evolui no 1º turno", "texto": "vale pros dois jogadores"}
+      ]
+    },
+    {
+      "tipo": "lista",
+      "titulo": "dano e nocaute",
+      "itens": [
+        {"titulo": "Fraqueza: dano x2", "texto": "olha o canto de baixo da carta"},
+        {"titulo": "Resistência: -30", "texto": "fraqueza e resistência só contam no ativo"},
+        {"titulo": "Nocaute", "texto": "dano igual ou maior que o HP: vai pro descarte e o atacante pega prêmio"},
+        {"titulo": "Promove do banco", "texto": "quem perdeu o ativo escolhe o novo"}
+      ]
+    },
+    {
+      "tipo": "lista",
+      "titulo": "montando o deck",
+      "itens": [
+        {"titulo": "60 cartas", "texto": "nem mais, nem menos"},
+        {"titulo": "Até 4 com o mesmo nome", "texto": "Energia Básica não tem limite"},
+        {"titulo": "1 ACE SPEC por deck", "texto": "as cartas mais fortes do jogo"},
+        {"titulo": "Standard: marcas H, I e J", "texto": "a letrinha no canto de baixo da carta"}
+      ]
+    },
+    {
+      "tipo": "lista",
+      "titulo": "quer aprender jogando?",
+      "itens": [
+        {"titulo": "Aulas toda semana", "texto": "do zero ao campeonato, no nosso perfil"},
+        {"titulo": "Deck do Dia", "texto": "os decks do meta montados carta a carta"},
+        {"titulo": "Salva este destaque", "texto": "e manda pra quem tá começando"}
+      ],
+      "nota": "segue @escolaumbratcg"
+    }
+  ]
+}
