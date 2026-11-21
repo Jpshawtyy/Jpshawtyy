@@ -1,0 +1,15 @@
+{
+  "arquivo": "clipes/brutos/teste.mp4",
+  "rotulo": "JOGADA DO LAIC",
+  "serie": "São Paulo 2026",
+  "titulo": "o nocaute da rodada",
+  "trechos": [
+    {"de": 2, "ate": 6},
+    {"de": 10, "ate": 15, "zoom": {"em": 1.5, "x": 0.7, "y": 0.4, "escala": 2}}
+  ],
+  "legendas": [
+    {"texto": "olha essa *virada*", "em": 0.3, "ate": 3.8},
+    {"texto": "Boss no banco e *nocaute*", "em": 4.2, "ate": 8.8}
+  ],
+  "impactos": [6.5]
+}

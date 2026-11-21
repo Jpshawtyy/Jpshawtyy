@@ -18,3 +18,5 @@ out/*
 # narrador: ambiente Python, vozes baixadas e frases já geradas (refeitos sozinhos quando faltam)
 .narrador/
 !out/stories/
+public/_clipes/
+clipes/brutos/

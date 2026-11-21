@@ -17,7 +17,7 @@ import {Faiscas, Flash, Sfx} from './efeitos';
 import {CartaShow, ComboDeck, RespiraDeck, Confronto, ContagemDeck, CtaDeck, DecklistDeal, GanchoDeck, ImpactoDeck, RankingDeck} from './cenas';
 
 // Legenda de impacto: maiúsculas grossas, a palavra que está sendo falada ganha uma tarja vermelha.
-const LegendaImpacto: React.FC<{legendas: LegendaPronta[]; falas?: PalavraFalada[]; inicioDaCena: number}> = ({legendas, falas, inicioDaCena}) => {
+export const LegendaImpacto: React.FC<{legendas: LegendaPronta[]; falas?: PalavraFalada[]; inicioDaCena: number}> = ({legendas, falas, inicioDaCena}) => {
   const quadro = useCurrentFrame();
   const {fps} = useVideoConfig();
   const t = quadro / fps;

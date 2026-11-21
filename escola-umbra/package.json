@@ -15,7 +15,8 @@
     "studio": "tsx scripts/studio.ts",
     "tipos": "tsc --noEmit",
     "trecho": "tsx scripts/trecho.ts",
-    "stories": "tsx scripts/stories.ts"
+    "stories": "tsx scripts/stories.ts",
+    "clipe": "tsx scripts/clipe.ts"
   },
   "dependencies": {
     "@react-three/fiber": "^9.8.2",

@@ -5,6 +5,7 @@ import {TestePersonagens} from './personagens/Teste';
 import {BANNER_PADRAO, BannerLoja, PerfilLoja} from './Loja';
 import {Aula} from './Aula';
 import {STORY_PADRAO, Story, duracaoStory} from './Story';
+import {CLIPE_PADRAO, Clipe, duracaoClipe} from './clipe/Clipe';
 import type {PropsAula} from './tipos';
 import {planejar} from './tempo';
 import {VIDEO} from './tema';
@@ -36,6 +37,16 @@ export const Root: React.FC = () => (
     <Still id="BannerLargo" component={BannerLoja} width={2400} height={800} defaultProps={{...BANNER_PADRAO, largura: 2400, altura: 800}} />
     <Still id="Banner16x9" component={BannerLoja} width={1920} height={1080} defaultProps={{...BANNER_PADRAO, titulo: 'CARTAS\nAVULSAS', largura: 1920, altura: 1080}} />
     <Composition id="TestePersonagens" component={TestePersonagens} width={1080} height={1080} fps={30} durationInFrames={120} defaultProps={{kai: 'acenando', faisca: 'feliz'}} />
+    <Composition
+      id="Clipe"
+      component={Clipe}
+      width={VIDEO.largura}
+      height={VIDEO.altura}
+      fps={VIDEO.fps}
+      durationInFrames={90}
+      defaultProps={CLIPE_PADRAO}
+      calculateMetadata={({props}) => ({durationInFrames: Math.round(duracaoClipe(props) * VIDEO.fps)})}
+    />
     <Composition
       id="StoryVideo"
       component={Story}

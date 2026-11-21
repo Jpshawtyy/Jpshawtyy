@@ -26,6 +26,21 @@ Sai em `out/`: `aula-01.mp4` e `aula-01-capa.png`.
 4. Veja uma prévia rápida: `npm run previa -- aulas/aula-02.json`
 5. Renderize a final: `npm run aula -- aulas/aula-02.json`
 
+## Clipes (cortes de vídeo)
+
+Para cortar e editar um vídeo horizontal (por exemplo, um clipe da transmissão de um torneio) no formato da Escola Umbra:
+
+1. Coloque o vídeo em `clipes/brutos/` (essa pasta não vai para o git).
+2. Crie um roteiro em `clipes/`, como `clipes/teste.json`:
+   - `arquivo`: o vídeo;
+   - `trechos`: `{"de", "ate"}` em segundos do vídeo original, na ordem em que entram; `zoom` opcional: `{"em", "x", "y", "escala"}`, com x e y de 0 a 1 no quadro original;
+   - `titulo`, `rotulo` (padrão "JOGADA DO LAIC") e `serie`;
+   - `legendas` com `em` e `ate` em segundos do clipe;
+   - `impactos`: segundos do clipe com flash, tremor e estrondo.
+3. `npm run clipe -- clipes/jogada-1.json` gera `out/clipes/jogada-1.mp4`: o vídeo grande no meio, ele mesmo desfocado no fundo, etiqueta, título, legenda, efeitos, o som original e uma tela final com o @.
+
+Imagem de transmissão oficial tem dono: o Instagram pode silenciar ou derrubar o vídeo.
+
 ## Série Deck do Dia
 
 Além das aulas, a página tem a série **Deck do Dia**: um deck do meta por episódio. Os roteiros ficam em `decks/` e usam o mesmo motor das aulas, com `"formato": "deck_do_dia"` no roteiro. Isso troca a etiqueta do topo e da capa para `DECK DO DIA #01 // META STANDARD` e liga a edição própria da série (`src/deckdodia/`). Ela não tem o Kai: o vídeo é só cartas em movimento.
