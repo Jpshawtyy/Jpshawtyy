@@ -1,0 +1,413 @@
+{
+  "formato": "deck_do_dia",
+  "rotulo": "Deck maluco",
+  "serie": "Okidogi",
+  "numero": 4,
+  "titulo_capa": "deck maluco 4",
+  "subtitulo_capa": "o truque do okidogi",
+  "capa": {
+    "cartas": [
+      "prism",
+      "okidogi",
+      "lunatone"
+    ]
+  },
+  "narracao": "auto",
+  "cartas": {
+    "okidogi": {
+      "nome": "Okidogi",
+      "set": "Twilight Masquerade",
+      "numero": 111
+    },
+    "solrock": {
+      "nome": "Solrock",
+      "set": "Mega Evolution",
+      "numero": 75
+    },
+    "lunatone": {
+      "nome": "Lunatone",
+      "set": "Mega Evolution",
+      "numero": 74
+    },
+    "binacle": {
+      "nome": "Binacle",
+      "set": "Perfect Order",
+      "numero": 42
+    },
+    "barbaracle": {
+      "nome": "Barbaracle",
+      "set": "Perfect Order",
+      "numero": 43
+    },
+    "ursaluna": {
+      "nome": "Bloodmoon Ursaluna",
+      "set": "Prismatic Evolutions",
+      "numero": 54
+    },
+    "moltres": {
+      "nome": "Moltres",
+      "set": "Phantasmal Flames",
+      "numero": 14
+    },
+    "patrat": {
+      "nome": "Patrat",
+      "set": "Chaos Rising",
+      "numero": 70
+    },
+    "shaymin": {
+      "nome": "Shaymin",
+      "set": "Destined Rivals",
+      "numero": 10
+    },
+    "lillie": {
+      "nome": "Lillie's Determination",
+      "set": "Mega Evolution",
+      "numero": 119
+    },
+    "boss": {
+      "nome": "Boss's Orders",
+      "set": "Mega Evolution",
+      "numero": 114
+    },
+    "tarragon": {
+      "nome": "Tarragon",
+      "set": "Perfect Order",
+      "numero": 85
+    },
+    "morty": {
+      "nome": "Morty's Conviction",
+      "set": "Temporal Forces",
+      "numero": 155
+    },
+    "gwynn": {
+      "nome": "Gwynn",
+      "set": "Pitch Black",
+      "numero": 78
+    },
+    "hassel": {
+      "nome": "Hassel",
+      "set": "Twilight Masquerade",
+      "numero": 151
+    },
+    "poke-pad": {
+      "nome": "Poké Pad",
+      "set": "Perfect Order",
+      "numero": 81
+    },
+    "gong": {
+      "nome": "Fighting Gong",
+      "set": "Mega Evolution",
+      "numero": 116
+    },
+    "stretcher": {
+      "nome": "Night Stretcher",
+      "set": "Ascended Heroes",
+      "numero": 196
+    },
+    "pokegear": {
+      "nome": "Pokégear 3.0",
+      "set": "Black Bolt",
+      "numero": 84
+    },
+    "ppp": {
+      "nome": "Premium Power Pro",
+      "set": "Mega Evolution",
+      "numero": 124
+    },
+    "retrieval": {
+      "nome": "Energy Retrieval",
+      "set": "Chaos Rising",
+      "numero": 108
+    },
+    "balloon": {
+      "nome": "Air Balloon",
+      "set": "Ascended Heroes",
+      "numero": 181
+    },
+    "cage": {
+      "nome": "Battle Cage",
+      "set": "Phantasmal Flames",
+      "numero": 85
+    },
+    "luta": {
+      "nome": "Basic Fighting Energy",
+      "set": "Scarlet & Violet Energies",
+      "numero": 6
+    },
+    "prism": {
+      "nome": "Prism Energy",
+      "set": "Ascended Heroes",
+      "numero": 216
+    },
+    "legacy": {
+      "nome": "Legacy Energy",
+      "set": "Twilight Masquerade",
+      "numero": 167
+    }
+  },
+  "cenas": [
+    {
+      "tipo": "gancho",
+      "texto": "deck maluco",
+      "subtitulo": "parte 4",
+      "carta": "okidogi",
+      "duracao": 2.6,
+      "legendas": [
+        {
+          "texto": "deck maluco *#4*: Okidogi",
+          "em": 0.05,
+          "fala": "Deck maluco número quatro: Okidogi!"
+        },
+        {
+          "texto": "*top 32* no Regional de Gdańsk",
+          "em": 1.6,
+          "fala": "Top trinta e dois no Regional de Gdansk."
+        }
+      ]
+    },
+    {
+      "tipo": "carta_destaque",
+      "carta": "okidogi",
+      "pill": "TOP 32",
+      "pill_cor": "ouro",
+      "titulo": "Adrena-Power",
+      "foco": {
+        "em": 0.8,
+        "x": 0.5,
+        "y": 0.56,
+        "escala": 1.9
+      },
+      "duracao": 5,
+      "legendas": [
+        {
+          "texto": "com *Energia Escura*: +100 de HP e +100 de dano",
+          "em": 0.3,
+          "fala": "Com Energia Escura, o Okidogi ganha mais cem de HP e mais cem de dano."
+        },
+        {
+          "texto": "mas o deck *não tem* Energia Escura...",
+          "em": 3.4,
+          "fala": "Mas o deck não tem nenhuma Energia Escura..."
+        }
+      ]
+    },
+    {
+      "tipo": "carta_destaque",
+      "carta": "prism",
+      "pill": "O TRUQUE",
+      "pill_cor": "vermelho",
+      "titulo": "Prism Energy",
+      "duracao": 4.5,
+      "legendas": [
+        {
+          "texto": "num Básico, ela vale *todos os tipos*",
+          "em": 0.3,
+          "fala": "O truque: a Prism Energy, num Pokémon Básico, vale todos os tipos."
+        },
+        {
+          "texto": "inclusive *Escura*: soco de 170",
+          "em": 2.6,
+          "fala": "Inclusive Escura. E o Good Punch vira cento e setenta."
+        }
+      ],
+      "foco": {
+        "em": 2.6,
+        "x": 0.5,
+        "y": 0.55,
+        "escala": 1.8
+      }
+    },
+    {
+      "tipo": "carta_destaque",
+      "carta": "lunatone",
+      "pill": "SOL E LUA",
+      "pill_cor": "ouro",
+      "titulo": "Lunatone + Solrock",
+      "duracao": 4.5,
+      "legendas": [
+        {
+          "texto": "com Solrock em jogo, *compra 3*",
+          "em": 0.3,
+          "fala": "Com Solrock em jogo, o Lunatone compra três cartas."
+        },
+        {
+          "texto": "e o Solrock bate *70* sem olhar fraqueza",
+          "em": 2.5,
+          "fala": "E o Solrock bate setenta, sem olhar fraqueza."
+        }
+      ]
+    },
+    {
+      "tipo": "decklist",
+      "titulo": "montando o deck",
+      "duracao": 9,
+      "cartas": [
+        {
+          "carta": "okidogi",
+          "qtd": 3
+        },
+        {
+          "carta": "prism",
+          "qtd": 4
+        },
+        {
+          "carta": "solrock",
+          "qtd": 3
+        },
+        {
+          "carta": "lunatone",
+          "qtd": 2
+        },
+        {
+          "carta": "binacle",
+          "qtd": 2
+        },
+        {
+          "carta": "barbaracle",
+          "qtd": 2
+        },
+        {
+          "carta": "gong",
+          "qtd": 4
+        },
+        {
+          "carta": "ppp",
+          "qtd": 1
+        },
+        {
+          "carta": "luta",
+          "qtd": 8
+        },
+        {
+          "carta": "legacy",
+          "qtd": 1
+        },
+        {
+          "carta": "ursaluna",
+          "qtd": 1
+        },
+        {
+          "carta": "moltres",
+          "qtd": 1
+        },
+        {
+          "carta": "patrat",
+          "qtd": 1
+        },
+        {
+          "carta": "shaymin",
+          "qtd": 1
+        },
+        {
+          "carta": "lillie",
+          "qtd": 4
+        },
+        {
+          "carta": "boss",
+          "qtd": 3
+        },
+        {
+          "carta": "tarragon",
+          "qtd": 2
+        },
+        {
+          "carta": "morty",
+          "qtd": 1
+        },
+        {
+          "carta": "gwynn",
+          "qtd": 1
+        },
+        {
+          "carta": "hassel",
+          "qtd": 1
+        },
+        {
+          "carta": "poke-pad",
+          "qtd": 4
+        },
+        {
+          "carta": "stretcher",
+          "qtd": 2
+        },
+        {
+          "carta": "pokegear",
+          "qtd": 2
+        },
+        {
+          "carta": "retrieval",
+          "qtd": 1
+        },
+        {
+          "carta": "balloon",
+          "qtd": 2
+        },
+        {
+          "carta": "cage",
+          "qtd": 3
+        }
+      ],
+      "grupos": [
+        {
+          "cartas": [
+            "okidogi",
+            "prism"
+          ],
+          "adesivo": "o truque"
+        },
+        {
+          "cartas": [
+            "solrock",
+            "lunatone"
+          ],
+          "adesivo": "sol e lua"
+        },
+        {
+          "cartas": [
+            "binacle",
+            "barbaracle"
+          ],
+          "adesivo": "liga energia"
+        },
+        {
+          "cartas": [
+            "gong",
+            "ppp"
+          ],
+          "adesivo": "+30 de dano"
+        }
+      ],
+      "legendas": [
+        {
+          "texto": "*3 Okidogi e 4 Prism*",
+          "fala": "Três Okidogi e quatro Prism."
+        },
+        {
+          "texto": "*Solrock e Lunatone*",
+          "fala": "Solrock e Lunatone."
+        },
+        {
+          "texto": "*Barbaracle* liga Energia de Luta",
+          "fala": "Barbaracle liga Energia de Luta da mão."
+        },
+        {
+          "texto": "e *Premium Power Pro*: +30 de dano",
+          "fala": "E Premium Power Pro: mais trinta de dano."
+        }
+      ]
+    },
+    {
+      "tipo": "cta",
+      "duracao": 4.5,
+      "principal": "COMENTA",
+      "complemento": "qual o próximo deck maluco?",
+      "seguir": "segue @escolaumbratcg",
+      "falas": [
+        {
+          "texto": "Qual o próximo deck maluco? Comenta aí.",
+          "em": 0.25
+        }
+      ]
+    }
+  ]
+}

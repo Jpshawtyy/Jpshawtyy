@@ -1,0 +1,391 @@
+{
+  "formato": "deck_do_dia",
+  "rotulo": "Deck maluco",
+  "serie": "Equipe Rocket",
+  "numero": 3,
+  "titulo_capa": "deck maluco 3",
+  "subtitulo_capa": "equipe rocket",
+  "capa": {
+    "cartas": [
+      "porygon2",
+      "honchkrow",
+      "ariana"
+    ]
+  },
+  "narracao": "auto",
+  "cartas": {
+    "murkrow": {
+      "nome": "Team Rocket's Murkrow",
+      "set": "Destined Rivals",
+      "numero": 127
+    },
+    "honchkrow": {
+      "nome": "Team Rocket's Honchkrow",
+      "set": "Ascended Heroes",
+      "numero": 127
+    },
+    "porygon": {
+      "nome": "Team Rocket's Porygon",
+      "set": "Destined Rivals",
+      "numero": 153
+    },
+    "porygon2": {
+      "nome": "Team Rocket's Porygon2",
+      "set": "Destined Rivals",
+      "numero": 154
+    },
+    "articuno": {
+      "nome": "Team Rocket's Articuno",
+      "set": "Destined Rivals",
+      "numero": 51
+    },
+    "mimikyu": {
+      "nome": "Team Rocket's Mimikyu",
+      "set": "Destined Rivals",
+      "numero": 87
+    },
+    "archer": {
+      "nome": "Team Rocket's Archer",
+      "set": "Destined Rivals",
+      "numero": 170
+    },
+    "ariana": {
+      "nome": "Team Rocket's Ariana",
+      "set": "Destined Rivals",
+      "numero": 171
+    },
+    "petrel": {
+      "nome": "Team Rocket's Petrel",
+      "set": "Destined Rivals",
+      "numero": 176
+    },
+    "proton": {
+      "nome": "Team Rocket's Proton",
+      "set": "Destined Rivals",
+      "numero": 177
+    },
+    "giovanni": {
+      "nome": "Team Rocket's Giovanni",
+      "set": "Destined Rivals",
+      "numero": 174
+    },
+    "transceiver": {
+      "nome": "Team Rocket's Transceiver",
+      "set": "Destined Rivals",
+      "numero": 178
+    },
+    "poke-pad": {
+      "nome": "Poké Pad",
+      "set": "Perfect Order",
+      "numero": 81
+    },
+    "roto-stick": {
+      "nome": "Roto-Stick",
+      "set": "Prismatic Evolutions",
+      "numero": 127
+    },
+    "stretcher": {
+      "nome": "Night Stretcher",
+      "set": "Ascended Heroes",
+      "numero": 196
+    },
+    "pokegear": {
+      "nome": "Pokégear 3.0",
+      "set": "Black Bolt",
+      "numero": 84
+    },
+    "headset": {
+      "nome": "Miracle Headset",
+      "set": "Surging Sparks",
+      "numero": 183
+    },
+    "fabrica": {
+      "nome": "Team Rocket's Factory",
+      "set": "Destined Rivals",
+      "numero": 173
+    },
+    "ignition": {
+      "nome": "Ignition Energy",
+      "set": "White Flare",
+      "numero": 86
+    },
+    "energia-rocket": {
+      "nome": "Team Rocket's Energy",
+      "set": "Destined Rivals",
+      "numero": 182
+    },
+    "dragapult": {
+      "nome": "Dragapult ex",
+      "set": "Twilight Masquerade",
+      "numero": 130
+    }
+  },
+  "cenas": [
+    {
+      "tipo": "gancho",
+      "texto": "deck maluco",
+      "subtitulo": "parte 3",
+      "carta": "honchkrow",
+      "duracao": 2.6,
+      "legendas": [
+        {
+          "texto": "deck maluco *#3*: Equipe Rocket",
+          "em": 0.05,
+          "fala": "Deck maluco número três: Equipe Rocket!"
+        },
+        {
+          "texto": "*2º lugar* no Regional de Gdańsk",
+          "em": 1.6,
+          "fala": "Segundo lugar no Regional de Gdansk."
+        }
+      ]
+    },
+    {
+      "tipo": "carta_destaque",
+      "carta": "honchkrow",
+      "pill": "2º LUGAR",
+      "pill_cor": "ouro",
+      "titulo": "Rocket Feathers",
+      "foco": {
+        "em": 1.0,
+        "x": 0.5,
+        "y": 0.64,
+        "escala": 1.9
+      },
+      "duracao": 4.5,
+      "legendas": [
+        {
+          "texto": "descarta Apoiador *da Equipe Rocket*",
+          "em": 0.3,
+          "fala": "O Rocket Feathers descarta Apoiadores da Equipe Rocket da mão,"
+        },
+        {
+          "texto": "*60 de dano* pra cada um",
+          "em": 2.6,
+          "fala": "e dá sessenta de dano pra cada um."
+        }
+      ]
+    },
+    {
+      "tipo": "combo",
+      "alvo": "dragapult",
+      "selo": "NOCAUTE",
+      "duracao": 6.5,
+      "passos": [
+        {
+          "carta": "archer",
+          "tipo": "dano",
+          "valor": 120,
+          "rotulo": "-120"
+        },
+        {
+          "carta": "ariana",
+          "tipo": "dano",
+          "valor": 120,
+          "rotulo": "-120"
+        },
+        {
+          "carta": "giovanni",
+          "tipo": "dano",
+          "valor": 120,
+          "rotulo": "-120"
+        }
+      ],
+      "legendas": [
+        {
+          "texto": "contra o *Dragapult*: 320 de HP",
+          "fala": "Contra o Dragapult, com trezentos e vinte de HP:"
+        },
+        {
+          "texto": "*2 Apoiadores*: 120",
+          "fala": "Dois Apoiadores: cento e vinte."
+        },
+        {
+          "texto": "*mais 2*: 240",
+          "fala": "Mais dois: duzentos e quarenta."
+        },
+        {
+          "texto": "*mais 2*: 360. *Nocaute!*",
+          "fala": "Mais dois: trezentos e sessenta. Nocaute!"
+        }
+      ]
+    },
+    {
+      "tipo": "carta_destaque",
+      "carta": "porygon2",
+      "pill": "BÔNUS",
+      "pill_cor": "vermelho",
+      "titulo": "R Command",
+      "foco": {
+        "em": 1.2,
+        "x": 0.5,
+        "y": 0.7,
+        "escala": 1.9
+      },
+      "duracao": 4.2,
+      "legendas": [
+        {
+          "texto": "e o descarte vira *munição*",
+          "em": 0.3,
+          "fala": "E o descarte vira munição:"
+        },
+        {
+          "texto": "Porygon2: *20 por cada* Apoiador Rocket no descarte",
+          "em": 1.5,
+          "fala": "O Porygon2 dá vinte por cada um no descarte."
+        }
+      ]
+    },
+    {
+      "tipo": "decklist",
+      "titulo": "montando o deck",
+      "duracao": 9,
+      "cartas": [
+        {
+          "carta": "murkrow",
+          "qtd": 4
+        },
+        {
+          "carta": "honchkrow",
+          "qtd": 3
+        },
+        {
+          "carta": "porygon",
+          "qtd": 2
+        },
+        {
+          "carta": "porygon2",
+          "qtd": 1
+        },
+        {
+          "carta": "archer",
+          "qtd": 4
+        },
+        {
+          "carta": "ariana",
+          "qtd": 4
+        },
+        {
+          "carta": "petrel",
+          "qtd": 4
+        },
+        {
+          "carta": "proton",
+          "qtd": 4
+        },
+        {
+          "carta": "giovanni",
+          "qtd": 4
+        },
+        {
+          "carta": "ignition",
+          "qtd": 4
+        },
+        {
+          "carta": "energia-rocket",
+          "qtd": 4
+        },
+        {
+          "carta": "articuno",
+          "qtd": 2
+        },
+        {
+          "carta": "mimikyu",
+          "qtd": 1
+        },
+        {
+          "carta": "transceiver",
+          "qtd": 4
+        },
+        {
+          "carta": "poke-pad",
+          "qtd": 4
+        },
+        {
+          "carta": "roto-stick",
+          "qtd": 4
+        },
+        {
+          "carta": "stretcher",
+          "qtd": 2
+        },
+        {
+          "carta": "pokegear",
+          "qtd": 1
+        },
+        {
+          "carta": "headset",
+          "qtd": 1
+        },
+        {
+          "carta": "fabrica",
+          "qtd": 3
+        }
+      ],
+      "grupos": [
+        {
+          "cartas": [
+            "murkrow",
+            "honchkrow"
+          ],
+          "adesivo": "o corvo"
+        },
+        {
+          "cartas": [
+            "porygon",
+            "porygon2"
+          ],
+          "adesivo": "o hacker"
+        },
+        {
+          "cartas": [
+            "archer",
+            "ariana",
+            "petrel",
+            "proton",
+            "giovanni"
+          ],
+          "adesivo": "20 apoiadores?!"
+        },
+        {
+          "cartas": [
+            "ignition",
+            "energia-rocket"
+          ],
+          "adesivo": "só 8\nenergias"
+        }
+      ],
+      "legendas": [
+        {
+          "texto": "*4 Murkrow e 3 Honchkrow*",
+          "fala": "Quatro Murkrow e três Honchkrow."
+        },
+        {
+          "texto": "*Porygon e Porygon2*",
+          "fala": "Porygon e Porygon2."
+        },
+        {
+          "texto": "*20 Apoiadores* da Equipe Rocket",
+          "fala": "Vinte Apoiadores da Equipe Rocket: quatro de cada."
+        },
+        {
+          "texto": "e só *8 energias*",
+          "fala": "E só oito energias."
+        }
+      ]
+    },
+    {
+      "tipo": "cta",
+      "duracao": 4.5,
+      "principal": "COMENTA",
+      "complemento": "você jogaria de Equipe Rocket?",
+      "seguir": "segue @escolaumbratcg",
+      "falas": [
+        {
+          "texto": "Você jogaria de Equipe Rocket? Comenta aí.",
+          "em": 0.25
+        }
+      ]
+    }
+  ]
+}

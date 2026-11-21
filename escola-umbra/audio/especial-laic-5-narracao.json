@@ -1,0 +1,408 @@
+{
+ "assinatura": "ab591cab85cf7f92dd06e58f48e688231a722ff0",
+ "voz": "pm_santa",
+ "frases": [
+  {
+   "fala": "Deck maluco número três: Equipe Rocket!",
+   "duracao": 2.301134
+  },
+  {
+   "fala": "Segundo lugar no Regional de Gdansk.",
+   "duracao": 2.123764
+  },
+  {
+   "fala": "O Rocket Feathers descarta Apoiadores da Equipe Rocket da mão,",
+   "duracao": 3.548005
+  },
+  {
+   "fala": "e dá sessenta de dano pra cada um.",
+   "duracao": 2.043265
+  },
+  {
+   "fala": "Contra o Dragapult, com trezentos e vinte de HP:",
+   "duracao": 2.944626
+  },
+  {
+   "fala": "Dois Apoiadores: cento e vinte.",
+   "duracao": 1.843265
+  },
+  {
+   "fala": "Mais dois: duzentos e quarenta.",
+   "duracao": 1.931293
+  },
+  {
+   "fala": "Mais dois: trezentos e sessenta. Nocaute!",
+   "duracao": 2.490726
+  },
+  {
+   "fala": "E o descarte vira munição:",
+   "duracao": 1.699297
+  },
+  {
+   "fala": "O Porygon2 dá vinte por cada um no descarte.",
+   "duracao": 2.835215
+  },
+  {
+   "fala": "Quatro Murkrow e três Honchkrow.",
+   "duracao": 1.752925
+  },
+  {
+   "fala": "Porygon e Porygon2.",
+   "duracao": 1.517347
+  },
+  {
+   "fala": "Vinte Apoiadores da Equipe Rocket: quatro de cada.",
+   "duracao": 2.868549
+  },
+  {
+   "fala": "E só oito energias.",
+   "duracao": 1.31576
+  },
+  {
+   "fala": "Você jogaria de Equipe Rocket? Comenta aí.",
+   "duracao": 2.427211
+  }
+ ],
+ "words": [
+  {
+   "palavra": "deck",
+   "inicio": 0.05,
+   "fim": 0.4238457698461538
+  },
+  {
+   "palavra": "maluco",
+   "inicio": 0.4238457698461538,
+   "fim": 0.9336354559999999
+  },
+  {
+   "palavra": "#3:",
+   "inicio": 0.9336354559999999,
+   "fim": 1.2395092676923076
+  },
+  {
+   "palavra": "Equipe",
+   "inicio": 1.2395092676923076,
+   "fim": 1.7492989538461536
+  },
+  {
+   "palavra": "Rocket",
+   "inicio": 1.7492989538461536,
+   "fim": 2.2590886399999994
+  },
+  {
+   "palavra": "2º",
+   "inicio": 2.5111339999999998,
+   "fim": 2.7210118541176467
+  },
+  {
+   "palavra": "lugar",
+   "inicio": 2.7210118541176467,
+   "fim": 3.1107850117647056
+  },
+  {
+   "palavra": "no",
+   "inicio": 3.1107850117647056,
+   "fim": 3.3206628658823525
+  },
+  {
+   "palavra": "Regional",
+   "inicio": 3.3206628658823525,
+   "fim": 3.8903313270588233
+  },
+  {
+   "palavra": "de",
+   "inicio": 3.8903313270588233,
+   "fim": 4.100209181176471
+  },
+  {
+   "palavra": "Gdańsk",
+   "inicio": 4.100209181176471,
+   "fim": 4.5499474399999995
+  },
+  {
+   "palavra": "descarta",
+   "inicio": 5.184898,
+   "fim": 6.047772815999999
+  },
+  {
+   "palavra": "Apoiador",
+   "inicio": 6.047772815999999,
+   "fim": 6.910647632
+  },
+  {
+   "palavra": "da",
+   "inicio": 6.910647632,
+   "fim": 7.22854888
+  },
+  {
+   "palavra": "Equipe",
+   "inicio": 7.22854888,
+   "fim": 7.9097658399999995
+  },
+  {
+   "palavra": "Rocket",
+   "inicio": 7.9097658399999995,
+   "fim": 8.590982799999999
+  },
+  {
+   "palavra": "60",
+   "inicio": 8.892903,
+   "fim": 9.156955707692308
+  },
+  {
+   "palavra": "de",
+   "inicio": 9.156955707692308,
+   "fim": 9.421008415384616
+  },
+  {
+   "palavra": "dano",
+   "inicio": 9.421008415384616,
+   "fim": 9.835948384615385
+  },
+  {
+   "palavra": "pra",
+   "inicio": 9.835948384615385,
+   "fim": 10.175444723076923
+  },
+  {
+   "palavra": "cada",
+   "inicio": 10.175444723076923,
+   "fim": 10.590384692307692
+  },
+  {
+   "palavra": "um",
+   "inicio": 10.590384692307692,
+   "fim": 10.8544374
+  },
+  {
+   "palavra": "contra",
+   "inicio": 11.436167999999999,
+   "fim": 12.059735858823528
+  },
+  {
+   "palavra": "o",
+   "inicio": 12.059735858823528,
+   "fim": 12.267591811764705
+  },
+  {
+   "palavra": "Dragapult:",
+   "inicio": 12.267591811764705,
+   "fim": 13.306871576470586
+  },
+  {
+   "palavra": "320",
+   "inicio": 13.306871576470586,
+   "fim": 13.681012291764704
+  },
+  {
+   "palavra": "de",
+   "inicio": 13.681012291764704,
+   "fim": 13.972010625882351
+  },
+  {
+   "palavra": "HP",
+   "inicio": 13.972010625882351,
+   "fim": 14.263008959999999
+  },
+  {
+   "palavra": "2",
+   "inicio": 14.540793999999998,
+   "fim": 14.75659087804878
+  },
+  {
+   "palavra": "Apoiadores:",
+   "inicio": 14.75659087804878,
+   "fim": 15.921894019512193
+  },
+  {
+   "palavra": "120",
+   "inicio": 15.921894019512193,
+   "fim": 16.3103284
+  },
+  {
+   "palavra": "mais",
+   "inicio": 16.544058999999997,
+   "fim": 17.247316037241376
+  },
+  {
+   "palavra": "2:",
+   "inicio": 17.247316037241376,
+   "fim": 17.822708158620685
+  },
+  {
+   "palavra": "240",
+   "inicio": 17.822708158620685,
+   "fim": 18.398100279999998
+  },
+  {
+   "palavra": "mais",
+   "inicio": 18.635351999999997,
+   "fim": 19.088835906206896
+  },
+  {
+   "palavra": "2:",
+   "inicio": 19.088835906206896,
+   "fim": 19.459868193103446
+  },
+  {
+   "palavra": "360.",
+   "inicio": 19.459868193103446,
+   "fim": 20.078255337931033
+  },
+  {
+   "palavra": "Nocaute!",
+   "inicio": 20.078255337931033,
+   "fim": 21.026448959999996
+  },
+  {
+   "palavra": "e",
+   "inicio": 21.676078,
+   "fim": 21.819176694736843
+  },
+  {
+   "palavra": "o",
+   "inicio": 21.819176694736843,
+   "fim": 21.962275389473685
+  },
+  {
+   "palavra": "descarte",
+   "inicio": 21.962275389473685,
+   "fim": 22.506050429473685
+  },
+  {
+   "palavra": "vira",
+   "inicio": 22.506050429473685,
+   "fim": 22.820867557894736
+  },
+  {
+   "palavra": "munição",
+   "inicio": 22.820867557894736,
+   "fim": 23.30740312
+  },
+  {
+   "palavra": "Porygon2:",
+   "inicio": 23.535375,
+   "fim": 24.104479974545452
+  },
+  {
+   "palavra": "20",
+   "inicio": 24.104479974545452,
+   "fim": 24.277685836363634
+  },
+  {
+   "palavra": "por",
+   "inicio": 24.277685836363634,
+   "fim": 24.500379087272727
+  },
+  {
+   "palavra": "cada",
+   "inicio": 24.500379087272727,
+   "fim": 24.772559727272725
+  },
+  {
+   "palavra": "Apoiador",
+   "inicio": 24.772559727272725,
+   "fim": 25.242689923636362
+  },
+  {
+   "palavra": "Rocket",
+   "inicio": 25.242689923636362,
+   "fim": 25.61384534181818
+  },
+  {
+   "palavra": "no",
+   "inicio": 25.61384534181818,
+   "fim": 25.787051203636363
+  },
+  {
+   "palavra": "descarte",
+   "inicio": 25.787051203636363,
+   "fim": 26.257181399999997
+  },
+  {
+   "palavra": "4",
+   "inicio": 26.87059,
+   "fim": 27.029345471698115
+  },
+  {
+   "palavra": "Murkrow",
+   "inicio": 27.029345471698115,
+   "fim": 27.5691140754717
+  },
+  {
+   "palavra": "e",
+   "inicio": 27.5691140754717,
+   "fim": 27.72786954716981
+  },
+  {
+   "palavra": "3",
+   "inicio": 27.72786954716981,
+   "fim": 27.886625018867925
+  },
+  {
+   "palavra": "Honchkrow",
+   "inicio": 27.886625018867925,
+   "fim": 28.553398
+  },
+  {
+   "palavra": "Porygon",
+   "inicio": 28.87059,
+   "fim": 29.47456812292683
+  },
+  {
+   "palavra": "e",
+   "inicio": 29.47456812292683,
+   "fim": 29.652208747317072
+  },
+  {
+   "palavra": "Porygon2",
+   "inicio": 29.652208747317072,
+   "fim": 30.32724312
+  },
+  {
+   "palavra": "20",
+   "inicio": 31.12059,
+   "fim": 31.408301183283584
+  },
+  {
+   "palavra": "Apoiadores",
+   "inicio": 31.408301183283584,
+   "fim": 32.35363792835821
+  },
+  {
+   "palavra": "da",
+   "inicio": 32.35363792835821,
+   "fim": 32.641349111641794
+  },
+  {
+   "palavra": "Equipe",
+   "inicio": 32.641349111641794,
+   "fim": 33.257873075820896
+  },
+  {
+   "palavra": "Rocket",
+   "inicio": 33.257873075820896,
+   "fim": 33.87439704
+  },
+  {
+   "palavra": "e",
+   "inicio": 34.149139,
+   "fim": 34.324573666666666
+  },
+  {
+   "palavra": "só",
+   "inicio": 34.324573666666666,
+   "fim": 34.5701822
+  },
+  {
+   "palavra": "8",
+   "inicio": 34.5701822,
+   "fim": 34.745616866666666
+  },
+  {
+   "palavra": "energias",
+   "inicio": 34.745616866666666,
+   "fim": 35.4122686
+  }
+ ]
+}

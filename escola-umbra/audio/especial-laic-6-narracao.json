@@ -1,0 +1,425 @@
+{
+ "assinatura": "e01d3dedcb3902c64960c79233a9a82dcaaa78d8",
+ "voz": "pm_santa",
+ "frases": [
+  {
+   "fala": "Deck maluco número quatro: Okidogi!",
+   "duracao": 2.221474
+  },
+  {
+   "fala": "Top trinta e dois no Regional de Gdansk.",
+   "duracao": 2.333764
+  },
+  {
+   "fala": "Com Energia Escura, o Okidogi ganha mais cem de HP e mais cem de dano.",
+   "duracao": 4.021837
+  },
+  {
+   "fala": "Mas o deck não tem nenhuma Energia Escura...",
+   "duracao": 2.292562
+  },
+  {
+   "fala": "O truque: a Prism Energy, num Pokémon Básico, vale todos os tipos.",
+   "duracao": 3.770181
+  },
+  {
+   "fala": "Inclusive Escura. E o Good Punch vira cento e setenta.",
+   "duracao": 2.960295
+  },
+  {
+   "fala": "Com Solrock em jogo, o Lunatone compra três cartas.",
+   "duracao": 3.019229
+  },
+  {
+   "fala": "E o Solrock bate setenta, sem olhar fraqueza.",
+   "duracao": 2.6178
+  },
+  {
+   "fala": "Três Okidogi e quatro Prism.",
+   "duracao": 1.859184
+  },
+  {
+   "fala": "Solrock e Lunatone.",
+   "duracao": 1.3161
+  },
+  {
+   "fala": "Barbaracle liga Energia de Luta da mão.",
+   "duracao": 2.383061
+  },
+  {
+   "fala": "E Premium Power Pro: mais trinta de dano.",
+   "duracao": 2.282517
+  },
+  {
+   "fala": "Qual o próximo deck maluco? Comenta aí.",
+   "duracao": 2.080295
+  }
+ ],
+ "words": [
+  {
+   "palavra": "deck",
+   "inicio": 0.05,
+   "fim": 0.5011301046153847
+  },
+  {
+   "palavra": "maluco",
+   "inicio": 0.5011301046153847,
+   "fim": 1.11630752
+  },
+  {
+   "palavra": "#4:",
+   "inicio": 1.11630752,
+   "fim": 1.4854139692307693
+  },
+  {
+   "palavra": "Okidogi",
+   "inicio": 1.4854139692307693,
+   "fim": 2.18261504
+  },
+  {
+   "palavra": "top",
+   "inicio": 2.431474,
+   "fim": 2.7465321400000002
+  },
+  {
+   "palavra": "32",
+   "inicio": 2.7465321400000002,
+   "fim": 2.99157736
+  },
+  {
+   "palavra": "no",
+   "inicio": 2.99157736,
+   "fim": 3.23662258
+  },
+  {
+   "palavra": "Regional",
+   "inicio": 3.23662258,
+   "fim": 3.90174532
+  },
+  {
+   "palavra": "de",
+   "inicio": 3.90174532,
+   "fim": 4.14679054
+  },
+  {
+   "palavra": "Gdańsk",
+   "inicio": 4.14679054,
+   "fim": 4.67188744
+  },
+  {
+   "palavra": "com",
+   "inicio": 5.315238,
+   "fim": 5.6627247168
+  },
+  {
+   "palavra": "Energia",
+   "inicio": 5.6627247168,
+   "fim": 6.3190885152
+  },
+  {
+   "palavra": "Escura:",
+   "inicio": 6.3190885152,
+   "fim": 7.052671584
+  },
+  {
+   "palavra": "+100",
+   "inicio": 7.052671584,
+   "fim": 7.400158300799999
+  },
+  {
+   "palavra": "de",
+   "inicio": 7.400158300799999,
+   "fim": 7.6704257471999995
+  },
+  {
+   "palavra": "HP",
+   "inicio": 7.6704257471999995,
+   "fim": 7.9406931936
+  },
+  {
+   "palavra": "e",
+   "inicio": 7.9406931936,
+   "fim": 8.1337413696
+  },
+  {
+   "palavra": "+100",
+   "inicio": 8.1337413696,
+   "fim": 8.4812280864
+  },
+  {
+   "palavra": "de",
+   "inicio": 8.4812280864,
+   "fim": 8.7514955328
+  },
+  {
+   "palavra": "dano",
+   "inicio": 8.7514955328,
+   "fim": 9.17620152
+  },
+  {
+   "palavra": "mas",
+   "inicio": 9.497074999999999,
+   "fim": 9.741614946666665
+  },
+  {
+   "palavra": "o",
+   "inicio": 9.741614946666665,
+   "fim": 9.877470472592591
+  },
+  {
+   "palavra": "deck",
+   "inicio": 9.877470472592591,
+   "fim": 10.176352629629628
+  },
+  {
+   "palavra": "não",
+   "inicio": 10.176352629629628,
+   "fim": 10.420892576296295
+  },
+  {
+   "palavra": "tem",
+   "inicio": 10.420892576296295,
+   "fim": 10.665432522962963
+  },
+  {
+   "palavra": "Energia",
+   "inicio": 10.665432522962963,
+   "fim": 11.12734131111111
+  },
+  {
+   "palavra": "Escura...",
+   "inicio": 11.12734131111111,
+   "fim": 11.697934519999999
+  },
+  {
+   "palavra": "num",
+   "inicio": 12.339637000000002,
+   "fim": 12.741789640000002
+  },
+  {
+   "palavra": "Básico,",
+   "inicio": 12.741789640000002,
+   "fim": 13.590778546666668
+  },
+  {
+   "palavra": "ela",
+   "inicio": 13.590778546666668,
+   "fim": 13.992931186666668
+  },
+  {
+   "palavra": "vale",
+   "inicio": 13.992931186666668,
+   "fim": 14.484451080000001
+  },
+  {
+   "palavra": "todos",
+   "inicio": 14.484451080000001,
+   "fim": 15.065338226666668
+  },
+  {
+   "palavra": "os",
+   "inicio": 15.065338226666668,
+   "fim": 15.378123613333335
+  },
+  {
+   "palavra": "tipos",
+   "inicio": 15.378123613333335,
+   "fim": 15.959010760000002
+  },
+  {
+   "palavra": "inclusive",
+   "inicio": 16.269818,
+   "fim": 17.160557510447763
+  },
+  {
+   "palavra": "Escura:",
+   "inicio": 17.160557510447763,
+   "fim": 17.966464686567164
+  },
+  {
+   "palavra": "soco",
+   "inicio": 17.966464686567164,
+   "fim": 18.433042525373136
+  },
+  {
+   "palavra": "de",
+   "inicio": 18.433042525373136,
+   "fim": 18.72995569552239
+  },
+  {
+   "palavra": "170",
+   "inicio": 18.72995569552239,
+   "fim": 19.1117012
+  },
+  {
+   "palavra": "com",
+   "inicio": 19.780113000000004,
+   "fim": 20.163732684705884
+  },
+  {
+   "palavra": "Solrock",
+   "inicio": 20.163732684705884,
+   "fim": 20.888347644705885
+  },
+  {
+   "palavra": "em",
+   "inicio": 20.888347644705885,
+   "fim": 21.18671851058824
+  },
+  {
+   "palavra": "jogo,",
+   "inicio": 21.18671851058824,
+   "fim": 21.82608465176471
+  },
+  {
+   "palavra": "compra",
+   "inicio": 21.82608465176471,
+   "fim": 22.46545079294118
+  },
+  {
+   "palavra": "3",
+   "inicio": 22.46545079294118,
+   "fim": 22.678572840000005
+  },
+  {
+   "palavra": "e",
+   "inicio": 22.959342000000003,
+   "fim": 23.105451767441863
+  },
+  {
+   "palavra": "o",
+   "inicio": 23.105451767441863,
+   "fim": 23.251561534883724
+  },
+  {
+   "palavra": "Solrock",
+   "inicio": 23.251561534883724,
+   "fim": 23.74833474418605
+  },
+  {
+   "palavra": "bate",
+   "inicio": 23.74833474418605,
+   "fim": 24.06977623255814
+  },
+  {
+   "palavra": "70",
+   "inicio": 24.06977623255814,
+   "fim": 24.274329906976746
+  },
+  {
+   "palavra": "sem",
+   "inicio": 24.274329906976746,
+   "fim": 24.537327488372096
+  },
+  {
+   "palavra": "olhar",
+   "inicio": 24.537327488372096,
+   "fim": 24.917212883720932
+  },
+  {
+   "palavra": "fraqueza",
+   "inicio": 24.917212883720932,
+   "fim": 25.472430000000003
+  },
+  {
+   "palavra": "3",
+   "inicio": 26.077142000000002,
+   "fim": 26.27545496
+  },
+  {
+   "palavra": "Okidogi",
+   "inicio": 26.27545496,
+   "fim": 26.949719024000004
+  },
+  {
+   "palavra": "e",
+   "inicio": 26.949719024000004,
+   "fim": 27.148031984000003
+  },
+  {
+   "palavra": "4",
+   "inicio": 27.148031984000003,
+   "fim": 27.346344944000002
+  },
+  {
+   "palavra": "Prism",
+   "inicio": 27.346344944000002,
+   "fim": 27.86195864
+  },
+  {
+   "palavra": "Solrock",
+   "inicio": 28.096326,
+   "fim": 28.620198000000002
+  },
+  {
+   "palavra": "e",
+   "inicio": 28.620198000000002,
+   "fim": 28.774278000000002
+  },
+  {
+   "palavra": "Lunatone",
+   "inicio": 28.774278000000002,
+   "fim": 29.359782000000003
+  },
+  {
+   "palavra": "Barbaracle",
+   "inicio": 30.346326,
+   "fim": 31.10890552
+  },
+  {
+   "palavra": "liga",
+   "inicio": 31.10890552,
+   "fim": 31.47361746434783
+  },
+  {
+   "palavra": "Energia",
+   "inicio": 31.47361746434783,
+   "fim": 32.03726319652174
+  },
+  {
+   "palavra": "de",
+   "inicio": 32.03726319652174,
+   "fim": 32.269352615652174
+  },
+  {
+   "palavra": "Luta",
+   "inicio": 32.269352615652174,
+   "fim": 32.63406456
+  },
+  {
+   "palavra": "e",
+   "inicio": 32.889387,
+   "fim": 33.03947030958904
+  },
+  {
+   "palavra": "Premium",
+   "inicio": 33.03947030958904,
+   "fim": 33.54975356219178
+  },
+  {
+   "palavra": "Power",
+   "inicio": 33.54975356219178,
+   "fim": 33.939970167123285
+  },
+  {
+   "palavra": "Pro:",
+   "inicio": 33.939970167123285,
+   "fim": 34.330186772054795
+  },
+  {
+   "palavra": "+30",
+   "inicio": 34.330186772054795,
+   "fim": 34.54030340547945
+  },
+  {
+   "palavra": "de",
+   "inicio": 34.54030340547945,
+   "fim": 34.75042003890411
+  },
+  {
+   "palavra": "dano",
+   "inicio": 34.75042003890411,
+   "fim": 35.08060332
+  }
+ ]
+}
