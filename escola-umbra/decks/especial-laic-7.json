@@ -1,0 +1,453 @@
+{
+  "formato": "deck_do_dia",
+  "rotulo": "Especial LAIC",
+  "serie": "O deck campeão",
+  "numero": 7,
+  "titulo_capa": "campeão do LAIC",
+  "subtitulo_capa": "n's zoroark ex",
+  "capa": {
+    "cartas": [
+      "zekrom",
+      "zoroark",
+      "pecharunt"
+    ]
+  },
+  "narracao": "auto",
+  "cartas": {
+    "zorua": {
+      "nome": "N's Zorua",
+      "set": "Journey Together",
+      "numero": 97
+    },
+    "zoroark": {
+      "nome": "N's Zoroark ex",
+      "set": "Journey Together",
+      "numero": 98
+    },
+    "munkidori": {
+      "nome": "Munkidori",
+      "set": "Twilight Masquerade",
+      "numero": 95
+    },
+    "zekrom": {
+      "nome": "N's Zekrom",
+      "set": "Ascended Heroes",
+      "numero": 155
+    },
+    "pecharunt": {
+      "nome": "Pecharunt ex",
+      "set": "Shrouded Fable",
+      "numero": 39
+    },
+    "meowth": {
+      "nome": "Meowth ex",
+      "set": "Perfect Order",
+      "numero": 62
+    },
+    "fezandipiti": {
+      "nome": "Fezandipiti ex",
+      "set": "Ascended Heroes",
+      "numero": 142
+    },
+    "budew": {
+      "nome": "Budew",
+      "set": "Ascended Heroes",
+      "numero": 16
+    },
+    "lillie": {
+      "nome": "Lillie's Determination",
+      "set": "Mega Evolution",
+      "numero": 119
+    },
+    "boss": {
+      "nome": "Boss's Orders",
+      "set": "Mega Evolution",
+      "numero": 114
+    },
+    "judge": {
+      "nome": "Judge",
+      "set": "Perfect Order",
+      "numero": 76
+    },
+    "cyrano": {
+      "nome": "Cyrano",
+      "set": "Surging Sparks",
+      "numero": 170
+    },
+    "black-belt": {
+      "nome": "Black Belt's Training",
+      "set": "Journey Together",
+      "numero": 143
+    },
+    "poffin": {
+      "nome": "Buddy-Buddy Poffin",
+      "set": "Temporal Forces",
+      "numero": 144
+    },
+    "ultra-ball": {
+      "nome": "Ultra Ball",
+      "set": "Mega Evolution",
+      "numero": 131
+    },
+    "pp-up": {
+      "nome": "N's PP Up",
+      "set": "Journey Together",
+      "numero": 153
+    },
+    "poke-pad": {
+      "nome": "Poké Pad",
+      "set": "Perfect Order",
+      "numero": 81
+    },
+    "stretcher": {
+      "nome": "Night Stretcher",
+      "set": "Ascended Heroes",
+      "numero": 196
+    },
+    "red-card": {
+      "nome": "Special Red Card",
+      "set": "Chaos Rising",
+      "numero": 82
+    },
+    "secret-box": {
+      "nome": "Secret Box",
+      "set": "Twilight Masquerade",
+      "numero": 163
+    },
+    "mochi": {
+      "nome": "Binding Mochi",
+      "set": "Prismatic Evolutions",
+      "numero": 95
+    },
+    "watchtower": {
+      "nome": "Team Rocket's Watchtower",
+      "set": "Destined Rivals",
+      "numero": 180
+    },
+    "gravity": {
+      "nome": "Gravity Mountain",
+      "set": "Surging Sparks",
+      "numero": 177
+    },
+    "castle": {
+      "nome": "N's Castle",
+      "set": "Journey Together",
+      "numero": 152
+    },
+    "escura": {
+      "nome": "Basic Darkness Energy",
+      "set": "Scarlet & Violet Energies",
+      "numero": 7
+    },
+    "dragapult": {
+      "nome": "Dragapult ex",
+      "set": "Twilight Masquerade",
+      "numero": 130
+    }
+  },
+  "cenas": [
+    {
+      "tipo": "gancho",
+      "texto": "campeão do LAIC",
+      "subtitulo": "é brasileiro!",
+      "carta": "zoroark",
+      "duracao": 2.6,
+      "legendas": [
+        {
+          "texto": "o campeão do LAIC é *brasileiro*!",
+          "em": 0.05,
+          "fala": "O campeão do Laique é brasileiro!"
+        },
+        {
+          "texto": "*Vinícius Fernandez*, de N's Zoroark",
+          "em": 1.6,
+          "fala": "Vinícius Fernandez, de N's Zoroark."
+        }
+      ]
+    },
+    {
+      "tipo": "piramide",
+      "modo": "ranking",
+      "titulo": "dia 2 do LAIC",
+      "fonte": "Limitless TCG · LAIC 2026–27 · 2.646 jogadores · 474 no dia 2",
+      "duracao": 6,
+      "niveis": [
+        {
+          "rotulo": "Slowking",
+          "detalhe": "7,2%",
+          "valor": 7.2,
+          "em": 2.6
+        },
+        {
+          "rotulo": "N's Zoroark",
+          "detalhe": "9,9%",
+          "valor": 9.9,
+          "em": 2.4
+        },
+        {
+          "rotulo": "Basic Box",
+          "detalhe": "11,4%",
+          "valor": 11.4,
+          "em": 2.2
+        },
+        {
+          "rotulo": "Dragapult ex",
+          "detalhe": "32,1%",
+          "valor": 32.1,
+          "destaque": true,
+          "carta": "dragapult"
+        }
+      ],
+      "legendas": [
+        {
+          "texto": "*1 em cada 3* no dia 2 era Dragapult",
+          "em": 0.2,
+          "fala": "Um em cada três no dia dois era Dragapult."
+        },
+        {
+          "texto": "e o campeão veio de Zoroark: *9,9%*",
+          "em": 3.0,
+          "fala": "E o campeão veio de Zoroark, com menos de dez por cento."
+        }
+      ]
+    },
+    {
+      "tipo": "carta_destaque",
+      "carta": "zoroark",
+      "pill": "CAMPEÃO",
+      "pill_cor": "ouro",
+      "titulo": "Night Joker",
+      "foco": {
+        "em": 1.0,
+        "x": 0.5,
+        "y": 0.72,
+        "escala": 1.9
+      },
+      "duracao": 4.6,
+      "legendas": [
+        {
+          "texto": "*Night Joker* copia o ataque do N's Zekrom",
+          "em": 0.3,
+          "fala": "O Night Joker copia o ataque do N's Zekrom do banco:"
+        },
+        {
+          "texto": "*250 de dano* com só 2 Energias",
+          "em": 2.6,
+          "fala": "duzentos e cinquenta, com só duas energias."
+        }
+      ]
+    },
+    {
+      "tipo": "combo",
+      "alvo": "dragapult",
+      "selo": "NOCAUTE",
+      "duracao": 7,
+      "passos": [
+        {
+          "carta": "zoroark",
+          "tipo": "dano",
+          "valor": 250
+        },
+        {
+          "carta": "mochi",
+          "tipo": "dano",
+          "valor": 40,
+          "rotulo": "+40"
+        },
+        {
+          "carta": "black-belt",
+          "tipo": "dano",
+          "valor": 40,
+          "rotulo": "+40"
+        }
+      ],
+      "legendas": [
+        {
+          "texto": "contra o *Dragapult*: 320 de HP",
+          "fala": "Contra o Dragapult, com trezentos e vinte de HP:"
+        },
+        {
+          "texto": "Night Joker copiando o Zekrom: *250*",
+          "fala": "Night Joker copiando o Zekrom: duzentos e cinquenta."
+        },
+        {
+          "texto": "envenenado pelo Pecharunt, o *Mochi* dá +40",
+          "fala": "Envenenado pelo Pecharunt, o Mochi dá mais quarenta."
+        },
+        {
+          "texto": "*Black Belt's Training*: +40. *Nocaute!*",
+          "fala": "Black Belt's Training: mais quarenta. Nocaute!"
+        }
+      ]
+    },
+    {
+      "tipo": "decklist",
+      "titulo": "a lista campeã",
+      "duracao": 9,
+      "cartas": [
+        {
+          "carta": "zorua",
+          "qtd": 4
+        },
+        {
+          "carta": "zoroark",
+          "qtd": 4
+        },
+        {
+          "carta": "zekrom",
+          "qtd": 2
+        },
+        {
+          "carta": "pecharunt",
+          "qtd": 2
+        },
+        {
+          "carta": "munkidori",
+          "qtd": 2
+        },
+        {
+          "carta": "pp-up",
+          "qtd": 4
+        },
+        {
+          "carta": "mochi",
+          "qtd": 2
+        },
+        {
+          "carta": "black-belt",
+          "qtd": 1
+        },
+        {
+          "carta": "escura",
+          "qtd": 8
+        },
+        {
+          "carta": "meowth",
+          "qtd": 1
+        },
+        {
+          "carta": "fezandipiti",
+          "qtd": 1
+        },
+        {
+          "carta": "budew",
+          "qtd": 1
+        },
+        {
+          "carta": "lillie",
+          "qtd": 4
+        },
+        {
+          "carta": "boss",
+          "qtd": 3
+        },
+        {
+          "carta": "judge",
+          "qtd": 2
+        },
+        {
+          "carta": "cyrano",
+          "qtd": 1
+        },
+        {
+          "carta": "poffin",
+          "qtd": 4
+        },
+        {
+          "carta": "ultra-ball",
+          "qtd": 4
+        },
+        {
+          "carta": "poke-pad",
+          "qtd": 2
+        },
+        {
+          "carta": "stretcher",
+          "qtd": 2
+        },
+        {
+          "carta": "red-card",
+          "qtd": 1
+        },
+        {
+          "carta": "secret-box",
+          "qtd": 1
+        },
+        {
+          "carta": "watchtower",
+          "qtd": 2
+        },
+        {
+          "carta": "gravity",
+          "qtd": 1
+        },
+        {
+          "carta": "castle",
+          "qtd": 1
+        }
+      ],
+      "grupos": [
+        {
+          "cartas": [
+            "zorua",
+            "zoroark"
+          ],
+          "adesivo": "o campeão"
+        },
+        {
+          "cartas": [
+            "zekrom",
+            "pecharunt",
+            "munkidori"
+          ],
+          "adesivo": "o banco"
+        },
+        {
+          "cartas": [
+            "pp-up"
+          ],
+          "adesivo": "energia\nde volta"
+        },
+        {
+          "cartas": [
+            "mochi",
+            "black-belt",
+            "escura"
+          ],
+          "adesivo": "+80 de dano"
+        }
+      ],
+      "legendas": [
+        {
+          "texto": "*4 Zorua e 4 Zoroark*",
+          "fala": "Quatro Zorua e quatro Zoroark."
+        },
+        {
+          "texto": "*Zekrom, Pecharunt* e Munkidori no banco",
+          "fala": "Zekrom, Pecharunt e Munkidori no banco."
+        },
+        {
+          "texto": "*4 N's PP Up*: energia do descarte pro banco",
+          "fala": "Quatro N's PP Up, que trazem energia do descarte."
+        },
+        {
+          "texto": "Mochi e Black Belt: *+80*",
+          "fala": "E Mochi com Black Belt: mais oitenta."
+        }
+      ]
+    },
+    {
+      "tipo": "cta",
+      "duracao": 4.5,
+      "principal": "PARABÉNS",
+      "complemento": "campeão do LAIC",
+      "seguir": "segue @escolaumbratcg",
+      "falas": [
+        {
+          "texto": "Parabéns, Vinícius! Salva a lista campeã e segue a Escola Umbra.",
+          "em": 0.25
+        }
+      ]
+    }
+  ]
+}

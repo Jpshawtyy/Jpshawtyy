@@ -1,0 +1,523 @@
+{
+ "assinatura": "1f0cafa97cc8f6579e1616a8c9203090614e62f2",
+ "voz": "pm_santa",
+ "frases": [
+  {
+   "fala": "O campeão do Laique é brasileiro!",
+   "duracao": 1.842313
+  },
+  {
+   "fala": "Vinícius Fernandez, de N's Zoroark.",
+   "duracao": 2.012381
+  },
+  {
+   "fala": "Um em cada três no dia dois era Dragapult.",
+   "duracao": 2.574059
+  },
+  {
+   "fala": "E o campeão veio de Zoroark, com menos de dez por cento.",
+   "duracao": 2.990522
+  },
+  {
+   "fala": "O Night Joker copia o ataque do N's Zekrom do banco:",
+   "duracao": 2.777098
+  },
+  {
+   "fala": "duzentos e cinquenta, com só duas energias.",
+   "duracao": 2.561769
+  },
+  {
+   "fala": "Contra o Dragapult, com trezentos e vinte de HP:",
+   "duracao": 2.944626
+  },
+  {
+   "fala": "Night Joker copiando o Zekrom: duzentos e cinquenta.",
+   "duracao": 2.958503
+  },
+  {
+   "fala": "Envenenado pelo Pecharunt, o Mochi dá mais quarenta.",
+   "duracao": 2.999138
+  },
+  {
+   "fala": "Black Belt's Training: mais quarenta. Nocaute!",
+   "duracao": 2.47263
+  },
+  {
+   "fala": "Quatro Zorua e quatro Zoroark.",
+   "duracao": 1.927143
+  },
+  {
+   "fala": "Zekrom, Pecharunt e Munkidori no banco.",
+   "duracao": 2.253855
+  },
+  {
+   "fala": "Quatro N's PP Up, que trazem energia do descarte.",
+   "duracao": 2.86542
+  },
+  {
+   "fala": "E Mochi com Black Belt: mais oitenta.",
+   "duracao": 2.125057
+  },
+  {
+   "fala": "Parabéns, Vinícius! Salva a lista campeã e segue a Escola Umbra.",
+   "duracao": 3.623469
+  }
+ ],
+ "words": [
+  {
+   "palavra": "o",
+   "inicio": 0.05,
+   "fim": 0.16950138378378377
+  },
+  {
+   "palavra": "campeão",
+   "inicio": 0.16950138378378377,
+   "fim": 0.5758060886486487
+  },
+  {
+   "palavra": "do",
+   "inicio": 0.5758060886486487,
+   "fim": 0.743108025945946
+  },
+  {
+   "palavra": "LAIC",
+   "inicio": 0.743108025945946,
+   "fim": 1.0060110702702703
+  },
+  {
+   "palavra": "é",
+   "inicio": 1.0060110702702703,
+   "fim": 1.1255124540540542
+  },
+  {
+   "palavra": "brasileiro!",
+   "inicio": 1.1255124540540542,
+   "fim": 1.8186204800000003
+  },
+  {
+   "palavra": "Vinícius",
+   "inicio": 2.0523130000000003,
+   "fim": 2.5417240592000003
+  },
+  {
+   "palavra": "Fernandez,",
+   "inicio": 2.5417240592000003,
+   "fim": 3.1856859792
+  },
+  {
+   "palavra": "de",
+   "inicio": 3.1856859792,
+   "fim": 3.3659953168000003
+  },
+  {
+   "palavra": "N's",
+   "inicio": 3.3659953168000003,
+   "fim": 3.5463046544
+  },
+  {
+   "palavra": "Zoroark",
+   "inicio": 3.5463046544,
+   "fim": 3.98419876
+  },
+  {
+   "palavra": "1",
+   "inicio": 4.514694,
+   "fim": 4.671092521518988
+  },
+  {
+   "palavra": "em",
+   "inicio": 4.671092521518988,
+   "fim": 4.89005045164557
+  },
+  {
+   "palavra": "cada",
+   "inicio": 4.89005045164557,
+   "fim": 5.234127198987342
+  },
+  {
+   "palavra": "3",
+   "inicio": 5.234127198987342,
+   "fim": 5.3905257205063295
+  },
+  {
+   "palavra": "no",
+   "inicio": 5.3905257205063295,
+   "fim": 5.609483650632912
+  },
+  {
+   "palavra": "dia",
+   "inicio": 5.609483650632912,
+   "fim": 5.891000989367089
+  },
+  {
+   "palavra": "2",
+   "inicio": 5.891000989367089,
+   "fim": 6.047399510886076
+  },
+  {
+   "palavra": "era",
+   "inicio": 6.047399510886076,
+   "fim": 6.328916849620254
+  },
+  {
+   "palavra": "Dragapult",
+   "inicio": 6.328916849620254,
+   "fim": 6.98579064
+  },
+  {
+   "palavra": "e",
+   "inicio": 7.314694,
+   "fim": 7.5113310630136985
+  },
+  {
+   "palavra": "o",
+   "inicio": 7.5113310630136985,
+   "fim": 7.707968126027398
+  },
+  {
+   "palavra": "campeão",
+   "inicio": 7.707968126027398,
+   "fim": 8.376534140273973
+  },
+  {
+   "palavra": "veio",
+   "inicio": 8.376534140273973,
+   "fim": 8.80913567890411
+  },
+  {
+   "palavra": "de",
+   "inicio": 8.80913567890411,
+   "fim": 9.084427567123289
+  },
+  {
+   "palavra": "Zoroark:",
+   "inicio": 9.084427567123289,
+   "fim": 9.910303231780823
+  },
+  {
+   "palavra": "9,9%",
+   "inicio": 9.910303231780823,
+   "fim": 10.18559512
+  },
+  {
+   "palavra": "Night",
+   "inicio": 10.855216000000002,
+   "fim": 11.249058989090912
+  },
+  {
+   "palavra": "Joker",
+   "inicio": 11.249058989090912,
+   "fim": 11.64290197818182
+  },
+  {
+   "palavra": "copia",
+   "inicio": 11.64290197818182,
+   "fim": 12.03674496727273
+  },
+  {
+   "palavra": "o",
+   "inicio": 12.03674496727273,
+   "fim": 12.188223040000002
+  },
+  {
+   "palavra": "ataque",
+   "inicio": 12.188223040000002,
+   "fim": 12.64265725818182
+  },
+  {
+   "palavra": "do",
+   "inicio": 12.64265725818182,
+   "fim": 12.854726560000003
+  },
+  {
+   "palavra": "N's",
+   "inicio": 12.854726560000003,
+   "fim": 13.066795861818184
+  },
+  {
+   "palavra": "Zekrom",
+   "inicio": 13.066795861818184,
+   "fim": 13.521230080000002
+  },
+  {
+   "palavra": "250",
+   "inicio": 13.792314000000001,
+   "fim": 14.122667494925373
+  },
+  {
+   "palavra": "de",
+   "inicio": 14.122667494925373,
+   "fim": 14.379609102089553
+  },
+  {
+   "palavra": "dano",
+   "inicio": 14.379609102089553,
+   "fim": 14.78337448477612
+  },
+  {
+   "palavra": "com",
+   "inicio": 14.78337448477612,
+   "fim": 15.113727979701494
+  },
+  {
+   "palavra": "só",
+   "inicio": 15.113727979701494,
+   "fim": 15.370669586865672
+  },
+  {
+   "palavra": "2",
+   "inicio": 15.370669586865672,
+   "fim": 15.554199306268657
+  },
+  {
+   "palavra": "Energias",
+   "inicio": 15.554199306268657,
+   "fim": 16.25161224
+  },
+  {
+   "palavra": "contra",
+   "inicio": 16.854083000000003,
+   "fim": 17.477650858823534
+  },
+  {
+   "palavra": "o",
+   "inicio": 17.477650858823534,
+   "fim": 17.685506811764707
+  },
+  {
+   "palavra": "Dragapult:",
+   "inicio": 17.685506811764707,
+   "fim": 18.724786576470592
+  },
+  {
+   "palavra": "320",
+   "inicio": 18.724786576470592,
+   "fim": 19.09892729176471
+  },
+  {
+   "palavra": "de",
+   "inicio": 19.09892729176471,
+   "fim": 19.389925625882356
+  },
+  {
+   "palavra": "HP",
+   "inicio": 19.389925625882356,
+   "fim": 19.68092396
+  },
+  {
+   "palavra": "Night",
+   "inicio": 19.958709000000002,
+   "fim": 20.432069480000003
+  },
+  {
+   "palavra": "Joker",
+   "inicio": 20.432069480000003,
+   "fim": 20.905429960000003
+  },
+  {
+   "palavra": "copiando",
+   "inicio": 20.905429960000003,
+   "fim": 21.59726450769231
+  },
+  {
+   "palavra": "o",
+   "inicio": 21.59726450769231,
+   "fim": 21.779326230769232
+  },
+  {
+   "palavra": "Zekrom:",
+   "inicio": 21.779326230769232,
+   "fim": 22.47116077846154
+  },
+  {
+   "palavra": "250",
+   "inicio": 22.47116077846154,
+   "fim": 22.798871880000004
+  },
+  {
+   "palavra": "envenenado",
+   "inicio": 23.077212000000003,
+   "fim": 23.804914934505497
+  },
+  {
+   "palavra": "pelo",
+   "inicio": 23.804914934505497,
+   "fim": 24.152946772747256
+  },
+  {
+   "palavra": "Pecharunt,",
+   "inicio": 24.152946772747256,
+   "fim": 24.943928223296705
+  },
+  {
+   "palavra": "o",
+   "inicio": 24.943928223296705,
+   "fim": 25.102124513406597
+  },
+  {
+   "palavra": "Mochi",
+   "inicio": 25.102124513406597,
+   "fim": 25.51343486769231
+  },
+  {
+   "palavra": "dá",
+   "inicio": 25.51343486769231,
+   "fim": 25.734909673846158
+  },
+  {
+   "palavra": "+40",
+   "inicio": 25.734909673846158,
+   "fim": 25.956384480000004
+  },
+  {
+   "palavra": "Black",
+   "inicio": 26.23635,
+   "fim": 26.599390263529415
+  },
+  {
+   "palavra": "Belt's",
+   "inicio": 26.599390263529415,
+   "fim": 26.962430527058824
+  },
+  {
+   "palavra": "Training:",
+   "inicio": 26.962430527058824,
+   "fim": 27.604732531764707
+  },
+  {
+   "palavra": "+40.",
+   "inicio": 27.604732531764707,
+   "fim": 27.96777279529412
+  },
+  {
+   "palavra": "Nocaute!",
+   "inicio": 27.96777279529412,
+   "fim": 28.610074800000003
+  },
+  {
+   "palavra": "4",
+   "inicio": 29.208980000000004,
+   "fim": 29.414541920000005
+  },
+  {
+   "palavra": "Zorua",
+   "inicio": 29.414541920000005,
+   "fim": 29.949002912000005
+  },
+  {
+   "palavra": "e",
+   "inicio": 29.949002912000005,
+   "fim": 30.154564832000005
+  },
+  {
+   "palavra": "4",
+   "inicio": 30.154564832000005,
+   "fim": 30.360126752000003
+  },
+  {
+   "palavra": "Zoroark",
+   "inicio": 30.360126752000003,
+   "fim": 31.059037280000005
+  },
+  {
+   "palavra": "Zekrom,",
+   "inicio": 31.296123000000005,
+   "fim": 31.77414992093024
+  },
+  {
+   "palavra": "Pecharunt",
+   "inicio": 31.77414992093024,
+   "fim": 32.30249546511629
+  },
+  {
+   "palavra": "e",
+   "inicio": 32.30249546511629,
+   "fim": 32.42829202325582
+  },
+  {
+   "palavra": "Munkidori",
+   "inicio": 32.42829202325582,
+   "fim": 32.95663756744187
+  },
+  {
+   "palavra": "no",
+   "inicio": 32.95663756744187,
+   "fim": 33.13275274883721
+  },
+  {
+   "palavra": "banco",
+   "inicio": 33.13275274883721,
+   "fim": 33.4598238
+  },
+  {
+   "palavra": "4",
+   "inicio": 33.70997800000001,
+   "fim": 33.85475711578948
+  },
+  {
+   "palavra": "N's",
+   "inicio": 33.85475711578948,
+   "fim": 34.057447877894745
+  },
+  {
+   "palavra": "PP",
+   "inicio": 34.057447877894745,
+   "fim": 34.26013864000001
+  },
+  {
+   "palavra": "Up:",
+   "inicio": 34.26013864000001,
+   "fim": 34.578652694736846
+  },
+  {
+   "palavra": "energia",
+   "inicio": 34.578652694736846,
+   "fim": 35.07090168842106
+  },
+  {
+   "palavra": "do",
+   "inicio": 35.07090168842106,
+   "fim": 35.27359245052632
+  },
+  {
+   "palavra": "descarte",
+   "inicio": 35.27359245052632,
+   "fim": 35.823753090526324
+  },
+  {
+   "palavra": "pro",
+   "inicio": 35.823753090526324,
+   "fim": 36.084355498947374
+  },
+  {
+   "palavra": "banco",
+   "inicio": 36.084355498947374,
+   "fim": 36.46078120000001
+  },
+  {
+   "palavra": "Mochi",
+   "inicio": 36.735398,
+   "fim": 37.23578878037736
+  },
+  {
+   "palavra": "e",
+   "inicio": 37.23578878037736,
+   "fim": 37.42824677283019
+  },
+  {
+   "palavra": "Black",
+   "inicio": 37.42824677283019,
+   "fim": 37.92863755320755
+  },
+  {
+   "palavra": "Belt:",
+   "inicio": 37.92863755320755,
+   "fim": 38.50601153056604
+  },
+  {
+   "palavra": "+80",
+   "inicio": 38.50601153056604,
+   "fim": 38.775452720000004
+  }
+ ]
+}
