@@ -1,0 +1,12 @@
+{
+  "serie": "Destaques",
+  "destaques": [
+    {"titulo": "Aulas", "subtitulo": "do zero", "icone": "aulas", "arquivo": "aulas.png"},
+    {"titulo": "Decks", "subtitulo": "do dia", "icone": "decks", "arquivo": "decks.png"},
+    {"titulo": "Regras", "subtitulo": "pokémon tcg", "icone": "regras", "arquivo": "regras.png"},
+    {"titulo": "Liga", "subtitulo": "umbra", "icone": "trofeu", "arquivo": "liga.png"},
+    {"titulo": "Torneios", "subtitulo": "datas", "icone": "calendario", "arquivo": "torneios.png"},
+    {"titulo": "Loja", "subtitulo": "cartas avulsas", "icone": "sacola", "arquivo": "loja.png"}
+  ],
+  "paginas": []
+}

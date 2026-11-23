@@ -13,7 +13,8 @@ const {bundle} = await import('@remotion/bundler');
 const {renderMedia, renderStill, selectComposition} = await import('@remotion/renderer');
 const {RAIZ} = await import('./cartas');
 
-type Roteiro = {serie: string; marca?: string; destaque?: {titulo: string; subtitulo?: string}; paginas: PaginaStory[]};
+type CapaDestaque = {titulo: string; subtitulo?: string; icone?: PaginaStory['icone']; arquivo?: string};
+type Roteiro = {serie: string; marca?: string; destaque?: CapaDestaque; destaques?: CapaDestaque[]; paginas: PaginaStory[]};
 
 const caminho = process.argv.slice(2).find((a) => !a.startsWith('--'));
 const video = process.argv.includes('--video');
@@ -36,6 +37,7 @@ const serveUrl = await bundle({entryPoint: path.join(RAIZ, 'src', 'index.ts'), p
 
 const paginas: {arquivo: string; pagina: PaginaStory; numero?: number}[] = [];
 if (roteiro.destaque) paginas.push({arquivo: '00-destaque.png', pagina: {tipo: 'destaque', ...roteiro.destaque}});
+(roteiro.destaques ?? []).forEach((d, i) => paginas.push({arquivo: d.arquivo ?? `destaque-${String(i + 1).padStart(2, '0')}.png`, pagina: {tipo: 'destaque', titulo: d.titulo, subtitulo: d.subtitulo, icone: d.icone}}));
 roteiro.paginas.forEach((p, i) => paginas.push({arquivo: `${String(i + 1).padStart(2, '0')}.png`, pagina: p, numero: i + 1}));
 
 for (const {arquivo, pagina, numero} of paginas) {

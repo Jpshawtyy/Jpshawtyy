@@ -5,6 +5,7 @@ import React, {createContext, useContext} from 'react';
 import {AbsoluteFill, Img, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
 import {MOLA_PULO, MOLA_SECA, mola} from './anim';
 import {Faiscas, Flash, Raios, Sfx} from './deckdodia/efeitos';
+import {Icone, type NomeIcone} from './componentes/Icones';
 import {CORES, MARCA} from './tema';
 import {FONTE_MONO, FONTE_TEXTO, FONTE_TITULO} from './fontes';
 import {Etiqueta, ListrasOuro, TituloArena, TracoOuro, fundoVermelho, sombraTitulo} from './componentes/Arena';
@@ -17,6 +18,7 @@ export type PaginaStory = {
   subtitulo?: string;
   itens?: ItemStory[];
   nota?: string; // linha pequena no pé (ex.: "continua no próximo")
+  icone?: NomeIcone; // só na capa de destaque: desenho no lugar do emblema
 };
 
 export type PropsStory = {
@@ -200,7 +202,13 @@ const Destaque: React.FC<PropsStory> = ({pagina}) => (
   <AbsoluteFill style={{...fundoVermelho(135)}}>
     <AbsoluteFill style={{background: 'radial-gradient(circle at 50% 50%, rgba(10,10,13,0) 0%, rgba(10,10,13,0.55) 60%, rgba(10,10,13,0.9) 100%)'}} />
     <div style={{position: 'absolute', left: L / 2 - 330, top: 960 - 330, width: 660, height: 660, borderRadius: '50%', background: CORES.fundo, boxShadow: `inset 0 0 0 10px ${CORES.ouro}, 0 0 80px rgba(0,0,0,0.6)`}} />
-    <Img src={staticFile('logo.png')} style={{position: 'absolute', left: L / 2 - 140, top: 960 - 250, width: 280, height: 280, objectFit: 'contain'}} />
+    {pagina.icone ? (
+      <div style={{position: 'absolute', left: L / 2 - 140, top: 960 - 260, width: 280, height: 280}}>
+        <Icone nome={pagina.icone} tamanho={280} />
+      </div>
+    ) : (
+      <Img src={staticFile('logo.png')} style={{position: 'absolute', left: L / 2 - 140, top: 960 - 250, width: 280, height: 280, objectFit: 'contain'}} />
+    )}
     <div style={{position: 'absolute', left: L / 2 - 300, width: 600, top: 960 + 60, display: 'flex', justifyContent: 'center'}}>
       <div style={{fontFamily: FONTE_TITULO, fontSize: 120, lineHeight: 1, color: CORES.texto, textShadow: sombraTitulo(120), transform: 'skewX(-9deg)', textTransform: 'uppercase'}}>{pagina.titulo}</div>
     </div>
