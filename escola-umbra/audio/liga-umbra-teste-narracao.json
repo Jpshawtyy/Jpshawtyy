@@ -1,0 +1,98 @@
+{
+ "assinatura": "916ab9bdbb5b95e21122ff54c9cba33686747fd9",
+ "voz": "pm_santa",
+ "frases": [
+  {
+   "fala": "Amanhã tem o primeiro torneio teste!",
+   "duracao": 2.092063
+  },
+  {
+   "fala": "Da Liga Umbra!",
+   "duracao": 0.999433
+  },
+  {
+   "fala": "E a entrada é de graça!",
+   "duracao": 1.599977
+  },
+  {
+   "fala": "É um teste, pra deixar a liga redondinha.",
+   "duracao": 2.241814
+  },
+  {
+   "fala": "Quer jogar? Chama no direct!",
+   "duracao": 1.660385
+  }
+ ],
+ "words": [
+  {
+   "palavra": "amanhã",
+   "inicio": 0.15,
+   "fim": 0.8847733463414634
+  },
+  {
+   "palavra": "tem",
+   "inicio": 0.8847733463414634,
+   "fim": 1.3256373541463415
+  },
+  {
+   "palavra": "torneio",
+   "inicio": 1.3256373541463415,
+   "fim": 2.15838048
+  },
+  {
+   "palavra": "entrada",
+   "inicio": 5.699999999999999,
+   "fim": 6.4057195848648645
+  },
+  {
+   "palavra": "de",
+   "inicio": 6.4057195848648645,
+   "fim": 6.6963100021621615
+  },
+  {
+   "palavra": "graça",
+   "inicio": 6.6963100021621615,
+   "fim": 7.235977919999999
+  },
+  {
+   "palavra": "é",
+   "inicio": 8.1,
+   "fim": 8.228103657142857
+  },
+  {
+   "palavra": "um",
+   "inicio": 8.228103657142857,
+   "fim": 8.407448777142857
+  },
+  {
+   "palavra": "teste,",
+   "inicio": 8.407448777142857,
+   "fim": 8.843001211428572
+  },
+  {
+   "palavra": "pra",
+   "inicio": 8.843001211428572,
+   "fim": 9.073587794285714
+  },
+  {
+   "palavra": "deixar",
+   "inicio": 9.073587794285714,
+   "fim": 9.457898765714285
+  },
+  {
+   "palavra": "a",
+   "inicio": 9.457898765714285,
+   "fim": 9.586002422857142
+  },
+  {
+   "palavra": "liga",
+   "inicio": 9.586002422857142,
+   "fim": 9.867830468571428
+  },
+  {
+   "palavra": "pronta",
+   "inicio": 9.867830468571428,
+   "fim": 10.252141439999999
+  }
+ ]
+}

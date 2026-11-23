@@ -1,0 +1,66 @@
+{
+  "formato": "deck_do_dia",
+  "rotulo": "Liga Umbra",
+  "serie": "Torneio teste",
+  "numero": 1,
+  "titulo_capa": "torneio teste",
+  "subtitulo_capa": "amanhã · grátis",
+  "capa": {"cartas": ["zoroark", "dragapult", "crustle"]},
+  "narracao": "auto",
+
+  "cartas": {
+    "dragapult": {"nome": "Dragapult ex", "set": "Twilight Masquerade", "numero": 130},
+    "crustle": {"nome": "Crustle", "set": "Destined Rivals", "numero": 12},
+    "zoroark": {"nome": "N's Zoroark ex", "set": "Journey Together", "numero": 98},
+    "hydrapple": {"nome": "Hydrapple ex", "set": "Stellar Crown", "numero": 14},
+    "kangaskhan": {"nome": "Mega Kangaskhan ex", "set": "Mega Evolution", "numero": 104}
+  },
+
+  "cenas": [
+    {
+      "tipo": "impacto",
+      "antes": "AMANHÃ",
+      "texto": "1º torneio teste",
+      "subtitulo": "terça, 24/11",
+      "dramatico": true,
+      "bate": 0.05,
+      "duracao": 2.6,
+      "legendas": [{"texto": "*amanhã* tem torneio", "em": 0.15, "fala": "Amanhã tem o primeiro torneio teste!"}]
+    },
+    {
+      "tipo": "impacto",
+      "texto": "Liga Umbra",
+      "subtitulo": "torneio teste",
+      "logo": true,
+      "bate": 0,
+      "duracao": 3,
+      "falas": [{"texto": "Da Liga Umbra!", "em": 0.5}]
+    },
+    {
+      "tipo": "impacto",
+      "antes": "ENTRADA",
+      "texto": "grátis",
+      "cartas": ["dragapult", "crustle", "zoroark", "hydrapple", "kangaskhan"],
+      "bate": 0.05,
+      "duracao": 2.4,
+      "legendas": [{"texto": "entrada *de graça*", "em": 0.1, "fala": "E a entrada é de graça!"}]
+    },
+    {
+      "tipo": "impacto",
+      "antes": "É UM TESTE",
+      "texto": "vem jogar com a gente",
+      "subtitulo": "pra deixar tudo pronto",
+      "bate": 0.05,
+      "duracao": 2.6,
+      "legendas": [{"texto": "é um *teste*, pra deixar a liga pronta", "em": 0.1, "fala": "É um teste, pra deixar a liga redondinha."}]
+    },
+    {
+      "tipo": "cta",
+      "duracao": 4.2,
+      "principal": "BORA?",
+      "complemento": "chama no direct",
+      "seguir": "@escolaumbratcg",
+      "falas": [{"texto": "Quer jogar? Chama no direct!", "em": 0.25}]
+    }
+  ]
+}
