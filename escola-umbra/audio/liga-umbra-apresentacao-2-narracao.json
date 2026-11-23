@@ -1,0 +1,157 @@
+{
+ "assinatura": "b738b369f122d8a83311d65f5acfcd18fb85c2f5",
+ "voz": "pm_santa",
+ "frases": [
+  {
+   "fala": "Fala, treinador!",
+   "duracao": 1.105057
+  },
+  {
+   "fala": "Terça-feira tem o torneio teste da Liga Umbra!",
+   "duracao": 2.616054
+  },
+  {
+   "fala": "Toca no link da bio,",
+   "duracao": 1.295147
+  },
+  {
+   "fala": "faz o seu cadastro",
+   "duracao": 1.223424
+  },
+  {
+   "fala": "e vem jogar. É de graça!",
+   "duracao": 1.678594
+  },
+  {
+   "fala": "Estamos esperando todos vocês!",
+   "duracao": 2.008209
+  }
+ ],
+ "words": [
+  {
+   "palavra": "terça",
+   "inicio": 1.315057,
+   "fim": 1.708410661686747
+  },
+  {
+   "palavra": "tem",
+   "inicio": 1.708410661686747,
+   "fim": 1.9807324274698794
+  },
+  {
+   "palavra": "torneio",
+   "inicio": 1.9807324274698794,
+   "fim": 2.495117985060241
+  },
+  {
+   "palavra": "teste",
+   "inicio": 2.495117985060241,
+   "fim": 2.8884716467469875
+  },
+  {
+   "palavra": "da",
+   "inicio": 2.8884716467469875,
+   "fim": 3.1002774645783133
+  },
+  {
+   "palavra": "Liga",
+   "inicio": 3.1002774645783133,
+   "fim": 3.433115178313253
+  },
+  {
+   "palavra": "Umbra",
+   "inicio": 3.433115178313253,
+   "fim": 3.82646884
+  },
+  {
+   "palavra": "toca",
+   "inicio": 4.281111,
+   "fim": 4.5850388293333335
+  },
+  {
+   "palavra": "no",
+   "inicio": 4.5850388293333335,
+   "fim": 4.778447448
+  },
+  {
+   "palavra": "link",
+   "inicio": 4.778447448,
+   "fim": 5.082375277333334
+  },
+  {
+   "palavra": "da",
+   "inicio": 5.082375277333334,
+   "fim": 5.275783896
+  },
+  {
+   "palavra": "bio",
+   "inicio": 5.275783896,
+   "fim": 5.52445212
+  },
+  {
+   "palavra": "faz",
+   "inicio": 6.281111,
+   "fim": 6.532786794285714
+  },
+  {
+   "palavra": "o",
+   "inicio": 6.532786794285714,
+   "fim": 6.67260668
+  },
+  {
+   "palavra": "seu",
+   "inicio": 6.67260668,
+   "fim": 6.9242824742857145
+  },
+  {
+   "palavra": "cadastro",
+   "inicio": 6.9242824742857145,
+   "fim": 7.45559804
+  },
+  {
+   "palavra": "e",
+   "inicio": 8.281111000000001,
+   "fim": 8.43909631764706
+  },
+  {
+   "palavra": "vem",
+   "inicio": 8.43909631764706,
+   "fim": 8.723469889411765
+  },
+  {
+   "palavra": "jogar:",
+   "inicio": 8.723469889411765,
+   "fim": 9.260619969411765
+  },
+  {
+   "palavra": "é",
+   "inicio": 9.260619969411765,
+   "fim": 9.418605287058824
+  },
+  {
+   "palavra": "grátis",
+   "inicio": 9.418605287058824,
+   "fim": 9.892561240000001
+  },
+  {
+   "palavra": "estamos",
+   "inicio": 10.409705,
+   "fim": 10.877904584000001
+  },
+  {
+   "palavra": "esperando",
+   "inicio": 10.877904584000001,
+   "fim": 11.456268776
+  },
+  {
+   "palavra": "todos",
+   "inicio": 11.456268776,
+   "fim": 11.814303752
+  },
+  {
+   "palavra": "vocês!",
+   "inicio": 11.814303752,
+   "fim": 12.33758564
+  }
+ ]
+}

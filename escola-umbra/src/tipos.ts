@@ -67,6 +67,9 @@ type CenaBase = {
   falas?: Fala[]; // narração sem legenda (ex.: no CTA)
   kai?: string | {em: number; animacao: string}[]; // gesto do Kai nesta cena (ex.: "apontando") ou uma lista de gestos
   faisca?: string; // gesto do Faísca nesta cena
+  // Personagem 2D (imagens recortadas em public/mascote/<pose>.png) no Deck do Dia:
+  // x = centro, base = onde ficam os pés, altura em px; espelhar vira a imagem.
+  mascote?: {pose: string; x?: number; base?: number; altura?: number; espelhar?: boolean};
 };
 
 // ---------- Cenas ----------
@@ -139,6 +142,7 @@ export type CenaImpacto = CenaBase & {
   dramatico?: boolean; // zoom lento, vinheta vermelha e estrondo grave
   cartas?: RefCarta[]; // cartas explodindo do centro para fora
   bate?: number; // segundo em que a frase (ou o emblema) bate na tela
+  topo?: number; // altura do texto na tela (padrão: meio da tela)
 };
 
 // Combo: o alvo fica com a barra de HP e cada passo bate nele (dano) ou tira HP máximo (ex.: Gravity Mountain).

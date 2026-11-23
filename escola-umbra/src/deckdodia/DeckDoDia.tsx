@@ -14,6 +14,7 @@ import {Fundo} from '../componentes/Fundo';
 import {Guias, Moldura} from '../componentes/Moldura';
 import {quebrarPalavras, temposDaFala} from '../componentes/Legenda';
 import {Faiscas, Flash, Sfx} from './efeitos';
+import {Mascote2D} from './Mascote2D';
 import {CartaShow, ComboDeck, RespiraDeck, Confronto, ContagemDeck, CtaDeck, DecklistDeal, GanchoDeck, ImpactoDeck, RankingDeck} from './cenas';
 
 // Legenda de impacto: maiúsculas grossas, a palavra que está sendo falada ganha uma tarja vermelha.
@@ -106,6 +107,12 @@ export const DeckDoDia: React.FC<PropsAula> = (props) => {
           <Sequence key={i} from={c.de} durationInFrames={c.quadros} name={`${i + 1} · ${cena.tipo}`}>
             <Entrada quadros={c.quadros} ultima={i === plano.cenas.length - 1}>
               {corpo}
+              {cena.mascote ? (
+                <Mascote2D
+                  {...cena.mascote}
+                  falando={(palavras ?? []).some((p) => p.inicio < c.inicio + c.duracao && p.fim > c.inicio)}
+                />
+              ) : null}
             </Entrada>
             <LegendaImpacto legendas={legendasDaCena(cena, c.duracao)} falas={palavras} inicioDaCena={c.inicio} />
             {i > 0 ? <Flash em={[0]} forca={0.45} /> : null}

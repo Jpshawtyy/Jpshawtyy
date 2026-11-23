@@ -1,0 +1,122 @@
+{
+  "formato": "deck_do_dia",
+  "rotulo": "Liga Umbra",
+  "serie": "Torneio teste",
+  "numero": 1,
+  "titulo_capa": "torneio teste",
+  "subtitulo_capa": "inscrição pelo link na bio",
+  "narracao": "auto",
+  "cenas": [
+    {
+      "tipo": "impacto",
+      "antes": "FALA, TREINADOR!",
+      "texto": "torneio teste",
+      "subtitulo": "terça, 24/11 · grátis",
+      "topo": 400,
+      "bate": 0.1,
+      "duracao": 3.2,
+      "mascote": {
+        "pose": "acenando",
+        "x": 720,
+        "base": 1770,
+        "altura": 940
+      },
+      "falas": [
+        {
+          "texto": "Fala, treinador!",
+          "em": 0.05
+        }
+      ],
+      "legendas": [
+        {
+          "texto": "terça tem *torneio teste* da Liga Umbra",
+          "em": 1.2,
+          "fala": "Terça-feira tem o torneio teste da Liga Umbra!"
+        }
+      ]
+    },
+    {
+      "tipo": "impacto",
+      "antes": "PASSO 1",
+      "texto": "link na bio",
+      "subtitulo": "no perfil da Liga Umbra",
+      "topo": 400,
+      "duracao": 2,
+      "mascote": {
+        "pose": "apontando",
+        "x": 760,
+        "base": 1770,
+        "altura": 940
+      },
+      "legendas": [
+        {
+          "texto": "toca no *link da bio*",
+          "em": 0.1,
+          "fala": "Toca no link da bio,"
+        }
+      ]
+    },
+    {
+      "tipo": "impacto",
+      "antes": "PASSO 2",
+      "texto": "faz o cadastro",
+      "subtitulo": "é rapidinho",
+      "topo": 400,
+      "duracao": 2,
+      "mascote": {
+        "pose": "parado",
+        "x": 760,
+        "base": 1770,
+        "altura": 940
+      },
+      "legendas": [
+        {
+          "texto": "faz o seu *cadastro*",
+          "em": 0.1,
+          "fala": "faz o seu cadastro"
+        }
+      ]
+    },
+    {
+      "tipo": "impacto",
+      "antes": "PASSO 3",
+      "texto": "vem jogar",
+      "subtitulo": "entrada grátis",
+      "topo": 400,
+      "duracao": 2,
+      "mascote": {
+        "pose": "acenando",
+        "x": 720,
+        "base": 1770,
+        "altura": 940
+      },
+      "legendas": [
+        {
+          "texto": "e vem jogar: *é grátis*",
+          "em": 0.1,
+          "fala": "e vem jogar. É de graça!"
+        }
+      ]
+    },
+    {
+      "tipo": "impacto",
+      "texto": "te esperamos!",
+      "subtitulo": "inscrição no link da bio",
+      "topo": 330,
+      "duracao": 3.2,
+      "mascote": {
+        "pose": "joinha",
+        "x": 560,
+        "base": 1760,
+        "altura": 1060
+      },
+      "legendas": [
+        {
+          "texto": "estamos esperando *todos vocês*!",
+          "em": 0.2,
+          "fala": "Estamos esperando todos vocês!"
+        }
+      ]
+    }
+  ]
+}

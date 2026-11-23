@@ -848,7 +848,7 @@ export const ImpactoDeck: React.FC<{cena: CenaImpacto; cartas: MapaCartas}> = ({
   const logo = mola(quadro, fps, BATE, MOLA_PULO);
   const textoEm = cena.logo ? BATE + 0.4 : BATE;
   const comCartas = (cena.cartas?.length ?? 0) > 0;
-  const textoTop = cena.logo ? 1060 : comCartas ? 560 : 720;
+  const textoTop = cena.topo ?? (cena.logo ? 1060 : comCartas ? 560 : 720);
   const semente = cena.texto.length;
   // dramático: a câmera vai entrando devagar e a vinheta vermelha fecha
   const zoom = cena.dramatico ? 1 + 0.12 * trecho(t, [BATE, BATE + 3], [0, 1]) : 1;
