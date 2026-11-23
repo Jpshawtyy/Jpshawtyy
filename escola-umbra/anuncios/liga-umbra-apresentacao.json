@@ -1,0 +1,46 @@
+{
+  "rotulo": "Liga Umbra",
+  "serie": "Torneio teste",
+  "numero": 1,
+  "titulo_capa": "torneio teste",
+  "subtitulo_capa": "inscrição pelo link na bio",
+  "narracao": "auto",
+
+  "cenas": [
+    {
+      "tipo": "gancho",
+      "texto": "torneio teste",
+      "subtitulo": "terça, 24/11 · grátis",
+      "duracao": 3,
+      "kai": "acenando",
+      "faisca": "feliz",
+      "falas": [{"texto": "Fala, treinador! Eu sou o Kai, e esse é o Faísca!", "em": 0.05}],
+      "legendas": [{"texto": "terça tem o *torneio teste* da Liga Umbra", "em": 2.4, "fala": "Terça-feira tem o torneio teste da Liga Umbra!"}]
+    },
+    {
+      "tipo": "lista",
+      "titulo": "como participar",
+      "duracao": 7,
+      "itens": [
+        {"texto": "Toca no link da bio", "detalhe": "no perfil da Liga Umbra", "destaque": true},
+        {"texto": "Faz o cadastro", "detalhe": "é rapidinho", "destaque": true},
+        {"texto": "Vem jogar", "detalhe": "entrada grátis", "destaque": true}
+      ],
+      "legendas": [
+        {"texto": "toca no *link da bio*", "fala": "Toca no link da bio,"},
+        {"texto": "faz o *cadastro*", "fala": "faz o seu cadastro"},
+        {"texto": "e vem jogar: *é grátis*", "fala": "e vem jogar. É de graça!"}
+      ]
+    },
+    {
+      "tipo": "cta",
+      "duracao": 4.5,
+      "principal": "TE ESPERAMOS",
+      "complemento": "terça, 24/11",
+      "seguir": "inscrição no link da bio",
+      "kai": "joinha",
+      "faisca": "feliz",
+      "falas": [{"texto": "Estamos esperando todos vocês!", "em": 0.25}]
+    }
+  ]
+}

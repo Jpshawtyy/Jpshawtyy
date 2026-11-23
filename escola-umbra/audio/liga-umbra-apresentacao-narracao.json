@@ -1,0 +1,137 @@
+{
+ "assinatura": "bfc058a7af0cc0333c24bffa02e69f977fb0368b",
+ "voz": "pm_santa",
+ "frases": [
+  {
+   "fala": "Fala, treinador! Eu sou o Kai, e esse é o Faísca!",
+   "duracao": 2.468005
+  },
+  {
+   "fala": "Terça-feira tem o torneio teste da Liga Umbra!",
+   "duracao": 2.616054
+  },
+  {
+   "fala": "Toca no link da bio,",
+   "duracao": 1.295147
+  },
+  {
+   "fala": "faz o seu cadastro",
+   "duracao": 1.223424
+  },
+  {
+   "fala": "e vem jogar. É de graça!",
+   "duracao": 1.678594
+  },
+  {
+   "fala": "Estamos esperando todos vocês!",
+   "duracao": 2.008209
+  }
+ ],
+ "words": [
+  {
+   "palavra": "terça",
+   "inicio": 2.6780049999999997,
+   "fim": 3.049009021818182
+  },
+  {
+   "palavra": "tem",
+   "inicio": 3.049009021818182,
+   "fim": 3.30585796
+  },
+  {
+   "palavra": "o",
+   "inicio": 3.30585796,
+   "fim": 3.4485518145454543
+  },
+  {
+   "palavra": "torneio",
+   "inicio": 3.4485518145454543,
+   "fim": 3.9337109199999998
+  },
+  {
+   "palavra": "teste",
+   "inicio": 3.9337109199999998,
+   "fim": 4.304714941818181
+  },
+  {
+   "palavra": "da",
+   "inicio": 4.304714941818181,
+   "fim": 4.504486338181818
+  },
+  {
+   "palavra": "Liga",
+   "inicio": 4.504486338181818,
+   "fim": 4.818412818181818
+  },
+  {
+   "palavra": "Umbra",
+   "inicio": 4.818412818181818,
+   "fim": 5.18941684
+  },
+  {
+   "palavra": "toca",
+   "inicio": 5.794059000000001,
+   "fim": 6.097986829333334
+  },
+  {
+   "palavra": "no",
+   "inicio": 6.097986829333334,
+   "fim": 6.291395448000001
+  },
+  {
+   "palavra": "link",
+   "inicio": 6.291395448000001,
+   "fim": 6.595323277333334
+  },
+  {
+   "palavra": "da",
+   "inicio": 6.595323277333334,
+   "fim": 6.788731896000001
+  },
+  {
+   "palavra": "bio",
+   "inicio": 6.788731896000001,
+   "fim": 7.037400120000001
+  },
+  {
+   "palavra": "faz",
+   "inicio": 7.877392333333335,
+   "fim": 8.197706980606062
+  },
+  {
+   "palavra": "o",
+   "inicio": 8.197706980606062,
+   "fim": 8.375659562424243
+  },
+  {
+   "palavra": "cadastro",
+   "inicio": 8.375659562424243,
+   "fim": 9.051879373333335
+  },
+  {
+   "palavra": "e",
+   "inicio": 10.210725666666669,
+   "fim": 10.368710984313728
+  },
+  {
+   "palavra": "vem",
+   "inicio": 10.368710984313728,
+   "fim": 10.653084556078433
+  },
+  {
+   "palavra": "jogar:",
+   "inicio": 10.653084556078433,
+   "fim": 11.190234636078433
+  },
+  {
+   "palavra": "é",
+   "inicio": 11.190234636078433,
+   "fim": 11.348219953725492
+  },
+  {
+   "palavra": "grátis",
+   "inicio": 11.348219953725492,
+   "fim": 11.822175906666669
+  }
+ ]
+}
