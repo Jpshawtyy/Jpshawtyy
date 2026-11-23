@@ -20,6 +20,7 @@ const pecas: [string, string][] = [
   ['BannerLargo', 'banner-loja-2400x800.png'],
   ['Banner16x9', 'banner-loja-1920x1080.png'],
   ['Perfil', 'perfil-loja-1080x1080.png'],
+  ['PerfilLiga', 'perfil-liga-umbra-1080x1080.png'],
 ];
 for (const [id, arquivo] of pecas) {
   const comum = {serveUrl, inputProps: {}, ...navegador, logLevel: 'error' as const};

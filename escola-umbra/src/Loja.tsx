@@ -152,3 +152,20 @@ export const PerfilLoja: React.FC<{lado: number}> = ({lado: L}) => {
     </AbsoluteFill>
   );
 };
+
+// Foto de perfil da Liga Umbra: o emblema com "LIGA UMBRA" embaixo, tudo dentro do círculo do Instagram.
+export const PerfilLiga: React.FC<{lado: number}> = ({lado: L}) => {
+  const inclina = L * 0.36;
+  const corte = L * 0.62;
+  return (
+    <AbsoluteFill style={{backgroundColor: CORES.fundo, overflow: 'hidden'}}>
+      <Grade opacidade={0.04} />
+      <div style={{position: 'absolute', left: corte - inclina * 0.5, top: 0, width: L, height: L, clipPath: `polygon(${inclina}px 0, 100% 0, 100% 100%, 0 100%)`, ...fundoVermelho()}} />
+      <ListrasOuro x={corte - inclina * 0.5 - L * 0.07} y={0} altura={L} inclinacao={inclina} brilho={0.4} escala={1.6} />
+      <Img src={staticFile('logo.png')} style={{position: 'absolute', left: L * 0.25, top: L * 0.12, width: L * 0.5, height: L * 0.5, objectFit: 'contain', filter: 'drop-shadow(0 20px 44px rgba(0,0,0,0.6))'}} />
+      <div style={{position: 'absolute', left: 0, width: L, top: L * 0.62, display: 'flex', justifyContent: 'center'}}>
+        <TituloArena texto="Liga Umbra" largura={L * 0.72} maximo={L * 0.15} />
+      </div>
+    </AbsoluteFill>
+  );
+};

@@ -2,7 +2,7 @@ import React from 'react';
 import {Composition, Still} from 'remotion';
 import {Capa} from './Capa';
 import {TestePersonagens} from './personagens/Teste';
-import {BANNER_PADRAO, BannerLoja, PerfilLoja} from './Loja';
+import {BANNER_PADRAO, BannerLoja, PerfilLiga, PerfilLoja} from './Loja';
 import {Aula} from './Aula';
 import {STORY_PADRAO, Story, duracaoStory} from './Story';
 import {CLIPE_PADRAO, Clipe, duracaoClipe} from './clipe/Clipe';
@@ -58,6 +58,7 @@ export const Root: React.FC = () => (
       calculateMetadata={({props}) => ({durationInFrames: Math.round(duracaoStory(props.pagina) * 30)})}
     />
     <Still id="Story" component={Story} width={1080} height={1920} defaultProps={STORY_PADRAO} />
+    <Still id="PerfilLiga" component={PerfilLiga} width={1080} height={1080} defaultProps={{lado: 1080}} />
     <Still id="Perfil" component={PerfilLoja} width={1080} height={1080} defaultProps={{lado: 1080}} />
   </>
 );
