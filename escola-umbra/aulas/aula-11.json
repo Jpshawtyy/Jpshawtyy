@@ -1,0 +1,286 @@
+{
+  "serie": "Do zero ao campeonato",
+  "numero": 11,
+  "titulo_capa": "recuar",
+  "subtitulo_capa": "e trocar de ativo",
+  "capa": {
+    "cartas": [
+      "drakloak",
+      "switch",
+      "dragapult"
+    ]
+  },
+  "narracao": "auto",
+  "cartas": {
+    "dreepy": {
+      "nome": "Dreepy",
+      "set": "Twilight Masquerade",
+      "numero": 128
+    },
+    "drakloak": {
+      "nome": "Drakloak",
+      "set": "Twilight Masquerade",
+      "numero": 129
+    },
+    "dragapult": {
+      "nome": "Dragapult ex",
+      "set": "Twilight Masquerade",
+      "numero": 130
+    },
+    "munkidori": {
+      "nome": "Munkidori",
+      "set": "Twilight Masquerade",
+      "numero": 95
+    },
+    "switch": {
+      "nome": "Switch",
+      "set": "Mega Evolution",
+      "numero": 130
+    },
+    "energia-psiquica": {
+      "nome": "Basic Psychic Energy",
+      "set": "Scarlet & Violet Energies",
+      "numero": 5
+    },
+    "energia-fogo": {
+      "nome": "Basic Fire Energy",
+      "set": "Scarlet & Violet Energies",
+      "numero": 2
+    },
+    "energia-escura": {
+      "nome": "Basic Darkness Energy",
+      "set": "Scarlet & Violet Energies",
+      "numero": 7
+    }
+  },
+  "cenas": [
+    {
+      "tipo": "gancho",
+      "texto": "recuar",
+      "subtitulo": "e trocar de ativo",
+      "duracao": 2.4,
+      "falas": [
+        {
+          "texto": "Recuar: a saída de emergência.",
+          "em": 0.05
+        }
+      ],
+      "legendas": [
+        {
+          "texto": "uma vez por turno, *pagando energia*",
+          "em": 1.4,
+          "fala": "Uma vez por turno, pagando energia."
+        }
+      ]
+    },
+    {
+      "tipo": "lista",
+      "titulo": "como recuar",
+      "duracao": 7,
+      "itens": [
+        {
+          "texto": "Olha o custo de recuo",
+          "detalhe": "os símbolos no pé da carta",
+          "destaque": true
+        },
+        {
+          "texto": "Descarta essa energia",
+          "detalhe": "do Pokémon ativo",
+          "destaque": true
+        },
+        {
+          "texto": "Troca com o banco",
+          "detalhe": "só 1 vez por turno",
+          "destaque": true
+        }
+      ],
+      "legendas": [
+        {
+          "texto": "olha o *custo de recuo* no pé da carta",
+          "fala": "Olha o custo de recuo, no pé da carta."
+        },
+        {
+          "texto": "descarta *essa energia* do ativo",
+          "fala": "Descarta essa energia do ativo."
+        },
+        {
+          "texto": "e troca com o *banco*: 1 vez por turno",
+          "fala": "E troca com o banco. Só uma vez por turno."
+        }
+      ]
+    },
+    {
+      "tipo": "mesa",
+      "estado": {
+        "turno": 5,
+        "quem_comecou": "eu",
+        "eu": {
+          "ativo": {
+            "carta": "drakloak",
+            "evoluiu_de": [
+              "dreepy"
+            ],
+            "energias": [
+              "energia-psiquica"
+            ],
+            "dano": 70,
+            "entrou_no_turno": 3
+          },
+          "banco": [
+            {
+              "carta": "dragapult",
+              "evoluiu_de": [
+                "dreepy",
+                "drakloak"
+              ],
+              "energias": [
+                "energia-fogo",
+                "energia-psiquica"
+              ],
+              "entrou_no_turno": 1
+            }
+          ],
+          "mao": 4,
+          "deck": 30,
+          "premios": 5
+        },
+        "oponente": {
+          "ativo": {
+            "carta": "munkidori",
+            "energias": [
+              "energia-escura"
+            ],
+            "entrou_no_turno": 2
+          },
+          "banco": [
+            {
+              "carta": "dreepy",
+              "entrou_no_turno": 2
+            }
+          ],
+          "mao": 5,
+          "deck": 28,
+          "premios": 5
+        }
+      },
+      "acoes": [
+        {
+          "acao": "recuar",
+          "para": "banco:1",
+          "legenda": "Drakloak com *70 de dano*: recua!",
+          "fala": "O Drakloak tá com setenta de dano. Recua!"
+        },
+        {
+          "acao": "pausa",
+          "legenda": "pagou *1 energia*: foi pro descarte",
+          "fala": "Pagou uma energia."
+        },
+        {
+          "acao": "atacar",
+          "ataque": "Phantom Dive",
+          "legenda": "e o *Dragapult* entra batendo",
+          "fala": "E o Dragapult entra batendo."
+        },
+        {
+          "acao": "nocaute",
+          "alvo": "oponente.ativo",
+          "legenda": "nocaute, e o Drakloak *ficou salvo*",
+          "fala": "Nocaute. E o Drakloak ficou salvo no banco."
+        }
+      ]
+    },
+    {
+      "tipo": "lista",
+      "titulo": "quando recuar",
+      "duracao": 7,
+      "itens": [
+        {
+          "texto": "Vai ser nocauteado",
+          "detalhe": "salva o Pokémon e os prêmios",
+          "destaque": true
+        },
+        {
+          "texto": "Confronto ruim",
+          "detalhe": "sobe quem bate mais",
+          "destaque": true
+        },
+        {
+          "texto": "Confuso ou envenenado",
+          "detalhe": "no banco, a condição sai",
+          "destaque": true
+        }
+      ],
+      "legendas": [
+        {
+          "texto": "vai cair? *recua* e não entrega prêmio",
+          "fala": "Vai cair? Recua e não entrega prêmio."
+        },
+        {
+          "texto": "confronto ruim: sobe *quem bate mais*",
+          "fala": "Confronto ruim: sobe quem bate mais."
+        },
+        {
+          "texto": "confuso ou envenenado: no banco, *sai*",
+          "fala": "Confuso ou envenenado? No banco, sai."
+        }
+      ]
+    },
+    {
+      "tipo": "carta_destaque",
+      "carta": "switch",
+      "pill": "ITEM",
+      "pill_cor": "ouro",
+      "titulo": "e o Switch?",
+      "duracao": 5,
+      "legendas": [
+        {
+          "texto": "troca o ativo *sem pagar nada*",
+          "em": 0.3,
+          "fala": "O Switch troca o ativo sem pagar nada,"
+        },
+        {
+          "texto": "e *não conta* como o recuo do turno",
+          "em": 2.4,
+          "fala": "e não conta como o recuo do turno."
+        }
+      ]
+    },
+    {
+      "tipo": "riscado",
+      "titulo": "erro de iniciante",
+      "duracao": 4.4,
+      "itens": [
+        {
+          "texto": "Recuar Pokémon dormindo ou paralisado",
+          "em": 0.3,
+          "riscar_em": 1.4
+        }
+      ],
+      "legendas": [
+        {
+          "texto": "dormindo ou paralisado *não recua*",
+          "em": 0.6,
+          "fala": "Dormindo ou paralisado não recua."
+        },
+        {
+          "texto": "aí, só com *Switch*",
+          "em": 2.8,
+          "fala": "Aí, só com Switch."
+        }
+      ]
+    },
+    {
+      "tipo": "cta",
+      "duracao": 4.5,
+      "principal": "SALVA",
+      "complemento": "pra próxima partida",
+      "seguir": "segue @escolaumbratcg",
+      "falas": [
+        {
+          "texto": "Salva, e segue a Escola Umbra.",
+          "em": 0.25
+        }
+      ]
+    }
+  ]
+}

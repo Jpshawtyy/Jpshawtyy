@@ -1,0 +1,546 @@
+{
+ "assinatura": "ea55c3ab3dd3d246793349deadcc939a37540002",
+ "voz": "pm_santa",
+ "frases": [
+  {
+   "fala": "Recuar: a saída de emergência.",
+   "duracao": 1.86093
+  },
+  {
+   "fala": "Uma vez por turno, pagando energia.",
+   "duracao": 2.009342
+  },
+  {
+   "fala": "Olha o custo de recuo, no pé da carta.",
+   "duracao": 2.061837
+  },
+  {
+   "fala": "Descarta essa energia do ativo.",
+   "duracao": 1.901678
+  },
+  {
+   "fala": "E troca com o banco. Só uma vez por turno.",
+   "duracao": 2.439388
+  },
+  {
+   "fala": "O Drakloak tá com setenta de dano. Recua!",
+   "duracao": 2.40746
+  },
+  {
+   "fala": "Pagou uma energia.",
+   "duracao": 1.132472
+  },
+  {
+   "fala": "E o Dragapult entra batendo.",
+   "duracao": 1.860726
+  },
+  {
+   "fala": "Nocaute. E o Drakloak ficou salvo no banco.",
+   "duracao": 2.535215
+  },
+  {
+   "fala": "Vai cair? Recua e não entrega prêmio.",
+   "duracao": 2.033764
+  },
+  {
+   "fala": "Confronto ruim: sobe quem bate mais.",
+   "duracao": 2.286893
+  },
+  {
+   "fala": "Confuso ou envenenado? No banco, sai.",
+   "duracao": 2.232721
+  },
+  {
+   "fala": "O Switch troca o ativo sem pagar nada,",
+   "duracao": 2.402812
+  },
+  {
+   "fala": "e não conta como o recuo do turno.",
+   "duracao": 1.843764
+  },
+  {
+   "fala": "Dormindo ou paralisado não recua.",
+   "duracao": 1.996395
+  },
+  {
+   "fala": "Aí, só com Switch.",
+   "duracao": 1.156893
+  },
+  {
+   "fala": "Salva, e segue a Escola Umbra.",
+   "duracao": 1.634218
+  }
+ ],
+ "words": [
+  {
+   "palavra": "uma",
+   "inicio": 2.07093,
+   "fim": 2.2935032676923077
+  },
+  {
+   "palavra": "vez",
+   "inicio": 2.2935032676923077,
+   "fim": 2.5160765353846157
+  },
+  {
+   "palavra": "por",
+   "inicio": 2.5160765353846157,
+   "fim": 2.7386498030769233
+  },
+  {
+   "palavra": "turno,",
+   "inicio": 2.7386498030769233,
+   "fim": 3.1590659753846158
+  },
+  {
+   "palavra": "pagando",
+   "inicio": 3.1590659753846158,
+   "fim": 3.5794821476923078
+  },
+  {
+   "palavra": "energia",
+   "inicio": 3.5794821476923078,
+   "fim": 3.9998983200000002
+  },
+  {
+   "palavra": "olha",
+   "inicio": 4.580272000000001,
+   "fim": 4.842597285783134
+  },
+  {
+   "palavra": "o",
+   "inicio": 4.842597285783134,
+   "fim": 4.961836052048193
+  },
+  {
+   "palavra": "custo",
+   "inicio": 4.961836052048193,
+   "fim": 5.27185684433735
+  },
+  {
+   "palavra": "de",
+   "inicio": 5.27185684433735,
+   "fim": 5.438791117108434
+  },
+  {
+   "palavra": "recuo",
+   "inicio": 5.438791117108434,
+   "fim": 5.748811909397591
+  },
+  {
+   "palavra": "no",
+   "inicio": 5.748811909397591,
+   "fim": 5.915746182168675
+  },
+  {
+   "palavra": "pé",
+   "inicio": 5.915746182168675,
+   "fim": 6.08268045493976
+  },
+  {
+   "palavra": "da",
+   "inicio": 6.08268045493976,
+   "fim": 6.249614727710845
+  },
+  {
+   "palavra": "carta",
+   "inicio": 6.249614727710845,
+   "fim": 6.5596355200000005
+  },
+  {
+   "palavra": "descarta",
+   "inicio": 6.8021090000000015,
+   "fim": 7.319819548059703
+  },
+  {
+   "palavra": "essa",
+   "inicio": 7.319819548059703,
+   "fim": 7.619546707462688
+  },
+  {
+   "palavra": "energia",
+   "inicio": 7.619546707462688,
+   "fim": 8.08276140835821
+  },
+  {
+   "palavra": "do",
+   "inicio": 8.08276140835821,
+   "fim": 8.273496873432837
+  },
+  {
+   "palavra": "ativo",
+   "inicio": 8.273496873432837,
+   "fim": 8.62771988
+  },
+  {
+   "palavra": "e",
+   "inicio": 9.135442333333334,
+   "fim": 9.273196008627451
+  },
+  {
+   "palavra": "troca",
+   "inicio": 9.273196008627451,
+   "fim": 9.631355564392157
+  },
+  {
+   "palavra": "com",
+   "inicio": 9.631355564392157,
+   "fim": 9.87931217992157
+  },
+  {
+   "palavra": "o",
+   "inicio": 9.87931217992157,
+   "fim": 10.017065855215687
+  },
+  {
+   "palavra": "banco:",
+   "inicio": 10.017065855215687,
+   "fim": 10.485428351215687
+  },
+  {
+   "palavra": "1",
+   "inicio": 10.485428351215687,
+   "fim": 10.623182026509804
+  },
+  {
+   "palavra": "vez",
+   "inicio": 10.623182026509804,
+   "fim": 10.871138642039217
+  },
+  {
+   "palavra": "por",
+   "inicio": 10.871138642039217,
+   "fim": 11.119095257568627
+  },
+  {
+   "palavra": "turno",
+   "inicio": 11.119095257568627,
+   "fim": 11.477254813333333
+  },
+  {
+   "palavra": "Drakloak",
+   "inicio": 12.824830333333335,
+   "fim": 13.402620733333334
+  },
+  {
+   "palavra": "com",
+   "inicio": 13.402620733333334,
+   "fim": 13.67631092280702
+  },
+  {
+   "palavra": "70",
+   "inicio": 13.67631092280702,
+   "fim": 13.88918107017544
+  },
+  {
+   "palavra": "de",
+   "inicio": 13.88918107017544,
+   "fim": 14.102051217543861
+  },
+  {
+   "palavra": "dano:",
+   "inicio": 14.102051217543861,
+   "fim": 14.558201533333335
+  },
+  {
+   "palavra": "recua!",
+   "inicio": 14.558201533333335,
+   "fim": 15.135991933333335
+  },
+  {
+   "palavra": "pagou",
+   "inicio": 15.392290333333335,
+   "fim": 15.57825415649123
+  },
+  {
+   "palavra": "1",
+   "inicio": 15.57825415649123,
+   "fim": 15.649778703859651
+  },
+  {
+   "palavra": "energia:",
+   "inicio": 15.649778703859651,
+   "fim": 15.95018180280702
+  },
+  {
+   "palavra": "foi",
+   "inicio": 15.95018180280702,
+   "fim": 16.07892598807018
+  },
+  {
+   "palavra": "pro",
+   "inicio": 16.07892598807018,
+   "fim": 16.207670173333334
+  },
+  {
+   "palavra": "descarte",
+   "inicio": 16.207670173333334,
+   "fim": 16.479463453333334
+  },
+  {
+   "palavra": "e",
+   "inicio": 16.684762333333335,
+   "fim": 16.831180116939894
+  },
+  {
+   "palavra": "o",
+   "inicio": 16.831180116939894,
+   "fim": 16.97759790054645
+  },
+  {
+   "palavra": "Dragapult",
+   "inicio": 16.97759790054645,
+   "fim": 17.59255259169399
+  },
+  {
+   "palavra": "entra",
+   "inicio": 17.59255259169399,
+   "fim": 17.97323882907104
+  },
+  {
+   "palavra": "batendo",
+   "inicio": 17.97323882907104,
+   "fim": 18.471059293333337
+  },
+  {
+   "palavra": "nocaute,",
+   "inicio": 19.584762333333334,
+   "fim": 20.25726147017544
+  },
+  {
+   "palavra": "e",
+   "inicio": 20.25726147017544,
+   "fim": 20.417380312280702
+  },
+  {
+   "palavra": "o",
+   "inicio": 20.417380312280702,
+   "fim": 20.577499154385965
+  },
+  {
+   "palavra": "Drakloak",
+   "inicio": 20.577499154385965,
+   "fim": 21.185950754385964
+  },
+  {
+   "palavra": "ficou",
+   "inicio": 21.185950754385964,
+   "fim": 21.602259743859648
+  },
+  {
+   "palavra": "salvo",
+   "inicio": 21.602259743859648,
+   "fim": 22.018568733333332
+  },
+  {
+   "palavra": "vai",
+   "inicio": 22.734762333333336,
+   "fim": 22.941488462274513
+  },
+  {
+   "palavra": "cair?",
+   "inicio": 22.941488462274513,
+   "fim": 23.331971150274512
+  },
+  {
+   "palavra": "recua",
+   "inicio": 23.331971150274512,
+   "fim": 23.6305755587451
+  },
+  {
+   "palavra": "e",
+   "inicio": 23.6305755587451,
+   "fim": 23.745423408156867
+  },
+  {
+   "palavra": "não",
+   "inicio": 23.745423408156867,
+   "fim": 23.95214953709804
+  },
+  {
+   "palavra": "entrega",
+   "inicio": 23.95214953709804,
+   "fim": 24.342632225098043
+  },
+  {
+   "palavra": "prêmio",
+   "inicio": 24.342632225098043,
+   "fim": 24.687175773333337
+  },
+  {
+   "palavra": "confronto",
+   "inicio": 24.928526333333338,
+   "fim": 25.504823369333337
+  },
+  {
+   "palavra": "ruim:",
+   "inicio": 25.504823369333337,
+   "fim": 25.916464109333337
+  },
+  {
+   "palavra": "sobe",
+   "inicio": 25.916464109333337,
+   "fim": 26.218333985333338
+  },
+  {
+   "palavra": "quem",
+   "inicio": 26.218333985333338,
+   "fim": 26.520203861333336
+  },
+  {
+   "palavra": "bate",
+   "inicio": 26.520203861333336,
+   "fim": 26.822073737333337
+  },
+  {
+   "palavra": "mais",
+   "inicio": 26.822073737333337,
+   "fim": 27.12394361333334
+  },
+  {
+   "palavra": "confuso",
+   "inicio": 27.375419333333337,
+   "fim": 27.80920512761905
+  },
+  {
+   "palavra": "ou",
+   "inicio": 27.80920512761905,
+   "fim": 27.98782280761905
+  },
+  {
+   "palavra": "envenenado:",
+   "inicio": 27.98782280761905,
+   "fim": 28.67677671619048
+  },
+  {
+   "palavra": "no",
+   "inicio": 28.67677671619048,
+   "fim": 28.85539439619048
+  },
+  {
+   "palavra": "banco,",
+   "inicio": 28.85539439619048,
+   "fim": 29.289180190476195
+  },
+  {
+   "palavra": "sai",
+   "inicio": 29.289180190476195,
+   "fim": 29.518831493333337
+  },
+  {
+   "palavra": "troca",
+   "inicio": 30.15814033333334,
+   "fim": 30.62668867333334
+  },
+  {
+   "palavra": "o",
+   "inicio": 30.62668867333334,
+   "fim": 30.80689957333334
+  },
+  {
+   "palavra": "ativo",
+   "inicio": 30.80689957333334,
+   "fim": 31.275447913333338
+  },
+  {
+   "palavra": "sem",
+   "inicio": 31.275447913333338,
+   "fim": 31.59982753333334
+  },
+  {
+   "palavra": "pagar",
+   "inicio": 31.59982753333334,
+   "fim": 32.06837587333334
+  },
+  {
+   "palavra": "nada",
+   "inicio": 32.06837587333334,
+   "fim": 32.46483985333334
+  },
+  {
+   "palavra": "e",
+   "inicio": 32.72095233333334,
+   "fim": 32.837400585964915
+  },
+  {
+   "palavra": "não",
+   "inicio": 32.837400585964915,
+   "fim": 33.047007440701755
+  },
+  {
+   "palavra": "conta",
+   "inicio": 33.047007440701755,
+   "fim": 33.349772897543865
+  },
+  {
+   "palavra": "como",
+   "inicio": 33.349772897543865,
+   "fim": 33.605959053333336
+  },
+  {
+   "palavra": "o",
+   "inicio": 33.605959053333336,
+   "fim": 33.722407305964914
+  },
+  {
+   "palavra": "recuo",
+   "inicio": 33.722407305964914,
+   "fim": 34.02517276280702
+  },
+  {
+   "palavra": "do",
+   "inicio": 34.02517276280702,
+   "fim": 34.18820031649123
+  },
+  {
+   "palavra": "turno",
+   "inicio": 34.18820031649123,
+   "fim": 34.490965773333336
+  },
+  {
+   "palavra": "dormindo",
+   "inicio": 35.92095233333334,
+   "fim": 36.433829020657285
+  },
+  {
+   "palavra": "ou",
+   "inicio": 36.433829020657285,
+   "fim": 36.622783589671364
+  },
+  {
+   "palavra": "paralisado",
+   "inicio": 36.622783589671364,
+   "fim": 37.24363431643193
+  },
+  {
+   "palavra": "não",
+   "inicio": 37.24363431643193,
+   "fim": 37.48657590516432
+  },
+  {
+   "palavra": "recua",
+   "inicio": 37.48657590516432,
+   "fim": 37.83749153333334
+  },
+  {
+   "palavra": "aí,",
+   "inicio": 38.120952333333335,
+   "fim": 38.41182828761905
+  },
+  {
+   "palavra": "só",
+   "inicio": 38.41182828761905,
+   "fim": 38.59693116761905
+  },
+  {
+   "palavra": "com",
+   "inicio": 38.59693116761905,
+   "fim": 38.8349205847619
+  },
+  {
+   "palavra": "Switch",
+   "inicio": 38.8349205847619,
+   "fim": 39.231569613333335
+  }
+ ]
+}
