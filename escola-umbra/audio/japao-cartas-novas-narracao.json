@@ -1,0 +1,747 @@
+{
+ "assinatura": "c6eb686cca90c4b140c5b08370423534ebc7a419",
+ "voz": "pm_santa",
+ "frases": [
+  {
+   "fala": "Os decks com as cartas novas já começaram a aparecer no Japão.",
+   "duracao": 3.646893
+  },
+  {
+   "fala": "Olha os protótipos!",
+   "duracao": 1.331134
+  },
+  {
+   "fala": "A carta que mais tão testando é o Mega Lucario Z ex.",
+   "duracao": 3.037506
+  },
+  {
+   "fala": "No ativo, o Aura Seeker busca qualquer Apoiador.",
+   "duracao": 2.748254
+  },
+  {
+   "fala": "E o Dancing Fist bate cento e vinte, ou duzentos e quarenta contra ex.",
+   "duracao": 4.111383
+  },
+  {
+   "fala": "A base mais testada é Lucario com Dudunsparce pra comprar.",
+   "duracao": 3.298934
+  },
+  {
+   "fala": "Tem lista com Grand Tree no lugar, e até misturando Garchomp.",
+   "duracao": 3.22517
+  },
+  {
+   "fala": "E tem uma Apoiadora nova da Korrina.",
+   "duracao": 2.139002
+  },
+  {
+   "fala": "Ela dá mais vinte de dano pros Mega ex, pra cada prêmio que o oponente pegou.",
+   "duracao": 4.509002
+  },
+  {
+   "fala": "Com quatro prêmios, o Lucario bate trezentos e vinte: nocaute no Dragapult.",
+   "duracao": 4.348209
+  },
+  {
+   "fala": "Bem menos testado: o Mega Absol Z ex.",
+   "duracao": 2.436939
+  },
+  {
+   "fala": "Bate cento e sessenta, e trava Energia Especial e Estádio do oponente.",
+   "duracao": 4.135011
+  },
+  {
+   "fala": "O segundo mais testado é o Mega Garchomp Z ex.",
+   "duracao": 2.786395
+  },
+  {
+   "fala": "Bate trinta pra cada Pokémon Dragão no descarte,",
+   "duracao": 2.840295
+  },
+  {
+   "fala": "e tem um ataque de duzentos e quarenta que bate até no Crustle.",
+   "duracao": 3.499592
+  },
+  {
+   "fala": "As listas usam o Drakloak pra comprar,",
+   "duracao": 2.38
+  },
+  {
+   "fala": "e o Vibrava, que vai pro descarte, dá dano pro Garchomp e mostra a carta do topo.",
+   "duracao": 4.160181
+  },
+  {
+   "fala": "E um diferentão: o Sceptile ex.",
+   "duracao": 1.838685
+  },
+  {
+   "fala": "Com uma energia, bate quarenta e envenena.",
+   "duracao": 2.324104
+  },
+  {
+   "fala": "E com duas, cento e sessenta, mais cinquenta por Condição Especial.",
+   "duracao": 3.922132
+  },
+  {
+   "fala": "Quer um vídeo explicando cada um desses decks? Comenta aí!",
+   "duracao": 2.983265
+  }
+ ],
+ "words": [
+  {
+   "palavra": "decks",
+   "inicio": 0.15,
+   "fim": 0.6393895122580645
+  },
+  {
+   "palavra": "com",
+   "inicio": 0.6393895122580645,
+   "fim": 0.9781976361290322
+  },
+  {
+   "palavra": "as",
+   "inicio": 0.9781976361290322,
+   "fim": 1.2417150658064515
+  },
+  {
+   "palavra": "cartas",
+   "inicio": 1.2417150658064515,
+   "fim": 1.8063952722580643
+  },
+  {
+   "palavra": "novas",
+   "inicio": 1.8063952722580643,
+   "fim": 2.2957847845161288
+  },
+  {
+   "palavra": "já",
+   "inicio": 2.2957847845161288,
+   "fim": 2.559302214193548
+  },
+  {
+   "palavra": "tão",
+   "inicio": 2.559302214193548,
+   "fim": 2.898110338064516
+  },
+  {
+   "palavra": "no",
+   "inicio": 2.898110338064516,
+   "fim": 3.1616277677419355
+  },
+  {
+   "palavra": "Japão",
+   "inicio": 3.1616277677419355,
+   "fim": 3.6510172799999996
+  },
+  {
+   "palavra": "olha",
+   "inicio": 3.956893,
+   "fim": 4.299741171707317
+  },
+  {
+   "palavra": "os",
+   "inicio": 4.299741171707317,
+   "fim": 4.51791728097561
+  },
+  {
+   "palavra": "protótipos",
+   "inicio": 4.51791728097561,
+   "fim": 5.23478164
+  },
+  {
+   "palavra": "a",
+   "inicio": 5.788027,
+   "fim": 5.977378023376623
+  },
+  {
+   "palavra": "mais",
+   "inicio": 5.977378023376623,
+   "fim": 6.393950274805194
+  },
+  {
+   "palavra": "testada:",
+   "inicio": 6.393950274805194,
+   "fim": 7.189224572987013
+  },
+  {
+   "palavra": "Mega",
+   "inicio": 7.189224572987013,
+   "fim": 7.605796824415584
+  },
+  {
+   "palavra": "Lucario",
+   "inicio": 7.605796824415584,
+   "fim": 8.249590303896102
+  },
+  {
+   "palavra": "Z",
+   "inicio": 8.249590303896102,
+   "fim": 8.438941327272726
+  },
+  {
+   "palavra": "ex",
+   "inicio": 8.438941327272726,
+   "fim": 8.70403276
+  },
+  {
+   "palavra": "Aura",
+   "inicio": 8.985533,
+   "fim": 9.343823891851851
+  },
+  {
+   "palavra": "Seeker:",
+   "inicio": 9.343823891851851,
+   "fim": 9.962689977777778
+  },
+  {
+   "palavra": "busca",
+   "inicio": 9.962689977777778,
+   "fim": 10.386124668148149
+  },
+  {
+   "palavra": "qualquer",
+   "inicio": 10.386124668148149,
+   "fim": 11.004990754074074
+  },
+  {
+   "palavra": "Apoiador",
+   "inicio": 11.004990754074074,
+   "fim": 11.62385684
+  },
+  {
+   "palavra": "Dancing",
+   "inicio": 11.893787,
+   "fim": 12.702193874216867
+  },
+  {
+   "palavra": "Fist:",
+   "inicio": 12.702193874216867,
+   "fim": 13.415494057349397
+  },
+  {
+   "palavra": "120,",
+   "inicio": 13.415494057349397,
+   "fim": 14.033687549397591
+  },
+  {
+   "palavra": "ou",
+   "inicio": 14.033687549397591,
+   "fim": 14.36656096819277
+  },
+  {
+   "palavra": "240",
+   "inicio": 14.36656096819277,
+   "fim": 14.794541078072289
+  },
+  {
+   "palavra": "contra",
+   "inicio": 14.794541078072289,
+   "fim": 15.507841261204819
+  },
+  {
+   "palavra": "ex",
+   "inicio": 15.507841261204819,
+   "fim": 15.84071468
+  },
+  {
+   "palavra": "a",
+   "inicio": 16.35517,
+   "fim": 16.525437561290325
+  },
+  {
+   "palavra": "base:",
+   "inicio": 16.525437561290325,
+   "fim": 17.03624024516129
+  },
+  {
+   "palavra": "Lucario",
+   "inicio": 17.03624024516129,
+   "fim": 17.61514995354839
+  },
+  {
+   "palavra": "com",
+   "inicio": 17.61514995354839,
+   "fim": 17.921631563870967
+  },
+  {
+   "palavra": "Dudunsparce",
+   "inicio": 17.921631563870967,
+   "fim": 18.77296937032258
+  },
+  {
+   "palavra": "na",
+   "inicio": 18.77296937032258,
+   "fim": 19.011343956129032
+  },
+  {
+   "palavra": "compra",
+   "inicio": 19.011343956129032,
+   "fim": 19.522146640000003
+  },
+  {
+   "palavra": "tem",
+   "inicio": 19.814104,
+   "fim": 20.08999973069307
+  },
+  {
+   "palavra": "lista",
+   "inicio": 20.08999973069307,
+   "fim": 20.488515786138613
+  },
+  {
+   "palavra": "com",
+   "inicio": 20.488515786138613,
+   "fim": 20.764411516831682
+  },
+  {
+   "palavra": "Grand",
+   "inicio": 20.764411516831682,
+   "fim": 21.162927572277226
+  },
+  {
+   "palavra": "Tree,",
+   "inicio": 21.162927572277226,
+   "fim": 21.62275379009901
+  },
+  {
+   "palavra": "e",
+   "inicio": 21.62275379009901,
+   "fim": 21.776029196039605
+  },
+  {
+   "palavra": "até",
+   "inicio": 21.776029196039605,
+   "fim": 22.051924926732674
+  },
+  {
+   "palavra": "com",
+   "inicio": 22.051924926732674,
+   "fim": 22.327820657425743
+  },
+  {
+   "palavra": "Garchomp",
+   "inicio": 22.327820657425743,
+   "fim": 22.9102672
+  },
+  {
+   "palavra": "e",
+   "inicio": 23.539274,
+   "fim": 23.68594842285714
+  },
+  {
+   "palavra": "uma",
+   "inicio": 23.68594842285714,
+   "fim": 23.949962384
+  },
+  {
+   "palavra": "Apoiadora",
+   "inicio": 23.949962384,
+   "fim": 24.565994959999998
+  },
+  {
+   "palavra": "nova",
+   "inicio": 24.565994959999998,
+   "fim": 24.888678690285712
+  },
+  {
+   "palavra": "da",
+   "inicio": 24.888678690285712,
+   "fim": 25.094022882285714
+  },
+  {
+   "palavra": "Korrina",
+   "inicio": 25.094022882285714,
+   "fim": 25.59271592
+  },
+  {
+   "palavra": "Mega",
+   "inicio": 25.838276,
+   "fim": 26.319236213333333
+  },
+  {
+   "palavra": "ex:",
+   "inicio": 26.319236213333333,
+   "fim": 26.800196426666666
+  },
+  {
+   "palavra": "+20",
+   "inicio": 26.800196426666666,
+   "fim": 27.106262016969698
+  },
+  {
+   "palavra": "por",
+   "inicio": 27.106262016969698,
+   "fim": 27.499774918787878
+  },
+  {
+   "palavra": "prêmio",
+   "inicio": 27.499774918787878,
+   "fim": 28.155629755151516
+  },
+  {
+   "palavra": "que",
+   "inicio": 28.155629755151516,
+   "fim": 28.549142656969696
+  },
+  {
+   "palavra": "o",
+   "inicio": 28.549142656969696,
+   "fim": 28.767760935757575
+  },
+  {
+   "palavra": "oponente",
+   "inicio": 28.767760935757575,
+   "fim": 29.598510395151514
+  },
+  {
+   "palavra": "pegou",
+   "inicio": 29.598510395151514,
+   "fim": 30.16691792
+  },
+  {
+   "palavra": "o",
+   "inicio": 30.697278,
+   "fim": 30.92663407912088
+  },
+  {
+   "palavra": "Lucario",
+   "inicio": 30.92663407912088,
+   "fim": 31.70644474813187
+  },
+  {
+   "palavra": "bate",
+   "inicio": 31.70644474813187,
+   "fim": 32.2110281221978
+  },
+  {
+   "palavra": "320:",
+   "inicio": 32.2110281221978,
+   "fim": 32.80735392791209
+  },
+  {
+   "palavra": "nocaute",
+   "inicio": 32.80735392791209,
+   "fim": 33.587164596923074
+  },
+  {
+   "palavra": "no",
+   "inicio": 33.587164596923074,
+   "fim": 33.90826310769231
+  },
+  {
+   "palavra": "Dragapult",
+   "inicio": 33.90826310769231,
+   "fim": 34.87155864
+  },
+  {
+   "palavra": "testado",
+   "inicio": 35.545487,
+   "fim": 36.04891541113924
+  },
+  {
+   "palavra": "bem",
+   "inicio": 36.04891541113924,
+   "fim": 36.31543633468355
+  },
+  {
+   "palavra": "pouco:",
+   "inicio": 36.31543633468355,
+   "fim": 36.818864745822786
+  },
+  {
+   "palavra": "Mega",
+   "inicio": 36.818864745822786,
+   "fim": 37.14461254126582
+  },
+  {
+   "palavra": "Absol",
+   "inicio": 37.14461254126582,
+   "fim": 37.529587208607595
+  },
+  {
+   "palavra": "Z",
+   "inicio": 37.529587208607595,
+   "fim": 37.67765438835443
+  },
+  {
+   "palavra": "ex",
+   "inicio": 37.67765438835443,
+   "fim": 37.88494844
+  },
+  {
+   "palavra": "160,",
+   "inicio": 38.142426,
+   "fim": 38.72225675595506
+  },
+  {
+   "palavra": "e",
+   "inicio": 38.72225675595506,
+   "fim": 38.94526858516854
+  },
+  {
+   "palavra": "trava",
+   "inicio": 38.94526858516854,
+   "fim": 39.52509934112359
+  },
+  {
+   "palavra": "Energia",
+   "inicio": 39.52509934112359,
+   "fim": 40.28333956044944
+  },
+  {
+   "palavra": "Especial",
+   "inicio": 40.28333956044944,
+   "fim": 41.130784511460675
+  },
+  {
+   "palavra": "e",
+   "inicio": 41.130784511460675,
+   "fim": 41.35379634067416
+  },
+  {
+   "palavra": "Estádio",
+   "inicio": 41.35379634067416,
+   "fim": 42.11203656
+  },
+  {
+   "palavra": "o",
+   "inicio": 42.777437000000006,
+   "fim": 42.916756750000005
+  },
+  {
+   "palavra": "segundo",
+   "inicio": 42.916756750000005,
+   "fim": 43.39044390000001
+  },
+  {
+   "palavra": "mais",
+   "inicio": 43.39044390000001,
+   "fim": 43.69694735000001
+  },
+  {
+   "palavra": "testado:",
+   "inicio": 43.69694735000001,
+   "fim": 44.28209030000001
+  },
+  {
+   "palavra": "Mega",
+   "inicio": 44.28209030000001,
+   "fim": 44.58859375000001
+  },
+  {
+   "palavra": "Garchomp",
+   "inicio": 44.58859375000001,
+   "fim": 45.118008800000005
+  },
+  {
+   "palavra": "Z",
+   "inicio": 45.118008800000005,
+   "fim": 45.257328550000004
+  },
+  {
+   "palavra": "ex",
+   "inicio": 45.257328550000004,
+   "fim": 45.4523762
+  },
+  {
+   "palavra": "30",
+   "inicio": 45.72383200000001,
+   "fim": 46.05868783157896
+  },
+  {
+   "palavra": "por",
+   "inicio": 46.05868783157896,
+   "fim": 46.489216757894745
+  },
+  {
+   "palavra": "Dragão",
+   "inicio": 46.489216757894745,
+   "fim": 47.20676496842106
+  },
+  {
+   "palavra": "no",
+   "inicio": 47.20676496842106,
+   "fim": 47.54162080000001
+  },
+  {
+   "palavra": "descarte",
+   "inicio": 47.54162080000001,
+   "fim": 48.450515200000005
+  },
+  {
+   "palavra": "e",
+   "inicio": 48.72412700000001,
+   "fim": 48.97484403880598
+  },
+  {
+   "palavra": "240",
+   "inicio": 48.97484403880598,
+   "fim": 49.426134708656726
+  },
+  {
+   "palavra": "que",
+   "inicio": 49.426134708656726,
+   "fim": 49.877425378507475
+  },
+  {
+   "palavra": "bate",
+   "inicio": 49.877425378507475,
+   "fim": 50.429002863880605
+  },
+  {
+   "palavra": "até",
+   "inicio": 50.429002863880605,
+   "fim": 50.880293533731354
+  },
+  {
+   "palavra": "no",
+   "inicio": 50.880293533731354,
+   "fim": 51.23129738805971
+  },
+  {
+   "palavra": "Crustle",
+   "inicio": 51.23129738805971,
+   "fim": 52.08373532000001
+  },
+  {
+   "palavra": "usam",
+   "inicio": 52.573719000000004,
+   "fim": 52.9857321147541
+  },
+  {
+   "palavra": "o",
+   "inicio": 52.9857321147541,
+   "fim": 53.17301080327869
+  },
+  {
+   "palavra": "Drakloak",
+   "inicio": 53.17301080327869,
+   "fim": 53.88466981967213
+  },
+  {
+   "palavra": "pra",
+   "inicio": 53.88466981967213,
+   "fim": 54.221771459016395
+  },
+  {
+   "palavra": "comprar",
+   "inicio": 54.221771459016395,
+   "fim": 54.858519
+  },
+  {
+   "palavra": "e",
+   "inicio": 55.113719,
+   "fim": 55.30572735384616
+  },
+  {
+   "palavra": "o",
+   "inicio": 55.30572735384616,
+   "fim": 55.497735707692314
+  },
+  {
+   "palavra": "Vibrava:",
+   "inicio": 55.497735707692314,
+   "fim": 56.304170793846154
+  },
+  {
+   "palavra": "vai",
+   "inicio": 56.304170793846154,
+   "fim": 56.64978583076923
+  },
+  {
+   "palavra": "pro",
+   "inicio": 56.64978583076923,
+   "fim": 56.99540086769231
+  },
+  {
+   "palavra": "descarte",
+   "inicio": 56.99540086769231,
+   "fim": 57.72503261230769
+  },
+  {
+   "palavra": "e",
+   "inicio": 57.72503261230769,
+   "fim": 57.91704096615385
+  },
+  {
+   "palavra": "mostra",
+   "inicio": 57.91704096615385,
+   "fim": 58.49306602769231
+  },
+  {
+   "palavra": "o",
+   "inicio": 58.49306602769231,
+   "fim": 58.68507438153846
+  },
+  {
+   "palavra": "topo",
+   "inicio": 58.68507438153846,
+   "fim": 59.10749276
+  },
+  {
+   "palavra": "e",
+   "inicio": 59.773900000000005,
+   "fim": 59.90967981538462
+  },
+  {
+   "palavra": "um",
+   "inicio": 59.90967981538462,
+   "fim": 60.09977155692308
+  },
+  {
+   "palavra": "diferentão:",
+   "inicio": 60.09977155692308,
+   "fim": 60.832982560000005
+  },
+  {
+   "palavra": "Sceptile",
+   "inicio": 60.832982560000005,
+   "fim": 61.34894585846154
+  },
+  {
+   "palavra": "ex",
+   "inicio": 61.34894585846154,
+   "fim": 61.53903760000001
+  },
+  {
+   "palavra": "40",
+   "inicio": 61.77258500000001,
+   "fim": 62.276390770322585
+  },
+  {
+   "palavra": "e",
+   "inicio": 62.276390770322585,
+   "fim": 62.63625203483872
+  },
+  {
+   "palavra": "envenena",
+   "inicio": 62.63625203483872,
+   "fim": 64.00372484
+  },
+  {
+   "palavra": "160",
+   "inicio": 64.25668900000001,
+   "fim": 64.79458138857143
+  },
+  {
+   "palavra": "+50",
+   "inicio": 64.79458138857143,
+   "fim": 65.21294213523811
+  },
+  {
+   "palavra": "por",
+   "inicio": 65.21294213523811,
+   "fim": 65.75083452380953
+  },
+  {
+   "palavra": "Condição",
+   "inicio": 65.75083452380953,
+   "fim": 66.88638512190477
+  },
+  {
+   "palavra": "Especial",
+   "inicio": 66.88638512190477,
+   "fim": 68.02193572
+  }
+ ]
+}

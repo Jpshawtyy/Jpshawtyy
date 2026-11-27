@@ -153,6 +153,20 @@ export type CenaCombo = CenaBase & {tipo: 'combo'; alvo: RefCarta; passos: Passo
 // Respiração guiada: o círculo cresce (puxa), para (segura) e diminui (solta), com contagem.
 export type CenaRespira = CenaBase & {tipo: 'respira'; puxa?: number; segura?: number; solta?: number; em?: number};
 
+// Ficha de uma carta que ainda não tem imagem oficial (ex.: carta nova do Japão): nome, HP, tipo
+// e cada habilidade e ataque, desenhados no estilo da marca. As linhas entram com as últimas frases da cena.
+export type LinhaFicha = {tipo: 'habilidade' | 'ataque'; nome: string; custo?: string[]; dano?: string; texto: string; em?: number};
+export type CenaFicha = CenaBase & {
+  tipo: 'ficha';
+  nome: string;
+  estagio?: string; // "Básico", "Estágio 1"...
+  hp?: number;
+  energia?: string; // tipo em inglês, como na API: "Metal", "Psychic"...
+  pill?: string;
+  selo?: string; // faixa no pé (padrão: "carta do Japão · ainda não saiu aqui")
+  linhas: LinhaFicha[];
+};
+
 // Contagem regressiva (3, 2, 1), um número por tempo da música.
 export type CenaContagem = CenaBase & {tipo: 'contagem'; de?: number; passo?: number};
 
@@ -253,6 +267,7 @@ export type Cena =
   | CenaContagem
   | CenaCombo
   | CenaRespira
+  | CenaFicha
   | CenaCta;
 
 export type TipoCena = Cena['tipo'];

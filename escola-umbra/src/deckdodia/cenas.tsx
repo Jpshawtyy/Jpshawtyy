@@ -7,7 +7,8 @@ import {FONTE_MONO, FONTE_TEXTO, FONTE_TITULO} from '../fontes';
 import {MOLA_PULO, MOLA_SECA, acaso, mola, trecho} from '../anim';
 import {TituloArena, sombraTitulo} from '../componentes/Arena';
 import {legendasDaCena} from '../tempo';
-import type {Cena, CenaCartaDestaque, CenaCombo, CenaConfronto, CenaContagem, CenaImpacto, CenaRespira, CenaCta, CenaDecklist, CenaGancho, CenaPiramide, MapaCartas} from '../tipos';
+import type {Cena, CenaCartaDestaque, CenaCombo, CenaConfronto, CenaContagem, CenaFicha, CenaImpacto, CenaRespira, CenaCta, CenaDecklist, CenaGancho, CenaPiramide, MapaCartas} from '../tipos';
+import {IconeEnergia} from '../mesa/IconeEnergia';
 import {Carta3D, Flash, LinhasDeVelocidade, Raios, Sfx, Tremer, balanco, passadaDeBrilho} from './efeitos';
 
 const sair = Easing.out(Easing.cubic);
@@ -1145,6 +1146,108 @@ export const RespiraDeck: React.FC<{cena: CenaRespira}> = ({cena}) => {
       </Batida>
       {fases.map((f, i) => (
         <Sfx key={i} som="brilho" em={f.de} volume={0.22} />
+      ))}
+    </AbsoluteFill>
+  );
+};
+
+// ---------- Ficha de carta (carta nova sem imagem oficial) ----------
+
+const COR_TIPO: Record<string, string> = {
+  Grass: '#4E9A35', Fire: '#E0522A', Water: '#2F8FD6', Lightning: '#E9C22E', Psychic: '#9A57C7', Fighting: '#C46A2B',
+  Darkness: '#2F4A57', Metal: '#8D99A4', Dragon: '#B59A2E', Fairy: '#D95FA5', Colorless: '#D9D5CC',
+};
+
+export const FichaCarta: React.FC<{cena: CenaFicha; duracao: number}> = ({cena, duracao}) => {
+  const quadro = useCurrentFrame();
+  const {fps} = useVideoConfig();
+  const t = quadro / fps;
+  const POUSO = 0.45;
+  const entra = voo(t, 0, POUSO);
+  const bal = balanco(t, 0.35 * Math.min(1, t / POUSO));
+  const cor = COR_TIPO[cena.energia ?? 'Colorless'] ?? CORES.ouro;
+  const W = 700;
+  const linhas = cena.linhas.map((l, i) => ({...l, em: l.em ?? 0.8 + i * 1.3}));
+  const frases = batidasDasFrases(cena, duracao);
+  return (
+    <AbsoluteFill>
+      <Raios x={AREA.cx} y={760} forca={trecho(t, [POUSO, POUSO + 0.3], [0, 0.8])} cor={`${cor}88`} />
+      <Tremer impactos={[POUSO, ...linhas.map((l) => l.em + 0.15), ...frases]} forca={14}>
+        <div style={{position: 'absolute', left: AREA.cx - W / 2, top: 330, width: W, perspective: 1800}}>
+          <div
+            style={{
+              transformStyle: 'preserve-3d',
+              transform: `translateY(${interpolate(entra, [0, 1], [900, 0])}px) rotateY(${interpolate(entra, [0, 1], [-200, 0]) + bal.ry * 0.5}deg) rotateX(${bal.rx * 0.5}deg) rotateZ(${interpolate(entra, [0, 1], [-25, 0]) + bal.rz * 0.5}deg)`,
+              background: `linear-gradient(160deg, ${cor} 0%, #1c1c22 38%, #121216 100%)`,
+              borderRadius: 26,
+              boxShadow: `inset 0 0 0 6px ${CORES.ouro}, 0 30px 70px rgba(0,0,0,0.65), 0 0 ${60 * trecho(t, [POUSO, POUSO + 0.4], [0, 1])}px ${cor}`,
+              padding: '26px 30px 30px',
+              overflow: 'hidden',
+            }}
+          >
+            {/* reflexo passando */}
+            <div style={{position: 'absolute', inset: 0, pointerEvents: 'none', mixBlendMode: 'screen', background: `linear-gradient(115deg, transparent ${(passadaDeBrilho(t, 2, POUSO + 0.2) ?? -1) * 160 - 30}%, rgba(255,240,200,0.35) ${(passadaDeBrilho(t, 2, POUSO + 0.2) ?? -1) * 160 - 18}%, transparent ${(passadaDeBrilho(t, 2, POUSO + 0.2) ?? -1) * 160 - 6}%)`}} />
+            <div style={{display: 'flex', alignItems: 'center', gap: 16}}>
+              {cena.estagio ? (
+                <div style={{background: 'rgba(10,10,13,0.7)', border: `2px solid ${CORES.ouro}`, borderRadius: 30, padding: '4px 16px', fontFamily: FONTE_MONO, fontWeight: 700, fontSize: 26, letterSpacing: '0.08em', color: CORES.texto, textTransform: 'uppercase'}}>{cena.estagio}</div>
+              ) : null}
+              <div style={{flex: 1}} />
+              {cena.hp ? <div style={{fontFamily: FONTE_TITULO, fontSize: 64, color: CORES.texto, textShadow: '0 3px 0 rgba(0,0,0,0.6)'}}><span style={{fontSize: 30, marginRight: 6}}>HP</span>{cena.hp}</div> : null}
+              {cena.energia ? <IconeEnergia tipo={cena.energia} tamanho={58} /> : null}
+            </div>
+            <div style={{marginTop: 10, fontFamily: FONTE_TITULO, fontSize: 74, lineHeight: 1, color: CORES.ouro, textShadow: '0 4px 0 rgba(0,0,0,0.6)'}}>{cena.nome}</div>
+            <div style={{height: 3, background: `linear-gradient(90deg, ${CORES.ouro}, transparent)`, margin: '18px 0 20px'}} />
+            <div style={{display: 'flex', flexDirection: 'column', gap: 22}}>
+              {linhas.map((l, i) => {
+                const e = mola(quadro, fps, l.em, MOLA_PULO);
+                if (t < l.em - 0.05) return <div key={i} style={{height: 0}} />;
+                return (
+                  <div key={i} style={{opacity: Math.min(1, e * 2), transform: `translateX(${(1 - e) * (i % 2 ? -260 : 260)}px)`, background: 'rgba(10,10,13,0.55)', borderRadius: 14, padding: '16px 20px', boxShadow: `inset 0 0 0 2px ${l.tipo === 'habilidade' ? CORES.vermelho : 'rgba(245,241,232,0.18)'}`}}>
+                    <div style={{display: 'flex', alignItems: 'center', gap: 12}}>
+                      {l.tipo === 'habilidade' ? (
+                        <span style={{background: CORES.vermelho, color: CORES.texto, fontFamily: FONTE_MONO, fontWeight: 700, fontSize: 22, letterSpacing: '0.1em', padding: '3px 12px', borderRadius: 6, textTransform: 'uppercase'}}>Habilidade</span>
+                      ) : (
+                        (l.custo ?? []).map((c, k) => <IconeEnergia key={k} tipo={c} tamanho={40} />)
+                      )}
+                      <span style={{fontFamily: FONTE_TEXTO, fontWeight: 700, fontSize: 40, color: CORES.texto, flex: 1}}>{l.nome}</span>
+                      {l.dano ? <span style={{fontFamily: FONTE_TITULO, fontSize: 54, color: CORES.ouro}}>{l.dano}</span> : null}
+                    </div>
+                    <div style={{marginTop: 8, fontFamily: FONTE_TEXTO, fontWeight: 500, fontSize: 30, lineHeight: 1.25, color: CORES.secundario}}>{l.texto}</div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+        {cena.pill ? (
+          <div style={{position: 'absolute', left: AREA.cx - W / 2 - 20, top: 300, transform: `rotate(-8deg) scale(${mola(quadro, fps, 0.55, MOLA_PULO)})`, background: CORES.vermelho, padding: '6px 22px', fontFamily: FONTE_TITULO, fontSize: 42, color: CORES.texto, boxShadow: '0 10px 24px rgba(0,0,0,0.6)', zIndex: 5}}>{cena.pill}</div>
+        ) : null}
+      </Tremer>
+      <div
+        style={{
+          position: 'absolute',
+          left: AREA.x0,
+          width: AREA.largura,
+          top: 1205,
+          display: 'flex',
+          justifyContent: 'center',
+          opacity: trecho(t, [POUSO + 0.2, POUSO + 0.5], [0, 1]),
+        }}
+      >
+        <div style={{background: 'rgba(10,10,13,0.85)', border: `2px solid ${CORES.ouro}`, padding: '6px 20px', fontFamily: FONTE_MONO, fontWeight: 700, fontSize: 22, letterSpacing: '0.14em', color: CORES.ouro, textTransform: 'uppercase'}}>
+          {cena.selo ?? 'carta do Japão · ainda não saiu aqui'}
+        </div>
+      </div>
+      <LinhasDeVelocidade em={POUSO} x={AREA.cx} y={760} />
+      <Flash em={[POUSO]} forca={0.6} />
+      <Sfx som="whoosh" em={0} />
+      <Sfx som="impacto" em={POUSO} volume={0.45} />
+      <Sfx som="brilho" em={POUSO + 0.2} volume={0.25} />
+      {linhas.map((l, i) => (
+        <React.Fragment key={i}>
+          <Sfx som="whoosh" em={Math.max(0, l.em - 0.05)} volume={0.22} />
+          <Sfx som="pop" em={l.em + 0.15} volume={0.28} />
+        </React.Fragment>
       ))}
     </AbsoluteFill>
   );

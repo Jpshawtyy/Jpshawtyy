@@ -36,6 +36,8 @@ export const duracaoPadrao = (cena: Cena, cartas: MapaCartas): number => {
       return 2.4;
     case 'combo':
       return 1.5 + cena.passos.length * 1.4;
+    case 'ficha':
+      return 1.5 + cena.linhas.length * 1.6;
     case 'respira':
       return (cena.em ?? 0.4) + (cena.puxa ?? 3) + (cena.segura ?? 2) + (cena.solta ?? 3) + 0.4;
     case 'contagem':

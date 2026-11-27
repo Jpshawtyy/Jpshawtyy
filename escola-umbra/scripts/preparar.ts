@@ -25,7 +25,7 @@ export type Preparo = {
   narracao?: Narracao; // quando o roteiro usa "narracao": "auto"
 };
 
-const TIPOS = ['gancho', 'carta_destaque', 'lista', 'piramide', 'comparacao', 'riscado', 'mesa', 'decklist', 'confronto', 'impacto', 'contagem', 'combo', 'respira', 'cta'];
+const TIPOS = ['gancho', 'carta_destaque', 'lista', 'piramide', 'comparacao', 'riscado', 'mesa', 'decklist', 'confronto', 'impacto', 'contagem', 'combo', 'respira', 'ficha', 'cta'];
 const EMOJI = /\p{Extended_Pictographic}/u;
 
 const textosDe = (valor: unknown, caminho: string, saida: {caminho: string; texto: string}[]) => {
@@ -55,6 +55,7 @@ const conferirEstrutura = (r: Roteiro, achados: Achado[]) => {
     if (c.tipo === 'piramide' && !(c.niveis?.length > 0)) erro(onde, 'Falta "niveis".');
     if (c.tipo === 'comparacao' && !(c.bons?.length > 0 && c.ruins?.length > 0)) erro(onde, 'Faltam "bons" e "ruins".');
     if (c.tipo === 'riscado' && !(c.itens?.length > 0)) erro(onde, 'Falta "itens".');
+    if (c.tipo === 'ficha' && !(c.nome && c.linhas?.length > 0)) erro(onde, 'Faltam "nome" e "linhas".');
     if (c.tipo === 'combo' && !(c.alvo && c.passos?.length > 0)) erro(onde, 'Faltam "alvo" e "passos".');
     if (c.tipo === 'impacto' && !c.texto) erro(onde, 'Falta "texto".');
     if (c.tipo === 'confronto') {
@@ -106,6 +107,7 @@ const eventosDaCena = (cena: Cena, duracao: number, temposAcoes: number[]): numb
   if (cena.tipo === 'cta') eventos.push(0.2, 0.8, 1.6, 2.6);
   if (cena.tipo === 'impacto') eventos.push(0.15, 0.35, 0.7, 1.0);
   if (cena.tipo === 'combo') cena.passos.forEach((p, i) => eventos.push(p.em ?? 0.8 + i * 1.3, (p.em ?? 0.8 + i * 1.3) + 0.45));
+  if (cena.tipo === 'ficha') cena.linhas.forEach((l, i) => eventos.push(l.em ?? 0.8 + i * 1.3));
   if (cena.tipo === 'respira') {
     const e = cena.em ?? 0.4;
     for (let k = 0; k < 9; k++) eventos.push(e + k);

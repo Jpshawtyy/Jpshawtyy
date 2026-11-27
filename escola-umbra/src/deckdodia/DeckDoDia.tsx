@@ -15,7 +15,7 @@ import {Guias, Moldura} from '../componentes/Moldura';
 import {quebrarPalavras, temposDaFala} from '../componentes/Legenda';
 import {Faiscas, Flash, Sfx} from './efeitos';
 import {Mascote2D} from './Mascote2D';
-import {CartaShow, ComboDeck, RespiraDeck, Confronto, ContagemDeck, CtaDeck, DecklistDeal, GanchoDeck, ImpactoDeck, RankingDeck} from './cenas';
+import {CartaShow, ComboDeck, FichaCarta, RespiraDeck, Confronto, ContagemDeck, CtaDeck, DecklistDeal, GanchoDeck, ImpactoDeck, RankingDeck} from './cenas';
 
 // Legenda de impacto: maiúsculas grossas, a palavra que está sendo falada ganha uma tarja vermelha.
 export const LegendaImpacto: React.FC<{legendas: LegendaPronta[]; falas?: PalavraFalada[]; inicioDaCena: number}> = ({legendas, falas, inicioDaCena}) => {
@@ -99,6 +99,7 @@ export const DeckDoDia: React.FC<PropsAula> = (props) => {
         else if (cena.tipo === 'decklist') corpo = <DecklistDeal cena={cena} cartas={cartas} duracao={c.duracao} />;
         else if (cena.tipo === 'impacto') corpo = <ImpactoDeck cena={cena} cartas={cartas} />;
         else if (cena.tipo === 'combo') corpo = <ComboDeck cena={cena} cartas={cartas} duracao={c.duracao} />;
+        else if (cena.tipo === 'ficha') corpo = <FichaCarta cena={cena} duracao={c.duracao} />;
         else if (cena.tipo === 'respira') corpo = <RespiraDeck cena={cena} />;
         else if (cena.tipo === 'contagem') corpo = <ContagemDeck cena={cena} />;
         else if (cena.tipo === 'confronto') corpo = <Confronto cena={cena} cartas={cartas} duracao={c.duracao} />;
