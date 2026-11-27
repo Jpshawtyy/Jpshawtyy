@@ -1,0 +1,357 @@
+{
+ "assinatura": "40686489d5abd0cc5cc6a6186d2d646f4a6ffed0",
+ "voz": "pm_santa",
+ "frases": [
+  {
+   "fala": "Bora montar o deck campeão do Laique,",
+   "duracao": 2.121338
+  },
+  {
+   "fala": "carta por carta.",
+   "duracao": 1.114512
+  },
+  {
+   "fala": "Quatro Zorua e quatro Zoroark: copiam ataques do banco.",
+   "duracao": 3.153515
+  },
+  {
+   "fala": "Dois Zekrom: o ataque de duzentos e cinquenta.",
+   "duracao": 2.561134
+  },
+  {
+   "fala": "Pecharunt envenena, e o Mochi dá mais quarenta.",
+   "duracao": 2.608254
+  },
+  {
+   "fala": "Munkidori joga três contadores no oponente.",
+   "duracao": 2.717438
+  },
+  {
+   "fala": "Oito Escuras, e quatro PP Up que reciclam energia.",
+   "duracao": 2.918435
+  },
+  {
+   "fala": "Meowth busca Apoiador, Fezandipiti compra três.",
+   "duracao": 2.988503
+  },
+  {
+   "fala": "Watchtower e Gravity Mountain atrapalham o meta.",
+   "duracao": 2.726259
+  },
+  {
+   "fala": "E Black Belt: mais quarenta em ex. Sessenta cartas!",
+   "duracao": 2.789342
+  },
+  {
+   "fala": "Salva a lista campeã e segue a Escola Umbra!",
+   "duracao": 2.396395
+  }
+ ],
+ "words": [
+  {
+   "palavra": "bora",
+   "inicio": 0.05,
+   "fim": 0.3409263542857143
+  },
+  {
+   "palavra": "montar",
+   "inicio": 0.3409263542857143,
+   "fim": 0.7376441101298702
+  },
+  {
+   "palavra": "o",
+   "inicio": 0.7376441101298702,
+   "fim": 0.8698833620779222
+  },
+  {
+   "palavra": "deck",
+   "inicio": 0.8698833620779222,
+   "fim": 1.1608097163636364
+  },
+  {
+   "palavra": "campeão",
+   "inicio": 1.1608097163636364,
+   "fim": 1.610423172987013
+  },
+  {
+   "palavra": "do",
+   "inicio": 1.610423172987013,
+   "fim": 1.7955581257142856
+  },
+  {
+   "palavra": "LAIC",
+   "inicio": 1.7955581257142856,
+   "fim": 2.0864844799999998
+  },
+  {
+   "palavra": "carta",
+   "inicio": 2.331338,
+   "fim": 2.728741136
+  },
+  {
+   "palavra": "por",
+   "inicio": 2.728741136,
+   "fim": 3.003866384
+  },
+  {
+   "palavra": "carta",
+   "inicio": 3.003866384,
+   "fim": 3.40126952
+  },
+  {
+   "palavra": "4",
+   "inicio": 3.94585,
+   "fim": 4.098747696969697
+  },
+  {
+   "palavra": "Zorua",
+   "inicio": 4.098747696969697,
+   "fim": 4.496281709090909
+  },
+  {
+   "palavra": "e",
+   "inicio": 4.496281709090909,
+   "fim": 4.649179406060606
+  },
+  {
+   "palavra": "4",
+   "inicio": 4.649179406060606,
+   "fim": 4.802077103030303
+  },
+  {
+   "palavra": "Zoroark:",
+   "inicio": 4.802077103030303,
+   "fim": 5.44424743030303
+  },
+  {
+   "palavra": "copia",
+   "inicio": 5.44424743030303,
+   "fim": 5.841781442424242
+  },
+  {
+   "palavra": "ataques",
+   "inicio": 5.841781442424242,
+   "fim": 6.361633612121212
+  },
+  {
+   "palavra": "do",
+   "inicio": 6.361633612121212,
+   "fim": 6.575690387878788
+  },
+  {
+   "palavra": "banco",
+   "inicio": 6.575690387878788,
+   "fim": 6.9732244
+  },
+  {
+   "palavra": "2",
+   "inicio": 7.259365000000001,
+   "fim": 7.442849226865673
+  },
+  {
+   "palavra": "N's",
+   "inicio": 7.442849226865673,
+   "fim": 7.699727144477612
+  },
+  {
+   "palavra": "Zekrom:",
+   "inicio": 7.699727144477612,
+   "fim": 8.396967206567165
+  },
+  {
+   "palavra": "o",
+   "inicio": 8.396967206567165,
+   "fim": 8.580451433432836
+  },
+  {
+   "palavra": "ataque",
+   "inicio": 8.580451433432836,
+   "fim": 9.130904114029851
+  },
+  {
+   "palavra": "de",
+   "inicio": 9.130904114029851,
+   "fim": 9.387782031641791
+  },
+  {
+   "palavra": "250",
+   "inicio": 9.387782031641791,
+   "fim": 9.71805364
+  },
+  {
+   "palavra": "Pecharunt",
+   "inicio": 10.509365,
+   "fim": 11.20123869263158
+  },
+  {
+   "palavra": "envenena,",
+   "inicio": 11.20123869263158,
+   "fim": 11.959005117894737
+  },
+  {
+   "palavra": "o",
+   "inicio": 11.959005117894737,
+   "fim": 12.123736949473685
+  },
+  {
+   "palavra": "Mochi",
+   "inicio": 12.123736949473685,
+   "fim": 12.55203971157895
+  },
+  {
+   "palavra": "dá",
+   "inicio": 12.55203971157895,
+   "fim": 12.782664275789475
+  },
+  {
+   "palavra": "+40",
+   "inicio": 12.782664275789475,
+   "fim": 13.013288840000001
+  },
+  {
+   "palavra": "Munkidori:",
+   "inicio": 13.759365,
+   "fim": 14.564531814814815
+  },
+  {
+   "palavra": "3",
+   "inicio": 14.564531814814815,
+   "fim": 14.725565177777778
+  },
+  {
+   "palavra": "contadores",
+   "inicio": 14.725565177777778,
+   "fim": 15.466318647407409
+  },
+  {
+   "palavra": "pro",
+   "inicio": 15.466318647407409,
+   "fim": 15.756178700740742
+  },
+  {
+   "palavra": "oponente",
+   "inicio": 15.756178700740742,
+   "fim": 16.36810548
+  },
+  {
+   "palavra": "8",
+   "inicio": 17.009365000000003,
+   "fim": 17.180200219512198
+  },
+  {
+   "palavra": "Escuras",
+   "inicio": 17.180200219512198,
+   "fim": 17.761039965853662
+  },
+  {
+   "palavra": "e",
+   "inicio": 17.761039965853662,
+   "fim": 17.931875185365858
+  },
+  {
+   "palavra": "4",
+   "inicio": 17.931875185365858,
+   "fim": 18.102710404878053
+  },
+  {
+   "palavra": "PP",
+   "inicio": 18.102710404878053,
+   "fim": 18.341879712195123
+  },
+  {
+   "palavra": "Up",
+   "inicio": 18.341879712195123,
+   "fim": 18.581049019512196
+  },
+  {
+   "palavra": "reciclam",
+   "inicio": 18.581049019512196,
+   "fim": 19.23022285365854
+  },
+  {
+   "palavra": "energia",
+   "inicio": 19.23022285365854,
+   "fim": 19.811062600000003
+  },
+  {
+   "palavra": "Meowth,",
+   "inicio": 20.259365,
+   "fim": 20.91611553879518
+  },
+  {
+   "palavra": "Fezandipiti",
+   "inicio": 20.91611553879518,
+   "fim": 21.780260984578312
+  },
+  {
+   "palavra": "e",
+   "inicio": 21.780260984578312,
+   "fim": 21.953090073734938
+  },
+  {
+   "palavra": "Budew:",
+   "inicio": 21.953090073734938,
+   "fim": 22.54070897686747
+  },
+  {
+   "palavra": "suporte",
+   "inicio": 22.54070897686747,
+   "fim": 23.12832788
+  },
+  {
+   "palavra": "Watchtower",
+   "inicio": 23.509365,
+   "fim": 24.201270732413793
+  },
+  {
+   "palavra": "e",
+   "inicio": 24.201270732413793,
+   "fim": 24.351685022068963
+  },
+  {
+   "palavra": "Gravity",
+   "inicio": 24.351685022068963,
+   "fim": 24.863093606896552
+  },
+  {
+   "palavra": "Mountain:",
+   "inicio": 24.863093606896552,
+   "fim": 25.554999339310346
+  },
+  {
+   "palavra": "anti-meta",
+   "inicio": 25.554999339310346,
+   "fim": 26.12657364
+  },
+  {
+   "palavra": "Black",
+   "inicio": 26.759365,
+   "fim": 27.25666483085714
+  },
+  {
+   "palavra": "Belt's",
+   "inicio": 27.25666483085714,
+   "fim": 27.753964661714285
+  },
+  {
+   "palavra": "Training:",
+   "inicio": 27.753964661714285,
+   "fim": 28.633802824
+  },
+  {
+   "palavra": "+40",
+   "inicio": 28.633802824,
+   "fim": 28.901579656
+  },
+  {
+   "palavra": "em",
+   "inicio": 28.901579656,
+   "fim": 29.169356488
+  },
+  {
+   "palavra": "ex",
+   "inicio": 29.169356488,
+   "fim": 29.437133319999997
+  }
+ ]
+}

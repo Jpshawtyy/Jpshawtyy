@@ -1,0 +1,376 @@
+{
+  "formato": "deck_do_dia",
+  "rotulo": "Especial LAIC",
+  "serie": "Montando o campeão",
+  "numero": 8,
+  "titulo_capa": "montando o campeão",
+  "subtitulo_capa": "n's zoroark ex · LAIC",
+  "capa": {
+    "cartas": [
+      "pecharunt",
+      "zoroark",
+      "zekrom"
+    ]
+  },
+  "narracao": "auto",
+  "cartas": {
+    "zorua": {
+      "nome": "N's Zorua",
+      "set": "Journey Together",
+      "numero": 97
+    },
+    "zoroark": {
+      "nome": "N's Zoroark ex",
+      "set": "Journey Together",
+      "numero": 98
+    },
+    "munkidori": {
+      "nome": "Munkidori",
+      "set": "Twilight Masquerade",
+      "numero": 95
+    },
+    "zekrom": {
+      "nome": "N's Zekrom",
+      "set": "Ascended Heroes",
+      "numero": 155
+    },
+    "pecharunt": {
+      "nome": "Pecharunt ex",
+      "set": "Shrouded Fable",
+      "numero": 39
+    },
+    "meowth": {
+      "nome": "Meowth ex",
+      "set": "Perfect Order",
+      "numero": 62
+    },
+    "fezandipiti": {
+      "nome": "Fezandipiti ex",
+      "set": "Ascended Heroes",
+      "numero": 142
+    },
+    "budew": {
+      "nome": "Budew",
+      "set": "Ascended Heroes",
+      "numero": 16
+    },
+    "lillie": {
+      "nome": "Lillie's Determination",
+      "set": "Mega Evolution",
+      "numero": 119
+    },
+    "boss": {
+      "nome": "Boss's Orders",
+      "set": "Mega Evolution",
+      "numero": 114
+    },
+    "judge": {
+      "nome": "Judge",
+      "set": "Perfect Order",
+      "numero": 76
+    },
+    "cyrano": {
+      "nome": "Cyrano",
+      "set": "Surging Sparks",
+      "numero": 170
+    },
+    "black-belt": {
+      "nome": "Black Belt's Training",
+      "set": "Journey Together",
+      "numero": 143
+    },
+    "poffin": {
+      "nome": "Buddy-Buddy Poffin",
+      "set": "Temporal Forces",
+      "numero": 144
+    },
+    "ultra-ball": {
+      "nome": "Ultra Ball",
+      "set": "Mega Evolution",
+      "numero": 131
+    },
+    "pp-up": {
+      "nome": "N's PP Up",
+      "set": "Journey Together",
+      "numero": 153
+    },
+    "poke-pad": {
+      "nome": "Poké Pad",
+      "set": "Perfect Order",
+      "numero": 81
+    },
+    "stretcher": {
+      "nome": "Night Stretcher",
+      "set": "Ascended Heroes",
+      "numero": 196
+    },
+    "red-card": {
+      "nome": "Special Red Card",
+      "set": "Chaos Rising",
+      "numero": 82
+    },
+    "secret-box": {
+      "nome": "Secret Box",
+      "set": "Twilight Masquerade",
+      "numero": 163
+    },
+    "mochi": {
+      "nome": "Binding Mochi",
+      "set": "Prismatic Evolutions",
+      "numero": 95
+    },
+    "watchtower": {
+      "nome": "Team Rocket's Watchtower",
+      "set": "Destined Rivals",
+      "numero": 180
+    },
+    "gravity": {
+      "nome": "Gravity Mountain",
+      "set": "Surging Sparks",
+      "numero": 177
+    },
+    "castle": {
+      "nome": "N's Castle",
+      "set": "Journey Together",
+      "numero": 152
+    },
+    "escura": {
+      "nome": "Basic Darkness Energy",
+      "set": "Scarlet & Violet Energies",
+      "numero": 7
+    }
+  },
+  "cenas": [
+    {
+      "tipo": "gancho",
+      "texto": "o deck campeão",
+      "subtitulo": "carta por carta",
+      "carta": "zoroark",
+      "duracao": 2.6,
+      "legendas": [
+        {
+          "texto": "bora montar o deck *campeão do LAIC*",
+          "em": 0.05,
+          "fala": "Bora montar o deck campeão do Laique,"
+        },
+        {
+          "texto": "*carta por carta*",
+          "em": 1.7,
+          "fala": "carta por carta."
+        }
+      ]
+    },
+    {
+      "tipo": "decklist",
+      "titulo": "montando o campeão",
+      "duracao": 26,
+      "cartas": [
+        {
+          "carta": "zorua",
+          "qtd": 4
+        },
+        {
+          "carta": "zoroark",
+          "qtd": 4
+        },
+        {
+          "carta": "zekrom",
+          "qtd": 2
+        },
+        {
+          "carta": "pecharunt",
+          "qtd": 2
+        },
+        {
+          "carta": "mochi",
+          "qtd": 2
+        },
+        {
+          "carta": "munkidori",
+          "qtd": 2
+        },
+        {
+          "carta": "escura",
+          "qtd": 8
+        },
+        {
+          "carta": "pp-up",
+          "qtd": 4
+        },
+        {
+          "carta": "meowth",
+          "qtd": 1
+        },
+        {
+          "carta": "fezandipiti",
+          "qtd": 1
+        },
+        {
+          "carta": "budew",
+          "qtd": 1
+        },
+        {
+          "carta": "watchtower",
+          "qtd": 2
+        },
+        {
+          "carta": "gravity",
+          "qtd": 1
+        },
+        {
+          "carta": "black-belt",
+          "qtd": 1
+        },
+        {
+          "carta": "boss",
+          "qtd": 3
+        },
+        {
+          "carta": "castle",
+          "qtd": 1
+        },
+        {
+          "carta": "lillie",
+          "qtd": 4
+        },
+        {
+          "carta": "judge",
+          "qtd": 2
+        },
+        {
+          "carta": "cyrano",
+          "qtd": 1
+        },
+        {
+          "carta": "poffin",
+          "qtd": 4
+        },
+        {
+          "carta": "ultra-ball",
+          "qtd": 4
+        },
+        {
+          "carta": "poke-pad",
+          "qtd": 2
+        },
+        {
+          "carta": "stretcher",
+          "qtd": 2
+        },
+        {
+          "carta": "red-card",
+          "qtd": 1
+        },
+        {
+          "carta": "secret-box",
+          "qtd": 1
+        }
+      ],
+      "grupos": [
+        {
+          "cartas": [
+            "zorua",
+            "zoroark"
+          ],
+          "adesivo": "o atacante"
+        },
+        {
+          "cartas": [
+            "zekrom"
+          ],
+          "adesivo": "250 emprestado"
+        },
+        {
+          "cartas": [
+            "pecharunt",
+            "mochi"
+          ],
+          "adesivo": "veneno do bem"
+        },
+        {
+          "cartas": [
+            "munkidori"
+          ],
+          "adesivo": "devolve o dano"
+        },
+        {
+          "cartas": [
+            "escura",
+            "pp-up"
+          ],
+          "adesivo": "energia de volta"
+        },
+        {
+          "cartas": [
+            "meowth",
+            "fezandipiti",
+            "budew"
+          ],
+          "adesivo": "o suporte"
+        },
+        {
+          "cartas": [
+            "watchtower",
+            "gravity"
+          ],
+          "adesivo": "anti-meta"
+        },
+        {
+          "cartas": [
+            "black-belt",
+            "boss",
+            "castle"
+          ],
+          "adesivo": "pra fechar"
+        }
+      ],
+      "legendas": [
+        {
+          "texto": "*4 Zorua e 4 Zoroark*: copia ataques do banco",
+          "fala": "Quatro Zorua e quatro Zoroark: copiam ataques do banco."
+        },
+        {
+          "texto": "*2 N's Zekrom*: o ataque de 250",
+          "fala": "Dois Zekrom: o ataque de duzentos e cinquenta."
+        },
+        {
+          "texto": "*Pecharunt* envenena, o *Mochi* dá +40",
+          "fala": "Pecharunt envenena, e o Mochi dá mais quarenta."
+        },
+        {
+          "texto": "*Munkidori*: 3 contadores pro oponente",
+          "fala": "Munkidori joga três contadores no oponente."
+        },
+        {
+          "texto": "*8 Escuras* e *4 PP Up* reciclam energia",
+          "fala": "Oito Escuras, e quatro PP Up que reciclam energia."
+        },
+        {
+          "texto": "*Meowth*, *Fezandipiti* e *Budew*: suporte",
+          "fala": "Meowth busca Apoiador, Fezandipiti compra três."
+        },
+        {
+          "texto": "*Watchtower* e *Gravity Mountain*: anti-meta",
+          "fala": "Watchtower e Gravity Mountain atrapalham o meta."
+        },
+        {
+          "texto": "*Black Belt's Training*: +40 em ex",
+          "fala": "E Black Belt: mais quarenta em ex. Sessenta cartas!"
+        }
+      ]
+    },
+    {
+      "tipo": "cta",
+      "duracao": 4.5,
+      "principal": "SALVA",
+      "complemento": "a lista campeã",
+      "seguir": "segue @escolaumbratcg",
+      "falas": [
+        {
+          "texto": "Salva a lista campeã e segue a Escola Umbra!",
+          "em": 0.25
+        }
+      ]
+    }
+  ]
+}
