@@ -1166,14 +1166,16 @@ export const FichaCarta: React.FC<{cena: CenaFicha; duracao: number}> = ({cena, 
   const entra = voo(t, 0, POUSO);
   const bal = balanco(t, 0.35 * Math.min(1, t / POUSO));
   const cor = COR_TIPO[cena.energia ?? 'Colorless'] ?? CORES.ouro;
-  const W = 700;
+  const W = AREA.largura;
+  const duas = cena.linhas.length > 1;
+  const tamNome = Math.min(86, Math.floor(1250 / Math.max(10, cena.nome.length)));
   const linhas = cena.linhas.map((l, i) => ({...l, em: l.em ?? 0.8 + i * 1.3}));
   const frases = batidasDasFrases(cena, duracao);
   return (
     <AbsoluteFill>
       <Raios x={AREA.cx} y={760} forca={trecho(t, [POUSO, POUSO + 0.3], [0, 0.8])} cor={`${cor}88`} />
       <Tremer impactos={[POUSO, ...linhas.map((l) => l.em + 0.15), ...frases]} forca={14}>
-        <div style={{position: 'absolute', left: AREA.cx - W / 2, top: 330, width: W, perspective: 1800}}>
+        <div style={{position: 'absolute', left: AREA.cx - W / 2, top: 380, width: W, perspective: 1800}}>
           <div
             style={{
               transformStyle: 'preserve-3d',
@@ -1195,9 +1197,15 @@ export const FichaCarta: React.FC<{cena: CenaFicha; duracao: number}> = ({cena, 
               {cena.hp ? <div style={{fontFamily: FONTE_TITULO, fontSize: 64, color: CORES.texto, textShadow: '0 3px 0 rgba(0,0,0,0.6)'}}><span style={{fontSize: 30, marginRight: 6}}>HP</span>{cena.hp}</div> : null}
               {cena.energia ? <IconeEnergia tipo={cena.energia} tamanho={58} /> : null}
             </div>
-            <div style={{marginTop: 10, fontFamily: FONTE_TITULO, fontSize: 74, lineHeight: 1, color: CORES.ouro, textShadow: '0 4px 0 rgba(0,0,0,0.6)'}}>{cena.nome}</div>
-            <div style={{height: 3, background: `linear-gradient(90deg, ${CORES.ouro}, transparent)`, margin: '18px 0 20px'}} />
-            <div style={{display: 'flex', flexDirection: 'column', gap: 22}}>
+            <div style={{marginTop: 10, fontFamily: FONTE_TITULO, fontSize: tamNome, lineHeight: 1, whiteSpace: 'nowrap', color: CORES.ouro, textShadow: '0 4px 0 rgba(0,0,0,0.6)'}}>{cena.nome}</div>
+            {/* área da arte: a imagem oficial ainda não saiu, então vai o símbolo do tipo grande */}
+            <div style={{position: 'relative', height: duas ? 150 : 260, margin: '16px 0 18px', borderRadius: 14, overflow: 'hidden', background: `radial-gradient(circle at 50% 55%, ${cor} 0%, ${cor}66 35%, rgba(10,10,13,0.9) 80%)`, boxShadow: `inset 0 0 0 3px ${CORES.ouro}`}}>
+              <div style={{position: 'absolute', inset: 0, backgroundImage: 'repeating-linear-gradient(115deg, rgba(255,255,255,0.06) 0 2px, transparent 2px 18px)'}} />
+              <div style={{position: 'absolute', left: '50%', top: '50%', transform: `translate(-50%, -50%) scale(${1 + Math.sin(t * 2) * 0.04}) rotate(${Math.sin(t * 0.8) * 6}deg)`, filter: 'drop-shadow(0 0 30px rgba(255,255,255,0.35))'}}>
+                {cena.energia ? <IconeEnergia tipo={cena.energia} tamanho={duas ? 110 : 170} /> : <span style={{fontFamily: FONTE_TITULO, fontSize: 170, color: CORES.ouro}}>?</span>}
+              </div>
+            </div>
+            <div style={{display: 'flex', flexDirection: 'column', gap: duas ? 14 : 22}}>
               {linhas.map((l, i) => {
                 const e = mola(quadro, fps, l.em, MOLA_PULO);
                 if (t < l.em - 0.05) return <div key={i} style={{height: 0}} />;
@@ -1207,37 +1215,25 @@ export const FichaCarta: React.FC<{cena: CenaFicha; duracao: number}> = ({cena, 
                       {l.tipo === 'habilidade' ? (
                         <span style={{background: CORES.vermelho, color: CORES.texto, fontFamily: FONTE_MONO, fontWeight: 700, fontSize: 22, letterSpacing: '0.1em', padding: '3px 12px', borderRadius: 6, textTransform: 'uppercase'}}>Habilidade</span>
                       ) : (
-                        (l.custo ?? []).map((c, k) => <IconeEnergia key={k} tipo={c} tamanho={40} />)
+                        (l.custo ?? []).map((c, k) => <IconeEnergia key={k} tipo={c} tamanho={46} />)
                       )}
-                      <span style={{fontFamily: FONTE_TEXTO, fontWeight: 700, fontSize: 40, color: CORES.texto, flex: 1}}>{l.nome}</span>
-                      {l.dano ? <span style={{fontFamily: FONTE_TITULO, fontSize: 54, color: CORES.ouro}}>{l.dano}</span> : null}
+                      <span style={{fontFamily: FONTE_TEXTO, fontWeight: 700, fontSize: duas ? 40 : 46, color: CORES.texto, flex: 1}}>{l.nome}</span>
+                      {l.dano ? <span style={{fontFamily: FONTE_TITULO, fontSize: 62, color: CORES.ouro}}>{l.dano}</span> : null}
                     </div>
-                    <div style={{marginTop: 8, fontFamily: FONTE_TEXTO, fontWeight: 500, fontSize: 30, lineHeight: 1.25, color: CORES.secundario}}>{l.texto}</div>
+                    <div style={{marginTop: 8, fontFamily: FONTE_TEXTO, fontWeight: 500, fontSize: duas ? 31 : 36, lineHeight: 1.22, color: CORES.secundario}}>{l.texto}</div>
                   </div>
                 );
               })}
             </div>
+            <div style={{marginTop: 16, textAlign: 'center', fontFamily: FONTE_MONO, fontWeight: 700, fontSize: 20, letterSpacing: '0.14em', color: CORES.ouro, textTransform: 'uppercase', opacity: trecho(t, [POUSO + 0.2, POUSO + 0.5], [0, 1])}}>
+              {cena.selo ?? 'carta do Japão · ainda não saiu aqui'}
+            </div>
           </div>
         </div>
         {cena.pill ? (
-          <div style={{position: 'absolute', left: AREA.cx - W / 2 - 20, top: 300, transform: `rotate(-8deg) scale(${mola(quadro, fps, 0.55, MOLA_PULO)})`, background: CORES.vermelho, padding: '6px 22px', fontFamily: FONTE_TITULO, fontSize: 42, color: CORES.texto, boxShadow: '0 10px 24px rgba(0,0,0,0.6)', zIndex: 5}}>{cena.pill}</div>
+          <div style={{position: 'absolute', left: AREA.cx - W / 2 - 20, top: 336, transform: `rotate(-5deg) scale(${mola(quadro, fps, 0.55, MOLA_PULO)})`, background: CORES.vermelho, padding: '6px 22px', fontFamily: FONTE_TITULO, fontSize: 42, color: CORES.texto, boxShadow: '0 10px 24px rgba(0,0,0,0.6)', zIndex: 5}}>{cena.pill}</div>
         ) : null}
       </Tremer>
-      <div
-        style={{
-          position: 'absolute',
-          left: AREA.x0,
-          width: AREA.largura,
-          top: 1205,
-          display: 'flex',
-          justifyContent: 'center',
-          opacity: trecho(t, [POUSO + 0.2, POUSO + 0.5], [0, 1]),
-        }}
-      >
-        <div style={{background: 'rgba(10,10,13,0.85)', border: `2px solid ${CORES.ouro}`, padding: '6px 20px', fontFamily: FONTE_MONO, fontWeight: 700, fontSize: 22, letterSpacing: '0.14em', color: CORES.ouro, textTransform: 'uppercase'}}>
-          {cena.selo ?? 'carta do Japão · ainda não saiu aqui'}
-        </div>
-      </div>
       <LinhasDeVelocidade em={POUSO} x={AREA.cx} y={760} />
       <Flash em={[POUSO]} forca={0.6} />
       <Sfx som="whoosh" em={0} />
