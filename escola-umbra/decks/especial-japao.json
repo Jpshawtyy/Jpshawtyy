@@ -1,0 +1,279 @@
+{
+  "formato": "deck_do_dia",
+  "rotulo": "Direto do Japão",
+  "serie": "Champions League Chiba",
+  "numero": 1,
+  "titulo_capa": "o que o japão joga",
+  "subtitulo_capa": "top 4 da champions league",
+  "capa": {
+    "cartas": [
+      "clefairy",
+      "seaking",
+      "garchomp"
+    ]
+  },
+  "narracao": "auto",
+  "cartas": {
+    "dragapult": {
+      "nome": "Dragapult ex",
+      "set": "Twilight Masquerade",
+      "numero": 130
+    },
+    "seaking": {
+      "nome": "Seaking",
+      "set": "Prismatic Evolutions",
+      "numero": 21
+    },
+    "thwackey": {
+      "nome": "Thwackey",
+      "set": "Twilight Masquerade",
+      "numero": 15
+    },
+    "gladion": {
+      "nome": "Gladion's Final Battle",
+      "set": "Pitch Black",
+      "numero": 77
+    },
+    "bangle": {
+      "nome": "Brave Bangle",
+      "set": "White Flare",
+      "numero": 80
+    },
+    "grounds": {
+      "nome": "Festival Grounds",
+      "set": "Twilight Masquerade",
+      "numero": 149
+    },
+    "clefairy": {
+      "nome": "Lillie's Clefairy ex",
+      "set": "Journey Together",
+      "numero": 56
+    },
+    "garchomp": {
+      "nome": "Cynthia's Garchomp ex",
+      "set": "Destined Rivals",
+      "numero": 104
+    },
+    "roserade": {
+      "nome": "Cynthia's Roserade",
+      "set": "Destined Rivals",
+      "numero": 8
+    }
+  },
+  "cenas": [
+    {
+      "tipo": "gancho",
+      "texto": "direto do Japão",
+      "subtitulo": "top da champions league",
+      "carta": "seaking",
+      "duracao": 2.6,
+      "mascote": {
+        "pose": "acenando",
+        "x": 830,
+        "base": 1790,
+        "altura": 760
+      },
+      "legendas": [
+        {
+          "texto": "olha o que o *Japão* tá jogando",
+          "em": 0.05,
+          "fala": "Olha o que o Japão tá jogando agora!"
+        },
+        {
+          "texto": "e um *peixinho* ficou em 2º",
+          "em": 1.6,
+          "fala": "E um peixinho ficou em segundo lugar."
+        }
+      ]
+    },
+    {
+      "tipo": "piramide",
+      "modo": "ranking",
+      "titulo": "Champions League Chiba",
+      "fonte": "Limitless TCG · Champions League Chiba 22/11 · listas do top",
+      "duracao": 5.5,
+      "niveis": [
+        {
+          "rotulo": "Alakazam",
+          "detalhe": "7,4%",
+          "valor": 7.4,
+          "em": 2.4
+        },
+        {
+          "rotulo": "Garchomp",
+          "detalhe": "7,4%",
+          "valor": 7.4,
+          "em": 2.2
+        },
+        {
+          "rotulo": "Crustle",
+          "detalhe": "11,1%",
+          "valor": 11.1,
+          "em": 2.0
+        },
+        {
+          "rotulo": "Dragapult ex",
+          "detalhe": "48,1%",
+          "valor": 48.1,
+          "destaque": true,
+          "carta": "dragapult"
+        }
+      ],
+      "legendas": [
+        {
+          "texto": "lá, *quase metade* é Dragapult",
+          "em": 0.2,
+          "fala": "Lá, quase metade das listas do topo é Dragapult."
+        },
+        {
+          "texto": "mas o top 4 teve *surpresa*",
+          "em": 3.2,
+          "fala": "Mas o top quatro teve surpresa."
+        }
+      ]
+    },
+    {
+      "tipo": "carta_destaque",
+      "carta": "seaking",
+      "pill": "2º LUGAR",
+      "pill_cor": "ouro",
+      "titulo": "Festival Lead",
+      "foco": {
+        "em": 0.9,
+        "x": 0.5,
+        "y": 0.6,
+        "escala": 1.9
+      },
+      "duracao": 4.6,
+      "mascote": {
+        "pose": "apontando",
+        "x": 860,
+        "base": 1790,
+        "altura": 740
+      },
+      "legendas": [
+        {
+          "texto": "com *Festival Grounds*, ataca *duas vezes*",
+          "em": 0.3,
+          "fala": "O Seaking, com Festival Grounds em jogo, ataca duas vezes."
+        },
+        {
+          "texto": "e o Thwackey busca *qualquer carta*",
+          "em": 2.6,
+          "fala": "E o Thwackey busca qualquer carta pra ele."
+        }
+      ]
+    },
+    {
+      "tipo": "combo",
+      "alvo": "dragapult",
+      "selo": "NOCAUTE",
+      "duracao": 6,
+      "passos": [
+        {
+          "carta": "seaking",
+          "tipo": "dano",
+          "valor": 170,
+          "rotulo": "-170"
+        },
+        {
+          "carta": "seaking",
+          "tipo": "dano",
+          "valor": 170,
+          "rotulo": "-170"
+        }
+      ],
+      "legendas": [
+        {
+          "texto": "contra o *Dragapult*: 320 de HP",
+          "fala": "Contra o Dragapult, com trezentos e vinte de HP:"
+        },
+        {
+          "texto": "60 + *Gladion* 80 + *Bangle* 30 = 170",
+          "fala": "Sessenta, mais oitenta do Gladion, mais trinta do Bangle: cento e setenta."
+        },
+        {
+          "texto": "e bate *de novo*: 340. *Nocaute!*",
+          "fala": "E bate de novo: trezentos e quarenta. Nocaute!"
+        }
+      ]
+    },
+    {
+      "tipo": "carta_destaque",
+      "carta": "clefairy",
+      "pill": "3º LUGAR",
+      "pill_cor": "vermelho",
+      "titulo": "Fairy Zone",
+      "foco": {
+        "em": 0.9,
+        "x": 0.5,
+        "y": 0.58,
+        "escala": 1.9
+      },
+      "duracao": 4.4,
+      "mascote": {
+        "pose": "parado",
+        "x": 870,
+        "base": 1790,
+        "altura": 740
+      },
+      "legendas": [
+        {
+          "texto": "Pokémon *Dragão* do oponente ficam fracos a *Psíquico*",
+          "em": 0.3,
+          "fala": "A Lillie's Clefairy deixa todo Pokémon Dragão do oponente fraco a Psíquico."
+        },
+        {
+          "texto": "o Dragapult toma *dano em dobro*",
+          "em": 2.8,
+          "fala": "O Dragapult passa a tomar dano em dobro."
+        }
+      ]
+    },
+    {
+      "tipo": "carta_destaque",
+      "carta": "garchomp",
+      "pill": "4º LUGAR",
+      "pill_cor": "ouro",
+      "titulo": "Draconic Buster",
+      "foco": {
+        "em": 0.9,
+        "x": 0.5,
+        "y": 0.74,
+        "escala": 1.9
+      },
+      "duracao": 4.2,
+      "mascote": {
+        "pose": "apontando",
+        "x": 860,
+        "base": 1790,
+        "altura": 740
+      },
+      "legendas": [
+        {
+          "texto": "Cynthia's Garchomp ex: *260* de dano",
+          "em": 0.3,
+          "fala": "E o Garchomp da Cynthia bate duzentos e sessenta,"
+        },
+        {
+          "texto": "com *Roserade*, mais 30",
+          "em": 2.4,
+          "fala": "com a Roserade, mais trinta."
+        }
+      ]
+    },
+    {
+      "tipo": "cta",
+      "duracao": 4.5,
+      "principal": "COMENTA",
+      "complemento": "qual você testaria?",
+      "seguir": "segue @escolaumbratcg",
+      "falas": [
+        {
+          "texto": "Qual desses você testaria? Comenta aí!",
+          "em": 0.25
+        }
+      ]
+    }
+  ]
+}

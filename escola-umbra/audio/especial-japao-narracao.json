@@ -1,0 +1,469 @@
+{
+ "assinatura": "07f09c1bb34e0a8279cb9c15017534f8c3ce6230",
+ "voz": "pm_santa",
+ "frases": [
+  {
+   "fala": "Olha o que o Japão tá jogando agora!",
+   "duracao": 1.959138
+  },
+  {
+   "fala": "E um peixinho ficou em segundo lugar.",
+   "duracao": 1.998934
+  },
+  {
+   "fala": "Lá, quase metade das listas do topo é Dragapult.",
+   "duracao": 2.799342
+  },
+  {
+   "fala": "Mas o top quatro teve surpresa.",
+   "duracao": 1.966417
+  },
+  {
+   "fala": "O Seaking, com Festival Grounds em jogo, ataca duas vezes.",
+   "duracao": 3.428753
+  },
+  {
+   "fala": "E o Thwackey busca qualquer carta pra ele.",
+   "duracao": 2.22551
+  },
+  {
+   "fala": "Contra o Dragapult, com trezentos e vinte de HP:",
+   "duracao": 2.944626
+  },
+  {
+   "fala": "Sessenta, mais oitenta do Gladion, mais trinta do Bangle: cento e setenta.",
+   "duracao": 3.92585
+  },
+  {
+   "fala": "E bate de novo: trezentos e quarenta. Nocaute!",
+   "duracao": 2.834807
+  },
+  {
+   "fala": "A Lillie's Clefairy deixa todo Pokémon Dragão do oponente fraco a Psíquico.",
+   "duracao": 4.149683
+  },
+  {
+   "fala": "O Dragapult passa a tomar dano em dobro.",
+   "duracao": 2.327256
+  },
+  {
+   "fala": "E o Garchomp da Cynthia bate duzentos e sessenta,",
+   "duracao": 2.757302
+  },
+  {
+   "fala": "com a Roserade, mais trinta.",
+   "duracao": 1.683968
+  },
+  {
+   "fala": "Qual desses você testaria? Comenta aí!",
+   "duracao": 2.166757
+  }
+ ],
+ "words": [
+  {
+   "palavra": "olha",
+   "inicio": 0.05,
+   "fim": 0.35878354149253733
+  },
+  {
+   "palavra": "o",
+   "inicio": 0.35878354149253733,
+   "fim": 0.4991396967164179
+  },
+  {
+   "palavra": "que",
+   "inicio": 0.4991396967164179,
+   "fim": 0.751780776119403
+  },
+  {
+   "palavra": "o",
+   "inicio": 0.751780776119403,
+   "fim": 0.8921369313432836
+  },
+  {
+   "palavra": "Japão",
+   "inicio": 0.8921369313432836,
+   "fim": 1.2570629349253732
+  },
+  {
+   "palavra": "tá",
+   "inicio": 1.2570629349253732,
+   "fim": 1.453561552238806
+  },
+  {
+   "palavra": "jogando",
+   "inicio": 1.453561552238806,
+   "fim": 1.9307724800000001
+  },
+  {
+   "palavra": "e",
+   "inicio": 2.1691380000000002,
+   "fim": 2.3345670206896556
+  },
+  {
+   "palavra": "um",
+   "inicio": 2.3345670206896556,
+   "fim": 2.5661676496551724
+  },
+  {
+   "palavra": "peixinho",
+   "inicio": 2.5661676496551724,
+   "fim": 3.1947979282758623
+  },
+  {
+   "palavra": "ficou",
+   "inicio": 3.1947979282758623,
+   "fim": 3.624913382068966
+  },
+  {
+   "palavra": "em",
+   "inicio": 3.624913382068966,
+   "fim": 3.856514011034483
+  },
+  {
+   "palavra": "2º",
+   "inicio": 3.856514011034483,
+   "fim": 4.088114640000001
+  },
+  {
+   "palavra": "lá,",
+   "inicio": 4.618072000000001,
+   "fim": 5.072857408000001
+  },
+  {
+   "palavra": "quase",
+   "inicio": 5.072857408000001,
+   "fim": 5.610331072
+  },
+  {
+   "palavra": "metade",
+   "inicio": 5.610331072,
+   "fim": 6.230492992
+  },
+  {
+   "palavra": "é",
+   "inicio": 6.230492992,
+   "fim": 6.437213632000001
+  },
+  {
+   "palavra": "Dragapult",
+   "inicio": 6.437213632000001,
+   "fim": 7.305440320000001
+  },
+  {
+   "palavra": "mas",
+   "inicio": 7.618072000000001,
+   "fim": 7.911000325517242
+  },
+  {
+   "palavra": "o",
+   "inicio": 7.911000325517242,
+   "fim": 8.073738284137931
+  },
+  {
+   "palavra": "top",
+   "inicio": 8.073738284137931,
+   "fim": 8.366666609655173
+  },
+  {
+   "palavra": "4",
+   "inicio": 8.366666609655173,
+   "fim": 8.529404568275863
+  },
+  {
+   "palavra": "teve",
+   "inicio": 8.529404568275863,
+   "fim": 8.88742807724138
+  },
+  {
+   "palavra": "surpresa",
+   "inicio": 8.88742807724138,
+   "fim": 9.50583232
+  },
+  {
+   "palavra": "com",
+   "inicio": 10.218072000000001,
+   "fim": 10.56254206883721
+  },
+  {
+   "palavra": "Festival",
+   "inicio": 10.56254206883721,
+   "fim": 11.289756658604652
+  },
+  {
+   "palavra": "Grounds,",
+   "inicio": 11.289756658604652,
+   "fim": 12.09352015255814
+  },
+  {
+   "palavra": "ataca",
+   "inicio": 12.09352015255814,
+   "fim": 12.591088029767443
+  },
+  {
+   "palavra": "duas",
+   "inicio": 12.591088029767443,
+   "fim": 13.0121070027907
+  },
+  {
+   "palavra": "vezes",
+   "inicio": 13.0121070027907,
+   "fim": 13.50967488
+  },
+  {
+   "palavra": "e",
+   "inicio": 13.806825,
+   "fim": 13.951182405405405
+  },
+  {
+   "palavra": "o",
+   "inicio": 13.951182405405405,
+   "fim": 14.095539810810811
+  },
+  {
+   "palavra": "Thwackey",
+   "inicio": 14.095539810810811,
+   "fim": 14.644097951351352
+  },
+  {
+   "palavra": "busca",
+   "inicio": 14.644097951351352,
+   "fim": 15.019427205405405
+  },
+  {
+   "palavra": "qualquer",
+   "inicio": 15.019427205405405,
+   "fim": 15.567985345945946
+  },
+  {
+   "palavra": "carta",
+   "inicio": 15.567985345945946,
+   "fim": 15.9433146
+  },
+  {
+   "palavra": "contra",
+   "inicio": 16.532335,
+   "fim": 17.15590285882353
+  },
+  {
+   "palavra": "o",
+   "inicio": 17.15590285882353,
+   "fim": 17.363758811764704
+  },
+  {
+   "palavra": "Dragapult:",
+   "inicio": 17.363758811764704,
+   "fim": 18.40303857647059
+  },
+  {
+   "palavra": "320",
+   "inicio": 18.40303857647059,
+   "fim": 18.777179291764707
+  },
+  {
+   "palavra": "de",
+   "inicio": 18.777179291764707,
+   "fim": 19.068177625882353
+  },
+  {
+   "palavra": "HP",
+   "inicio": 19.068177625882353,
+   "fim": 19.359175959999998
+  },
+  {
+   "palavra": "60",
+   "inicio": 19.636961,
+   "fim": 20.008534408450704
+  },
+  {
+   "palavra": "+",
+   "inicio": 20.008534408450704,
+   "fim": 20.167780154929577
+  },
+  {
+   "palavra": "Gladion",
+   "inicio": 20.167780154929577,
+   "fim": 21.07017271830986
+  },
+  {
+   "palavra": "80",
+   "inicio": 21.07017271830986,
+   "fim": 21.441746126760563
+  },
+  {
+   "palavra": "+",
+   "inicio": 21.441746126760563,
+   "fim": 21.600991873239437
+  },
+  {
+   "palavra": "Bangle",
+   "inicio": 21.600991873239437,
+   "fim": 22.3972206056338
+  },
+  {
+   "palavra": "30",
+   "inicio": 22.3972206056338,
+   "fim": 22.768794014084506
+  },
+  {
+   "palavra": "=",
+   "inicio": 22.768794014084506,
+   "fim": 22.92803976056338
+  },
+  {
+   "palavra": "170",
+   "inicio": 22.92803976056338,
+   "fim": 23.405777
+  },
+  {
+   "palavra": "e",
+   "inicio": 23.722811,
+   "fim": 23.90185144210526
+  },
+  {
+   "palavra": "bate",
+   "inicio": 23.90185144210526,
+   "fim": 24.29574041473684
+  },
+  {
+   "palavra": "de",
+   "inicio": 24.29574041473684,
+   "fim": 24.54639703368421
+  },
+  {
+   "palavra": "novo:",
+   "inicio": 24.54639703368421,
+   "fim": 25.08351836
+  },
+  {
+   "palavra": "340.",
+   "inicio": 25.08351836,
+   "fim": 25.62063968631579
+  },
+  {
+   "palavra": "Nocaute!",
+   "inicio": 25.62063968631579,
+   "fim": 26.44422572
+  },
+  {
+   "palavra": "Pokémon",
+   "inicio": 27.107618,
+   "fim": 27.723280059636362
+  },
+  {
+   "palavra": "Dragão",
+   "inicio": 27.723280059636362,
+   "fim": 28.266511288727273
+  },
+  {
+   "palavra": "do",
+   "inicio": 28.266511288727273,
+   "fim": 28.520019195636362
+  },
+  {
+   "palavra": "oponente",
+   "inicio": 28.520019195636362,
+   "fim": 29.20811208581818
+  },
+  {
+   "palavra": "ficam",
+   "inicio": 29.20811208581818,
+   "fim": 29.678912484363636
+  },
+  {
+   "palavra": "fracos",
+   "inicio": 29.678912484363636,
+   "fim": 30.222143713454543
+  },
+  {
+   "palavra": "a",
+   "inicio": 30.222143713454543,
+   "fim": 30.403220789818178
+  },
+  {
+   "palavra": "Psíquico",
+   "inicio": 30.403220789818178,
+   "fim": 31.09131368
+  },
+  {
+   "palavra": "o",
+   "inicio": 31.417301,
+   "fim": 31.581577894117647
+  },
+  {
+   "palavra": "Dragapult",
+   "inicio": 31.581577894117647,
+   "fim": 32.271540849411764
+  },
+  {
+   "palavra": "toma",
+   "inicio": 32.271540849411764,
+   "fim": 32.63295001647059
+  },
+  {
+   "palavra": "dano",
+   "inicio": 32.63295001647059,
+   "fim": 32.99435918352941
+  },
+  {
+   "palavra": "em",
+   "inicio": 32.99435918352941,
+   "fim": 33.224346835294114
+  },
+  {
+   "palavra": "dobro",
+   "inicio": 33.224346835294114,
+   "fim": 33.65146676
+  },
+  {
+   "palavra": "Cynthia's",
+   "inicio": 34.294557,
+   "fim": 34.956309479999994
+  },
+  {
+   "palavra": "Garchomp",
+   "inicio": 34.956309479999994,
+   "fim": 35.61806196
+  },
+  {
+   "palavra": "ex:",
+   "inicio": 35.61806196,
+   "fim": 36.001181816842106
+  },
+  {
+   "palavra": "260",
+   "inicio": 36.001181816842106,
+   "fim": 36.31464351789474
+  },
+  {
+   "palavra": "de",
+   "inicio": 36.31464351789474,
+   "fim": 36.55844706315789
+  },
+  {
+   "palavra": "dano",
+   "inicio": 36.55844706315789,
+   "fim": 36.94156692
+  },
+  {
+   "palavra": "com",
+   "inicio": 37.211859000000004,
+   "fim": 37.502848670400006
+  },
+  {
+   "palavra": "Roserade,",
+   "inicio": 37.502848670400006,
+   "fim": 38.246488939200006
+  },
+  {
+   "palavra": "mais",
+   "inicio": 38.246488939200006,
+   "fim": 38.602142980800004
+  },
+  {
+   "palavra": "30",
+   "inicio": 38.602142980800004,
+   "fim": 38.82846828
+  }
+ ]
+}
