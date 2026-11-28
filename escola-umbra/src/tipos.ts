@@ -158,7 +158,7 @@ export type CenaRespira = CenaBase & {tipo: 'respira'; puxa?: number; segura?: n
 export type LinhaFicha = {tipo: 'habilidade' | 'ataque'; nome: string; custo?: string[]; dano?: string; texto: string; em?: number};
 export type CenaFicha = CenaBase & {
   tipo: 'ficha';
-  nome: string;
+  nome: string; imagem?: string;
   estagio?: string; // "Básico", "Estágio 1"...
   hp?: number;
   energia?: string; // tipo em inglês, como na API: "Metal", "Psychic"...

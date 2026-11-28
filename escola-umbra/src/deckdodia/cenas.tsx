@@ -1168,6 +1168,7 @@ export const FichaCarta: React.FC<{cena: CenaFicha; duracao: number}> = ({cena, 
   const cor = COR_TIPO[cena.energia ?? 'Colorless'] ?? CORES.ouro;
   const W = AREA.largura;
   const duas = cena.linhas.length > 1;
+  const LARG_IMG = duas ? 250 : 290;
   const tamNome = Math.min(86, Math.floor(1250 / Math.max(10, cena.nome.length)));
   const linhas = cena.linhas.map((l, i) => ({...l, em: l.em ?? 0.8 + i * 1.3}));
   const frases = batidasDasFrases(cena, duracao);
@@ -1189,6 +1190,26 @@ export const FichaCarta: React.FC<{cena: CenaFicha; duracao: number}> = ({cena, 
           >
             {/* reflexo passando */}
             <div style={{position: 'absolute', inset: 0, pointerEvents: 'none', mixBlendMode: 'screen', background: `linear-gradient(115deg, transparent ${(passadaDeBrilho(t, 2, POUSO + 0.2) ?? -1) * 160 - 30}%, rgba(255,240,200,0.35) ${(passadaDeBrilho(t, 2, POUSO + 0.2) ?? -1) * 160 - 18}%, transparent ${(passadaDeBrilho(t, 2, POUSO + 0.2) ?? -1) * 160 - 6}%)`}} />
+            {cena.imagem ? (
+              // carta oficial na esquerda, dados na direita
+              <div style={{display: 'flex', gap: 24, alignItems: 'stretch', marginBottom: 18}}>
+                <div style={{position: 'relative', width: LARG_IMG, height: LARG_IMG * (640 / 460), flexShrink: 0, borderRadius: 14, overflow: 'hidden', transform: `rotate(${-3 + Math.sin(t * 1.3) * 1.5}deg) scale(${0.85 + 0.15 * mola(quadro, fps, POUSO, MOLA_PULO)})`, boxShadow: `0 0 0 4px ${CORES.ouro}, 0 18px 40px rgba(0,0,0,0.6), 0 0 40px ${cor}88`}}>
+                  <Img src={staticFile(cena.imagem)} style={{width: '100%', height: '100%', objectFit: 'cover'}} />
+                  <div style={{position: 'absolute', inset: 0, mixBlendMode: 'screen', background: `linear-gradient(115deg, transparent ${(passadaDeBrilho(t, 2.4, POUSO + 0.1) ?? -1) * 170 - 40}%, rgba(255,250,230,0.55) ${(passadaDeBrilho(t, 2.4, POUSO + 0.1) ?? -1) * 170 - 25}%, transparent ${(passadaDeBrilho(t, 2.4, POUSO + 0.1) ?? -1) * 170 - 10}%)`}} />
+                </div>
+                <div style={{flex: 1, display: 'flex', flexDirection: 'column', gap: 14, paddingTop: 34}}>
+                  <div style={{display: 'flex', alignItems: 'center', gap: 12}}>
+                    {cena.estagio ? (
+                      <div style={{background: 'rgba(10,10,13,0.7)', border: `2px solid ${CORES.ouro}`, borderRadius: 30, padding: '4px 16px', fontFamily: FONTE_MONO, fontWeight: 700, fontSize: 24, letterSpacing: '0.08em', color: CORES.texto, textTransform: 'uppercase'}}>{cena.estagio}</div>
+                    ) : null}
+                    {cena.energia ? <IconeEnergia tipo={cena.energia} tamanho={50} /> : null}
+                  </div>
+                  <div style={{fontFamily: FONTE_TITULO, fontSize: 64, lineHeight: 1.02, textWrap: 'balance', color: CORES.ouro, textShadow: '0 4px 0 rgba(0,0,0,0.6)'}}>{cena.nome}</div>
+                  {cena.hp ? <div style={{fontFamily: FONTE_TITULO, fontSize: 70, color: CORES.texto, textShadow: '0 3px 0 rgba(0,0,0,0.6)'}}><span style={{fontSize: 32, marginRight: 8}}>HP</span>{cena.hp}</div> : null}
+                </div>
+              </div>
+            ) : (
+              <>
             <div style={{display: 'flex', alignItems: 'center', gap: 16}}>
               {cena.estagio ? (
                 <div style={{background: 'rgba(10,10,13,0.7)', border: `2px solid ${CORES.ouro}`, borderRadius: 30, padding: '4px 16px', fontFamily: FONTE_MONO, fontWeight: 700, fontSize: 26, letterSpacing: '0.08em', color: CORES.texto, textTransform: 'uppercase'}}>{cena.estagio}</div>
@@ -1205,6 +1226,8 @@ export const FichaCarta: React.FC<{cena: CenaFicha; duracao: number}> = ({cena, 
                 {cena.energia ? <IconeEnergia tipo={cena.energia} tamanho={duas ? 110 : 170} /> : <span style={{fontFamily: FONTE_TITULO, fontSize: 170, color: CORES.ouro}}>?</span>}
               </div>
             </div>
+              </>
+            )}
             <div style={{display: 'flex', flexDirection: 'column', gap: duas ? 14 : 22}}>
               {linhas.map((l, i) => {
                 const e = mola(quadro, fps, l.em, MOLA_PULO);
@@ -1231,7 +1254,7 @@ export const FichaCarta: React.FC<{cena: CenaFicha; duracao: number}> = ({cena, 
           </div>
         </div>
         {cena.pill ? (
-          <div style={{position: 'absolute', left: AREA.cx - W / 2 - 20, top: 336, transform: `rotate(-5deg) scale(${mola(quadro, fps, 0.55, MOLA_PULO)})`, background: CORES.vermelho, padding: '6px 22px', fontFamily: FONTE_TITULO, fontSize: 42, color: CORES.texto, boxShadow: '0 10px 24px rgba(0,0,0,0.6)', zIndex: 5}}>{cena.pill}</div>
+          <div style={{position: 'absolute', ...(cena.imagem ? {right: 1080 - (AREA.cx + W / 2) - 20} : {left: AREA.cx - W / 2 - 20}), top: 336, transform: `rotate(${cena.imagem ? 4 : -5}deg) scale(${mola(quadro, fps, 0.55, MOLA_PULO)})`, background: CORES.vermelho, padding: '6px 22px', fontFamily: FONTE_TITULO, fontSize: 42, color: CORES.texto, boxShadow: '0 10px 24px rgba(0,0,0,0.6)', zIndex: 5}}>{cena.pill}</div>
         ) : null}
       </Tremer>
       <LinhasDeVelocidade em={POUSO} x={AREA.cx} y={760} />

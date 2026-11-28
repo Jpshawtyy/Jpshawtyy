@@ -5,17 +5,41 @@
   "numero": 2,
   "titulo_capa": "decks do futuro",
   "subtitulo_capa": "o que o japão já testa",
-  "capa": {"cartas": ["dudunsparce", "dragapult", "grand-tree"]},
-  "narracao": "auto",
-
-  "cartas": {
-    "dragapult": {"nome": "Dragapult ex", "set": "Twilight Masquerade", "numero": 130},
-    "drakloak": {"nome": "Drakloak", "set": "Twilight Masquerade", "numero": 129},
-    "dudunsparce": {"nome": "Dudunsparce", "set": "Temporal Forces", "numero": 129},
-    "grand-tree": {"nome": "Grand Tree", "set": "Stellar Crown", "numero": 136},
-    "crustle": {"nome": "Crustle", "set": "Destined Rivals", "numero": 12}
+  "capa": {
+    "cartas": [
+      "dudunsparce",
+      "dragapult",
+      "grand-tree"
+    ]
   },
-
+  "narracao": "auto",
+  "cartas": {
+    "dragapult": {
+      "nome": "Dragapult ex",
+      "set": "Twilight Masquerade",
+      "numero": 130
+    },
+    "drakloak": {
+      "nome": "Drakloak",
+      "set": "Twilight Masquerade",
+      "numero": 129
+    },
+    "dudunsparce": {
+      "nome": "Dudunsparce",
+      "set": "Temporal Forces",
+      "numero": 129
+    },
+    "grand-tree": {
+      "nome": "Grand Tree",
+      "set": "Stellar Crown",
+      "numero": 136
+    },
+    "crustle": {
+      "nome": "Crustle",
+      "set": "Destined Rivals",
+      "numero": 12
+    }
+  },
   "cenas": [
     {
       "tipo": "impacto",
@@ -26,8 +50,16 @@
       "bate": 0.05,
       "duracao": 2.8,
       "legendas": [
-        {"texto": "decks com as cartas novas já tão no *Japão*", "em": 0.15, "fala": "Os decks com as cartas novas já começaram a aparecer no Japão."},
-        {"texto": "olha os *protótipos*", "em": 2.0, "fala": "Olha os protótipos!"}
+        {
+          "texto": "decks com as cartas novas já tão no *Japão*",
+          "em": 0.15,
+          "fala": "Os decks com as cartas novas já começaram a aparecer no Japão."
+        },
+        {
+          "texto": "olha os *protótipos*",
+          "em": 2.0,
+          "fala": "Olha os protótipos!"
+        }
       ]
     },
     {
@@ -38,26 +70,60 @@
       "energia": "Metal",
       "pill": "O MAIS TESTADO",
       "linhas": [
-        {"tipo": "habilidade", "nome": "Aura Seeker", "texto": "no Ativo, busca qualquer Apoiador no deck"},
-        {"tipo": "ataque", "nome": "Dancing Fist", "custo": ["Metal", "Metal"], "dano": "120+", "texto": "+120 se o Ativo do oponente for Pokémon ex"}
+        {
+          "tipo": "habilidade",
+          "nome": "Aura Seeker",
+          "texto": "no Ativo, busca qualquer Apoiador no deck"
+        },
+        {
+          "tipo": "ataque",
+          "nome": "Dancing Fist",
+          "custo": [
+            "Metal",
+            "Metal"
+          ],
+          "dano": "120+",
+          "texto": "+120 se o Ativo do oponente for Pokémon ex"
+        }
       ],
       "legendas": [
-        {"texto": "a mais testada: *Mega Lucario Z ex*", "fala": "A carta que mais tão testando é o Mega Lucario Z ex."},
-        {"texto": "*Aura Seeker*: busca qualquer Apoiador", "fala": "No ativo, o Aura Seeker busca qualquer Apoiador."},
-        {"texto": "*Dancing Fist*: 120, ou *240* contra ex", "fala": "E o Dancing Fist bate cento e vinte, ou duzentos e quarenta contra ex."}
-      ]
+        {
+          "texto": "a mais testada: *Mega Lucario Z ex*",
+          "fala": "A carta que mais tão testando é o Mega Lucario Z ex."
+        },
+        {
+          "texto": "*Aura Seeker*: busca qualquer Apoiador",
+          "fala": "No ativo, o Aura Seeker busca qualquer Apoiador."
+        },
+        {
+          "texto": "*Dancing Fist*: 120, ou *240* contra ex",
+          "fala": "E o Dancing Fist bate cento e vinte, ou duzentos e quarenta contra ex."
+        }
+      ],
+      "imagem": "cartas-jp/M7_57.png"
     },
     {
       "tipo": "impacto",
       "antes": "A BASE",
       "texto": "Lucario + Dudunsparce",
       "subtitulo": "pra comprar carta",
-      "cartas": ["dudunsparce", "grand-tree"],
+      "cartas": [
+        "dudunsparce",
+        "grand-tree"
+      ],
       "bate": 0.05,
       "duracao": 2.8,
       "legendas": [
-        {"texto": "a base: Lucario com *Dudunsparce* na compra", "em": 0.1, "fala": "A base mais testada é Lucario com Dudunsparce pra comprar."},
-        {"texto": "tem lista com *Grand Tree*, e até com Garchomp", "em": 2.2, "fala": "Tem lista com Grand Tree no lugar, e até misturando Garchomp."}
+        {
+          "texto": "a base: Lucario com *Dudunsparce* na compra",
+          "em": 0.1,
+          "fala": "A base mais testada é Lucario com Dudunsparce pra comprar."
+        },
+        {
+          "texto": "tem lista com *Grand Tree*, e até com Garchomp",
+          "em": 2.2,
+          "fala": "Tem lista com Grand Tree no lugar, e até misturando Garchomp."
+        }
       ]
     },
     {
@@ -67,22 +133,41 @@
       "pill": "APOIADORA NOVA",
       "selo": "carta do Japão · nome em inglês ainda não saiu",
       "linhas": [
-        {"tipo": "ataque", "nome": "Neste turno", "texto": "seus Pokémon Mega Evolução ex dão +20 de dano para cada prêmio que o oponente já pegou"}
+        {
+          "tipo": "ataque",
+          "nome": "Neste turno",
+          "texto": "seus Pokémon Mega Evolução ex dão +20 de dano para cada prêmio que o oponente já pegou"
+        }
       ],
       "legendas": [
-        {"texto": "e uma *Apoiadora nova* da Korrina", "fala": "E tem uma Apoiadora nova da Korrina."},
-        {"texto": "Mega ex: *+20* por prêmio que o oponente pegou", "fala": "Ela dá mais vinte de dano pros Mega ex, pra cada prêmio que o oponente pegou."}
-      ]
+        {
+          "texto": "e uma *Apoiadora nova* da Korrina",
+          "fala": "E tem uma Apoiadora nova da Korrina."
+        },
+        {
+          "texto": "Mega ex: *+20* por prêmio que o oponente pegou",
+          "fala": "Ela dá mais vinte de dano pros Mega ex, pra cada prêmio que o oponente pegou."
+        }
+      ],
+      "imagem": "cartas-jp/M7_75.png"
     },
     {
       "tipo": "impacto",
       "antes": "OPONENTE COM 4 PRÊMIOS",
       "texto": "240 + 80 = 320",
       "subtitulo": "nocaute no Dragapult",
-      "cartas": ["dragapult"],
+      "cartas": [
+        "dragapult"
+      ],
       "bate": 0.05,
       "duracao": 2.6,
-      "legendas": [{"texto": "o Lucario bate *320*: nocaute no Dragapult", "em": 0.1, "fala": "Com quatro prêmios, o Lucario bate trezentos e vinte: nocaute no Dragapult."}]
+      "legendas": [
+        {
+          "texto": "o Lucario bate *320*: nocaute no Dragapult",
+          "em": 0.1,
+          "fala": "Com quatro prêmios, o Lucario bate trezentos e vinte: nocaute no Dragapult."
+        }
+      ]
     },
     {
       "tipo": "ficha",
@@ -92,12 +177,29 @@
       "energia": "Psychic",
       "pill": "POUCO TESTADO",
       "linhas": [
-        {"tipo": "ataque", "nome": "Blood-Red Fear", "custo": ["Psychic", "Psychic", "Colorless"], "dano": "160", "texto": "no próximo turno, o oponente não joga Energia Especial nem Estádio"}
+        {
+          "tipo": "ataque",
+          "nome": "Blood-Red Fear",
+          "custo": [
+            "Psychic",
+            "Psychic",
+            "Colorless"
+          ],
+          "dano": "160",
+          "texto": "no próximo turno, o oponente não joga Energia Especial nem Estádio"
+        }
       ],
       "legendas": [
-        {"texto": "testado bem pouco: *Mega Absol Z ex*", "fala": "Bem menos testado: o Mega Absol Z ex."},
-        {"texto": "160, e trava *Energia Especial* e *Estádio*", "fala": "Bate cento e sessenta, e trava Energia Especial e Estádio do oponente."}
-      ]
+        {
+          "texto": "testado bem pouco: *Mega Absol Z ex*",
+          "fala": "Bem menos testado: o Mega Absol Z ex."
+        },
+        {
+          "texto": "160, e trava *Energia Especial* e *Estádio*",
+          "fala": "Bate cento e sessenta, e trava Energia Especial e Estádio do oponente."
+        }
+      ],
+      "imagem": "cartas-jp/M7_30.png"
     },
     {
       "tipo": "ficha",
@@ -107,26 +209,66 @@
       "energia": "Dragon",
       "pill": "2º MAIS TESTADO",
       "linhas": [
-        {"tipo": "ataque", "nome": "Draconic Avenger", "custo": ["Water", "Fighting"], "dano": "30×", "texto": "30 para cada Pokémon Dragão no seu descarte"},
-        {"tipo": "ataque", "nome": "Draconic Edge", "custo": ["Water", "Fighting", "Colorless"], "dano": "240", "texto": "não é afetado por efeitos no Ativo do oponente"}
+        {
+          "tipo": "ataque",
+          "nome": "Draconic Avenger",
+          "custo": [
+            "Water",
+            "Fighting"
+          ],
+          "dano": "30×",
+          "texto": "30 para cada Pokémon Dragão no seu descarte"
+        },
+        {
+          "tipo": "ataque",
+          "nome": "Draconic Edge",
+          "custo": [
+            "Water",
+            "Fighting",
+            "Colorless"
+          ],
+          "dano": "240",
+          "texto": "não é afetado por efeitos no Ativo do oponente"
+        }
       ],
       "legendas": [
-        {"texto": "o *segundo* mais testado: Mega Garchomp Z ex", "fala": "O segundo mais testado é o Mega Garchomp Z ex."},
-        {"texto": "*30* por Dragão no descarte", "fala": "Bate trinta pra cada Pokémon Dragão no descarte,"},
-        {"texto": "e *240* que bate até no *Crustle*", "fala": "e tem um ataque de duzentos e quarenta que bate até no Crustle."}
-      ]
+        {
+          "texto": "o *segundo* mais testado: Mega Garchomp Z ex",
+          "fala": "O segundo mais testado é o Mega Garchomp Z ex."
+        },
+        {
+          "texto": "*30* por Dragão no descarte",
+          "fala": "Bate trinta pra cada Pokémon Dragão no descarte,"
+        },
+        {
+          "texto": "e *240* que bate até no *Crustle*",
+          "fala": "e tem um ataque de duzentos e quarenta que bate até no Crustle."
+        }
+      ],
+      "imagem": "cartas-jp/M7_67.png"
     },
     {
       "tipo": "impacto",
       "antes": "AS LISTAS",
       "texto": "com Drakloak",
       "subtitulo": "e Vibrava no descarte",
-      "cartas": ["drakloak", "crustle"],
+      "cartas": [
+        "drakloak",
+        "crustle"
+      ],
       "bate": 0.05,
       "duracao": 2.8,
       "legendas": [
-        {"texto": "usam o *Drakloak* pra comprar", "em": 0.1, "fala": "As listas usam o Drakloak pra comprar,"},
-        {"texto": "e o *Vibrava*: vai pro descarte e mostra o topo", "em": 1.9, "fala": "e o Vibrava, que vai pro descarte, dá dano pro Garchomp e mostra a carta do topo."}
+        {
+          "texto": "usam o *Drakloak* pra comprar",
+          "em": 0.1,
+          "fala": "As listas usam o Drakloak pra comprar,"
+        },
+        {
+          "texto": "e o *Vibrava*: vai pro descarte e mostra o topo",
+          "em": 1.9,
+          "fala": "e o Vibrava, que vai pro descarte, dá dano pro Garchomp e mostra a carta do topo."
+        }
       ]
     },
     {
@@ -138,14 +280,41 @@
       "pill": "DIFERENTÃO",
       "selo": "carta do Japão · nomes dos ataques ainda não saíram",
       "linhas": [
-        {"tipo": "ataque", "nome": "Garra venenosa", "custo": ["Grass"], "dano": "40", "texto": "deixa o Ativo do oponente Envenenado"},
-        {"tipo": "ataque", "nome": "Lâmina", "custo": ["Grass", "Grass"], "dano": "160+", "texto": "+50 para cada Condição Especial no Ativo do oponente"}
+        {
+          "tipo": "ataque",
+          "nome": "Garra venenosa",
+          "custo": [
+            "Grass"
+          ],
+          "dano": "40",
+          "texto": "deixa o Ativo do oponente Envenenado"
+        },
+        {
+          "tipo": "ataque",
+          "nome": "Lâmina",
+          "custo": [
+            "Grass",
+            "Grass"
+          ],
+          "dano": "160+",
+          "texto": "+50 para cada Condição Especial no Ativo do oponente"
+        }
       ],
       "legendas": [
-        {"texto": "e um *diferentão*: Sceptile ex", "fala": "E um diferentão: o Sceptile ex."},
-        {"texto": "*40* e envenena", "fala": "Com uma energia, bate quarenta e envenena."},
-        {"texto": "*160 +50* por Condição Especial", "fala": "E com duas, cento e sessenta, mais cinquenta por Condição Especial."}
-      ]
+        {
+          "texto": "e um *diferentão*: Sceptile ex",
+          "fala": "E um diferentão: o Sceptile ex."
+        },
+        {
+          "texto": "*40* e envenena",
+          "fala": "Com uma energia, bate quarenta e envenena."
+        },
+        {
+          "texto": "*160 +50* por Condição Especial",
+          "fala": "E com duas, cento e sessenta, mais cinquenta por Condição Especial."
+        }
+      ],
+      "imagem": "cartas-jp/M7_8.png"
     },
     {
       "tipo": "cta",
@@ -153,7 +322,12 @@
       "principal": "COMENTA",
       "complemento": "quer um vídeo de cada deck?",
       "seguir": "segue @escolaumbratcg",
-      "falas": [{"texto": "Quer um vídeo explicando cada um desses decks? Comenta aí!", "em": 0.25}]
+      "falas": [
+        {
+          "texto": "Quer um vídeo explicando cada um desses decks? Comenta aí!",
+          "em": 0.25
+        }
+      ]
     }
   ]
 }
